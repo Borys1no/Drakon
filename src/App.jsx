@@ -1,32 +1,15 @@
 import { useEffect } from "react";
 import { collection, addDoc, getDocs } from "firebase/firestore";
-import { db } from "./firebase";  // Asegúrate de que este es el path correcto a tu archivo firebase.js
+import { db } from "./firebase";
+import Navbar from "./components/Navbar";
 
-function App() {
-  useEffect(() => {
-    // Función para agregar un nuevo documento a Firestore
-    const addTestData = async () => {
-      try {
-        const docRef = await addDoc(collection(db, "testCollection"), {
-          name: "Rosa",
-          price: 15.99,
-          description: "Hermoso ramo de rosas rojas",
-        });
-        console.log("Documento escrito con ID: ", docRef.id);
-      } catch (e) {
-        console.error("Error agregando el documento: ", e);
-      }
-    };
 
-    // Llamar a la función para agregar datos
-    addTestData();
-  }, []);
-
+const App = () => {
   return (
-    <div>
-      <h1>Conexión Firebase</h1>
+    <div className="app">
+      <Navbar/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
