@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { collection, addDoc, getDocs } from "firebase/firestore";
-import { db } from "../firebase/firebase";
+// import { useEffect } from "react";
+// import { collection, addDoc, getDocs } from "firebase/firestore";
+// import { db } from "../firebase/firebase.js";
 import Navbar from "./components/Navbar";
 
 
