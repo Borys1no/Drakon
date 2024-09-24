@@ -1,41 +1,60 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { assets } from '../assets/assets'
+import '../index.css';
+import './Navbar.css';
 
 const Navbar = () => {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    const handleResize = () => {
+        window.innerWidth > 768 ? setIsMobile(false) && setIsNavOpen(false) : setIsMobile(true);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <nav>
             <div className='navbar'>
                 <a href="#">
-                <img src={assets.LogoNegro} alt=""  className='logo' />
-
+                    <img src={assets.LogoNegro} alt="Logo Drakon" className='logo' />
                 </a>
-                
+
+
+                <div className={`navbar-center ${isNavOpen && isMobile ? 'active' : ''}`}>
+                    <ul className="nav-links">
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Cocteles</a></li>
+                        <li><a href="#">Nuestra historia</a></li>
+                        <li><a href="#">Proceso</a></li>
+                        <li><a href="#">Reconocimientos</a></li>
+                        <li><a href="#">Equipo Drakon</a></li>
+                    </ul>
+                </div>
+
+                <div className="navbar-right">
+                    <a href="#" className="cart-icon">
+                        <img src={assets.Cart} alt="Carrito" />
+                    </a>
+                    <a href="#" className="user-icon">
+                        <img src={assets.User} alt="Usuario" />
+                    </a>
+                </div>
+                {isMobile && (
+                    <div className="burger" onClick={() => setIsNavOpen(!isNavOpen)}>
+                        <img src={assets.Burger} alt="Hamburger-Menu" />
+                    </div>
+                )}
 
             </div>
-            <div className="navbar-centers">
-                <ul className="nav-links">
-                    <li>
-                        <a href="">Productos</a>
-                        <a href="">Cocteles</a>
-                        <a href="">Nuestra historia</a>
-                        <a href="">Proceso</a>
-                        <a href="">Reconocimientos</a>
-                        <a href="">Equipo Drakon</a>
-                    </li>
-                </ul>
-            </div>
-            <div className="navbar-right">
-                <a href="#" className="cart-icon">
-                <i className="fas fa-shopping-cart"></i>
-                </a>
-                <a href="#" className="user-icon"></a>
-
-
-            </div>
-
         </nav>
+    );
+};
 
-    )
-}
-
-export default Navbar
+export default Navbar;

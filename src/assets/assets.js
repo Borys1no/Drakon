@@ -1,11 +1,18 @@
 import LogoNegro from './LogoDrakonNegro.png'
 import LogoBlanco from './LogoDrakonBlanco.png'
-
+import Cart from './shopping-cart.svg'
+import User from './user.svg'
+import Burger from './hamburger.svg'
 
 
 
 
 export const assets ={
     LogoNegro,
-    LogoBlanco
+    LogoBlanco,
+    Cart,
+    User,
+    Burger
+
+
 }
