@@ -4,7 +4,13 @@ import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../fireb
 import { useAuth } from '../../../contexts/authContext'
 
 const Login = () => {
-    const { userLoggedIn } = useAuth()
+    const auth = useAuth()
+    const userLoggedIn = auth?.userLoggedIn
+
+    if (!auth) {
+        // Handle the case where the useAuth hook returns undefined
+        return <div>Error: Unable to retrieve authentication context</div>
+    }
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

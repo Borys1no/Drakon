@@ -42,7 +42,7 @@ const Navbar = () => {
                     <a href="#" className="cart-icon">
                         <img src={assets.Cart} alt="Carrito" />
                     </a>
-                    <a href="#" className="user-icon">
+                    <a href="/login" className="user-icon">
                         <img src={assets.User} alt="Usuario" />
                     </a>
                 </div>
