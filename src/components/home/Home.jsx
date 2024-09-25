@@ -4,7 +4,7 @@ import Navbar from '../Navbar'
 const Home = () => {
   return (
     <div>
-      <p>Hola</p>
+      <p>Hola soy el Rubius</p>
     </div>
   )
 }
