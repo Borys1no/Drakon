@@ -27,8 +27,13 @@ const Products = () => {
                         <li><strong>Aroma:</strong> Exótico aroma de frutas y flores silvestres.</li>
                         <li><strong>Diferencia:</strong> Ideal para coctelería, aclamado por su versatilidad, notas frutales y aromas florales.</li>
                     </ul>
+                    {/* Botón de Comprar */}
+                    <div className="button-container">
+                        <button className="buy-button">
+                            Comprar ahora <span className="arrow">→</span>
+                        </button>
+                    </div>
                 </div>
-                
             </div>
 
             {/* Producto 2: Malke Triple Destilado (Imagen a la izquierda) */}
@@ -48,6 +53,11 @@ const Products = () => {
                         <li><strong>Aroma:</strong> Exótico aroma de frutas y flores silvestres.</li>
                         <li><strong>Diferencia:</strong> Ideal para coctelería, shot, o bajativo, aclamado internacionalmente.</li>
                     </ul>
+                    <div className="button-container">
+                        <button className="buy-button">
+                            Comprar ahora <span className="arrow">→</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -67,8 +77,12 @@ const Products = () => {
                         <li><strong>Aroma:</strong> Detalles a completar.</li>
                         <li><strong>Diferencia:</strong> Detalles a completar.</li>
                     </ul>
+                    <div className="button-container">
+                        <button className="buy-button">
+                            Comprar ahora <span className="arrow">→</span>
+                        </button>
+                    </div>
                 </div>
-                
             </div>
 
             {/* Producto 4: Sal de Pitahaya (Imagen a la izquierda) */}
@@ -84,6 +98,11 @@ const Products = () => {
                     <ul className="product-features">
                         <li><strong>Economía Circular:</strong> Creemos en la sostenibilidad y reutilizamos la cáscara de la pitahaya.</li>
                     </ul>
+                    <div className="button-container">
+                        <button className="buy-button">
+                            Comprar ahora <span className="arrow">→</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
