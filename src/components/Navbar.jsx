@@ -6,6 +6,7 @@ import { assets } from '../assets/assets';
 import '../index.css';
 import './Navbar.css';
 import Home from './home/Home';
+import Products from './Productos/Products';
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -44,7 +45,7 @@ const Navbar = () => {
 
                 <div className={`navbar-center ${isNavOpen && isMobile ? 'active' : ''}`}>
                     <ul className="nav-links">
-                        <li><a href="#">Productos</a></li>
+                        <li><a href="/products">Productos</a></li>
                         <li><a href="#">Cocteles</a></li>
                         <li><a href="#">Nuestra historia</a></li>
                         <li><a href="#">Proceso</a></li>
