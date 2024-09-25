@@ -29,7 +29,7 @@ const Navbar = () => {
     const handleLogout = async () => {
         try {
             await doSignOut(); // Llamamos a la función para cerrar sesión
-            navigate('/login'); // Redirigimos al usuario a la página de login
+            navigate(Home); // Redirigimos al usuario a la página de login
         } catch (error) {
             console.error('Error al cerrar sesión: ', error);
         }
