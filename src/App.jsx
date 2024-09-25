@@ -6,14 +6,17 @@ import Home from './components/home/Home';
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Navigate to="/Home" />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<LoginMenu />} />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Navigate to="/Home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<LoginMenu />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
+    
   );
 };
 
