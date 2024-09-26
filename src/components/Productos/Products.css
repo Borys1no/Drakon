@@ -94,9 +94,7 @@
         grid-template-columns: 1fr auto 2fr; /* Tres columnas: una para el nombre, una para la línea, y una para la descripción */
         align-items: center;
     }
-
-
-
+    
     .separator {
         content: '';
         width: 2px;

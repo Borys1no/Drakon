@@ -23,13 +23,14 @@ const Products = () => {
                     <ul className="product-features">
                         <li><strong>Vista</strong><span className="separator"></span>Claro, limpio y transparente</li>
                         <li><strong>Sabor</strong><span className="separator"></span>Entrada agradable, persistente y agradable final</li>
-                        <li><strong>Cuerpo</strong><span className="separator"></span>Ligeras notas de fruta, destellos florales</li>
+                        <li><strong>Cuerpo</strong><span className="separator"></span>Tema mas alla de lo frutal, ligeras notas de fruta, destellos florales</li>
                         <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma de frutas y flores silvestres</li>
-                        <li><strong>Diferencia</strong><span className="separator"></span>Ideal para coctelería, aclamado por su versatilidad</li>
+                        <li><strong>Diferencia</strong><span className="separator"></span>El malke destilado virgen es una opción ideal para cocteleria, aclamado por su versatilidad, notas frutales y aromas florales </li>
                     </ul>
                     {/* Botón de Comprar */}
                     <div className="button-container">
                         <button className="buy-button">
+                            <li><a href="/products">Productos</a></li>
                             Comprar ahora <span className="arrow">→</span>
                         </button>
                     </div>
@@ -47,11 +48,11 @@ const Products = () => {
                         Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
                     </p>
                     <ul className="product-features">
-                        <li><strong>Vista</strong><span className="separator"></span>Claro, limpio y transparente</li>
-                        <li><strong>Sabor</strong><span className="separator"></span>Entrada agradable, persistente y agradable final</li>
-                        <li><strong>Cuerpo</strong><span className="separator"></span>Ligeras notas de fruta, destellos florales</li>
-                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma de frutas y flores silvestres</li>
-                        <li><strong>Diferencia</strong><span className="separator"></span>Ideal para coctelería, aclamado por su versatilidad</li>
+                        <li><strong>Vista</strong><span className="separator"></span>Brillante, limpio y transparente</li>
+                        <li><strong>Sabor</strong><span className="separator"></span>Elegante presencia frutal, con notas de pera y kiwi</li>
+                        <li><strong>Cuerpo</strong><span className="separator"></span>Elegante, ligeras notas de fruta, destellos florales</li>
+                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma que incluye frutas y flores silvestres</li>
+                        <li><strong>Diferencia</strong><span className="separator"></span>El malke triple destilado es una opción ideal para cocteleria, shot, o bajativo, aclamado internacionalmente.</li>
                     </ul>
                     <div className="button-container">
                         <button className="buy-button">
@@ -72,11 +73,11 @@ const Products = () => {
                         Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).
                     </p>
                     <ul className="product-features">
-                        <li><strong>Vista</strong><span className="separator"></span>Claro, limpio y transparente</li>
-                        <li><strong>Sabor</strong><span className="separator"></span>Entrada agradable, persistente y agradable final</li>
-                        <li><strong>Cuerpo</strong><span className="separator"></span>Ligeras notas de fruta, destellos florales</li>
-                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma de frutas y flores silvestres</li>
-                        <li><strong>Diferencia</strong><span className="separator"></span>Ideal para coctelería, aclamado por su versatilidad</li>
+                        <li><strong>Vista</strong><span className="separator"></span>Descripcion </li>
+                        <li><strong>Sabor</strong><span className="separator"></span>Descripcion</li>
+                        <li><strong>Cuerpo</strong><span className="separator"></span>Descripcion</li>
+                        <li><strong>Aroma</strong><span className="separator"></span>Descripcion</li>
+                        <li><strong>Diferencia</strong><span className="separator"></span>Descripcion</li>
                     </ul>
                     <div className="button-container">
                         <button className="buy-button">
@@ -96,13 +97,6 @@ const Products = () => {
                     <p className="product-description">
                         Utilizamos la cáscara interna de la pitahaya para elaborar nuestra famosa “sal” de pitahaya mediante un proceso de cocción, deshidratado y añadidura de sal marina.
                     </p>
-                    <ul className="product-features">
-                        <li><strong>Vista</strong><span className="separator"></span>Claro, limpio y transparente</li>
-                        <li><strong>Sabor</strong><span className="separator"></span>Entrada agradable, persistente y agradable final</li>
-                        <li><strong>Cuerpo</strong><span className="separator"></span>Ligeras notas de fruta, destellos florales</li>
-                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma de frutas y flores silvestres</li>
-                        <li><strong>Diferencia</strong><span className="separator"></span>Ideal para coctelería, aclamado por su versatilidad</li>
-                    </ul>
                     <div className="button-container">
                         <button className="buy-button">
                             Comprar ahora <span className="arrow">→</span>
