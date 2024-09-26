@@ -4,6 +4,8 @@ import Cart from './shopping-cart.svg'
 import User from './user.svg'
 import Burger from './hamburger.svg'
 import Banner from './banner.jpg'
+import Introduction from './imgIntroduction.jpg'
+import Trago from './trago.jpg'
 
 
 
@@ -14,7 +16,9 @@ export const assets ={
     Cart,
     User,
     Burger,
-    Banner
+    Banner,
+    Introduction,
+    Trago
 
 
 }
