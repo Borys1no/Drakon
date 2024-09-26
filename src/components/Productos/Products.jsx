@@ -21,11 +21,11 @@ const Products = () => {
                         Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, al menos dos destilados, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
                     </p>
                     <ul className="product-features">
-                        <li><strong>Vista:</strong> Claro, limpio y transparente.</li>
-                        <li><strong>Sabor:</strong> Entrada agradable, persistente y agradable final.</li>
-                        <li><strong>Cuerpo:</strong> Ligeras notas de fruta, destellos florales.</li>
-                        <li><strong>Aroma:</strong> Exótico aroma de frutas y flores silvestres.</li>
-                        <li><strong>Diferencia:</strong> Ideal para coctelería, aclamado por su versatilidad, notas frutales y aromas florales.</li>
+                        <li><strong>Vista</strong><span className="separator"></span>Claro, limpio y transparente</li>
+                        <li><strong>Sabor</strong><span className="separator"></span>Entrada agradable, persistente y agradable final</li>
+                        <li><strong>Cuerpo</strong><span className="separator"></span>Ligeras notas de fruta, destellos florales</li>
+                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma de frutas y flores silvestres</li>
+                        <li><strong>Diferencia</strong><span className="separator"></span>Ideal para coctelería, aclamado por su versatilidad</li>
                     </ul>
                     {/* Botón de Comprar */}
                     <div className="button-container">
@@ -47,11 +47,11 @@ const Products = () => {
                         Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
                     </p>
                     <ul className="product-features">
-                        <li><strong>Vista:</strong> Brillante, limpio y transparente.</li>
-                        <li><strong>Sabor:</strong> Elegante presencia frutal, con notas de pera y kiwi.</li>
-                        <li><strong>Cuerpo:</strong> Elegante, ligeras notas de fruta, destellos florales.</li>
-                        <li><strong>Aroma:</strong> Exótico aroma de frutas y flores silvestres.</li>
-                        <li><strong>Diferencia:</strong> Ideal para coctelería, shot, o bajativo, aclamado internacionalmente.</li>
+                        <li><strong>Vista</strong><span className="separator"></span>Claro, limpio y transparente</li>
+                        <li><strong>Sabor</strong><span className="separator"></span>Entrada agradable, persistente y agradable final</li>
+                        <li><strong>Cuerpo</strong><span className="separator"></span>Ligeras notas de fruta, destellos florales</li>
+                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma de frutas y flores silvestres</li>
+                        <li><strong>Diferencia</strong><span className="separator"></span>Ideal para coctelería, aclamado por su versatilidad</li>
                     </ul>
                     <div className="button-container">
                         <button className="buy-button">
@@ -72,10 +72,11 @@ const Products = () => {
                         Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).
                     </p>
                     <ul className="product-features">
-                        <li><strong>Sabor:</strong> Detalles a completar.</li>
-                        <li><strong>Cuerpo & Olor:</strong> Detalles a completar.</li>
-                        <li><strong>Aroma:</strong> Detalles a completar.</li>
-                        <li><strong>Diferencia:</strong> Detalles a completar.</li>
+                        <li><strong>Vista</strong><span className="separator"></span>Claro, limpio y transparente</li>
+                        <li><strong>Sabor</strong><span className="separator"></span>Entrada agradable, persistente y agradable final</li>
+                        <li><strong>Cuerpo</strong><span className="separator"></span>Ligeras notas de fruta, destellos florales</li>
+                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma de frutas y flores silvestres</li>
+                        <li><strong>Diferencia</strong><span className="separator"></span>Ideal para coctelería, aclamado por su versatilidad</li>
                     </ul>
                     <div className="button-container">
                         <button className="buy-button">
@@ -96,7 +97,11 @@ const Products = () => {
                         Utilizamos la cáscara interna de la pitahaya para elaborar nuestra famosa “sal” de pitahaya mediante un proceso de cocción, deshidratado y añadidura de sal marina.
                     </p>
                     <ul className="product-features">
-                        <li><strong>Economía Circular:</strong> Creemos en la sostenibilidad y reutilizamos la cáscara de la pitahaya.</li>
+                        <li><strong>Vista</strong><span className="separator"></span>Claro, limpio y transparente</li>
+                        <li><strong>Sabor</strong><span className="separator"></span>Entrada agradable, persistente y agradable final</li>
+                        <li><strong>Cuerpo</strong><span className="separator"></span>Ligeras notas de fruta, destellos florales</li>
+                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma de frutas y flores silvestres</li>
+                        <li><strong>Diferencia</strong><span className="separator"></span>Ideal para coctelería, aclamado por su versatilidad</li>
                     </ul>
                     <div className="button-container">
                         <button className="buy-button">
