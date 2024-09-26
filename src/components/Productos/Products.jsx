@@ -30,8 +30,7 @@ const Products = () => {
                     {/* Botón de Comprar */}
                     <div className="button-container">
                         <button className="buy-button">
-                            <li><a href="/products">Productos</a></li>
-                            Comprar ahora <span className="arrow">→</span>
+                            <a href="/MalkeVirgen"> Comprar ahora <span className="arrow">→</span> </a>
                         </button>
                     </div>
                 </div>
