@@ -41,7 +41,7 @@ const Home = () => {
         <div className="productos-carousel">
           <div className="producto-card">
             <div className="product-img">
-              <img src={assets.Trago} alt="Malke Virgen"  />
+              <img src={assets.Trago} alt="Malke Virgen" />
             </div>
             <div className="container-descrip">
               <h2 className='product-title'>Malke Virgen</h2>
@@ -52,23 +52,23 @@ const Home = () => {
           </div>
           <div className="producto-card">
             <div className="product-img">
-              <img src={assets.Trago} alt="Malke Triple Destilado"  />
+              <img src={assets.Trago} alt="Malke Triple Destilado" />
             </div>
             <div className="container-descrip">
               <h2 className='product-title'>Malke Triple Destilado</h2>
               <p className='product-description'>
-              Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).</p>
+                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).</p>
             </div>
             <button className="btn">Comprar</button>
           </div>
           <div className="producto-card">
             <div className="product-img">
-              <img src={assets.Trago} alt="Malke Reposado"  />
+              <img src={assets.Trago} alt="Malke Reposado" />
             </div>
             <div className="container-descrip">
               <h2 className='product-title'>Malke Reposado</h2>
               <p className='product-description'>
-              Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).</p>
+                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).</p>
             </div>
             <button className="btn">Comprar</button>
           </div>
@@ -79,17 +79,23 @@ const Home = () => {
       {/* Proceso de fabricación */}
       <section className="fabricacion">
         <h3>Proceso de Fabricación</h3>
-        <div className="img-fabricacion">
-          <img src={assets.Introduction} alt="Fabricacion"/>
+        <div className="fabricacion-content">
+
+          <div className="text-content">
+            <p>
+              El proceso de creación de Drakon se enfoca en seleccionar solo la mejor pitahaya de
+              Manabí, preservando sus sabores únicos a través de un cuidadoso proceso de fermentación,
+              destilación y filtrado. Este enfoque garantiza un destilado de la más alta calidad,
+              orgullosamente hecho en Ecuador.
+            </p>
+            <button className="btn">Leer más</button>
+          </div>
+          <div className="img-fabricacion">
+            <img src={assets.Introduction} alt="Fabricacion" />
+          </div>
         </div>
-        <p>
-          El proceso de creación de Drakon se enfoca en seleccionar solo la mejor pitahaya de
-          Manabí, preservando sus sabores únicos a través de un cuidadoso proceso de fermentación,
-          destilación y filtrado. Este enfoque garantiza un destilado de la más alta calidad,
-          orgullosamente hecho en Ecuador.
-        </p>
-        <button className="btn">Leer más</button>
       </section>
+
 
       {/* Cocteles */}
       <section className="cocteles">
@@ -97,7 +103,7 @@ const Home = () => {
         <div className="cocteles-grid">
           <div className="coctel-card">
             <div className="coctel-front">
-              <img src="drakon-rose-tonic.jpg" alt="Drakon Rose Tonic" />
+              <img src={assets.Coctel} alt="Drakon Rose Tonic" />
               <h4>Drakon Rose Tonic</h4>
             </div>
             <div className="coctel-back">
@@ -106,7 +112,7 @@ const Home = () => {
           </div>
           <div className="coctel-card">
             <div className="coctel-front">
-              <img src="drakon-tonic.jpg" alt="Drakon Tonic" />
+              <img src={assets.Coctel} alt="Drakon Tonic" />
               <h4>Drakon Tonic</h4>
             </div>
             <div className="coctel-back">
@@ -115,11 +121,12 @@ const Home = () => {
           </div>
           <div className="coctel-card">
             <div className="coctel-front">
-              <img src="drakon-rasp-sour.jpg" alt="Drakon Rasp Sour" />
+              <img src={assets.Coctel} alt="Drakon Rasp Sour" />
               <h4>Drakon Rasp Sour</h4>
             </div>
             <div className="coctel-back">
               <p>3/4 oz de syrup simple, 3/4 oz de zumo de limón, 1 clara de huevo, 2 oz de Drakon, 6 frambuesas machacadas</p>
+              <button> Ver la receta completa</button>
             </div>
           </div>
         </div>
