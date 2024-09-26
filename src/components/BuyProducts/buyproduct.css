@@ -1,0 +1,124 @@
+/* Estilos para la página del producto */
+.Qroduct-page-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #2C2A29;
+    color: #CD528F;
+    font-family: Arial, sans-serif;
+}
+
+.Qproduct-image-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Qproduct-image {
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(205, 82, 143, 0.5);
+}
+
+/* Flechas para cambiar de imagen */
+.Qprev-arrow, .next-arrow {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: #CD528F;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.Qprev-arrow {
+    left: 0;
+}
+
+.Qnext-arrow {
+    right: 0;
+}
+
+.Qproduct-details {
+    flex: 1;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Qproduct-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #CD528F;
+}
+
+/* Características del producto */
+.Qproduct-features {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    display: grid;
+    grid-gap: 15px;
+    margin-bottom: 30px;
+}
+
+.Qproduct-features li {
+    display: grid;
+    grid-template-columns: 1fr 20px 2fr;
+    align-items: center;
+}
+
+.Qseparator {
+    width: 2px;
+    height: 100%;
+    background-color: #CD528F;
+    margin: 0 10px;
+}
+
+/* Selector de cantidad */
+.Qquantity-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Qquantity-container label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.Qquantity-container input {
+    width: 50px;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #CD528F;
+}
+
+/* Precio del producto */
+.Qproduct-price {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Botón "Agregar al carrito" */
+.Qadd-to-cart-button {
+    background-color: #CD528F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Qadd-to-cart-button:hover {
+    background-color: #b13e78;
+}
