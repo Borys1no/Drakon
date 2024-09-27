@@ -1,5 +1,5 @@
-/* Estilos para la página del producto */
-.Qroduct-page-container {
+/* Estilos generales */
+.Qproduct-page-container {
     display: flex;
     justify-content: space-between;
     padding: 40px;
@@ -8,47 +8,70 @@
     font-family: Arial, sans-serif;
 }
 
-.Qproduct-image-container {
-    position: relative;
+/* Sección de la imagen principal y carrusel a la izquierda */
+.Qproduct-image-section {
     flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
+.Qproduct-image-container {
+    position: relative;
+    width: 70%; /* Ajuste hecho por ti */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Para evitar que la imagen salga de su contenedor */
+}
+
 .Qproduct-image {
-    max-width: 10%;
+    max-width: 100%;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(205, 82, 143, 0.5);
+    transition: opacity 0.5s ease-in-out; /* Transición suave de opacidad */
 }
 
-/* Flechas para cambiar de imagen */
-.Qprev-arrow, .next-arrow {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    color: #CD528F;
-    font-size: 2rem;
+/* Animación de desvanecimiento */
+.Qfade {
+    opacity: 0;
+}
+
+/* Carrusel de imágenes pequeñas */
+.Qimage-carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Qcarousel-image {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
     cursor: pointer;
-    padding: 0 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.Qprev-arrow {
-    left: 0;
+.Qcarousel-image:hover {
+    transform: scale(1.1);
 }
 
-.Qnext-arrow {
-    right: 0;
+.Qactive {
+    border-color: #CD528F;
 }
 
+/* Sección de detalles a la derecha */
 .Qproduct-details {
     flex: 1;
-    margin-left: 50px;
+    padding-left: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
+/* Características del producto */
 .Qproduct-title {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -56,7 +79,10 @@
     color: #CD528F;
 }
 
-/* Características del producto */
+.Qproduct-description {
+    margin-bottom: 20px;
+}
+
 .Qproduct-features {
     list-style-type: none;
     padding-left: 0;
@@ -92,7 +118,7 @@
 }
 
 .Qquantity-container input {
-    width: 50px;
+    width: 80px;
     padding: 5px;
     font-size: 1.2rem;
     text-align: center;
@@ -117,6 +143,7 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-bottom: 40px;
 }
 
 .Qadd-to-cart-button:hover {
