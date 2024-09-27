@@ -6,6 +6,7 @@ import Burger from './hamburger.svg'
 import Banner from './banner.jpg'
 import Introduction from './imgIntroduction.jpg'
 import Trago from './trago.jpg'
+import Coctel from './coctel.jpg'
 
 
 
@@ -18,7 +19,8 @@ export const assets ={
     Burger,
     Banner,
     Introduction,
-    Trago
+    Trago,
+    Coctel
 
 
 }
