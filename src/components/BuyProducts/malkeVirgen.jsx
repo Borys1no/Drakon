@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './buyproduct.css';  // Archivo CSS importado
+import { assets } from '../../assets/assets';
 
 const ProductPage = () => {
   // Estado para manejar la cantidad y las imágenes
@@ -8,9 +9,9 @@ const ProductPage = () => {
 
   // Lista de imágenes del producto
   const productImages = [
-    '/path/to/image1.jpg',
-    '/path/to/image2.jpg',
-    '/path/to/image3.jpg',
+    assets.Trago,
+    assets.Trago,
+    assets.Trago,
   ];
 
   // Función para avanzar a la siguiente imagen
@@ -28,52 +29,53 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="product-page-container">
+    <div className="Qproduct-page-container">
       {/* Sección de imagen a la izquierda */}
-      <div className="product-image-container">
-        <button className="prev-arrow" onClick={prevImage}>
+      <div className="Qproduct-image-container">
+        <button className="Qprev-arrow" onClick={prevImage}>
           &lt; {/* Flecha izquierda */}
         </button>
         <img
           src={productImages[currentImageIndex]}
           alt="Producto Malke Virgen"
-          className="product-image"
+          className="Qproduct-image"
         />
-        <button className="next-arrow" onClick={nextImage}>
+        <button className="Qnext-arrow" onClick={nextImage}>
           &gt; {/* Flecha derecha */}
         </button>
       </div>
 
       {/* Sección de detalles a la derecha */}
-      <div className="product-details">
-        <h1 className="product-title">Malke Virgen</h1>
+      <div className="Qproduct-details">
+        <h1 className="Qproduct-title">Malke Virgen</h1>
 
         {/* Características del producto */}
-        <ul className="product-features">
-          <li>
-            <strong>Material:</strong>
-            <div className="separator"></div>
-            <span>Madera de alta calidad</span>
-          </li>
-          <li>
-            <strong>Dimensiones:</strong>
-            <div className="separator"></div>
-            <span>40cm x 20cm x 10cm</span>
-          </li>
-          <li>
-            <strong>Peso:</strong>
-            <div className="separator"></div>
-            <span>2.5 kg</span>
-          </li>
-          <li>
-            <strong>Color:</strong>
-            <div className="separator"></div>
-            <span>Marrón natural</span>
-          </li>
-        </ul>
+        <div className="product-section reverse">
+                <div className="product-image">
+                    <img src={assets.LogoNegro} alt="Malke Triple Destilado" />
+                </div>
+                <div className="product-text">
+                    <h2 className="product-title">Malke Triple Destilado</h2>
+                    <p className="product-description">
+                        Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
+                    </p>
+                    <ul className="product-features">
+                        <li><strong>Vista</strong><span className="separator"></span>Brillante, limpio y transparente</li>
+                        <li><strong>Sabor</strong><span className="separator"></span>Elegante presencia frutal, con notas de pera y kiwi</li>
+                        <li><strong>Cuerpo</strong><span className="separator"></span>Elegante, ligeras notas de fruta, destellos florales</li>
+                        <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma que incluye frutas y flores silvestres</li>
+                        <li><strong>Diferencia</strong><span className="separator"></span>El malke triple destilado es una opción ideal para cocteleria, shot, o bajativo, aclamado internacionalmente.</li>
+                    </ul>
+                    <div className="button-container">
+                        <button className="buy-button">
+                            Comprar ahora <span className="arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
         {/* Selector de cantidad */}
-        <div className="quantity-container">
+        <div className="Qquantity-container">
           <label htmlFor="quantity">Cantidad:</label>
           <input
             type="number"
@@ -85,10 +87,10 @@ const ProductPage = () => {
         </div>
 
         {/* Precio */}
-        <div className="product-price">$30.00</div>
+        <div className="Qproduct-price">$30.00</div>
 
         {/* Botón para agregar al carrito */}
-        <button className="add-to-cart-button">Agregar al carrito</button>
+        <button className="Qadd-to-cart-button">Agregar al carrito</button>
       </div>
     </div>
   );
