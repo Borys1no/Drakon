@@ -3,10 +3,7 @@ import './buyproduct.css';  // Archivo CSS importado
 import { assets } from '../../assets/assets';
 
 const ProductPage = () => {
-  // Estado para manejar la cantidad y las imágenes
-  const [quantity, setQuantity] = useState(1);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [animate, setAnimate] = useState(false); // Estado para la animación de la imagen
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);  // Índice actual de la imagen
 
   // Lista de imágenes del producto
   const productImages = [
@@ -17,23 +14,30 @@ const ProductPage = () => {
 
   // Función para cambiar la imagen principal al hacer clic en una imagen pequeña
   const handleImageClick = (index) => {
-    setAnimate(true); // Iniciar animación
-    setTimeout(() => {
-      setCurrentImageIndex(index);
-      setAnimate(false); // Finalizar animación
-    }, 500); // Duración de la animación
+    setCurrentImageIndex(index);  // Actualiza el índice de la imagen seleccionada
   };
 
   return (
     <div className="Qproduct-page-container">
       {/* Sección de la imagen principal y el carrusel */}
       <div className="Qproduct-image-section">
-        <div className={`Qproduct-image-container`}>
-          <img
-            src={productImages[currentImageIndex]}
-            alt="Producto Malke Virgen"
-            className={`Qproduct-image ${animate ? 'Qfade' : ''}`}  // Aplicar animación de desvanecimiento
-          />
+        <div className="Qproduct-image-container">
+          <div
+            className="Qcarousel-slides"
+            style={{
+              transform: `translateX(-${currentImageIndex * 100}%)`, // Desliza las imágenes
+              transition: 'transform 0.5s ease-in-out'  // Transición suave
+            }}
+          >
+            {productImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Producto Malke Virgen ${index + 1}`}
+                className="Qproduct-image"
+              />
+            ))}
+          </div>
         </div>
 
         {/* Carrusel de imágenes pequeñas */}
@@ -52,31 +56,21 @@ const ProductPage = () => {
 
       {/* Sección de detalles del producto */}
       <div className="Qproduct-details">
-        {/* Características del producto */}
-        <div className="product-text">
-          <h2 className="product-title">Malke Triple Destilado</h2>
-          <p className="product-description">
-            Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
-          </p>
-          <ul className="product-features">
-            <li><strong>Vista</strong><span className="separator"></span>Brillante, limpio y transparente</li>
-            <li><strong>Sabor</strong><span className="separator"></span>Elegante presencia frutal, con notas de pera y kiwi</li>
-            <li><strong>Cuerpo</strong><span className="separator"></span>Elegante, ligeras notas de fruta, destellos florales</li>
-            <li><strong>Aroma</strong><span className="separator"></span>Exótico aroma que incluye frutas y flores silvestres</li>
-            <li><strong>Diferencia</strong><span className="separator"></span>El malke triple destilado es una opción ideal para cocteleria, shot, o bajativo, aclamado internacionalmente.</li>
-          </ul>
-        </div>
+        <h2 className="Qproduct-title">Malke Virgen</h2>
+        <p className="Qproduct-description">
+          Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte.
+        </p>
+        <ul className="Qproduct-features">
+          <li><strong>Vista</strong><span className="Qseparator"></span>Claro, limpio y transparente</li>
+          <li><strong>Sabor</strong><span className="Qseparator"></span>Entrada agradable, persistente y agradable final</li>
+          <li><strong>Cuerpo</strong><span className="Qseparator"></span>Ligeras notas de fruta, destellos florales</li>
+          <li><strong>Aroma</strong><span className="Qseparator"></span>Exótico aroma de frutas y flores silvestres</li>
+        </ul>
 
         {/* Selector de cantidad */}
         <div className="Qquantity-container">
           <label htmlFor="quantity">Cantidad:</label>
-          <input
-            type="number"
-            id="quantity"
-            value={quantity}
-            min="1"
-            onChange={(e) => setQuantity(Number(e.target.value))}
-          />
+          <input type="number" id="quantity" min="1" />
         </div>
 
         {/* Precio y botón */}

@@ -18,23 +18,22 @@
 
 .Qproduct-image-container {
     position: relative;
-    width: 70%; /* Ajuste hecho por ti */
+    width: 20%;  /* Ajuste del ancho del contenedor de la imagen */
+    overflow: hidden;  /* Oculta las imágenes que no están activas */
+    height: auto;
+}
+
+.Qcarousel-slides {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Para evitar que la imagen salga de su contenedor */
+    width: 100%;
 }
 
 .Qproduct-image {
-    max-width: 100%;
+    min-width: 100%; /* Asegura que cada imagen ocupe el 100% del contenedor */
+    height: auto;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(205, 82, 143, 0.5);
-    transition: opacity 0.5s ease-in-out; /* Transición suave de opacidad */
-}
-
-/* Animación de desvanecimiento */
-.Qfade {
-    opacity: 0;
+    object-fit: cover;
 }
 
 /* Carrusel de imágenes pequeñas */
@@ -71,7 +70,6 @@
     justify-content: flex-start;
 }
 
-/* Características del producto */
 .Qproduct-title {
     font-size: 3rem;
     margin-bottom: 20px;
