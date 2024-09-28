@@ -7,7 +7,10 @@ import Banner from './banner.jpg'
 import Introduction from './imgIntroduction.jpg'
 import Trago from './trago.jpg'
 import Coctel from './coctel.jpg'
-
+import Facebook from './facebook.png'
+import Instagram from './instagram.png'
+import Linkedin from './linkedin.png'
+import X from './x.png'
 
 
 
@@ -20,7 +23,11 @@ export const assets ={
     Banner,
     Introduction,
     Trago,
-    Coctel
+    Coctel,
+    Facebook,
+    Instagram,
+    Linkedin,
+    X
 
 
 }

@@ -5,7 +5,7 @@ import { AuthProvider } from "./contexts/authContext";
 import Home from './components/home/Home';
 import Register from "./components/auth/register";
 import Products from './components/Productos/Products';
-import MalkeVirgen from './components/BuyProducts/malkeVirgen';
+import MalkeVirgen from './components/BuyProducts/MalkeVirgen';
 
 const App = () => {
   return (

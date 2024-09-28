@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
+import Footer from '../Footer/Footer'
 import Navbar from '../Navbar'
-import Header from '../header/Header'
 import { assets } from '../../assets/assets'
 
 const Home = () => {
@@ -27,7 +27,7 @@ const Home = () => {
             que cultiva más de 30 hectáreas de pitahaya de alta calidad, con el propósito de
             representar lo mejor de Ecuador y su diversidad agrícola.
           </p>
-          <button className="btn">Ver más</button>
+          <a href='#' className="btn">Ver más</a>
         </div>
       </section>
 
@@ -36,7 +36,7 @@ const Home = () => {
       <section className="productos">
         <div className="productos-header">
           <h3>Productos</h3>
-          <button className="btn">Tienda</button>
+          <a href="#" className="btn">Tienda</a>
         </div>
         <div className="productos-carousel">
           <div className="producto-card">
@@ -48,7 +48,7 @@ const Home = () => {
               <p className='product-description'>
                 Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, al menos dos destilados, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).</p>
             </div>
-            <button className="btn">Comprar</button>
+            <a href='#' className="btn">Comprar</a>
           </div>
           <div className="producto-card">
             <div className="product-img">
@@ -59,7 +59,7 @@ const Home = () => {
               <p className='product-description'>
                 Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).</p>
             </div>
-            <button className="btn">Comprar</button>
+            <a href='#' className="btn">Comprar</a>
           </div>
           <div className="producto-card">
             <div className="product-img">
@@ -70,7 +70,7 @@ const Home = () => {
               <p className='product-description'>
                 Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).</p>
             </div>
-            <button className="btn">Comprar</button>
+            <a href='#' className="btn">Comprar</a>
           </div>
 
         </div>
@@ -88,7 +88,7 @@ const Home = () => {
               destilación y filtrado. Este enfoque garantiza un destilado de la más alta calidad,
               orgullosamente hecho en Ecuador.
             </p>
-            <button className="btn">Leer más</button>
+            <a href="#" className="btn">Leer más</a>
           </div>
           <div className="img-fabricacion">
             <img src={assets.Introduction} alt="Fabricacion" />
@@ -107,7 +107,9 @@ const Home = () => {
               <h4>Drakon Rose Tonic</h4>
             </div>
             <div className="coctel-back">
-              <p>4 tiempos de Agua tónica de rosas, 2 oz de Drakon doble destilado, Hielo</p>
+              <p>4 tiempos de Agua tónica de rosas, 
+                2 oz de Drakon doble destilado, Hielo</p>
+                <a href="#" className="btn-receta">Ver la receta completa</a>
             </div>
           </div>
           <div className="coctel-card">
@@ -116,7 +118,9 @@ const Home = () => {
               <h4>Drakon Tonic</h4>
             </div>
             <div className="coctel-back">
-              <p>4 tiempos de agua tónica britvic, 2 oz de Drakon doble destilado, Hielo</p>
+              <p>4 tiempos de agua tónica britvic, 2 oz de Drakon doble destilado,
+                 Hielo</p>
+                 <a href="#" className="btn-recetas">Ver la receta completa</a>
             </div>
           </div>
           <div className="coctel-card">
@@ -126,12 +130,13 @@ const Home = () => {
             </div>
             <div className="coctel-back">
               <p>3/4 oz de syrup simple, 3/4 oz de zumo de limón, 1 clara de huevo, 2 oz de Drakon, 6 frambuesas machacadas</p>
-              <button> Ver la receta completa</button>
+              <a href="#" className="btn-recetas">Ver la receta completa</a>
             </div>
           </div>
         </div>
-        <button className="btn">Ver más</button>
+        <a href="#" className="btn-coctel">Ver más</a>
       </section>
+      <Footer/>.
     </div>
   )
 }
