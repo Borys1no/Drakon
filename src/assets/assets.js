@@ -10,6 +10,7 @@ import Coctel from './coctel.jpg'
 import Facebook from './facebook.png'
 import Instagram from './instagram.png'
 import Linkedin from './linkedin.png'
+import Champage from './champage.png'
 import X from './x.png'
 
 
@@ -27,7 +28,8 @@ export const assets ={
     Facebook,
     Instagram,
     Linkedin,
-    X
+    X,
+    Champage,
 
 
 }

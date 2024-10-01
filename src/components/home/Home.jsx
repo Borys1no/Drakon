@@ -33,48 +33,41 @@ const Home = () => {
 
 
       {/* Productos */}
-      <section className="productos">
+      <section >
         <div className="productos-header">
           <h3>Productos</h3>
-          <a href="#" className="btn">Tienda</a>
         </div>
         <div className="productos-carousel">
           <div className="producto-card">
-            <div className="product-img">
-              <img src={assets.Trago} alt="Malke Virgen" />
-            </div>
+            <img src={assets.Champage} alt="Malke Virgen" />
             <div className="container-descrip">
               <h2 className='product-title'>Malke Virgen</h2>
               <p className='product-description'>
                 Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, al menos dos destilados, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).</p>
             </div>
-            <a href='#' className="btn">Comprar</a>
+            <a href='#' className="Qbtn">Comprar</a>
           </div>
           <div className="producto-card">
-            <div className="product-img">
-              <img src={assets.Trago} alt="Malke Triple Destilado" />
-            </div>
+            <img src={assets.Champage} alt="Malke Triple Destilado" />
             <div className="container-descrip">
               <h2 className='product-title'>Malke Triple Destilado</h2>
               <p className='product-description'>
                 Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).</p>
             </div>
-            <a href='#' className="btn">Comprar</a>
+            <a href='#' className="Qbtn">Comprar</a>
           </div>
           <div className="producto-card">
-            <div className="product-img">
-              <img src={assets.Trago} alt="Malke Reposado" />
-            </div>
+            <img src={assets.Champage} alt="Malke Reposado" />
             <div className="container-descrip">
               <h2 className='product-title'>Malke Reposado</h2>
               <p className='product-description'>
                 Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).</p>
             </div>
-            <a href='#' className="btn">Comprar</a>
+            <a href='#' className="Qbtn">Comprar</a>
           </div>
-
         </div>
       </section>
+      
 
       {/* Proceso de fabricación */}
       <section className="fabricacion">
