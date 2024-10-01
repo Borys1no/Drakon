@@ -12,6 +12,9 @@ import Instagram from './instagram.png'
 import Linkedin from './linkedin.png'
 import Champage from './champage.png'
 import X from './x.png'
+import InstagramRosa from './instagram.svg'
+import FacebookRosa from './facebook.svg'
+import LinkedinRosa from './linkedin.svg'
 
 
 
@@ -30,6 +33,9 @@ export const assets ={
     Linkedin,
     X,
     Champage,
+    InstagramRosa,
+    FacebookRosa,
+    LinkedinRosa
 
 
 }

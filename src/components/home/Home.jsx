@@ -36,6 +36,7 @@ const Home = () => {
       <section >
         <div className="productos-header">
           <h3>Productos</h3>
+          <a href="#" className='btn'>Tienda</a>
         </div>
         <div className="productos-carousel">
           <div className="producto-card">
@@ -102,7 +103,7 @@ const Home = () => {
             <div className="coctel-back">
               <p>4 tiempos de Agua tónica de rosas, 
                 2 oz de Drakon doble destilado, Hielo</p>
-                <a href="#" className="btn-receta">Ver la receta completa</a>
+                <a href="#" className="btn-recetas">Ver la receta completa</a>
             </div>
           </div>
           <div className="coctel-card">

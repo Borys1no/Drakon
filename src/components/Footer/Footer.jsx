@@ -23,10 +23,10 @@ const Footer = () => {
             <div className="footer-col">
               <h3>Nuestras redes sociales</h3>
               <div className="social-links">
-                <a href="#"><img src={assets.Facebook} alt="Facebook"  /></a>
-                <a href="#"><img src={assets.Instagram} alt="Instagram"  /></a>
+                <a href="#"><img src={assets.FacebookRosa} alt="Facebook"  /></a>
+                <a href="#"><img src={assets.InstagramRosa} alt="Instagram"  /></a>
                 <a href="#"><img src={assets.X} alt="X" /></a>
-                <a href="#"><img src={assets.Linkedin} alt="Linkedin"  /></a>
+                <a href="#"><img src={assets.LinkedinRosa} alt="Linkedin"  /></a>
               </div>
             </div>
             <div className="footer-bottom">

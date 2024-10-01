@@ -48,6 +48,7 @@ body {
   text-align: right;
   font-size: 2rem;
   color: white;
+  margin-right: 10px;
 
 }
 
@@ -68,7 +69,6 @@ body {
   cursor: pointer;
   margin-top: 10px;
   font-size: 1.2rem;
-  float: right;
   display: inline-block;
 
 
@@ -100,6 +100,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: 1.3rem;
+  margin-right: 10px;
 }
 
 .productos-header .btn:hover {
@@ -126,6 +127,7 @@ body {
   text-align: center;
   flex: 1;
   border: 1px solid #CD528F;
+  margin-bottom: 20px;
 }
 
 .producto-card h2 {
@@ -279,6 +281,22 @@ body {
 }
 
 .cocteles .btn-coctel:hover {
+  background-color: #2C2A29;
+  color: #CD528F;
+  border: 1px solid #CD528F;
+  font-size: 1.5rem;
+}
+.coctel-back{
+  font-size: 1.5rem;
+}
+.coctel-back .btn-recetas{
+  background-color: #CD528F;
+  margin-top: 150px;
+  position: fixed;
+  padding: 15px 80px;
+  font-size: 1.3rem;
+}
+.coctel-back .btn-recetas:hover{
   background-color: #2C2A29;
   color: #CD528F;
   border: 1px solid #CD528F;
