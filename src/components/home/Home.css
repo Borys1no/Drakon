@@ -308,3 +308,48 @@ body {
   border: 1px solid #CD528F;
   font-size: 1.5rem;
 }
+@media (min-width: 780px){
+  .introduction{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .introduction .intro-text{
+    text-align: right;
+  }
+  .introduction .intro-img{
+    margin: 0;
+  }
+
+
+  /*Productos*/
+
+  .productos-header{
+    flex-direction: row;
+  }
+
+  /*Proceso de fabricacion*/
+
+  .fabricacion-content{
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+}
+
+@media(min-width:1024px){
+  .banner h2{
+    font-size: 3rem;
+  }
+  .banner p{
+    font-size: 1.5rem;
+  }
+  .introduction h3{
+    font-size: 2.5rem;
+
+  }
+  .introduction p{
+    font-size: 1.5rem;
+  }
+
+}
