@@ -1,5 +1,6 @@
 body {
   background-color: #2C2A29;
+  padding-top: 80px;
 
 }
 
@@ -8,9 +9,10 @@ body {
   background-image: url('/src/assets/banner.jpg');
   background-size: cover;
   background-position: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
   color: white;
+  margin-top: 80px;
 }
 
 .banner h2 {
@@ -30,6 +32,11 @@ body {
   align-items: center;
   margin-top: 50px;
   margin-right: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.introduction .intro-text {
+  text-align: right;
 }
 
 .introduction .intro-img {
@@ -74,7 +81,7 @@ body {
 
 }
 
-.introduction .btn:hover{
+.introduction .btn:hover {
   background-color: #2C2A29;
   color: #CD528F;
   border: 1px solid #CD528F;
@@ -160,21 +167,23 @@ body {
 
 
 /* Proceso de fabricación */
-.fabricacion h3{
+.fabricacion h3 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #fff;
 }
+
 .fabricacion-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.img-fabricacion img{
+
+.img-fabricacion img {
   max-width: 80%;
   height: auto;
-  
+
 }
 
 .fabricacion p {
@@ -185,7 +194,7 @@ body {
 
 }
 
-.text-content .btn{
+.text-content .btn {
   margin-top: 10px;
   background-color: #CD528F;
   color: white;
@@ -269,7 +278,8 @@ body {
 .coctel-card:hover .coctel-back {
   transform: rotateY(360deg);
 }
-.coctel-card h4{
+
+.coctel-card h4 {
   font-size: 1.5rem;
   color: #fff;
   margin-top: 15px;
@@ -292,64 +302,100 @@ body {
   border: 1px solid #CD528F;
   font-size: 1.5rem;
 }
-.coctel-back{
+
+.coctel-back {
   font-size: 1.5rem;
 }
-.coctel-back .btn-recetas{
+
+.coctel-back .btn-recetas {
   background-color: #CD528F;
   margin-top: 150px;
   position: fixed;
   padding: 15px 80px;
   font-size: 1.3rem;
 }
-.coctel-back .btn-recetas:hover{
+
+.coctel-back .btn-recetas:hover {
   background-color: #2C2A29;
   color: #CD528F;
   border: 1px solid #CD528F;
   font-size: 1.5rem;
 }
-@media (min-width: 780px){
-  .introduction{
-    flex-direction: row;
-    justify-content: space-between;
+
+
+
+
+@media (max-width: 780px) {
+  .banner {
+    padding: 50px 10px;
+    background-position: center;
+    background-size: cover;
   }
-  .introduction .intro-text{
-    text-align: right;
+
+  .banner h2 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .introduction {
+    flex-direction: column;
+    text-align: center;
   }
   .introduction .intro-img{
-    margin: 0;
+    position: relative;
+    z-index: 5;
   }
 
-
-  /*Productos*/
-
-  .productos-header{
-    flex-direction: row;
+  .introduction h3,
+  .introduction p {
+    text-align: center;
+    font-size: 1.2rem;
   }
 
-  /*Proceso de fabricacion*/
-
-  .fabricacion-content{
-    flex-direction: row;
-    justify-content: space-between;
-
+  .introduction .btn {
+    padding: 10px 40px;
   }
 
-}
-
-@media(min-width:1024px){
-  .banner h2{
-    font-size: 3rem;
-  }
-  .banner p{
-    font-size: 1.5rem;
-  }
-  .introduction h3{
-    font-size: 2.5rem;
-
-  }
-  .introduction p{
-    font-size: 1.5rem;
+  /* Productos */
+  .productos-carousel {
+    flex-direction: column;
+    gap: 10px;
   }
 
+  .producto-card .btn {
+    padding: 10px 40px;
+  }
+
+  /* Proceso de fabricación */
+  .fabricacion-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fabricacion p {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .text-content .btn {
+    padding: 10px 40px;
+  }
+
+  /* Cocteles */
+  .cocteles-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .coctel-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .coctel-card .btn-recetas {
+    padding: 10px 40px;
+  }
 }
