@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/authContext'; // Importamos el contexto de autenticación
+import { useAuth } from '../contexts/authContext'; 
+import { CartContext } from '../contexts/CartContext'; // Importar el contexto del carrito
 import { doSignOut } from '../firebase/auth'; // Importamos la función para cerrar sesión
 import { assets } from '../assets/assets';
 import '../index.css';
 import './Navbar.css';
-import Home from './home/Home';
-import Products from './Productos/Products';
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
-    const { userLoggedIn, currentUser } = useAuth(); // Accedemos al estado de autenticación
-    const navigate = useNavigate(); // Usamos navigate para redirigir
+    const { userLoggedIn, currentUser } = useAuth(); 
+    const { cartItems } = useContext(CartContext); // Acceder a los elementos del carrito
+    const navigate = useNavigate(); 
 
+    // Manejar el redimensionamiento de la pantalla
     const handleResize = () => {
         window.innerWidth > 768 ? setIsMobile(false) && setIsNavOpen(false) : setIsMobile(true);
     };
@@ -27,10 +28,11 @@ const Navbar = () => {
         };
     }, []);
 
+    // Función para hacer logout
     const handleLogout = async () => {
         try {
             await doSignOut(); // Llamamos a la función para cerrar sesión
-            navigate(Home); // Redirigimos al usuario a la página de login
+            navigate('/login'); // Redirigir al login después del logout
         } catch (error) {
             console.error('Error al cerrar sesión: ', error);
         }
@@ -55,14 +57,16 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-right">
-                    <a href="#" className="cart-icon">
+                    <a onClick={() => navigate('/checkout')} className="cart-icon" style={{ position: 'relative' }}>
                         <img src={assets.Cart} alt="Carrito" />
+                        {cartItems.length > 0 && (
+                            <span className="cart-count">{cartItems.length}</span>
+                        )}
                     </a>
 
-                    {/* Si el usuario está logueado, mostramos su email y el botón de logout */}
                     {userLoggedIn ? (
                         <div className="user-logged-in">
-                            <span>{currentUser?.email}</span> {/* Muestra el correo del usuario logueado */}
+                            <span>{currentUser?.email}</span> 
                             <button onClick={handleLogout} className="logout-button">Logout</button>
                         </div>
                     ) : (

@@ -20,7 +20,6 @@
     max-width: 100px;
 }
 
-
 .navbar-center{
     display: flex;
     justify-content: center;
@@ -40,27 +39,50 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-  }
-  
-  .navbar-right .cart-icon img,
-  .navbar-right .user-icon img {
+}
+
+.navbar-right .cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-right .cart-icon img,
+.navbar-right .user-icon img {
     width: 30px;
     height: 30px;
-  }
-  
-  .nav-links a{
+}
+
+/* Estilos para el contador de productos en el carrito */
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para los enlaces */
+.nav-links a{
     text-decoration: none;
     color: black;
     font-weight: bold;
     padding: 0.5rem;
     transition: color 0.3s ease;
     cursor: pointer;
-  }
+}
 
-  .nav-links a:hover {
+.nav-links a:hover {
     color: #f44336; 
 }
 
+/* Estilos para el menú en dispositivos móviles */
 .burger img{
     display: block;
     flex-direction: column;
@@ -70,8 +92,7 @@
     height: 30px;
 }
 
-
-@media  screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .burger{
         display: block;
     }
@@ -96,15 +117,16 @@
         flex-direction: column;
         width: 100%;
     }
+
     .nav-links li a{
         padding: 15px;
         text-align: right;
         width: 100%;
         display: block;
     }
+
     .navbar-right{
         display: flexbox;
-        
     }
 
     .logout-button {
@@ -116,11 +138,9 @@
         cursor: pointer;
         font-weight: bold;
         margin-left: 10px;
-      }
-      
-      .logout-button:hover {
+    }
+
+    .logout-button:hover {
         background-color: #e53e3e;
-      }
-      
-    
+    }
 }
