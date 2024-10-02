@@ -25,7 +25,7 @@ const Footer = () => {
               <div className="social-links">
                 <a href="#"><img src={assets.FacebookRosa} alt="Facebook"  /></a>
                 <a href="#"><img src={assets.InstagramRosa} alt="Instagram"  /></a>
-                <a href="#"><img src={assets.X} alt="X" /></a>
+                <a href="#"><img src={assets.Xrosa} alt="X" /></a>
                 <a href="#"><img src={assets.LinkedinRosa} alt="Linkedin"  /></a>
               </div>
             </div>

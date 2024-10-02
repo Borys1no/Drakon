@@ -116,6 +116,7 @@ body {
   color: #fff;
 }
 
+
 .productos-carousel {
   display: flex;
   gap: 20px;
@@ -267,6 +268,11 @@ body {
 
 .coctel-card:hover .coctel-back {
   transform: rotateY(360deg);
+}
+.coctel-card h4{
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 15px;
 }
 
 .cocteles .btn-coctel {

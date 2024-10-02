@@ -3,11 +3,13 @@ import './Home.css'
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar'
 import { assets } from '../../assets/assets'
+import ImgBg from '../img-animation/ImgBg'
 
 const Home = () => {
   return (
 
     <div className="home-container">
+      <ImgBg />
       {/* Banner */}
       <div className="banner">
         <h2>Drakon</h2>
@@ -131,7 +133,9 @@ const Home = () => {
         <a href="#" className="btn-coctel">Ver más</a>
       </section>
       <Footer/>.
+      
     </div>
+    
   )
 }
 

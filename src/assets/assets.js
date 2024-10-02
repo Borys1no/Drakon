@@ -15,6 +15,8 @@ import X from './x.png'
 import InstagramRosa from './instagram.svg'
 import FacebookRosa from './facebook.svg'
 import LinkedinRosa from './linkedin.svg'
+import Xrosa from './X.svg'
+import PitahayaBack from './pita-r.png'
 
 
 
@@ -35,7 +37,9 @@ export const assets ={
     Champage,
     InstagramRosa,
     FacebookRosa,
-    LinkedinRosa
+    LinkedinRosa,
+    Xrosa,
+    PitahayaBack
 
 
 }
