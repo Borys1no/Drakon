@@ -1,5 +1,5 @@
-import React, { createContext, useState, useEffect, useContext } from 'react';
-import { doc, setDoc, getDoc } from "firebase/firestore"; // Importar las funciones de Firestore
+import React, { createContext, useState, useEffect } from 'react';
+import { doc, setDoc, getDoc, updateDoc, arrayRemove } from "firebase/firestore"; // Importar las funciones de Firestore
 import { db } from '../firebase/firebase'; // Firestore
 import { useAuth } from './authContext'; // Importar contexto de autenticación
 
@@ -61,7 +61,8 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const removeFromCart = (productId) => {
+  // Modificación para eliminar también de Firestore
+  const removeFromCart = async (productId) => {
     setCartItems((prevItems) => {
       const updatedCart = prevItems.filter(item => item.id !== productId);
 
@@ -70,6 +71,23 @@ export const CartProvider = ({ children }) => {
 
       return updatedCart;
     });
+
+    // Si el usuario está logueado, elimina el producto de Firestore
+    if (currentUser) {
+      try {
+        const cartRef = doc(db, "carts", currentUser.uid);
+        const docSnap = await getDoc(cartRef);
+        if (docSnap.exists()) {
+          const existingItems = docSnap.data().items || [];
+          const updatedItems = existingItems.filter(item => item.id !== productId);
+
+          // Actualiza los elementos en Firestore
+          await updateDoc(cartRef, { items: updatedItems });
+        }
+      } catch (error) {
+        console.error('Error al eliminar el producto de Firebase:', error);
+      }
+    }
   };
 
   const getCartCount = () => {
