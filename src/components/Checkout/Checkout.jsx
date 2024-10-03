@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
+import './Checkout.css'; // Importa los estilos
 
 const Checkout = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
@@ -11,22 +12,22 @@ const Checkout = () => {
   }, 0);
 
   return (
-    <div className="checkout-page">
+    <div className="C-checkoutPage">
       <h1>Carrito de Compras</h1>
       {cartItems.length === 0 ? (
         <p>No tienes productos en el carrito.</p>
       ) : (
         <>
-          <ul className="checkout-items-list">
+          <ul className="C-checkoutItemsList">
             {cartItems.map((item, index) => (
-              <li key={index} className="checkout-item">
+              <li key={index} className="C-checkoutItem">
                 <span>{item.name}</span> - <span>{item.quantity} x ${item.price ? item.price.toFixed(2) : 'N/A'}</span>
-                <button className="remove-button" onClick={() => removeFromCart(item.id)}>Eliminar</button>
+                <button className="C-removeButton" onClick={() => removeFromCart(item.id)}>Eliminar</button>
               </li>
             ))}
           </ul>
-          <h2>Total: ${total.toFixed(2)}</h2>
-          <button className="pay-button">Pagar</button>
+          <h2 className="C-total">Total: ${total.toFixed(2)}</h2>
+          <button className="C-payButton">Pagar</button>
         </>
       )}
     </div>

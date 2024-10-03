@@ -6,17 +6,20 @@
     background-color: #2C2A29;
     color: #CD528F;
     font-family: Arial, sans-serif;
+    margin-top: 80px; /* Ajuste para evitar que quede debajo del navBar */
 }
 
 /* Sección del contenido: imagen a la izquierda y detalles a la derecha */
 .Qproduct-content {
     display: flex;
     justify-content: space-between;
+    gap: 40px; /* Espaciado entre la imagen y los detalles */
+    flex-wrap: wrap; /* Para que sea responsive */
 }
 
 /* Sección de la imagen principal y carrusel a la izquierda */
 .Qproduct-image-section {
-    flex: 0.5;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +43,7 @@
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(205, 82, 143, 0.5);
     object-fit: cover;
-    transition: transform 0.3s ease; /* Para animar el zoom al hacer hover */
+    transition: transform 0.3s ease;
 }
 
 /* Carrusel de imágenes pequeñas */
@@ -70,8 +73,7 @@
 
 /* Sección de detalles a la derecha */
 .Qproduct-details {
-    flex: 0.5;
-    padding-left: 40px;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -155,7 +157,7 @@
     background-color: #b13e78;
 }
 
-/* Sección de productos aparte */
+/* Estilos para la sección de productos adicionales */
 .productos-section {
     margin-top: 60px;
     padding-top: 40px;
@@ -186,42 +188,82 @@
     text-align: center;
     color: #fff;
     position: relative;
-    transition: transform 0.9s ease; /* Transición para el zoom en la tarjeta */
-    cursor: pointer; /* Hacer que el cursor sea de tipo "pointer" para todo el card */
+    transition: transform 0.9s ease;
+    cursor: pointer;
 }
 
 .producto-card:hover {
-    transform: scale(1.02); /* Zoom en la tarjeta al hacer hover */
+    transform: scale(1.02);
 }
 
 .producto-card:hover img {
-    transform: scale(1.1); /* Zoom en la imagen cuando haces hover en la tarjeta */
+    transform: scale(1.1);
 }
 
 .producto-card img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
-    transition: transform 0.9s ease; /* Transición suave para el zoom en la imagen */
+    transition: transform 0.9s ease;
 }
 
 .container-descrip {
     margin-bottom: 10px;
 }
 
-/* Botón "Comprar" dentro de la tarjeta */
+/* Botón "Comprar" */
 .Qbtn {
     display: block;
     background-color: #CD528F;
     color: white;
-    padding: 15px 30px; /* Hacer el botón más alargado */
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s ease;
-    width: 100%; /* Para hacer que el botón ocupe todo el ancho del card */
+    width: 100%;
 }
 
-.btn:hover {
+.Qbtn:hover {
     background-color: #b13e78;
+}
+
+/* ----------- Estilos Responsive ----------- */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .Qproduct-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Qproduct-image-section,
+    .Qproduct-details {
+        flex: 1;
+        padding: 0;
+    }
+
+    .Qproduct-title {
+        font-size: 2.5rem;
+    }
+
+    .Qproduct-description,
+    .Qproduct-features {
+        font-size: 1rem;
+    }
+
+    .Qadd-to-cart-button {
+        width: 100%;
+    }
+}
+
+/* Para tablets */
+@media (max-width: 1024px) {
+    .Qproduct-title {
+        font-size: 2.5rem;
+    }
+
+    .Qproduct-price {
+        font-size: 1.5rem;
+    }
 }
