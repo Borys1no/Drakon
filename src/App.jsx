@@ -7,7 +7,8 @@ import Home from './components/home/Home';
 import Register from "./components/auth/register";
 import Products from './components/Productos/Products';
 import MalkeVirgen from './components/BuyProducts/MalkeVirgen';
-import Checkout from './components/Checkout/Checkout'; // Importar el componente Checkout
+import Checkout from './components/Checkout/Checkout';
+import NuestraHistoria from './components/NuestraHistoria/NuestraHistoria';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/MalkeVirgen" element={<MalkeVirgen />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
           </Routes>
         </Router>
       </CartProvider>

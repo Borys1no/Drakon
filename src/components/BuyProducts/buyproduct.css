@@ -267,3 +267,8 @@
         font-size: 1.5rem;
     }
 }
+
+/* Añadir margen entre precio y la sección de productos */
+.productos-section {
+    margin-top: 40px; /* Ajusta el valor según el tamaño del espacio que desees */
+}
