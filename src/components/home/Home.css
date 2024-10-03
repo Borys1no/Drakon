@@ -35,6 +35,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .introduction .intro-text {
   text-align: right;
 }
@@ -99,6 +100,10 @@ body {
   align-items: center;
 }
 
+.product-description {
+  display: block;
+}
+
 .productos-header .btn {
   margin-bottom: 10px;
   background-color: #CD528F;
@@ -127,15 +132,18 @@ body {
 .productos-carousel {
   display: flex;
   gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .producto-card {
   background-color: #2C2A29;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  flex: 1;
+  flex: 1 1 calc(33.333% - 20px);
   border: 1px solid #CD528F;
   margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .producto-card h2 {
@@ -143,7 +151,8 @@ body {
 }
 
 .product-img img {
-  height: 30rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .producto-card .btn {
@@ -325,7 +334,7 @@ body {
 
 
 
-@media (max-width: 780px) {
+@media (min-width: 300px) and (max-width:1024px) {
   .banner {
     padding: 50px 10px;
     background-position: center;
@@ -344,7 +353,8 @@ body {
     flex-direction: column;
     text-align: center;
   }
-  .introduction .intro-img{
+
+  .introduction .intro-img {
     position: relative;
     z-index: 5;
   }
@@ -357,16 +367,36 @@ body {
 
   .introduction .btn {
     padding: 10px 40px;
+    margin-bottom: 20px;
   }
 
   /* Productos */
-  .productos-carousel {
-    flex-direction: column;
-    gap: 10px;
+  .productos-header .btn {
+    padding: 10px 40px;
   }
 
-  .producto-card .btn {
+  .productos-carousel {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    overflow-x: auto;
+    /* Habilitar scroll horizontal */
+    scroll-snap-type: x mandatory;
+  }
+
+  .producto-card .Qbtn {
     padding: 10px 40px;
+    
+  }
+  
+
+  .product-description {
+    display: none;
+    /* Ocultar descripciones para ahorrar espacio */
+  }
+
+  .producto-card img {
+    max-width: 90%;
   }
 
   /* Proceso de fabricación */
@@ -398,4 +428,11 @@ body {
   .coctel-card .btn-recetas {
     padding: 10px 40px;
   }
+}
+
+
+/* Teléfonos móviles pequeños */
+@media (max-width: 480px) {
+  /* Ajustes para pantallas pequeñas */
+
 }
