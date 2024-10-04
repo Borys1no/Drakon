@@ -1,6 +1,7 @@
 import React from 'react';
 import './Products.css';
 import { assets } from '../../assets/assets';
+import Footer from '../Footer/Footer';
 
 const Products = () => {
     return (
@@ -103,6 +104,7 @@ const Products = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
-import './NuestraHistoria.css'; // Asegúrate de crear este archivo con los estilos correspondientes
+import './NuestraHistoria.css';
+import Footer from '../Footer/Footer'; // Asegúrate de crear este archivo con los estilos correspondientes
 
 const NuestraHistoria = () => {
   return (
@@ -65,6 +66,7 @@ const NuestraHistoria = () => {
           Cuenta la leyenda que los duendes crearon un elixir mágico... (la historia completa).
         </p>
       </section>
+      <Footer/>
     </div>
   );
 };
