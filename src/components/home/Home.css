@@ -1,4 +1,7 @@
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background-color: #2C2A29;
   padding-top: 80px;
 
@@ -231,6 +234,7 @@ body {
 .cocteles h3 {
   font-size: 2rem;
   color: #fff;
+  margin-top: -100px;
 }
 
 .cocteles-grid {
@@ -368,6 +372,8 @@ body {
   .introduction .btn {
     padding: 10px 40px;
     margin-bottom: 20px;
+    background-color: #2C2A29;
+    border: 1px solid #CD528F;
   }
 
   /* Productos */
@@ -383,9 +389,23 @@ body {
     /* Habilitar scroll horizontal */
     scroll-snap-type: x mandatory;
   }
+  .producto-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    
+  }
+  .producto-card .product-description{
+    flex-grow: 1;
+  }
 
   .producto-card .Qbtn {
-    padding: 10px 40px;
+    padding: 5px 20px;
+    margin-top: auto;
     
   }
   
@@ -400,9 +420,52 @@ body {
   }
 
   /* Proceso de fabricación */
+  .fabricacion{
+    margin-top: 20px;
+    text-align: center;
+  }
+  .fabricacion h3{
+    border-bottom: 1px solid #CD528F;
+    margin-bottom: 20px;
+  }
   .fabricacion-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    
+    
+  }
+  .img-fabricacion{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+  .img-fabricacion img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .fabricacion .fabricacion-content{
+    position: relative;
+    max-width: 100%;
+  }
+
+  .fabricacion .text-content{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .fabricacion p {
@@ -412,27 +475,51 @@ body {
 
   .text-content .btn {
     padding: 10px 40px;
+    margin-top: 20px;
   }
 
   /* Cocteles */
+  .cocteles{
+    padding: 40px 20px;
+    text-align: center;
+  }
   .cocteles-grid {
-    flex-direction: column;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    
   }
 
   .coctel-card {
+    position: relative;
+    width: calc(33.333% - 20px);
+    height: 500px;
+    perspective: 1000px;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    
+  }
+  .coctel-front{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .coctel-front img{
     width: 100%;
-    height: auto;
+    height: 85%;
+    object-fit: cover;
   }
 
-  .coctel-card .btn-recetas {
+  .btn-recetas {
     padding: 10px 40px;
   }
+  .coctel-card {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-
-/* Teléfonos móviles pequeños */
-@media (max-width: 480px) {
-  /* Ajustes para pantallas pequeñas */
-
-}

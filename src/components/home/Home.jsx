@@ -70,13 +70,15 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
 
       {/* Proceso de fabricación */}
       <section className="fabricacion">
         <h3>Proceso de Fabricación</h3>
         <div className="fabricacion-content">
-
+          <div className="img-fabricacion">
+            <img src={assets.Introduction} alt="Fabricacion" />
+          </div>
           <div className="text-content">
             <p>
               El proceso de creación de Drakon se enfoca en seleccionar solo la mejor pitahaya de
@@ -86,9 +88,7 @@ const Home = () => {
             </p>
             <a href="#" className="btn">Leer más</a>
           </div>
-          <div className="img-fabricacion">
-            <img src={assets.Introduction} alt="Fabricacion" />
-          </div>
+
         </div>
       </section>
 
@@ -103,9 +103,9 @@ const Home = () => {
               <h4>Drakon Rose Tonic</h4>
             </div>
             <div className="coctel-back">
-              <p>4 tiempos de Agua tónica de rosas, 
+              <p>4 tiempos de Agua tónica de rosas,
                 2 oz de Drakon doble destilado, Hielo</p>
-                <a href="#" className="btn-recetas">Ver la receta completa</a>
+              <a href="#" className="btn-recetas">Ver la receta completa</a>
             </div>
           </div>
           <div className="coctel-card">
@@ -115,8 +115,8 @@ const Home = () => {
             </div>
             <div className="coctel-back">
               <p>4 tiempos de agua tónica britvic, 2 oz de Drakon doble destilado,
-                 Hielo</p>
-                 <a href="#" className="btn-recetas">Ver la receta completa</a>
+                Hielo</p>
+              <a href="#" className="btn-recetas">Ver la receta completa</a>
             </div>
           </div>
           <div className="coctel-card">
@@ -132,10 +132,10 @@ const Home = () => {
         </div>
         <a href="#" className="btn-coctel">Ver más</a>
       </section>
-      <Footer/>.
-      
+      <Footer />.
+
     </div>
-    
+
   )
 }
 

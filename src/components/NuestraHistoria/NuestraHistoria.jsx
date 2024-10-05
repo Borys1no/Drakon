@@ -1,6 +1,5 @@
 import React from 'react';
 import './NuestraHistoria.css'; // Asegúrate de crear este archivo con los estilos correspondientes
-import { assets } from '../../assets/assets'; // Reutilizar imágenes de assets
 
 const NuestraHistoria = () => {
   return (
@@ -70,6 +69,7 @@ const NuestraHistoria = () => {
           </ul>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };
