@@ -1,5 +1,7 @@
 import React from 'react';
 import './NuestraHistoria.css'; // Asegúrate de crear este archivo con los estilos correspondientes
+import Footer from '../Footer/Footer';
+import { assets } from '../../assets/assets'; 
 
 const NuestraHistoria = () => {
   return (

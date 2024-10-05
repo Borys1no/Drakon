@@ -112,7 +112,7 @@
     margin: 0 10px;
 }
 
-/* Selector de cantidad */
+/* Selector de cantidad mejorado */
 .Qquantity-container {
     display: flex;
     align-items: center;
@@ -122,15 +122,25 @@
 .Qquantity-container label {
     font-size: 1.2rem;
     margin-right: 10px;
+    color: #CD528F;
 }
 
 .Qquantity-container input {
     width: 80px;
-    padding: 5px;
+    padding: 10px;
     font-size: 1.2rem;
     text-align: center;
     border-radius: 4px;
-    border: 1px solid #CD528F;
+    border: 2px solid #CD528F;
+    outline: none;
+    background-color: #2C2A29;
+    color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Qquantity-container input:focus {
+    border-color: #b13e78;
+    box-shadow: 0 0 10px rgba(205, 82, 143, 0.5);
 }
 
 /* Precio del producto */
@@ -266,9 +276,4 @@
     .Qproduct-price {
         font-size: 1.5rem;
     }
-}
-
-/* Añadir margen entre precio y la sección de productos */
-.productos-section {
-    margin-top: 40px; /* Ajusta el valor según el tamaño del espacio que desees */
 }

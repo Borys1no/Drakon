@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import './buyproduct.css';  // Archivo CSS importado
 import { CartContext } from '../../contexts/CartContext';  // Importar el contexto del carrito
 import { assets } from '../../assets/assets';
+import Footer from '../Footer/Footer';
 
 const ProductPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -103,9 +104,8 @@ const ProductPage = () => {
           </button>
         </div>
       </div>
-{/* aqui quiero el espacio deseado */}
-{/* aqui quiero el espacio deseado */}
-<section className="productos-section">
+
+      <section className="productos-section">
         <div className="productos-header">
           <h3>Productos</h3>
           <a href="#" className='btn'>Tienda</a>
@@ -116,7 +116,8 @@ const ProductPage = () => {
             <div className="container-descrip">
               <h2 className='product-title'>Malke Virgen</h2>
               <p className='product-description'>
-                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, al menos dos destilados, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).</p>
+                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, al menos dos destilados, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
+              </p>
             </div>
             <a href='#' className="Qbtn">Comprar</a>
           </div>
@@ -125,7 +126,8 @@ const ProductPage = () => {
             <div className="container-descrip">
               <h2 className='product-title'>Malke Triple Destilado</h2>
               <p className='product-description'>
-                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).</p>
+                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
+              </p>
             </div>
             <a href='#' className="Qbtn">Comprar</a>
           </div>
@@ -134,16 +136,14 @@ const ProductPage = () => {
             <div className="container-descrip">
               <h2 className='product-title'>Malke Reposado</h2>
               <p className='product-description'>
-                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).</p>
+                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).
+              </p>
             </div>
             <a href='#' className="Qbtn">Comprar</a>
           </div>
         </div>
       </section>
-
-
-
-
+      <Footer/>
     </div>
   );
 };
