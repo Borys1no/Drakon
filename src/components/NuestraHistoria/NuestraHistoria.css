@@ -1,43 +1,85 @@
-/* Estilos generales para la página de Nuestra Historia */
+/* Asegúrate de que el título no quede debajo del navbar */
 .historia-page-container {
-    padding: 40px;
-    background-color: #2C2A29;
-    color: #CD528F;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Sección general de historia */
+  padding: 40px;
+  background-color: #2C2A29;
+  color: #CD528F;
+  font-family: Arial, sans-serif;
+  margin-top: 100px; /* Agregar margen superior para evitar que el contenido se superponga con el navbar */
+}
+
+/* Título Principal */
+.historia-title-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.historia-main-title {
+  font-size: 3.5rem;
+  color: #CD528F;
+  text-transform: uppercase;
+}
+
+/* Sección alternante de texto e imagen */
+.historia-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.historia-text-left,
+.historia-text-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.historia-text-left h2,
+.historia-text-right h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.historia-text-left p,
+.historia-text-right p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.historia-values {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+}
+
+.historia-values li {
+  margin-bottom: 15px;
+}
+
+.historia-image-left,
+.historia-image-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.historia-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
   .historia-section {
-    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .historia-section h1, .historia-section h2, .historia-section h3 {
-    color: #CD528F;
-    margin-bottom: 20px;
+
+  .historia-text-left,
+  .historia-text-right,
+  .historia-image-left,
+  .historia-image-right {
+    width: 100%;
+    text-align: center;
   }
-  
-  /* Texto general de la historia */
-  .historia-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-  }
-  
-  /* Valores como lista */
-  .historia-values {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .historia-values li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  
-  /* Valores en negrita */
-  .historia-values li strong {
-    color: #fff;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
+}
