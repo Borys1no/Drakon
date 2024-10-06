@@ -1,10 +1,10 @@
-/* Asegúrate de que el título no quede debajo del navbar */
+/* Asegúrate de que el contenido no quede debajo del navbar */
 .historia-page-container {
   padding: 40px;
-  background-color: #2C2A29;
-  color: #CD528F;
+  padding-top: 150px; /* Relleno superior para evitar que el contenido quede debajo del navbar */
+  background-color: #2C2A29; /* Restaurando fondo oscuro */
+  color: #CD528F; /* Restaurando color rosa */
   font-family: Arial, sans-serif;
-  margin-top: 100px; /* Agregar margen superior para evitar que el contenido se superponga con el navbar */
 }
 
 /* Título Principal */
@@ -69,6 +69,7 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
   .historia-section {
     flex-direction: column;
