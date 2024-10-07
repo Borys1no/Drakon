@@ -195,6 +195,7 @@ body {
 .img-fabricacion img {
   max-width: 80%;
   height: auto;
+  margin-left: 30px;
 
 }
 
@@ -234,7 +235,7 @@ body {
 .cocteles h3 {
   font-size: 2rem;
   color: #fff;
-  margin-top: -100px;
+  
 }
 
 .cocteles-grid {
@@ -520,6 +521,9 @@ body {
   .coctel-card {
     display: flex;
     flex-direction: column;
+  }
+  .cocteles h3{
+    margin-top: -100px;
   }
 }
 

@@ -48,7 +48,7 @@ const Navbar = () => {
                 <div className={`navbar-center ${isNavOpen && isMobile ? 'active' : ''}`}>
                     <ul className="nav-links">
                         <li><a href="/products">Productos</a></li>
-                        <li><a href="#">Cocteles</a></li>
+                        <li><a href="/Cocteles">Cocteles</a></li>
                         <li><a href="/NuestraHistoria">Nuestra historia</a></li>
                         <li><a href="#">Proceso</a></li>
                         <li><a href="#">Reconocimientos</a></li>
