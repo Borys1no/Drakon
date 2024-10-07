@@ -335,7 +335,21 @@ body {
   font-size: 1.5rem;
 }
 
+/* Footer */
+footer {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 40px 0;
+  margin-top: auto;
+  text-align: center;
+}
 
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}
 
 
 @media (min-width: 300px) and (max-width:1024px) {
