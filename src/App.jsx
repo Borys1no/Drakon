@@ -9,6 +9,7 @@ import Products from './components/Productos/Products';
 import MalkeVirgen from './components/BuyProducts/MalkeVirgen';
 import Checkout from './components/Checkout/Checkout';
 import NuestraHistoria from './components/NuestraHistoria/NuestraHistoria';
+import Cocteles from './components/Cocteles/Cocteles';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/MalkeVirgen" element={<MalkeVirgen />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
+            <Route path='/Cocteles' element={<Cocteles/>}/>
           </Routes>
         </Router>
       </CartProvider>
