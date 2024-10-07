@@ -14,9 +14,11 @@ const NuestraHistoria = () => {
       {/* Sección Proposito */}
       <section className="historia-section historia-alternating">
         <div className="historia-text-left">
-          <h2 className="historia-subtitle">Proposito</h2>
+          <h2 className="historia-subtitle">Innovación en Tiempos de Crisis</h2>
           <p className="historia-text">
-            La Felipa Fruit & Wine es la empresa pionera en la creación de Malke a nivel mundial. Fundada en 2019 como un anexo a la empresa agroindustrial La Felipa, la empresa ha crecido para posicionarse como un referente en la innovación de destilados en Ecuador y más allá.
+          La concepción de Drakon se remonta al año 2021, cuando Juan Sebastián Vélez Reyes, actual CEO y fundador de Drakon, estaba cursando sus pasantías como gerente de ventas en Agroindustrial La Felipa. Durante este período, una crisis conocida como la crisis de los contenedores impactó profundamente al mercado de la pitahaya. La sobreproducción de esta fruta exótica, combinada con dificultades para acceder al principal mercado exportador, Estados Unidos, resultó en pérdidas masivas para los productores de pitahaya.
+Consciente de las vulnerabilidades del sector productor y del carácter perecedero de la fruta, Vélez comenzó a idear una solución innovadora: crear un producto de calidad premium, único y duradero, que añadiera valor a la pitahaya, transformando su destino en los mercados internacionales. Fue en este momento crucial cuando nació el concepto de Drakon, marcando el inicio de un proyecto que cambiaría el panorama de la industria de bebidas espirituosas en Ecuador.
+
           </p>
         </div>
         <div className="historia-image-right">
@@ -24,9 +26,13 @@ const NuestraHistoria = () => {
         </div>
       </section>
 
-      {/* Otras secciones */}
-      {/* Similar a lo anterior, repetir la estructura para otras secciones */}
-      
+      <section className="process-section">
+        <div className="process-content">
+          <h2>Nuestro Proceso</h2>
+          <p>Entendemos el arte y el esfuerzo que conlleva la creación de una botella de nuestro galardonado producto.</p>
+        </div>
+      </section>
+
       <Footer/>
     </div>
   );

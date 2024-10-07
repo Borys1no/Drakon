@@ -1,13 +1,26 @@
-/* Asegúrate de que el contenido no quede debajo del navbar */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .historia-page-container {
-  padding: 40px;
-  padding-top: 150px; /* Relleno superior para evitar que el contenido quede debajo del navbar */
-  background-color: #2C2A29; /* Restaurando fondo oscuro */
-  color: #CD528F; /* Restaurando color rosa */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+  background-color: #2C2A29;
+  padding-bottom: 0;
   font-family: Arial, sans-serif;
 }
 
-/* Título Principal */
 .historia-title-section {
   text-align: center;
   margin-bottom: 60px;
@@ -25,6 +38,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
+  padding: 20px;
+  background-color: #2C2A29;
 }
 
 .historia-text-left,
@@ -46,27 +61,27 @@
   line-height: 1.8;
 }
 
-.historia-values {
-  list-style-type: none;
-  padding-left: 0;
-  font-size: 1.2rem;
-}
-
-.historia-values li {
-  margin-bottom: 15px;
-}
-
 .historia-image-left,
 .historia-image-right {
   flex: 1;
   padding: 20px;
+  text-align: center;
 }
 
 .historia-img {
   width: 100%;
   max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(205, 82, 143, 0.5);
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 40px 0;
+  width: 100%;
+  margin-top: auto;
+  position: relative;
 }
 
 /* Responsivo */
