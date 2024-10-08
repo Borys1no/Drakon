@@ -17,6 +17,10 @@ import FacebookRosa from './facebook.svg'
 import LinkedinRosa from './linkedin.svg'
 import Xrosa from './X.svg'
 import PitahayaBack from './pita-r.png'
+import Bann1 from './bann1.jpg'
+import Bann2 from './bann2.jpg'
+import Bann3 from './bann3.jpg'
+import CoctelD from './coctelDrakon.jpg' 
 
 
 
@@ -39,7 +43,11 @@ export const assets ={
     FacebookRosa,
     LinkedinRosa,
     Xrosa,
-    PitahayaBack
+    PitahayaBack,
+    Bann1,
+    Bann2,
+    Bann3,
+    CoctelD
 
 
 }
