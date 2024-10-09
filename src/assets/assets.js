@@ -29,13 +29,10 @@ import N3 from './N3.png'
 import N4 from './N4.png'
 import N5 from './N5.png'
 import N6 from './N6.png'
-<<<<<<< HEAD
 import ImgFtr from './wave-haikei.svg'
-
-=======
 import FlechaDerecha from './FlechaDerecha.svg'
 import FlechaIzquierda from './FlechaIzquierda.svg'
->>>>>>> fc1c7f04edd03bb071a2331e8e2205f39d8670e7
+fc1c7f04edd03bb071a2331e8e2205f39d8670e7
 
 export const assets ={
     LogoNegro,
@@ -69,12 +66,9 @@ export const assets ={
     N4,
     N5,
     N6,
-<<<<<<< HEAD
-    ImgFtr
-=======
+    ImgFtr,
     FlechaDerecha,
     FlechaIzquierda
->>>>>>> fc1c7f04edd03bb071a2331e8e2205f39d8670e7
 
 
 }
