@@ -32,7 +32,6 @@ import N6 from './N6.png'
 import ImgFtr from './wave-haikei.svg'
 import FlechaDerecha from './FlechaDerecha.svg'
 import FlechaIzquierda from './FlechaIzquierda.svg'
-fc1c7f04edd03bb071a2331e8e2205f39d8670e7
 
 export const assets ={
     LogoNegro,
