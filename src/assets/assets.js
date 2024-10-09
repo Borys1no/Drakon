@@ -29,6 +29,8 @@ import N3 from './N3.png'
 import N4 from './N4.png'
 import N5 from './N5.png'
 import N6 from './N6.png'
+import ImgFtr from './wave-haikei.svg'
+
 
 export const assets ={
     LogoNegro,
@@ -61,7 +63,8 @@ export const assets ={
     N3,
     N4,
     N5,
-    N6
+    N6,
+    ImgFtr
 
 
 }
