@@ -80,17 +80,21 @@ const NuestraHistoria = () => {
 
         {/* Carousel with arrows on either side */}
         <div className="process-step-container">
-          <button onClick={prevStep} className="carousel-btn left-arrow">←</button>
-          
-          <div className="process-step">
-            <img src={steps[currentStep].image} alt={steps[currentStep].title} className="process-img" />
-            <div className="process-step-details">
-              <h3>{steps[currentStep].title}</h3>
-              <p>{steps[currentStep].description}</p>
-            </div>
-          </div>
+        <button className="carousel-btn left-arrow" onClick={prevStep}>
+          <img src={assets.FlechaIzquierda} alt="Flecha Izquierda" className="arrow-icon" />
+        </button>
 
-          <button onClick={nextStep} className="carousel-btn right-arrow">→</button>
+        <div className="process-step">
+          <img src={steps[currentStep].image} alt={steps[currentStep].title} className="process-img" />
+          <div className="process-step-details">
+            <h3>{steps[currentStep].title}</h3>
+            <p>{steps[currentStep].description}</p>
+          </div>
+        </div>
+
+        <button className="carousel-btn right-arrow" onClick={nextStep}>
+          <img src={assets.FlechaDerecha} alt="Flecha Derecha" className="arrow-icon" />
+        </button>
         </div>
       </section>
 
