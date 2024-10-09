@@ -14,7 +14,7 @@ const Products = () => {
             {/* Producto 1: Malke Virgen (Imagen a la derecha) */}
             <div className="product-section">
                 <div className="product-image">
-                    <img src={assets.LogoNegro} alt="Malke Virgen" />
+                    <img src={assets.DrakonCarac} alt="Malke Virgen" />
                 </div>
                 <div className="product-text">
                     <h2 className="product-title">Malke Virgen</h2>
@@ -40,7 +40,7 @@ const Products = () => {
             {/* Producto 2: Malke Triple Destilado (Imagen a la izquierda) */}
             <div className="product-section reverse">
                 <div className="product-image">
-                    <img src={assets.LogoNegro} alt="Malke Triple Destilado" />
+                    <img src={assets.DrakonCarac} alt="Malke Triple Destilado" />
                 </div>
                 <div className="product-text">
                     <h2 className="product-title">Malke Triple Destilado</h2>
@@ -65,7 +65,7 @@ const Products = () => {
             {/* Producto 3: Malke Reposado (Imagen a la derecha) */}
             <div className="product-section">
                 <div className="product-image">
-                    <img src={assets.LogoNegro} alt="Malke Reposado" />
+                    <img src={assets.DrakonCarac} alt="Malke Reposado" />
                 </div>
                 <div className="product-text">
                     <h2 className="product-title">Malke Reposado</h2>
@@ -90,7 +90,7 @@ const Products = () => {
             {/* Producto 4: Sal de Pitahaya (Imagen a la izquierda) */}
             <div className="product-section reverse">
                 <div className="product-image">
-                    <img src={assets.LogoNegro} alt="Sal de Pitahaya" />
+                    <img src={assets.DrakonCarac} alt="Sal de Pitahaya" />
                 </div>
                 <div className="product-text">
                     <h2 className="product-title">Sal de Pitahaya</h2>

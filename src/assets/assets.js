@@ -21,7 +21,8 @@ import Bann1 from './bann1.jpg'
 import Bann2 from './bann2.jpg'
 import Bann3 from './bann3.jpg'
 import CoctelD from './coctelDrakon.jpg' 
-
+import DrakonCarac from './DrakonCarac.png'
+import NuestraHistoriaEJEM from './NuestraHistoriaEJEM.png'
 
 
 export const assets ={
@@ -47,7 +48,9 @@ export const assets ={
     Bann1,
     Bann2,
     Bann3,
-    CoctelD
+    CoctelD,
+    DrakonCarac,
+    NuestraHistoriaEJEM
 
 
 }
