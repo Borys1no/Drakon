@@ -67,21 +67,19 @@ const Cocteles = () => {
             ></div>
           ))}
         </div>
-        <div className="coctel-card"></div>
       </div>
       <div className="cocktails-grid">
         {cocktails.map((cocktail, index) => (
-          <div className="cocktail-card" key={index}>
-            <div
-              className="cocktail-image"
-              style={{ backgroundImage: `url(${cocktail.image})` }}
-            ></div>
-            <div className="cocktail-content">
+          <div className="coctel-card" key={index}>
+            <div className="coctel-fnt">
+              <img src={cocktail.image} alt={cocktail.title} />
               <h3>{cocktail.title}</h3>
             </div>
-            <div className="cocktail-hover">
-              <p>{cocktail.description}</p>
-              <button className="cocktail-button">Ver receta completa</button>
+            <div className="coctel-bck">
+              <div className="coctel-info">
+                <p>{cocktail.description}</p>
+                <button className="coctel-button">Ver receta completa</button>
+              </div>
             </div>
           </div>
         ))}
