@@ -23,7 +23,12 @@ import Bann3 from './bann3.jpg'
 import CoctelD from './coctelDrakon.jpg' 
 import DrakonCarac from './DrakonCarac.png'
 import NuestraHistoriaEJEM from './NuestraHistoriaEJEM.png'
-
+import N1 from './N1.png'
+import N2 from './N2.png'
+import N3 from './N3.png'
+import N4 from './N4.png'
+import N5 from './N5.png'
+import N6 from './N6.png'
 
 export const assets ={
     LogoNegro,
@@ -50,7 +55,13 @@ export const assets ={
     Bann3,
     CoctelD,
     DrakonCarac,
-    NuestraHistoriaEJEM
+    NuestraHistoriaEJEM,
+    N1,
+    N2,
+    N3,
+    N4,
+    N5,
+    N6
 
 
 }
