@@ -17,7 +17,7 @@
         
 
         .svg-fill-primary {
-            fill: #090D49;
+            fill: #FFFFFF;
         }
 
         .svg-fill-secondary {
@@ -29,7 +29,7 @@
         }
 
         .svg-stroke-primary {
-            stroke: #090D49;
+            stroke: #FFFFFF;
         }
 
         .svg-stroke-secondary {
@@ -43,11 +43,11 @@
 </defs>
     
 
-<clipPath id="clip-path-202410-0921-1759-043e9f60-e62a-4fd7-84fb-e7fbd8d80da8">
+<clipPath id="clip-path-202410-1002-1026-403f2eb1-14d7-47c7-8ec5-19cf332a9b4d">
     <rect x="0" y="0" width="100" height="100" rx="15" ry="15"></rect>
 </clipPath>
 
-<g clip-path="url(#clip-path-202410-0921-1759-043e9f60-e62a-4fd7-84fb-e7fbd8d80da8)">
+<g clip-path="url(#clip-path-202410-1002-1026-403f2eb1-14d7-47c7-8ec5-19cf332a9b4d)">
     
     
     <rect 

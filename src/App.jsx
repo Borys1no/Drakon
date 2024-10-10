@@ -10,6 +10,7 @@ import MalkeVirgen from './components/BuyProducts/MalkeVirgen';
 import Checkout from './components/Checkout/Checkout';
 import NuestraHistoria from './components/NuestraHistoria/NuestraHistoria';
 import Cocteles from './components/Cocteles/Cocteles';
+import Procesos from './components/Procesos/Procesos'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
             <Route path='/Cocteles' element={<Cocteles/>}/>
+            <Route path='/Procesos' element={<Procesos/>}/>
           </Routes>
         </Router>
       </CartProvider>

@@ -1,0 +1,23 @@
+.svg-fill-primary {
+    fill: #FFFFFF;
+}
+
+.svg-fill-secondary {
+    fill: #CD528F;
+}
+
+.svg-fill-tertiary {
+    fill: #E5E7EB;
+}
+
+.svg-stroke-primary {
+    stroke: #FFFFFF;
+}
+
+.svg-stroke-secondary {
+    stroke: #CD528F;
+}
+
+.svg-stroke-tertiary {
+    stroke: #E5E7EB;
+}
