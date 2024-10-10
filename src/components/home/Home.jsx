@@ -42,7 +42,7 @@ const Home = () => {
         </div>
         <div className="productos-carousel">
           <div className="producto-card">
-            <img src={assets.Champage} alt="Malke Virgen" />
+            <img src={assets.BotellaRosa} alt="Malke Virgen" />
             <div className="container-descrip">
               <h2 className='product-title'>Malke Virgen</h2>
               <p className='product-description'>
@@ -60,7 +60,7 @@ const Home = () => {
             <a href='#' className="Qbtn">Comprar</a>
           </div>
           <div className="producto-card">
-            <img src={assets.Champage} alt="Malke Reposado" />
+            <img src={assets.BotellaRoja} alt="Malke Reposado" />
             <div className="container-descrip">
               <h2 className='product-title'>Malke Reposado</h2>
               <p className='product-description'>
