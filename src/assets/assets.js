@@ -32,6 +32,8 @@ import N6 from './N6.png'
 import ImgFtr from './wave-haikei.svg'
 import FlechaDerecha from './FlechaDerecha.svg'
 import FlechaIzquierda from './FlechaIzquierda.svg'
+import BotellaRoja from './BotellasOficiales/BOTELLARoja.png'
+import BotellaRosa from './BotellasOficiales/BOTELLAROSA.png'
 
 export const assets ={
     LogoNegro,
@@ -67,7 +69,9 @@ export const assets ={
     N6,
     ImgFtr,
     FlechaDerecha,
-    FlechaIzquierda
+    FlechaIzquierda,
+    BotellaRoja,
+    BotellaRosa
 
 
 }
