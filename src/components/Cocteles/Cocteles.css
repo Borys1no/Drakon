@@ -58,10 +58,10 @@ body {
   padding: 40px;
 }
 
-.coctel-card {
+.coctel-card-pg {
   position: relative;
-  width: 700px;
-  height: 300px;
+  width: 65  0px;
+  height: 500px;
   perspective: 1000px; 
   margin-bottom: 20px;
   overflow: hidden;
@@ -140,11 +140,11 @@ body {
   background-color: #CD528F;
 }
 
-.coctel-card:hover .coctel-fnt {
+.coctel-card-pg:hover .coctel-fnt {
   transform: rotateY(180deg);
 }
 
-.coctel-card:hover .coctel-bck {
+.coctel-card-pg:hover .coctel-bck {
   transform: rotateY(360deg);
 }
 .img-ftr img{

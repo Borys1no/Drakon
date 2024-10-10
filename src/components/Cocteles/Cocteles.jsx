@@ -70,7 +70,7 @@ const Cocteles = () => {
       </div>
       <div className="cocktails-grid">
         {cocktails.map((cocktail, index) => (
-          <div className="coctel-card" key={index}>
+          <div className="coctel-card-pg" key={index}>
             <div className="coctel-fnt">
               <img src={cocktail.image} alt={cocktail.title} />
               <h3>{cocktail.title}</h3>
