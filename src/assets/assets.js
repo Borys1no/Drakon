@@ -34,6 +34,9 @@ import FlechaDerecha from './FlechaDerecha.svg'
 import FlechaIzquierda from './FlechaIzquierda.svg'
 import BotellaRoja from './BotellasOficiales/BOTELLARoja.png'
 import BotellaRosa from './BotellasOficiales/BOTELLAROSA.png'
+import Duende from './Duende.jpg'
+import Lechuza from './Lechuza.jpg'
+
 
 export const assets ={
     LogoNegro,
@@ -71,7 +74,9 @@ export const assets ={
     FlechaDerecha,
     FlechaIzquierda,
     BotellaRoja,
-    BotellaRosa
+    BotellaRosa,
+    Duende,
+    Lechuza
 
 
 }

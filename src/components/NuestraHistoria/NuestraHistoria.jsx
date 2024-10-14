@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NuestraHistoria.css'; 
 import Footer from '../Footer/Footer';
 import { assets } from '../../assets/assets'; 
 
 const NuestraHistoria = () => {
+  const [showLegend1, setShowLegend1] = useState(false);
+  const [showLegend2, setShowLegend2] = useState(false);
+
+
   return (
     <div className="historia-page-container">
       <section className="historia-title-section">
@@ -139,6 +143,60 @@ const NuestraHistoria = () => {
           </p>
         </article>
       </section>
+
+            {/* Leyendas Cortas Section */}
+            <section className="leyendas-section">
+        <h2 className="leyendas-title">Leyendas Cortas</h2>
+
+        {/* Legend 1 */}
+        <div className="leyenda">
+          <h3 className="leyenda-title">La lechuza que no podía volar <button onClick={() => setShowLegend1(!showLegend1)} className="leer-btn">
+            {showLegend1 ? 'Ocultar' : 'Leer'}
+          </button></h3>
+          
+          {showLegend1 && (
+            <div className="leyenda-content">
+              <p>
+              Cuenta la leyenda que en el corazón de Manabí vivía una lechuza que, a diferencia de las demás, no podía volar. Esto fue razón suficiente para que su grupo la rechazara y la condenara a vagar sola por el bosque, destinada a perecer en el abandono.
+              Desesperada y sin rumbo, la lechuza decidió buscar el consejo de la lechuza sabia del bosque, conocida por poseer respuestas a los misterios más profundos de la naturaleza. La lechuza sabia, al verla tan abatida, le reveló un secreto que podría salvar su vida:"Debes encontrar el elixir creado por los duendes, que yace en una fuente bajo un ceibo sagrado, en el valle donde guardan una fruta milagrosa."
+              A pesar de su debilidad, la lechuza emprendió un largo y arduo viaje. Durante siete días, atravesó bosques densos y colinas escarpadas, hasta que, exhausta y casi sin fuerzas, finalmente encontró el majestuoso ceibo que los duendes habitaban. Con su último aliento, se lanzó hacia la fuente que yacía a sus pies, dispuesta a beber el elixir de la vida.
+              En el momento en que su pico tocó el agua mágica, un cambio extraordinario ocurrió. La lechuza, que antes no podía volar, se elevó en el cielo con un vuelo majestuoso, transformándose en un poderoso dragón. Ya no era la frágil criatura que una vez había sido, sino el guardián del valle y protector de todos los seres vivientes que habitaban en la región. Desde ese día, el dragón vela por la naturaleza, cuidando el equilibrio y la armonía en el corazón de Manabí.
+              Y así, la lechuza que no podía volar encontró su verdadero propósito, recordándonos que nuestras mayores debilidades pueden convertirse en nuestras mayores fortalezas, si buscamos con el corazón abierto.
+              </p>
+              <div className="leyenda-image">
+                <img src={assets.Lechuza} alt="Leyenda 1" />
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Legend 2 */}
+        <div className="leyenda">
+          <h3 className="leyenda-title">El pago a los duendes  <button onClick={() => setShowLegend2(!showLegend2)} className="leer-btn">
+            {showLegend2 ? 'Ocultar' : 'Leer'}
+          </button></h3>
+         
+          {showLegend2 && (
+            <div className="leyenda-content">
+              <p>
+              En el corazón de Manabí, cuenta la leyenda que los duendes, cansados de ser vistos como seres malignos, decidieron crear algo que cambiaría su imagen para siempre: un elixir para regalar al mundo. Para lograrlo, escogieron una fruta especial, aquella que había nacido de la flor llamada la Reina de la Noche. Día y noche trabajaron sin descanso, hasta que finalmente dieron con un brebaje capaz de unir la realidad con la magia.
+              Con gran entusiasmo, decidieron ofrecer su creación a las lechuzas, criaturas sabias y respetadas. Sin embargo, las lechuzas rechazaron el elixir, pues consideraron que le faltaba algo esencial. Sin rendirse, los duendes lo ofrecieron a las plantas, pero estas, al obtener su fuerza vital de los ríos, tampoco lo aceptaron.
+              Frustrados y molestos, los duendes decidieron esconder su elixir para siempre, decepcionados de que nadie pareciera apreciar su arduo trabajo. Sin embargo, Drakorito, el duende más joven y curioso, creía firmemente que el brebaje tenía un propósito mayor. Decidió, a pesar del riesgo, compartirlo con los humanos, aunque ellos fueran quienes habían extendido la mala reputación de su raza.
+              Un día, mientras vagaba por los valles de Manabí, Drakorito encontró una hacienda en las afueras de Rocafuerte. Allí, observó que los dueños cultivaban con esmero la fruta nacida de la Reina de la Noche, y sentían un profundo respeto por la tierra. Con cautela, se acercó y les ofreció el elixir. Para su sorpresa, en lugar de temerle, los humanos lo recibieron con alegría y lo invitaron a celebrar. Pero juntos coincidieron en que al elixir aún le faltaba el toque humano.
+              Durante tres meses, guardaron el brebaje en barricas de roble, trabajadas con las manos dedicadas de los hombres. Al sacarlo, descubrieron que el tiempo y el esfuerzo humano habían completado la magia de los duendes, creando un elixir perfecto. Decidieron llamarlo "Drakon Reposado", en honor a Drakorito, el duende que les había confiado el secreto.
+              Drakorito quedó tan encantado con el resultado que, a cambio de una pequeña compensación para él y sus amigos, aceptó convertirse en el guardián de los barriles. Desde entonces, cada vez que se llena un barril de Drakon, al sacarlo siempre falta un pequeño porcentaje: el pago a los duendes que vigilan el precioso elixir.
+              
+              </p>
+              <div className="leyenda-image">
+                <img src={assets.Duende} alt="Leyenda 2" />
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      
+
 
       <Footer />
     </div>
