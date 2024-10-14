@@ -84,6 +84,7 @@ const Cocteles = () => {
           </div>
         ))}
       </div>
+      
       <div className="img-ftr">
         <img src={assets.ImgFtr} alt="Imagen footer" />
       </div>
