@@ -10,7 +10,12 @@ import MalkeVirgen from './components/BuyProducts/MalkeVirgen';
 import Checkout from './components/Checkout/Checkout';
 import NuestraHistoria from './components/NuestraHistoria/NuestraHistoria';
 import Cocteles from './components/Cocteles/Cocteles';
-import Procesos from './components/Procesos/Procesos'
+import Procesos from './components/Procesos/Procesos';
+import AdminHome from './components/dashboard/AdminHome';
+import Orders from './components/dashboard/Orders';
+import ProductsManagement from './components/dashboard/ProductsManagement';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+
 
 const App = () => {
   return (
@@ -19,6 +24,7 @@ const App = () => {
         <Router>
           <Navbar />
           <Routes>
+            {/*Rutas publicas*/}
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<LoginMenu />} />
@@ -29,6 +35,31 @@ const App = () => {
             <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
             <Route path='/Cocteles' element={<Cocteles/>}/>
             <Route path='/Procesos' element={<Procesos/>}/>
+
+            {/*Rutas protegidas*/}
+            <Route path='/dashboard' element={
+              <ProtectedRoute role="encargado">
+                <AdminHome />
+
+              </ProtectedRoute>
+            }/>
+            <Route path='/dashboard/Orders' element={
+              <ProtectedRoute role="encargado">
+                <Orders />
+
+              </ProtectedRoute>
+            }
+            
+            />
+
+            <Route path='/dashboard/ProductsManagement' element={
+              <ProtectedRoute role="encargado">
+                <ProductsManagement/>
+
+              </ProtectedRoute>
+            }
+            
+            />
           </Routes>
         </Router>
       </CartProvider>
