@@ -1,16 +1,13 @@
-/* eslint-disable no-undef */
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+import admin from 'firebase-admin';  // Importación por defecto de ESM
+import { onDocumentCreated } from 'firebase-functions/v2/firestore';  // Firebase Functions v2
+
 admin.initializeApp();
 
-exports.onOrderCreated = functions.firestore
-    .document('orders/{orderId}')
-    .onCreate((snap, context) => {
-        const newOrder = snap.data();
-        const orderId = context.params.orderId;
+export const onOrderCreated = onDocumentCreated('orders/{orderId}', (event) => {
+  const newOrder = event.data.data();
+  const orderId = event.params.orderId;
 
-        console.log(`Nuevo pedido creado: ${orderId}, Trago: ${newOrder.drink}, Cliente: ${newOrder.customerName}`);
+  console.log(`Nuevo pedido creado: ${orderId}, Trago: ${newOrder.drink}, Cliente: ${newOrder.customerName}`);
 
-        return null;
-    });
-/* eslint-enable no-undef */
+  return null;
+});
