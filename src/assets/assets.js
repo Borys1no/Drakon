@@ -36,6 +36,7 @@ import BotellaRoja from './BotellasOficiales/BOTELLARoja.png'
 import BotellaRosa from './BotellasOficiales/BOTELLAROSA.png'
 import Duende from './Duende.jpg'
 import Lechuza from './Lechuza.jpg'
+import medalla from './medalla.png'
 
 
 export const assets ={
@@ -76,7 +77,8 @@ export const assets ={
     BotellaRoja,
     BotellaRosa,
     Duende,
-    Lechuza
+    Lechuza,
+    medalla
 
 
 }
