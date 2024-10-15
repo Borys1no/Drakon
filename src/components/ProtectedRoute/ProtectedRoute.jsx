@@ -1,21 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from "react";
 import { useAuth } from "../../contexts/authContext";
 import { Navigate } from "react-router-dom";
+import { db } from "../../firebase/firebase";
+import {doc, getDoc} from "firebase/firestore";
 
 const ProtectedRoute = ({ role, children }) => {
-  const { currentUser, role: userRole } = useAuth();  // Desestructuramos el currentUser y el rol del usuario
+  const {currentUser}=useAuth();
+  const [userRole, setUserRole]= useState(null);
+  const [loading, setLoading]= useState(true);
 
-  // Verifica si el usuario está autenticado
-  if (!currentUser) {
-    return <Navigate to="/login" replace />;
+  useEffect(()=>{
+    const fetchUserRole = async()=>{
+      if(currentUser){
+        const userDoc = await getDoc(doc(db, "users", currentUser.uid));
+        if (userDoc.exists()){
+          setUserRole(userDoc.data().role);
+        }else{
+          console.error("No se encontro el documento del usuario. ");
+        }
+      }
+      setLoading(false);
+    };
+    fetchUserRole();
+  }, [currentUser]);
+  if(loading){
+    return <div>Cargando...</div>;
   }
-
-  // Verifica si el rol del usuario es el adecuado
-  if (userRole !== role) {
-    return <Navigate to="/home" replace />;
+  if(!currentUser){
+    return <Navigate to="/login" replace/>;
   }
-
-  // Si todo está bien, renderiza los componentes hijos
+  if(userRole !==role){
+    return <Navigate to="/home" replace/>;
+  }
   return children;
 };
 
