@@ -15,7 +15,7 @@ import AdminHome from './components/dashboard/AdminHome';
 import Orders from './components/dashboard/Orders';
 import ProductsManagement from './components/dashboard/ProductsManagement';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
-
+import Reconocimientos from './components/Reconocimientos/Reconocimientos';
 
 const App = () => {
   return (
@@ -35,6 +35,7 @@ const App = () => {
             <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
             <Route path='/Cocteles' element={<Cocteles/>}/>
             <Route path='/Procesos' element={<Procesos/>}/>
+            <Route path='/Reconocimientos' element={<Reconocimientos/>}/>
 
             {/*Rutas protegidas*/}
             <Route path='/dashboard' element={

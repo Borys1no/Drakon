@@ -51,7 +51,7 @@ const Navbar = () => {
                         <li><a href="/Cocteles">Cocteles</a></li>
                         <li><a href="/NuestraHistoria">Nuestra historia</a></li>
                         <li><a href="/Procesos">Proceso</a></li>
-                        <li><a href="#">Reconocimientos</a></li>
+                        <li><a href="/Reconocimientos">Reconocimientos</a></li>
                         <li><a href="#">Equipo Drakon</a></li>
                     </ul>
                 </div>
