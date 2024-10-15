@@ -1,44 +1,46 @@
-/* Container for Reconocimientos */
+/* Reconocimientos Container */
 .reconocimientos-container {
-    padding: 40px;
-    text-align: center;
-    background-color: #f5f5f5;
-  }
-  
-  /* Title for Reconocimientos */
-  .reconocimientos-title {
-    font-size: 2.5rem;
-    color: #2C2A29;
-    margin-bottom: 40px;
-  }
-  
-  /* Grid layout for the medallas */
-  .reconocimientos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
-  }
-  
-  /* Styling for each medalla item */
-  .medalla-item {
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .medalla-item:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Medalla images */
-  .medalla-img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.reconocimientos-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Medals Grid Layout */
+.reconocimientos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.medalla-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.medalla-item:hover {
+  transform: scale(1.1);
+}
+
+.medalla-img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.medalla-item:hover .medalla-img {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* Modal Styles */
 .modal-overlay {
   position: fixed;
