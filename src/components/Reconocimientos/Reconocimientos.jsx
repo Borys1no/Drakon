@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Reconocimientos.css'; 
 import { assets } from '../../assets/assets'; 
+import Footer from '../Footer/Footer';
 
 const Reconocimientos = () => {
   const [selectedMedalla, setSelectedMedalla] = useState(null); // Track which medalla is clicked
@@ -69,7 +70,9 @@ const Reconocimientos = () => {
           </div>
         </div>
       )}
+      <Footer />
     </div>
+    
   );
 };
 
