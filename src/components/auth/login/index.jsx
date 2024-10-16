@@ -1,30 +1,75 @@
-import React, { useState } from 'react';
-import { Navigate, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Navigate, Link, useNavigate } from 'react-router-dom';
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../firebase/auth';
 import { useAuth } from '../../../contexts/authContext';
+import { db } from '../../../firebase/firebase';
+import {doc,getDoc} from 'firebase/firestore';
 import './login.css'; // Importa los estilos
 
 const Login = () => {
     const auth = useAuth();
     const userLoggedIn = auth?.userLoggedIn;
-
-    if (!auth) {
-        return <div>Error: Unable to retrieve authentication context</div>;
-    }
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isSigningIn, setIsSigningIn] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const [loading, setLoading]= useState(true);
+    const [role, setRole]=useState(null);
+
+    useEffect(()=>{
+        if(auth?.currentUser){
+            const fetchUserRole = async()=>{
+                try{
+                    const userDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
+                    if(userDoc.exists()){
+                        setRole(userDoc.data().role);
+                    }
+                    setLoading(false);
+                }catch (error){
+                    console.error("Error al obtener el rol del usuario ", error);
+                    setErrorMessage("Error al obtener el rol del usuario");
+                    setLoading(false);
+                }
+            };
+            fetchUserRole();
+        }else{
+            setLoading(false);
+        }
+    }, [auth]);
 
     const onSubmit = async (e) => {
         e.preventDefault();
+        setErrorMessage('');
+
         if (!isSigningIn) {
             setIsSigningIn(true);
             try {
                 await doSignInWithEmailAndPassword(email, password);
+                console.log("Usuario autenticado con UID:", auth.currentUser.uid);
+
+                const userDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
+                if(userDoc.exists()){
+                    const role = userDoc.data().role;
+                    console.log("Rol de usuario: ", role);
+
+                    if(role== 'admin'){
+                        console.log("Redirigiendo al dashboard de admin...")
+                        navigate('/dashboard');
+                    }else{
+                        console.log("Redirigiendo a home...")
+                        navigate('/home');
+                    } 
+                }else{
+                    setErrorMessage("No se encontro el rol del usuario.")
+                    console.log("Error no se encontro el rol");
+                }
             } catch (error) {
                 setErrorMessage(error.message);
+                console.log("Error de inicio de sesion");
+                
+            } finally{
                 setIsSigningIn(false);
             }
         }
@@ -32,6 +77,8 @@ const Login = () => {
 
     const onGoogleSignIn = async (e) => {
         e.preventDefault();
+        setErrorMessage('');
+
         if (!isSigningIn) {
             setIsSigningIn(true);
             try {
@@ -42,6 +89,10 @@ const Login = () => {
             }
         }
     };
+    if(loading){
+        return <div>Cargando...</div>
+    }
+
 
     return (
         <div>
@@ -107,6 +158,7 @@ const Login = () => {
             </main>
         </div>
     );
+    
 };
 
 export default Login;

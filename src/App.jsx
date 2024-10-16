@@ -12,8 +12,6 @@ import NuestraHistoria from './components/NuestraHistoria/NuestraHistoria';
 import Cocteles from './components/Cocteles/Cocteles';
 import Procesos from './components/Procesos/Procesos';
 import AdminHome from './components/dashboard/AdminHome';
-import Orders from './components/dashboard/Orders';
-import ProductsManagement from './components/dashboard/ProductsManagement';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Reconocimientos from './components/Reconocimientos/Reconocimientos';
 
@@ -39,28 +37,11 @@ const App = () => {
 
             {/*Rutas protegidas*/}
             <Route path='/dashboard' element={
-              <ProtectedRoute role="encargado">
+              <ProtectedRoute role="admin">
                 <AdminHome />
 
               </ProtectedRoute>
             }/>
-            <Route path='/dashboard/Orders' element={
-              <ProtectedRoute role="encargado">
-                <Orders />
-
-              </ProtectedRoute>
-            }
-            
-            />
-
-            <Route path='/dashboard/ProductsManagement' element={
-              <ProtectedRoute role="encargado">
-                <ProductsManagement/>
-
-              </ProtectedRoute>
-            }
-            
-            />
           </Routes>
         </Router>
       </CartProvider>
