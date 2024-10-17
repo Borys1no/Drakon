@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom'; // Asegúrate de que Outlet está importado
 import LoginMenu from "./components/auth/login";
 import Navbar from "./components/Navbar";
 import { AuthProvider } from "./contexts/authContext";
@@ -20,32 +20,42 @@ const App = () => {
     <AuthProvider>
       <CartProvider>
         <Router>
-          <Navbar />
           <Routes>
-            {/*Rutas publicas*/}
-            <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<LoginMenu />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/MalkeVirgen" element={<MalkeVirgen />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
-            <Route path='/Cocteles' element={<Cocteles/>}/>
-            <Route path='/Procesos' element={<Procesos/>}/>
-            <Route path='/Reconocimientos' element={<Reconocimientos/>}/>
+            {/* Rutas públicas con Navbar */}
+            <Route element={<WithNavbar />}>
+              <Route path="/" element={<Navigate to="/home" />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/login" element={<LoginMenu />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/MalkeVirgen" element={<MalkeVirgen />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
+              <Route path='/Cocteles' element={<Cocteles/>}/>
+              <Route path='/Procesos' element={<Procesos/>}/>
+              <Route path='/Reconocimientos' element={<Reconocimientos/>}/>
+            </Route>
 
-            {/*Rutas protegidas*/}
-            <Route path='/dashboard' element={
+            {/* Rutas protegidas sin Navbar */}
+            <Route path='/dashboard/AdminHome' element={
               <ProtectedRoute role="admin">
                 <AdminHome />
-
               </ProtectedRoute>
             }/>
           </Routes>
         </Router>
       </CartProvider>
     </AuthProvider>
+  );
+};
+
+// Componente para las rutas que incluyen el Navbar
+const WithNavbar = () => {
+  return (
+    <>
+      <Navbar />
+      <Outlet /> {/* Aquí se renderizarán los componentes hijos */}
+    </>
   );
 };
 

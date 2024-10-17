@@ -3,7 +3,7 @@ import { Navigate, Link, useNavigate } from 'react-router-dom';
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../firebase/auth';
 import { useAuth } from '../../../contexts/authContext';
 import { db } from '../../../firebase/firebase';
-import {doc,getDoc} from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import './login.css'; // Importa los estilos
 
 const Login = () => {
@@ -15,26 +15,26 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [isSigningIn, setIsSigningIn] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-    const [loading, setLoading]= useState(true);
-    const [role, setRole]=useState(null);
+    const [loading, setLoading] = useState(true);
+    const [role, setRole] = useState(null);
 
-    useEffect(()=>{
-        if(auth?.currentUser){
-            const fetchUserRole = async()=>{
-                try{
+    useEffect(() => {
+        if (auth?.currentUser) {
+            const fetchUserRole = async () => {
+                try {
                     const userDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
-                    if(userDoc.exists()){
+                    if (userDoc.exists()) {
                         setRole(userDoc.data().role);
                     }
                     setLoading(false);
-                }catch (error){
+                } catch (error) {
                     console.error("Error al obtener el rol del usuario ", error);
                     setErrorMessage("Error al obtener el rol del usuario");
                     setLoading(false);
                 }
             };
             fetchUserRole();
-        }else{
+        } else {
             setLoading(false);
         }
     }, [auth]);
@@ -42,38 +42,49 @@ const Login = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         setErrorMessage('');
-
+    
         if (!isSigningIn) {
             setIsSigningIn(true);
             try {
-                await doSignInWithEmailAndPassword(email, password);
-                console.log("Usuario autenticado con UID:", auth.currentUser.uid);
-
-                const userDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
-                if(userDoc.exists()){
+    
+                // Intentar iniciar sesión con email y password
+                const userCredential = await doSignInWithEmailAndPassword(email, password);
+    
+                // Verificar si el usuario está autenticado
+                const user = userCredential.user;
+    
+                if (!user) {
+                    throw new Error("Error: No se pudo autenticar al usuario");
+                }
+    
+                // Obtener el documento de Firestore con el UID del usuario
+                const userDoc = await getDoc(doc(db, 'users', user.uid));
+                
+    
+                if (userDoc.exists()) {
                     const role = userDoc.data().role;
-                    console.log("Rol de usuario: ", role);
-
-                    if(role== 'admin'){
-                        console.log("Redirigiendo al dashboard de admin...")
-                        navigate('/dashboard');
-                    }else{
-                        console.log("Redirigiendo a home...")
+                    
+                    if (role === 'admin') {
+                        navigate('/dashboard/AdminHome');
+                    } else {
                         navigate('/home');
-                    } 
-                }else{
-                    setErrorMessage("No se encontro el rol del usuario.")
-                    console.log("Error no se encontro el rol");
+                    }
+                } else {
+                    setErrorMessage("No se encontró el rol del usuario.");
                 }
             } catch (error) {
-                setErrorMessage(error.message);
-                console.log("Error de inicio de sesion");
-                
-            } finally{
+                console.error("Error en el inicio de sesión:", error);
+                setErrorMessage("Error en el inicio de sesión: " + error.message);
+            } finally {
                 setIsSigningIn(false);
             }
         }
     };
+    
+    
+    
+    
+
 
     const onGoogleSignIn = async (e) => {
         e.preventDefault();
@@ -89,7 +100,7 @@ const Login = () => {
             }
         }
     };
-    if(loading){
+    if (loading) {
         return <div>Cargando...</div>
     }
 
@@ -158,7 +169,7 @@ const Login = () => {
             </main>
         </div>
     );
-    
+
 };
 
 export default Login;
