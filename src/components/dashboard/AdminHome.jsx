@@ -1,11 +1,16 @@
 import React from 'react'
+import './Dashboard.css'
 import SideBar from './SideBar';
 
 const AdminHome = () => {
   return (
     <div>
-      <SideBar/>
+      <SideBar />
+      <div className="txt-title">
       <h1>Bienvenido administrador</h1>
+
+      </div>
+      
     </div>
   )
 }
