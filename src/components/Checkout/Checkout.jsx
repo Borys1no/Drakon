@@ -1,15 +1,22 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
-import './Checkout.css'; // Importa los estilos
+import './Checkout.css';
 
 const Checkout = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   // Calcula el total solo para los ítems que tengan un precio válido
   const total = cartItems.reduce((acc, item) => {
     const price = item.price ? item.price : 0; // Verificar si el campo `price` está definido
     return acc + price * item.quantity;
   }, 0);
+
+  // Función para manejar el clic en "Pagar"
+  const handlePay = () => {
+    navigate('/cn'); // Redirige a la página de PasarelaPago
+  };
 
   return (
     <div className="C-checkoutPage">
@@ -27,7 +34,7 @@ const Checkout = () => {
             ))}
           </ul>
           <h2 className="C-total">Total: ${total.toFixed(2)}</h2>
-          <button className="C-payButton">Pagar</button>
+          <button className="C-payButton" onClick={handlePay}>Pagar</button>
         </>
       )}
     </div>

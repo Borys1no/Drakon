@@ -14,6 +14,7 @@ import Procesos from './components/Procesos/Procesos';
 import AdminHome from './components/dashboard/AdminHome';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Reconocimientos from './components/Reconocimientos/Reconocimientos';
+import PasarelaPago from './components/PasarelaPago/PasarelaPago';
 
 const App = () => {
   return (
@@ -34,6 +35,8 @@ const App = () => {
               <Route path='/Cocteles' element={<Cocteles/>}/>
               <Route path='/Procesos' element={<Procesos/>}/>
               <Route path='/Reconocimientos' element={<Reconocimientos/>}/>
+              <Route path='/cn' element={<PasarelaPago/>}/>
+
             </Route>
 
             {/* Rutas protegidas sin Navbar */}
