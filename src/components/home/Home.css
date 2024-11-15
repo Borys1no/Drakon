@@ -1,11 +1,20 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  background-color: #2C2A29;
-  padding-top: 80px;
-
 }
+.home-container {
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 10;
+  width: 100%;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+
 
 /* Banner */
 .banner {
@@ -336,22 +345,6 @@ body {
   font-size: 1.5rem;
 }
 
-/* Footer */
-footer {
-  background-color: #1c1c1c;
-  color: white;
-  padding: 40px 0;
-  margin-top: auto;
-  text-align: center;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 10px;
-  font-size: 14px;
-}
-
 
 @media (min-width: 300px) and (max-width:1024px) {
   .banner {
@@ -541,3 +534,13 @@ footer {
   }
 }
 
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Asegura que los hijos ocupen el espacio disponible */
+  justify-content: space-between; /* Empuja el footer al final */
+  min-height: 100vh; /* Ocupa al menos toda la ventana */
+  margin: 0;
+  padding: 0;
+  background-color: #2C2A29;
+}

@@ -1,44 +1,58 @@
+/* Estilos globales */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Previene scroll horizontal */
+}
+
 /* Reconocimientos Container */
 .reconocimientos-container {
-  text-align: center;
-  padding: 40px;
-  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espacio entre el contenido y el footer */
+  min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+  margin: 0; /* Elimina márgenes externos */
+  padding: 0; /* Elimina padding interno */
+  background-color: #f9f9f9; /* Fondo claro */
 }
 
 .reconocimientos-title {
+  margin: 10px 0; /* Reduce el espacio arriba y abajo del título */
   font-size: 2.5rem;
   color: #333;
-  margin-bottom: 40px;
+  text-align: center;
 }
 
 /* Medals Grid Layout */
 .reconocimientos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
+  gap: 20px; /* Reduce el espacio entre elementos */
+  margin-left: 30px; /* Elimina márgenes adicionales */
+  margin-right: 30px;
+  padding: 0; /* Elimina padding adicional */
 }
 
 .medalla-item {
+  margin: 0; /* Asegura que no haya espacio adicional */
+  padding: 0; /* Asegura que no haya padding adicional */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .medalla-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Efecto hover */
 }
 
 .medalla-img {
   width: 100%;
   height: auto;
-  max-width: 250px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
-}
-
-.medalla-item:hover .medalla-img {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  display: block; /* Evita espacio blanco debajo de imágenes */
+  margin: 0 auto; /* Centra la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 /* Modal Styles */
@@ -98,4 +112,15 @@
 
 .close-btn:hover {
   color: #ff006e;
+}
+
+/* Footer */
+footer {
+  position: relative; /* Asegura que no se superponga */
+  margin: 0; /* Elimina márgenes externos */
+  padding: 20px 0; /* Solo espaciado interno */
+  width: 100%;
+  background-color: #1c1c1c;
+  color: white;
+  text-align: center;
 }

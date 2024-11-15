@@ -1,10 +1,27 @@
 /* General styles for Checkout */
+.C-checkoutPage-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que ocupa toda la altura de la ventana */
+  padding-top: 80px; /* Altura del navbar para evitar que lo cubra */
+}
+
 .C-checkoutPage {
+  flex: 1; /* El contenido ocupa el espacio disponible */
   padding: 2rem;
   background-color: #f9f9f9;
   font-family: 'Inter', sans-serif;
 }
 
+footer {
+  background-color: #1c1c1c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Estilos específicos del contenido */
 .C-checkoutPage h1 {
   font-size: 2rem;
   color: #333;
