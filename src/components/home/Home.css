@@ -1,20 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-}
-.home-container {
-  position: relative;
-}
+  overflow-x: hidden;
+  background-color: #2C2A29;
+  padding-top: 80px;
 
-footer {
-  position: absolute;
-  bottom: 10;
-  width: 100%;
-  background-color: #1c1c1c;
-  color: white;
 }
-
-
 
 /* Banner */
 .banner {
@@ -204,7 +195,6 @@ footer {
 .img-fabricacion img {
   max-width: 80%;
   height: auto;
-  margin-left: 30px;
 
 }
 
@@ -244,7 +234,7 @@ footer {
 .cocteles h3 {
   font-size: 2rem;
   color: #fff;
-  
+  margin-top: -100px;
 }
 
 .cocteles-grid {
@@ -344,6 +334,8 @@ footer {
   border: 1px solid #CD528F;
   font-size: 1.5rem;
 }
+
+
 
 
 @media (min-width: 300px) and (max-width:1024px) {
@@ -529,18 +521,5 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .cocteles h3{
-    margin-top: -100px;
-  }
 }
 
-.home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch; /* Asegura que los hijos ocupen el espacio disponible */
-  justify-content: space-between; /* Empuja el footer al final */
-  min-height: 100vh; /* Ocupa al menos toda la ventana */
-  margin: 0;
-  padding: 0;
-  background-color: #2C2A29;
-}
