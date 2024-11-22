@@ -47,10 +47,14 @@ html, body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 10px;
-    padding: 20px;
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier relleno */
     background-color: #2C2A29;
     box-sizing: border-box;
+}
+
+.product-section + .product-section {
+    margin-top: 0; /* Asegura que no haya espacio entre secciones consecutivas */
 }
 
 /* Alternar dirección de los productos cuando sea necesario */
@@ -60,21 +64,21 @@ html, body {
 
 .product-text {
     flex: 1;
-    padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .product-title {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #CD528F;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .product-description {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #CD528F;
-    margin-bottom: 15px;
+    margin: 30px;
+    margin-bottom: 30px;
     text-align: justify;
 }
 
@@ -82,37 +86,47 @@ html, body {
 .product-features {
     list-style-type: none;
     padding-left: 0;
-    font-size: 1.2rem;
+    margin: 30px;
+    font-size: 1.5rem;
     line-height: 1.8;
 }
 
 .product-features li {
     font-size: 1.2rem;
     color: #CD528F;
-    display: grid;
-    grid-template-columns: 1fr auto 2fr; /* Tres columnas: una para el nombre, una para la línea, y una para la descripción */
-    align-items: center;
+    display: flex; /* Usa flexbox para alinear los elementos en la misma línea */
+    align-items: flex-start; /* Alinea verticalmente los textos al inicio */
+    gap: 10px; /* Espaciado entre <strong> y el texto */
+    margin-bottom: 5px; /* Espacio entre líneas */
 }
 
-.separator {
-    content: '';
-    width: 2px;
-    height: 100%; /* Ajusta esto para igualar la altura del elemento de la lista */
-    background-color: #CD528F;
-    margin: 0;
+.product-features li strong {
+    min-width: 100px; /* Fija un ancho mínimo para <strong> para una alineación uniforme */
+    text-align: left; /* Asegura que el texto del título esté alineado a la izquierda */
 }
 
+.product-features li span {
+    display: none; /* Elimina visualmente el `.separator` si aún está presente */
+}
 /* Estilos para la imagen del producto */
 .product-image {
     flex: 1;
     text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Asegura que no haya espacio alrededor */
+    padding: 0; /* Asegura que no haya espacio interno */
 }
 
 .product-image img {
-    max-width: 90%;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px #CD528F;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0; /* Elimina espacio adicional */
+    padding: 0; /* Asegura que no haya relleno */
+    display: block; /* Evita que se agregue espacio extra debajo de la imagen */
 }
+
 
 /* Estilos del botón */
 .button-container {

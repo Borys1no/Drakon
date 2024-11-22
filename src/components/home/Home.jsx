@@ -36,7 +36,7 @@ const Home = () => {
 
       {/* Productos */}
       <section >
-        <div className="productos-header">
+        <div className="productos-header" style={{ marginTop: '100px' }}>
           <h3>Productos</h3>
           <a href="#" className='btn'>Tienda</a>
         </div>
@@ -73,7 +73,7 @@ const Home = () => {
 
 
       {/* Proceso de fabricación */}
-      <section className="fabricacion">
+      <section className="fabricacion" style={{ marginTop: '100px' }}>
         <h3>Proceso de Fabricación</h3>
         <div className="fabricacion-content">
           <div className="img-fabricacion">
@@ -94,7 +94,7 @@ const Home = () => {
 
 
       {/* Cocteles */}
-      <section className="cocteles">
+      <section className="cocteles" style={{ marginTop: '100px' }}>
         <h3>Cocteles</h3>
         <div className="cocteles-grid">
           <div className="coctel-card">
