@@ -37,7 +37,8 @@ import BotellaRosa from './BotellasOficiales/BOTELLAROSA.png'
 import Duende from './Duende.jpg'
 import Lechuza from './Lechuza.jpg'
 import medalla from './medalla.png'
-
+import SLIDES2copy from './img/banners/SLIDES2copy.jpg'
+import BOTELLAROSAcopy from './img/icons/BOTELLAROSAcopy.png'
 
 export const assets ={
     LogoNegro,
@@ -78,7 +79,9 @@ export const assets ={
     BotellaRosa,
     Duende,
     Lechuza,
-    medalla
+    medalla,
+    SLIDES2copy,
+    BOTELLAROSAcopy
 
 
 }

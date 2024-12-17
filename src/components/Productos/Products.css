@@ -1,5 +1,6 @@
 /* Estilos base generales para que todo el contenido sea responsive */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -7,7 +8,19 @@ html, body {
 }
 
 * {
-    box-sizing: inherit; /* Aplica el box-sizing a todos los elementos */
+    box-sizing: inherit;
+    /* Aplica el box-sizing a todos los elementos */
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Coloca la imagen detrás de todo */
 }
 
 .products-container {
@@ -17,7 +30,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #2C2A29;
+    margin-top: 100px;
 }
 
 /* Encabezado con imagen de fondo ocupando todo el ancho */
@@ -33,12 +46,55 @@ html, body {
     padding: 0;
 }
 
+/* nuevo titulo*/
+.playfair-display-3TituloDrakonh1 {
+    font-size: 3rem;
+    color: #cc528f;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* Línea separadora fina */
+.separator-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    /* Color de la línea */
+    margin-top: 12px;
+    margin-bottom: 30px;
+    /* Espaciado arriba y abajo de la línea */
+}
+
+/* Sin espacios entre h3 y p */
+.product-subtitle {
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    color: #cd528f;
+    margin-bottom: 0;
+    /* Eliminar margen inferior */
+}
+
+.product-no-gap {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: #000000;
+    margin-top: 0;
+    /* Eliminar margen superior */
+    margin-bottom: 0;
+    /* Sin margen inferior */
+}
+
 .products-header h1 {
     font-size: 4rem;
-    font-weight: bold;
-    color: #CD528F;
-    font-family: "Big Shoulders Display", sans-serif;
+    font-family: "Poppins", serif;
     text-align: center;
+    font-weight: 300;
+    font-style: normal;
 }
 
 /* Sección de cada producto ocupando todo el ancho */
@@ -47,14 +103,11 @@ html, body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 0; /* Elimina cualquier margen */
-    padding: 0; /* Elimina cualquier relleno */
-    background-color: #2C2A29;
-    box-sizing: border-box;
 }
 
-.product-section + .product-section {
-    margin-top: 0; /* Asegura que no haya espacio entre secciones consecutivas */
+.product-section+.product-section {
+    margin-top: 0;
+    /* Asegura que no haya espacio entre secciones consecutivas */
 }
 
 /* Alternar dirección de los productos cuando sea necesario */
@@ -65,21 +118,30 @@ html, body {
 .product-text {
     flex: 1;
     text-align: left;
+    flex: 3 0 60%; /* Crece 3 unidades, tamaño base 60% */
 }
 
 .product-title {
     font-size: 4rem;
-    color: #CD528F;
+    color: #cd528f;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .product-description {
     font-size: 1.6rem;
-    color: #CD528F;
+    color: #cd528f;
     margin: 30px;
     margin-bottom: 30px;
     text-align: justify;
+}
+
+.product-description-poppins {
+    font-size: 1.6rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
 }
 
 /* Características del producto */
@@ -92,41 +154,62 @@ html, body {
 }
 
 .product-features li {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+
     font-size: 1.2rem;
-    color: #CD528F;
-    display: flex; /* Usa flexbox para alinear los elementos en la misma línea */
-    align-items: flex-start; /* Alinea verticalmente los textos al inicio */
-    gap: 10px; /* Espaciado entre <strong> y el texto */
-    margin-bottom: 5px; /* Espacio entre líneas */
+    color: black;
+    display: flex;
+    /* Usa flexbox para alinear los elementos en la misma línea */
+    align-items: flex-start;
+    /* Alinea verticalmente los textos al inicio */
+    gap: 10px;
+    /* Espaciado entre <strong> y el texto */
+    margin-bottom: 5px;
+    /* Espacio entre líneas */
 }
 
 .product-features li strong {
-    min-width: 100px; /* Fija un ancho mínimo para <strong> para una alineación uniforme */
-    text-align: left; /* Asegura que el texto del título esté alineado a la izquierda */
+    font-size: 1.8rem;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    min-width: 100px;
+    /* Fija un ancho mínimo para <strong> para una alineación uniforme */
+    text-align: left;
+    /* Asegura que el texto del título esté alineado a la izquierda */
 }
 
 .product-features li span {
-    display: none; /* Elimina visualmente el `.separator` si aún está presente */
+    display: none;
+    /* Elimina visualmente el `.separator` si aún está presente */
 }
+
 /* Estilos para la imagen del producto */
 .product-image {
     flex: 1;
     text-align: center;
     width: 100%;
     height: 100%;
-    margin: 0; /* Asegura que no haya espacio alrededor */
-    padding: 0; /* Asegura que no haya espacio interno */
+    margin: 0;
+    /* Asegura que no haya espacio alrededor */
+    padding: 0;
+    /* Asegura que no haya espacio interno */
+    flex: 2 0 40%; /* Crece 2 unidades, tamaño base 40% */
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    margin: 0; /* Elimina espacio adicional */
-    padding: 0; /* Asegura que no haya relleno */
-    display: block; /* Evita que se agregue espacio extra debajo de la imagen */
+    margin: 0;
+    /* Elimina espacio adicional */
+    padding: 0;
+    /* Asegura que no haya relleno */
+    display: block;
+    /* Evita que se agregue espacio extra debajo de la imagen */
 }
-
 
 /* Estilos del botón */
 .button-container {
@@ -136,7 +219,7 @@ html, body {
 }
 
 .buy-button {
-    background-color: #CD528F;
+    background-color: #cd528f;
     color: #fff;
     border: none;
     padding: 12px 30px;
@@ -166,7 +249,8 @@ html, body {
     }
 
     .product-section.reverse {
-        flex-direction: column; /* Evita que se invierta en pantallas pequeñas */
+        flex-direction: column;
+        /* Evita que se invierta en pantallas pequeñas */
     }
 
     .product-title {
