@@ -2,91 +2,110 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #2C2A29;
   padding-top: 80px;
+  
 
 }
 
 /* Banner */
 .banner {
-  background-image: url('/src/assets/banner.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 120px 20px;
-  text-align: center;
-  color: white;
-  margin-top: 80px;
-}
+    background-image: url('/src/assets/img/banners/mee.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+    width: 100%;
+    height: 600px; /* Ajusta según lo necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: 1px solid #c9a506;
+  }
+  
 
-.banner h2 {
-  display: flex;
-  font-size: 3rem;
-}
 
-.banner p {
-  display: flex;
-  font-size: 1.5rem;
-}
+
 
 /* Introducción */
 .introduction {
   display: flex;
-  justify-content: space-between;
+  border: 2px solid #e8d685;
+  padding: 20px;
   align-items: center;
-  margin-right: 10px;
-  flex-direction: row;
-  justify-content: space-between;
+  max-width: 1000px; /* Limita el ancho máximo */
+  margin: 0 auto; /* Centra la sección */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.introduction .intro-text {
-  text-align: right;
+.intro-img {
+  flex: 0 0 300px; /* Define un tamaño fijo para la imagen */
+  margin-right: 20px; /* Espacio entre imagen y texto */
 }
 
-.introduction .intro-img {
-  margin-right: 20px;
+.intro-img img {
+  display: block;
+  width: 100%; /* La imagen se ajusta al contenedor */
+  height: auto;
+  object-fit: cover;
 }
 
-.introduction .intro-img img {
-  max-width: 100%;
+.intro-text {
+  flex: 1;
+  text-align: justify;
+
+  max-width: 60%; /* Reduce el ancho máximo del texto */
+  position: relative;
+  padding-right: 150px;
+}
+.intro-text h3{
+  font-size: 40px;
+}
+.intro-text p {
+  font-size: 19px;
 }
 
-.introduction h3 {
-
-  text-align: right;
-  font-size: 2rem;
-  color: white;
-  margin-right: 10px;
-
+.buho {
+  position: absolute;
+  top: 50%; /* Centrado vertical */
+  right: 20px; /* Mueve el GIF hacia la derecha */
+  transform: translateY(-50%);
+  width: 120px;
+  height: auto;
 }
 
-.introduction p {
-  text-align: right;
-  font-size: 1.5rem;
-  margin: 10px;
-  color: white;
-  font-weight: bold;
 
+.buho img {
+  width: 200px;
+  height: 200px;
 }
 
-.introduction .btn {
-  background-color: #CD528F;
-  color: white;
-  padding: 15px 80px;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  display: inline-block;
+/* Media Query para dispositivos pequeños */
+@media (max-width: 768px) {
+  .introduction {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .intro-img {
+    margin-right: 0;
+    margin-bottom: 20px;
+    flex: none;
+  }
 
+  .intro-text {
+    max-width: 100%; /* Permite que el texto use todo el espacio en pantallas pequeñas */
+  }
+
+  .buho {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+    width: 80px;
+  }
 }
 
-.introduction .btn:hover {
-  background-color: #2C2A29;
-  color: #CD528F;
-  border: 1px solid #CD528F;
-  font-size: 1.5rem;
-}
+
 
 /* Productos */
 .productos {
@@ -385,7 +404,8 @@ body {
     /* Habilitar scroll horizontal */
     scroll-snap-type: x mandatory;
   }
-  .producto-card{
+
+  .producto-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -393,18 +413,19 @@ body {
     text-align: center;
     flex: 1 1 calc(33.333% - 20px);
     box-sizing: border-box;
-    
+
   }
-  .producto-card .product-description{
+
+  .producto-card .product-description {
     flex-grow: 1;
   }
 
   .producto-card .Qbtn {
     padding: 5px 20px;
     margin-top: auto;
-    
+
   }
-  
+
 
   .product-description {
     display: none;
@@ -416,15 +437,17 @@ body {
   }
 
   /* Proceso de fabricación */
-  .fabricacion{
+  .fabricacion {
     margin-top: 20px;
     text-align: center;
     margin-bottom: 50px;
   }
-  .fabricacion h3{
+
+  .fabricacion h3 {
     border-bottom: 1px solid #CD528F;
     margin-bottom: 20px;
   }
+
   .fabricacion-content {
     display: flex;
     flex-direction: column;
@@ -434,25 +457,27 @@ body {
     width: 100%;
     max-width: 800px;
   }
-  
-  .img-fabricacion{
+
+  .img-fabricacion {
     position: relative;
     width: 100%;
     max-width: 100%;
   }
-  .img-fabricacion img{
+
+  .img-fabricacion img {
     width: 100%;
     height: auto;
     position: relative;
     max-width: 800px;
     margin: 0 auto;
   }
-  .fabricacion .fabricacion-content{
+
+  .fabricacion .fabricacion-content {
     position: relative;
     max-width: 100%;
   }
 
-  .fabricacion .text-content{
+  .fabricacion .text-content {
     position: relative;
     top: 50%;
     left: 50%;
@@ -478,17 +503,18 @@ body {
   .cocteles {
     padding: 40px 20px;
     text-align: center;
-    margin-top: 50px; /* Ajusta este valor según tus necesidades */
+    margin-top: 50px;
+    /* Ajusta este valor según tus necesidades */
   }
-  
-  
+
+
   .cocteles-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
-    
+
   }
 
   .coctel-card {
@@ -499,15 +525,17 @@ body {
     flex: 1 1 100%;
     box-sizing: border-box;
     justify-content: space-between;
-    
+
   }
-  .coctel-front{
+
+  .coctel-front {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .coctel-front img{
+
+  .coctel-front img {
     width: 100%;
     height: 85%;
     object-fit: cover;
@@ -516,9 +544,9 @@ body {
   .btn-recetas {
     padding: 10px 40px;
   }
+
   .coctel-card {
     display: flex;
     flex-direction: column;
   }
 }
-
