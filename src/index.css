@@ -2,12 +2,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
+  font-family: "Big Shoulders Display", sans-serif;
+  
+=======
+>>>>>>> refs/remotes/origin/master
 }
 
 body, html {
   height: 100%;
   margin: 0;
   padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 a {

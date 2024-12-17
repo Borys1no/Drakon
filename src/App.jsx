@@ -16,6 +16,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Reconocimientos from './components/Reconocimientos/Reconocimientos';
 import PasarelaPago from './components/PasarelaPago/PasarelaPago';
 
+
 const App = () => {
   return (
     <AuthProvider>

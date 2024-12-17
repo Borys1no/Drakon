@@ -37,6 +37,12 @@ import BotellaRosa from './BotellasOficiales/BOTELLAROSA.png'
 import Duende from './Duende.jpg'
 import Lechuza from './Lechuza.jpg'
 import medalla from './medalla.png'
+
+
+import BannerOficial from './img/banners/mee.png'
+import FotoSeba from './img/pic/IMG1.jpg'
+import GifBuho from './img/gif/BUHO 1 copy.gif'
+
 import SLIDES2copy from './img/banners/SLIDES2copy.jpg'
 import BOTELLAROSAcopy from './img/icons/BOTELLAROSAcopy.png'
 
@@ -80,6 +86,9 @@ export const assets ={
     Duende,
     Lechuza,
     medalla,
+    BannerOficial,
+    FotoSeba,
+    GifBuho,
     SLIDES2copy,
     BOTELLAROSAcopy
 
