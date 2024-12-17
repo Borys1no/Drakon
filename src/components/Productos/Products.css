@@ -200,13 +200,12 @@ body {
 }
 
 .product-image img {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     object-fit: cover;
-    margin: 0;
-    /* Elimina espacio adicional */
-    padding: 0;
-    /* Asegura que no haya relleno */
+    margin-top: 80px;
+    padding-left: 80px;
+    padding-right: 40px;
     display: block;
     /* Evita que se agregue espacio extra debajo de la imagen */
 }
