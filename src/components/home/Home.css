@@ -135,7 +135,6 @@ body {
 
 .productos-header .btn:hover {
   color: #CD528F;
-  border: 1px solid #CD528F;
   font-size: 1.5rem;
 
 }
@@ -159,7 +158,6 @@ body {
   padding: 10px;
   text-align: center;
   flex: 1 1 calc(33.333% - 20px);
-  border: 1px solid #CD528F;
   margin-bottom: 20px;
   box-sizing: border-box;
 }
