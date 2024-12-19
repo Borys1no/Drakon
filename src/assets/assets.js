@@ -46,6 +46,7 @@ import GifBuho from './img/gif/BUHO 1 copy.gif'
 import SLIDES2copy from './img/banners/SLIDES2copy.jpg'
 import BOTELLAROSAcopy from './img/icons/BOTELLAROSAcopy.png'
 
+
 export const assets ={
     LogoNegro,
     LogoBlanco,

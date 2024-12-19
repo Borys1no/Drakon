@@ -33,7 +33,7 @@ const Home = () => {
       {/* Productos */}
       <section>
         <div className="productos-header" style={{ marginTop: "100px" }}>
-          <h3>Productos</h3>
+          <h3>Nuestros Productos</h3>
           <a href="#" className="btn">
             Tienda
           </a>
