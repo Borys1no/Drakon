@@ -26,7 +26,7 @@ const Home = () => {
             identidad ecuatoriana en los mercados internacionales.
           </p>
           <div className="buho">
-            <img src={assets.GifBuho} alt="Gif1"/>
+            <img src={assets.GifBuho} alt="Gif1" />
           </div>
         </div>
       </section>
@@ -34,51 +34,33 @@ const Home = () => {
       <section>
         <div className="productos-header" style={{ marginTop: "100px" }}>
           <h3>Nuestros Productos</h3>
-          <a href="#" className="btn">
-            Tienda
-          </a>
         </div>
         <div className="productos-carousel">
           <div className="producto-card">
-            <img src={assets.Champage} alt="Malke Virgen" />
+            <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
             <div className="container-descrip">
-              <h2 className="product-title">Malke Virgen</h2>
-              <p className="product-description">
-                Elaborado exclusivamente del mosto de pitahaya manabita roja
-                pulpa blanca cultivada en el cantón Rocafuerte, al menos dos
-                destilados, embotellado y envasado en botella de vidrio o
-                cerámica a 32% alc/vol (64 proof).
-              </p>
+              <h2 className="product-title">Drakon Destilado</h2>
+              <p className="product-description">$27,00</p>
             </div>
             <a href="#" className="Qbtn">
               Comprar
             </a>
           </div>
           <div className="producto-card">
-            <img src={assets.Champage} alt="Malke Triple Destilado" />
+            <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
             <div className="container-descrip">
-              <h2 className="product-title">Malke Triple Destilado</h2>
-              <p className="product-description">
-                Elaborado exclusivamente del mosto de pitahaya manabita roja
-                pulpa blanca cultivada en el cantón Rocafuerte, tres veces
-                destilado, embotellado y envasado en botella de vidrio o
-                cerámica a 32% alc/vol (64 proof).
-              </p>
+              <h2 className="product-title">Drakon Triple Destilado</h2>
+              <p className="product-description">$39,00</p>
             </div>
             <a href="#" className="Qbtn">
               Comprar
             </a>
           </div>
           <div className="producto-card">
-            <img src={assets.Champage} alt="Malke Reposado" />
+            <img src={assets.BOTELLAROJAcopy} alt="Malke Reposado" />
             <div className="container-descrip">
-              <h2 className="product-title">Malke Reposado</h2>
-              <p className="product-description">
-                Elaborado exclusivamente del mosto de pitahaya manabita roja
-                pulpa blanca en el cantón Rocafuerte, con un reposo de al menos
-                de tres meses en barrica de roble americano, envasado en botella
-                de vidrio a 40% alc/vol (80 proof).
-              </p>
+              <h2 className="product-title">Drakon Reposado</h2>
+              <p className="product-description">$50,00</p>
             </div>
             <a href="#" className="Qbtn">
               Comprar
@@ -90,20 +72,15 @@ const Home = () => {
       <section className="fabricacion" style={{ marginTop: "100px" }}>
         <h3>Proceso de Fabricación</h3>
         <div className="fabricacion-content">
-          <div className="img-fabricacion">
-            <img src={assets.Introduction} alt="Fabricacion" />
-          </div>
           <div className="text-content">
             <p>
-              El proceso de creación de Drakon se enfoca en seleccionar solo la
-              mejor pitahaya de Manabí, preservando sus sabores únicos a través
-              de un cuidadoso proceso de fermentación, destilación y filtrado.
-              Este enfoque garantiza un destilado de la más alta calidad,
-              orgullosamente hecho en Ecuador.
+              El proceso de Drakon une tradición e innovación, comenzando con la
+              selección de la mejor pitahaya ecuatoriana cultivada en el cantón
+              Rocafuerte, Manabí. La fermentación, destilación y filtración son
+              ejecutadas con precisión para garantizar pureza y equilibrio. Cada
+              botella es un destilado excepcional que refleja excelencia y
+              orgullo nacional.
             </p>
-            <a href="#" className="btn">
-              Leer más
-            </a>
           </div>
         </div>
       </section>
@@ -113,12 +90,13 @@ const Home = () => {
         <div className="cocteles-grid">
           <div className="coctel-card">
             <div className="coctel-front">
-              <img src={assets.Coctel} alt="Drakon Rose Tonic" />
-              <h4>Drakon Rose Tonic</h4>
+              <img src={assets.coctelRose} alt="Drakon Tonic" />
+              <h4>Drakon Tonic</h4>
             </div>
             <div className="coctel-back">
+              <h4>Drakon Tonic</h4>
               <p>
-                4 tiempos de Agua tónica de rosas, 2 oz de Drakon doble
+                4 tiempos de agua tónica britvic, 2 oz de Drakon doble
                 destilado, Hielo
               </p>
               <a href="#" className="btn-recetas">
@@ -126,9 +104,10 @@ const Home = () => {
               </a>
             </div>
           </div>
+
           <div className="coctel-card">
             <div className="coctel-front">
-              <img src={assets.Coctel} alt="Drakon Tonic" />
+              <img src={assets.coctelTonic} alt="Drakon Tonic" />
               <h4>Drakon Tonic</h4>
             </div>
             <div className="coctel-back">
@@ -143,7 +122,7 @@ const Home = () => {
           </div>
           <div className="coctel-card">
             <div className="coctel-front">
-              <img src={assets.Coctel} alt="Drakon Rasp Sour" />
+              <img src={assets.coctelRasp} alt="Drakon Rasp Sour" />
               <h4>Drakon Rasp Sour</h4>
             </div>
             <div className="coctel-back">

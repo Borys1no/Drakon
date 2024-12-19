@@ -144,6 +144,7 @@ body {
 .productos-header h3 {
   font-size: 2rem;
   color: #fff;
+  margin-left: 10px;
 }
 
 
@@ -166,11 +167,15 @@ body {
 
 .producto-card h2 {
   color: white;
+  font-size: 35px;
 }
 
-.product-img img {
-  max-width: 100%;
+.producto-card img {
+  max-width: 40%;
   height: auto;
+  margin: 0 auto;
+  display: block;
+
 }
 
 .producto-card .btn {
@@ -198,7 +203,7 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #cc528f;
 }
 
 .fabricacion-content {
@@ -216,7 +221,7 @@ body {
 .fabricacion p {
   font-size: 1.5rem;
   margin: 20px 0;
-  color: #fff;
+  color: #000;
   margin-left: 20px;
 
 }
@@ -248,7 +253,7 @@ body {
 
 .cocteles h3 {
   font-size: 2rem;
-  color: #fff;
+  color: #cc528f;
   margin-top: -100px;
 }
 
@@ -264,6 +269,7 @@ body {
   width: 400px;
   height: 500px;
   perspective: 1000px;
+  
 }
 
 .coctel-front,
@@ -276,27 +282,44 @@ body {
 }
 
 .coctel-front {
-  background-color: #CD528F;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 10px;
 }
 
+
 .coctel-front img {
-  width: 100%;
+  width: 80%;
   height: 85%;
   object-fit: cover;
+  border-radius: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.coctel-front h4{
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #000 !important;
+  text-align: center;
+
 }
 
 .coctel-back {
-  background-color: #333;
-  color: white;
+  width: 80%;
+  height: 85%;
+  background-image: url('../../assets/img/banners/SLIDES2copy.jpg');
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  border-radius: 50px;
+}
+.coctel-back h4{
+  color: #cc528f;
+  
 }
 
 .coctel-card:hover .coctel-front {

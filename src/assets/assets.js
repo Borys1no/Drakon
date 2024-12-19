@@ -47,6 +47,10 @@ import SLIDES2copy from './img/banners/SLIDES2copy.jpg'
 import BOTELLAROSAcopy from './img/icons/BOTELLAROSAcopy.png'
 import BOTELLAROJAcopy from './img/icons/BOTELLAROJAcopy.png'
 
+import coctelRose from './img/pic/GAB06660-Editar 2.jpg'
+import coctelTonic from './img/pic/GAB06764-8 copy.jpg'
+import coctelRasp from './img/pic/GAB06825-Editar 2.jpg'
+
 
 export const assets ={
     LogoNegro,
@@ -93,7 +97,10 @@ export const assets ={
     GifBuho,
     SLIDES2copy,
     BOTELLAROSAcopy,
-    BOTELLAROJAcopy
+    BOTELLAROJAcopy,
+    coctelRose,
+    coctelTonic,
+    coctelRasp
 
 
 }
