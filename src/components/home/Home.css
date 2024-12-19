@@ -141,7 +141,7 @@ body {
 
 .productos-header h3 {
   font-size: 2rem;
-  color: #000;
+  color: #000 !important;
   margin-left: 10px;
   margin-bottom: 20px;
 }
@@ -256,7 +256,7 @@ body {
 .cocteles-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   margin-top: 20px;
 }
 
@@ -327,7 +327,7 @@ body {
 .coctel-back p {
   color: #000;
   text-align: center; 
-  line-height: 1.2; 
+  line-height: 1; 
 }
 
 .coctel-card:hover .coctel-front {
