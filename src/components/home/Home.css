@@ -134,17 +134,16 @@ body {
 }
 
 .productos-header .btn:hover {
-  background-color: #2C2A29;
   color: #CD528F;
-  border: 1px solid #CD528F;
   font-size: 1.5rem;
 
 }
 
 .productos-header h3 {
   font-size: 2rem;
-  color: #fff;
+  color: #000 !important;
   margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 
@@ -156,17 +155,15 @@ body {
 }
 
 .producto-card {
-  background-color: #2C2A29;
   padding: 10px;
   text-align: center;
   flex: 1 1 calc(33.333% - 20px);
-  border: 1px solid #CD528F;
   margin-bottom: 20px;
   box-sizing: border-box;
 }
 
 .producto-card h2 {
-  color: white;
+  color: #000;
   font-size: 35px;
 }
 
@@ -190,7 +187,6 @@ body {
 }
 
 .producto-card .btn:hover {
-  background-color: #2C2A29;
   color: #CD528F;
   border: 1px solid #CD528F;
   font-size: 1.5rem;
@@ -260,7 +256,7 @@ body {
 .cocteles-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   margin-top: 20px;
 }
 
@@ -286,7 +282,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
 }
 
 
@@ -312,14 +307,27 @@ body {
   background-image: url('../../assets/img/banners/SLIDES2copy.jpg');
   transform: rotateY(180deg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
   border-radius: 50px;
+  gap: 10px;
 }
 .coctel-back h4{
+  color: #cc528f !important;
+  font-weight: bold;
+  font-style: italic;
+
+}
+.coctel-back h5 {
   color: #cc528f;
-  
+}
+
+.coctel-back p {
+  color: #000;
+  text-align: center; 
+  line-height: 1; 
 }
 
 .coctel-card:hover .coctel-front {
