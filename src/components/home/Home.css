@@ -286,7 +286,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
 }
 
 
@@ -312,14 +311,27 @@ body {
   background-image: url('../../assets/img/banners/SLIDES2copy.jpg');
   transform: rotateY(180deg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
   border-radius: 50px;
+  gap: 10px;
 }
 .coctel-back h4{
+  color: #cc528f !important;
+  font-weight: bold;
+  font-style: italic;
+
+}
+.coctel-back h5 {
   color: #cc528f;
-  
+}
+
+.coctel-back p {
+  color: #000;
+  text-align: center; 
+  line-height: 1.2; 
 }
 
 .coctel-card:hover .coctel-front {

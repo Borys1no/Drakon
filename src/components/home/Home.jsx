@@ -2,12 +2,10 @@ import React from "react";
 import "./Home.css";
 import Footer from "../Footer/Footer";
 import { assets } from "../../assets/assets";
-import ImgBg from "../img-animation/ImgBg";
 
 const Home = () => {
   return (
     <div className="home-container">
-      <ImgBg />
       {/* Banner */}
       <div className="banner"></div>
       {/* Introducción */}
@@ -95,44 +93,65 @@ const Home = () => {
             </div>
             <div className="coctel-back">
               <h4>Drakon Tonic</h4>
+              <h5>INGREDIENTES</h5>
               <p>
-                4 tiempos de agua tónica britvic, 2 oz de Drakon doble
-                destilado, Hielo
+                2 oz de Drakon destilado <br /> 
+                3/4 oz de zumo de limon <br /> 
+                4 oz de agua tonica
               </p>
-              <a href="#" className="btn-recetas">
-                Ver la receta completa
-              </a>
+              <h5>METODO DE ELABORACION</h5>
+              <p>Directo</p>
+              <h5>CRISTALERIA</h5>
+              <p>Copa balon/vaso largo</p>
+              <h5>GARNISH</h5>
+              <p>1 rodaja de pitahaya</p>
             </div>
           </div>
 
           <div className="coctel-card">
             <div className="coctel-front">
-              <img src={assets.coctelTonic} alt="Drakon Tonic" />
-              <h4>Drakon Tonic</h4>
+              <img src={assets.coctelTonic} alt="Rasp sour" />
+              <h4>Rasp Sour</h4>
             </div>
             <div className="coctel-back">
+            <h4>Rasp Sour</h4>
+            <h5>INGREDIENTES</h5>
               <p>
-                4 tiempos de agua tónica britvic, 2 oz de Drakon doble
-                destilado, Hielo
+                2 oz de Drakon destilado <br/>
+                3/4 oz de sirope simple <br/>
+                3/4 oz de zumo de limon <br/>
+                1 clara de huevo 
               </p>
-              <a href="#" className="btn-recetas">
-                Ver la receta completa
-              </a>
+              <h5>METODO DE ELABORACION</h5>
+              <p>Shake</p>
+              <h5>CRISTALERIA</h5>
+              <p>Copa coupe</p>
+              <h5>GARNISH</h5>
+              <p>1 cereza para decorar</p>
+
             </div>
           </div>
           <div className="coctel-card">
             <div className="coctel-front">
-              <img src={assets.coctelRasp} alt="Drakon Rasp Sour" />
-              <h4>Drakon Rasp Sour</h4>
+              <img src={assets.coctelRasp} alt="Lechuza" />
+              <h4>Lechuza</h4>
             </div>
             <div className="coctel-back">
+            <h4>Lechuza</h4>
+            <h5>INGREDIENTES</h5>
               <p>
-                3/4 oz de syrup simple, 3/4 oz de zumo de limón, 1 clara de
-                huevo, 2 oz de Drakon, 6 frambuesas machacadas
+                2 oz de Drakon destilado <br/>
+                1/2 oz de sirope simple <br/>
+                3/4 oz de zumo de limon <br/>
+                4 oz de agua mineral de toronja
               </p>
-              <a href="#" className="btn-recetas">
-                Ver la receta completa
-              </a>
+              <h5>METODO DE ELABORACION</h5>
+              <p>Directo</p>
+              <h5>CRISTALERIA</h5>
+              <p>Vaso corto</p>
+              <h5>GARNISH</h5>
+              <p>Vaso escarchado con sal de pitahaya <br/>
+              Twist de naranja</p>
             </div>
           </div>
         </div>
