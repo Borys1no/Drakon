@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     padding: 40px;
-    background-color: #2C2A29;
-    color: #CD528F;
+    background-color: #fff;
+    color: #000;
     font-family: Arial, sans-serif;
     margin-top: 80px; /* Ajuste para evitar que quede debajo del navBar */
     margin-top:  0; /* Asegúrate de que no hay márgenes */
@@ -31,8 +31,8 @@
 
 .Qproduct-image-container {
     position: relative;
-    width: 100%;
-    max-width: 500px;
+    width: 100%; /* Se asegura que sea responsive */
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen principal */
     overflow: hidden;
 }
 
@@ -43,9 +43,9 @@
 
 .Qproduct-image {
     min-width: 100%;
+    max-width: 100%; /* Restringe la imagen al contenedor */
     height: auto;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(205, 82, 143, 0.5);
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -58,8 +58,8 @@
 }
 
 .Qcarousel-image {
-    width: 60px;
-    height: 60px;
+    width: 50px; /* Ajusta el tamaño de las imágenes pequeñas */
+    height: 50px; /* Ajusta el tamaño de las imágenes pequeñas */
     margin: 0 10px;
     cursor: pointer;
     border: 2px solid transparent;
@@ -116,17 +116,90 @@
     margin: 0 10px;
 }
 
+
+/* Nuevo separador linea */
+/* Contenedor de características del producto */
+.product-featuresP-container {
+    margin-top: 40px; /* Ajusta el margen hacia arriba */
+    margin-bottom: 40px;
+}
+
+/* Características del producto */
+.product-featuresP {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-left: 20px; /* Agrega margen izquierdo */
+}
+
+.product-featuresP li {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: black;
+    display: flex;
+    /* Flexbox para alinear elementos horizontalmente */
+    gap: 10px;
+    margin-bottom: 5px;
+    /* Asegura que el texto del título esté alineado al inicio */
+    align-items: center;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+
+.product-featuresP li strong {
+    font-size: 1.8rem;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    min-width: 150px; /* Ajusta este valor según necesites */
+    text-align: left;
+    position: relative;
+}
+
+.product-featuresP li span {
+    display: none;
+}
+
+.product-featuresP li strong::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 100px;
+    width: 2px;
+    background-color: #a3a3a3;
+}
+
+
+
+
 /* Selector de cantidad mejorado */
 .Qquantity-container {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    
+    font-size: 1.6rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .Qquantity-container label {
     font-size: 1.2rem;
     margin-right: 10px;
-    color: #CD528F;
+    color: #cc528f;
+
+    font-size: 1.6rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .Qquantity-container input {
@@ -135,16 +208,25 @@
     font-size: 1.2rem;
     text-align: center;
     border-radius: 4px;
-    border: 2px solid #CD528F;
+    border: 2px solid #cc528f;
     outline: none;
-    background-color: #2C2A29;
-    color: white;
+    background-color: #fff;
+    color: black;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    font-size: 1.6rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .Qquantity-container input:focus {
     border-color: #b13e78;
     box-shadow: 0 0 10px rgba(205, 82, 143, 0.5);
+    font-size: 1.6rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 /* Precio del producto */
@@ -156,15 +238,22 @@
 
 /* Botón "Agregar al carrito" */
 .Qadd-to-cart-button {
-    background-color: #CD528F;
+    background-color: #cc528f;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    padding: 10px 10px; /* Reduce el relleno horizontal y vertical */
+    font-size: 1rem; /* Reduce ligeramente el tamaño de la fuente */
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
     margin-bottom: 40px;
+    width: 50%;
+
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 .Qadd-to-cart-button:hover {
@@ -175,7 +264,7 @@
 .productos-section {
     margin-top: 60px;
     padding-top: 40px;
-    border-top: 2px solid #CD528F;
+    border-top: 2px solid #cc528f;
 }
 
 .productos-header {
@@ -185,7 +274,7 @@
 }
 
 .productos-header h3 {
-    color: #CD528F;
+    color: #cc528f;
     font-size: 2rem;
 }
 
@@ -228,7 +317,7 @@
 /* Botón "Comprar" */
 .Qbtn {
     display: block;
-    background-color: #CD528F;
+    background-color: #cc528f;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -239,7 +328,7 @@
 }
 
 .Qbtn:hover {
-    background-color: #b13e78;
+    background-color: #cc528f;
 }
 
 /* ----------- Estilos Responsive ----------- */

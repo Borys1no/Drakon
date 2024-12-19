@@ -11,9 +11,9 @@ const ProductPage = () => {
 
   // Lista de imágenes del producto
   const productImages = [
-    assets.Trago,
-    assets.Trago,
-    assets.Trago,
+    assets.BOTELLAROSAcopy,
+    assets.Carrusel2,
+    assets.Carrusel3,
   ];
 
   // Datos del producto actual
@@ -74,16 +74,19 @@ const ProductPage = () => {
 
         {/* Sección de detalles del producto a la derecha */}
         <div className="Qproduct-details">
-          <h2 className="Qproduct-title">{product.name}</h2>
-          <p className="Qproduct-description">
+          <h2 className="playfair-display-3TituloDrakonh1">{product.name}</h2>
+          <p className="product-description-poppins">
             Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte.
           </p>
-          <ul className="Qproduct-features">
-            <li><strong>Vista</strong><span className="Qseparator"></span>Claro, limpio y transparente</li>
-            <li><strong>Sabor</strong><span className="Qseparator"></span>Entrada agradable, persistente y agradable final</li>
-            <li><strong>Cuerpo</strong><span className="Qseparator"></span>Ligeras notas de fruta, destellos florales</li>
-            <li><strong>Aroma</strong><span className="Qseparator"></span>Exótico aroma de frutas y flores silvestres</li>
-          </ul>
+
+          <div className="product-featuresP-container">
+            <ul className="product-featuresP">
+                <li><strong>Vista</strong> Claro, limpio y transparente.</li>
+                <li><strong>Sabor</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
+                <li><strong>Cuerpo</strong> Ligeras notas frutales con delicados destellos florales.</li>
+                <li><strong>Aroma</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
+            </ul>
+          </div>
 
           {/* Selector de cantidad */}
           <div className="Qquantity-container">
@@ -98,7 +101,7 @@ const ProductPage = () => {
           </div>
 
           {/* Precio y botón */}
-          <div className="Qproduct-price">${product.price}</div>
+          <div className="Qproduct-price"></div>
           <button className="Qadd-to-cart-button" onClick={handleAddToCart}>
             Agregar al carrito
           </button>

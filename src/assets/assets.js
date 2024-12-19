@@ -50,7 +50,8 @@ import BOTELLAROJAcopy from './img/icons/BOTELLAROJAcopy.png'
 import coctelRose from './img/pic/GAB06660-Editar 2.jpg'
 import coctelTonic from './img/pic/GAB06764-8 copy.jpg'
 import coctelRasp from './img/pic/GAB06825-Editar 2.jpg'
-
+import Carrusel2 from './img/pic/Carrusel2.jpg'
+import Carrusel3 from './img/pic/Carrusel3.jpg'
 
 export const assets ={
     LogoNegro,
@@ -100,7 +101,9 @@ export const assets ={
     BOTELLAROJAcopy,
     coctelRose,
     coctelTonic,
-    coctelRasp
+    coctelRasp,
+    Carrusel2,
+    Carrusel3
 
 
 }
