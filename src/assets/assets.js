@@ -32,12 +32,9 @@ import N6 from './N6.png'
 import ImgFtr from './wave-haikei.svg'
 import FlechaDerecha from './FlechaDerecha.svg'
 import FlechaIzquierda from './FlechaIzquierda.svg'
-import BotellaRoja from './BotellasOficiales/BOTELLARoja.png'
-import BotellaRosa from './BotellasOficiales/BOTELLAROSA.png'
 import Duende from './Duende.jpg'
 import Lechuza from './Lechuza.jpg'
 import medalla from './medalla.png'
-
 
 import BannerOficial from './img/banners/mee.png'
 import FotoSeba from './img/pic/IMG1.jpg'
@@ -45,6 +42,7 @@ import GifBuho from './img/gif/BUHO 1 copy.gif'
 
 import SLIDES2copy from './img/banners/SLIDES2copy.jpg'
 import BOTELLAROSAcopy from './img/icons/BOTELLAROSAcopy.png'
+import BOTELLAROJAcopy from './img/icons/BOTELLAROJAcopy.png'
 
 export const assets ={
     LogoNegro,
@@ -90,7 +88,8 @@ export const assets ={
     FotoSeba,
     GifBuho,
     SLIDES2copy,
-    BOTELLAROSAcopy
+    BOTELLAROSAcopy,
+    BOTELLAROJAcopy
 
 
 }
