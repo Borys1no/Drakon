@@ -24,20 +24,22 @@ const Products = () => {
                     <p className="product-no-gap">32% alc/vol (64 proof).</p>
                     <p className="product-no-gap">750 ml</p>
 
+                    
+                    <div className="product-features-container">
+                        <ul className="product-features">
+                            <li><strong>Vista</strong> Claro, limpio y transparente.</li>
+                            <li><strong>Sabor</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
+                            <li><strong>Cuerpo</strong> Ligeras notas frutales con delicados destellos florales.</li>
+                            <li><strong>Aroma</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
+                        </ul>
+                    </div>
 
-                    <ul className="product-features">
-                        <li><strong>Vista</strong> Claro, limpio y transparente.</li>
-                        <li><strong>Sabor</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
-                        <li><strong>Cuerpo</strong> Ligeras notas frutales con delicados destellos florales.</li>
-                        <li><strong>Aroma</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
-                    </ul>
-
-                    <p className="product-description">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>
+                    <p className="product-description-poppins">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>
 
                     {/* Botón de Comprar */}
                     <div className="button-container">
                         <button className="buy-button">
-                            <a href="/MalkeVirgen"> Comprar ahora</a>
+                            <a href="/MalkeVirgen"> AÑADIR AL CARRITO</a>
                         </button>
                     </div>
                 </div>
