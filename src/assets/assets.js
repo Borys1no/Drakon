@@ -106,8 +106,7 @@ export const assets ={
     BOTELLAROJAcopy,
     coctelRose,
     coctelTonic,
-    coctelRasp, 
-    HEAD,
+    coctelRasp,
     bannerProceso,
     Carrusel2,
     Carrusel3
