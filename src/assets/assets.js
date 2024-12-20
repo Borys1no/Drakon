@@ -50,7 +50,12 @@ import BOTELLAROJAcopy from './img/icons/BOTELLAROJAcopy.png'
 import coctelRose from './img/pic/GAB06660-Editar 2.jpg'
 import coctelTonic from './img/pic/GAB06764-8 copy.jpg'
 import coctelRasp from './img/pic/GAB06825-Editar 2.jpg'
+
 import bannerProceso from './img/banners/1.png'
+
+
+import Carrusel2 from './img/pic/Carrusel2.jpg'
+import Carrusel3 from './img/pic/Carrusel3.jpg'
 
 
 export const assets ={
@@ -101,8 +106,12 @@ export const assets ={
     BOTELLAROJAcopy,
     coctelRose,
     coctelTonic,
-    coctelRasp,
-    bannerProceso
+    coctelRasp, 
+    HEAD,
+    bannerProceso,
+    Carrusel2,
+    Carrusel3
+
 
 
 }
