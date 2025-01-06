@@ -46,7 +46,7 @@ const Products = () => {
             </div>
 
             {/* Producto 2: Malke Triple Destilado (Imagen a la izquierda) */}
-            <div className="product-section reverse" style={{ marginTop: '100px', marginBottom: '100px'}}>
+            <div className="product-section reverse">
                 <div className="product-image-2">
                     <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
                 </div>

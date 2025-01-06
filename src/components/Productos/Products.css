@@ -115,6 +115,8 @@ body {
 /* Alternar dirección de los productos cuando sea necesario */
 .product-section.reverse {
     flex-direction: row-reverse;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .product-text {
@@ -149,7 +151,6 @@ body {
     line-height: 1; /* Elimina el interlineado */
 }
 
-
 /* Contenedor de características del producto */
 .product-features-container {
     margin-top: 40px; /* Ajusta el margen hacia arriba */
@@ -181,7 +182,6 @@ body {
     position: relative; /* Necesario para posicionar el pseudo-elemento */
 }
 
-
 .product-features li strong {
     font-size: 1.8rem;
     font-family: "Poppins", serif;
@@ -202,12 +202,10 @@ body {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    height: 70px;
+    height: 90px;
     width: 2px;
     background-color: #a3a3a3;
 }
-
-
 
 /* Estilos para la imagen del producto */
 .product-image {
@@ -256,7 +254,6 @@ body {
     display: block;
     /* Evita que se agregue espacio extra debajo de la imagen */
 }
-
 
 /* Estilos del botón */
 .button-container2 {
@@ -339,16 +336,30 @@ body {
         font-size: 0.9rem;
     }
 
+    .product-features li strong {
+        font-size: 1.5rem;
+        min-width: 110px;
+    }
+
     .product-features li {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .buy-button {
-        font-size: 1rem;
+        font-size: 1.3rem;
         padding: 8px 20px;
+        margin-bottom: 10px;
     }
 
     .product-image img {
-        max-width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        max-width: 90%;
     }
+
+    .product-section.reverse {
+        margin-top: 10px;
+        margin-bottom: 100px;
+    }
+
 }
