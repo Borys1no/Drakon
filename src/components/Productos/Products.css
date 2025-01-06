@@ -259,23 +259,26 @@ body {
 
 
 /* Estilos del botón */
-.button-container {
+.button-container2 {
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
 
 .buy-button {    
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: "Poppins", serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #cd528f;
     color: #fff;
     border: none;
-    font-size: 1.4rem;
-    font-weight: bold;
+
     border-radius: 100px;
     cursor: pointer;
     display: inline-flex;

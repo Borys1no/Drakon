@@ -37,7 +37,7 @@ const Products = () => {
                         <p className="product-description-poppins">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>
 
                         {/* Botón de Comprar */}
-                        <div className="button-container">
+                        <div className="button-container2">
                             <button className="buy-button">
                                 <a href="/MalkeVirgen"> AÑADIR AL CARRITO</a>
                             </button>
@@ -72,7 +72,7 @@ const Products = () => {
                     <p className="product-description-poppins">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>
 
                     {/* Botón de Comprar */}
-                    <div className="button-container">
+                    <div className="button-container2">
                         <button className="buy-button">
                             <a href="/MalkeVirgen"> AÑADIR AL CARRITO</a>
                         </button>
