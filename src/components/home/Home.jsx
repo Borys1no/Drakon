@@ -16,10 +16,10 @@ const Home = () => {
         </div>
         <div className="intro-text">
           <Animation className="anim-left">
-            <h3>Un destilado a la perfección</h3>
+            <h3 className="des_txt">Un destilado a la perfección</h3>
           </Animation>
           <Animation className="anim-right">
-            <p>
+            <p className="txt_intro">
               Drakon, como marca líder de destilados premium, reafirma su
               compromiso con la innovación, calidad, sostenibilidad,
               responsabilidad social y excelencia global. Cada etapa de nuestro
@@ -203,7 +203,7 @@ const Home = () => {
           Ver más
         </a>
       </section>
-      <Footer />.
+      <Footer />
     </div>
   );
 };

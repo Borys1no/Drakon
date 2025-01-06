@@ -11,7 +11,6 @@ body, html {
   margin: 0;
   padding: 0;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 a {
@@ -22,11 +21,11 @@ a {
 .historia-page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+  min-height: 100vh;
 }
 
 footer {
-  margin-top: auto; /* Empuja el footer hacia la parte inferior si el contenido no llena la pantalla */
+  margin-top: auto;
   background-color: #1c1c1c;
   color: white;
   padding: 40px 0;
@@ -44,6 +43,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .footer-col {
@@ -58,4 +58,15 @@ footer {
   border-top: 1px solid #333;
   padding-top: 10px;
   font-size: 14px;
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
