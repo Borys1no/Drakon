@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'TTRamillas';
+  src: url('./assets/fonts/TT_Ramillas_Bold_Italic.woff2') format('woff2'),
+       url('./assets/fonts/TT_Ramillas_Bold_Italic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TTRamillas';
+  src: url('./assets/fonts/TT_Ramillas_Bold.woff2') format('woff2'),
+       url('./assets/fonts/TT_Ramillas_Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'TTRamillas', sans-serif;
+}
+
+
 * {
   padding: 0;
   margin: 0;
