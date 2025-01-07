@@ -47,9 +47,9 @@ footer {
 }
 .social-links {
     display: flex;
-    gap: 20px; /* Espaciado entre los íconos */
-    align-items: center; /* Alineación vertical */
-    justify-content: flex-start; /* Asegura que estén alineados horizontalmente */
+    gap: 15px;
+    align-items: center; 
+    justify-content: center; 
 }
 .social-links a {
     display: inline-block;

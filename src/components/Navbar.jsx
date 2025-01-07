@@ -47,13 +47,12 @@ const Navbar = () => {
 
                 <div className={`navbar-center ${isNavOpen && isMobile ? 'active' : ''}`}>
                     <ul className="nav-links">
-                        <li><a href="/Home">Inicio</a></li>
-                        <li><a href="/products">Productos</a></li>
-                        <li><a href="/Cocteles">Cocteles</a></li>
-                        <li><a href="/NuestraHistoria">Nuestra historia</a></li>
-                        <li><a href="/Procesos">Proceso</a></li>
-                        <li><a href="/Reconocimientos">Reconocimientos</a></li>
-                        <li><a href="#">Equipo Drakon</a></li>
+                        
+                        <li><a href="/products">PRODUCTOS</a></li>
+                        <li><a href="/Cocteles">COCTELES</a></li>
+                        <li><a href="/NuestraHistoria">NUESTRA HISTORIA</a></li>
+                        <li><a href="/Procesos">PROCESO</a></li>
+                        <li><a href="/Reconocimientos">RECONOCIMIENTOS</a></li>
                     </ul>
                 </div>
 

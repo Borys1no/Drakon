@@ -15,11 +15,8 @@ const Home = () => {
           <img src={assets.FotoSeba} alt="Imagen de introduccion" />
         </div>
         <div className="intro-text">
-          <Animation className="anim-left">
-            <h3 className="des_txt">Un destilado a la perfección</h3>
-          </Animation>
-          <Animation className="anim-right">
-            <p className="txt_intro">
+            <h3>Un destilado a la perfección</h3>
+            <p>
               Drakon, como marca líder de destilados premium, reafirma su
               compromiso con la innovación, calidad, sostenibilidad,
               responsabilidad social y excelencia global. Cada etapa de nuestro
@@ -27,7 +24,6 @@ const Home = () => {
               garantizar productos de la más alta calidad, representando con
               orgullo la identidad ecuatoriana en los mercados internacionales.
             </p>
-          </Animation>
 
           <div className="buho">
             <img src={assets.GifBuho} alt="Gif1" />
