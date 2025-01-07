@@ -37,7 +37,7 @@ const Products = () => {
                         <p className="product-description-poppins">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>
 
                         {/* Botón de Comprar */}
-                        <div className="button-container">
+                        <div className="button-container2">
                             <button className="buy-button">
                                 <a href="/MalkeVirgen"> AÑADIR AL CARRITO</a>
                             </button>
@@ -46,7 +46,7 @@ const Products = () => {
             </div>
 
             {/* Producto 2: Malke Triple Destilado (Imagen a la izquierda) */}
-            <div className="product-section reverse" style={{ marginTop: '100px', marginBottom: '100px'}}>
+            <div className="product-section reverse">
                 <div className="product-image-2">
                     <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
                 </div>
@@ -72,7 +72,7 @@ const Products = () => {
                     <p className="product-description-poppins">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>
 
                     {/* Botón de Comprar */}
-                    <div className="button-container">
+                    <div className="button-container2">
                         <button className="buy-button">
                             <a href="/MalkeVirgen"> AÑADIR AL CARRITO</a>
                         </button>
