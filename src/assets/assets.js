@@ -43,7 +43,6 @@ import BannerOficial from './img/banners/mee.png'
 import FotoSeba from './img/pic/IMG1.jpg'
 import GifBuho from './img/gif/BUHO 1 copy.gif'
 
-<<<<<<< HEAD
 import SLIDES2copy from './img/banners/SLIDES2copy.jpg'
 import BOTELLAROSAcopy from './img/icons/BOTELLAROSAcopy.png'
 import BOTELLAROJAcopy from './img/icons/BOTELLAROJAcopy.png'
@@ -52,15 +51,23 @@ import coctelRose from './img/pic/GAB06660-Editar 2.jpg'
 import coctelTonic from './img/pic/GAB06764-8 copy.jpg'
 import coctelRasp from './img/pic/GAB06825-Editar 2.jpg'
 
-import bannerProceso from './img/banners/1.png'
+import bannerProceso from "./img/banners/1.png";
+import bannerIdentidad from "./img/banners/4.png";
+import bannerClaro from "./img/banners/3.png";
+import bannerComunidad from "./img/banners/FIE09088-8.jpg";
+import bannerGente from "./img/banners/2.png";
 
+import bannerIdentidadRec from "./img/bannerRecortados/bannerRecortadosPrimero.png";
+import bannerClaroRec from "./img/bannerRecortados/bannerRecortadosPrimero.png";
+import bannerComunidadRec from "./img/bannerRecortados/bannerRecortadosPrimero.png";
+import bannerGenteRec from "./img/bannerRecortados/bannerRecortadosPrimero.png";
 
 import Carrusel2 from './img/pic/Carrusel2.jpg'
 import Carrusel3 from './img/pic/Carrusel3.jpg'
-=======
+
 import PFabricacion from './img/banners/procesoDeFabricacion.png'
 import LogoDrakon from './img/icons/drakon_negro.png'
->>>>>>> refs/remotes/origin/master
+
 
 export const assets = {
   LogoNegro,
@@ -126,62 +133,5 @@ export const assets = {
   bannerGenteRec
 };
 
-<<<<<<< HEAD
-export const assets ={
-    LogoNegro,
-    LogoBlanco,
-    Cart,
-    User,
-    Burger,
-    Banner,
-    Introduction,
-    Trago,
-    Coctel,
-    Facebook,
-    Instagram,
-    Linkedin,
-    X,
-    Champage,
-    InstagramRosa,
-    FacebookRosa,
-    LinkedinRosa,
-    Xrosa,
-    PitahayaBack,
-    Bann1,
-    Bann2,
-    Bann3,
-    CoctelD,
-    DrakonCarac,
-    NuestraHistoriaEJEM,
-    N1,
-    N2,
-    N3,
-    N4,
-    N5,
-    N6,
-    ImgFtr,
-    FlechaDerecha,
-    FlechaIzquierda,
-    BotellaRoja,
-    BotellaRosa,
-    Duende,
-    Lechuza,
-    medalla,
-    BannerOficial,
-    FotoSeba,
-    GifBuho,
-    SLIDES2copy,
-    BOTELLAROSAcopy,
-    BOTELLAROJAcopy,
-    coctelRose,
-    coctelTonic,
-    coctelRasp,
-    bannerProceso,
-    Carrusel2,
-    Carrusel3
 
 
-
-}
-=======
->>>>>>> refs/remotes/origin/master
