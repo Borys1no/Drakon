@@ -19,7 +19,7 @@ const ProductPage = () => {
   // Datos del producto actual
   const product = {
     id: 1,
-    name: 'Malke Virgen',
+    name: 'DRAKON DESTILADO',
     price: 30,
     image: assets.Trago,
   };
@@ -36,6 +36,8 @@ const ProductPage = () => {
 
   return (
     <div className="Qproduct-page-container">
+      {/* Fondo global */}
+      <img className="background-image2" src={assets.SLIDES2copy} alt="SLIDES2copy" />
       <div className="Qproduct-content">
         {/* Sección de la imagen principal y el carrusel a la izquierda */}
         <div className="Qproduct-image-section">
@@ -76,15 +78,16 @@ const ProductPage = () => {
         <div className="Qproduct-details">
           <h2 className="playfair-display-3TituloDrakonh1">{product.name}</h2>
           <p className="product-description-poppins">
-            Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte.
+          Ofrece pureza excepcional y un perfil de sabor equilibrado, reflejando la esencia premium de la
+          pitahaya manabita.
           </p>
 
           <div className="product-featuresP-container">
             <ul className="product-featuresP">
-                <li><strong>Vista</strong> Claro, limpio y transparente.</li>
-                <li><strong>Sabor</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
-                <li><strong>Cuerpo</strong> Ligeras notas frutales con delicados destellos florales.</li>
-                <li><strong>Aroma</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
+                <li><strong>VISTA</strong> Claro, limpio y transparente.</li>
+                <li><strong>SABOR</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
+                <li><strong>CUERPO</strong> Ligeras notas frutales con delicados destellos florales.</li>
+                <li><strong>AROMA</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
             </ul>
           </div>
 
@@ -103,49 +106,64 @@ const ProductPage = () => {
           {/* Precio y botón */}
           <div className="Qproduct-price"></div>
           <button className="Qadd-to-cart-button" onClick={handleAddToCart}>
-            Agregar al carrito
+          AÑADIR AL CARRITO
           </button>
         </div>
       </div>
 
-      <section className="productos-section">
-        <div className="productos-header">
-          <h3>Productos</h3>
-          <a href="#" className='btn'>Tienda</a>
-        </div>
-        <div className="productos-carousel">
-          <div className="producto-card">
-            <img src={assets.Champage} alt="Malke Virgen" />
-            <div className="container-descrip">
-              <h2 className='product-title'>Malke Virgen</h2>
-              <p className='product-description'>
-                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, al menos dos destilados, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
-              </p>
-            </div>
-            <a href='#' className="Qbtn">Comprar</a>
-          </div>
-          <div className="producto-card">
-            <img src={assets.Champage} alt="Malke Triple Destilado" />
-            <div className="container-descrip">
-              <h2 className='product-title'>Malke Triple Destilado</h2>
-              <p className='product-description'>
-                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca cultivada en el cantón Rocafuerte, tres veces destilado, embotellado y envasado en botella de vidrio o cerámica a 32% alc/vol (64 proof).
-              </p>
-            </div>
-            <a href='#' className="Qbtn">Comprar</a>
-          </div>
-          <div className="producto-card">
-            <img src={assets.Champage} alt="Malke Reposado" />
-            <div className="container-descrip">
-              <h2 className='product-title'>Malke Reposado</h2>
-              <p className='product-description'>
-                Elaborado exclusivamente del mosto de pitahaya manabita roja pulpa blanca en el cantón Rocafuerte, con un reposo de al menos de tres meses en barrica de roble americano, envasado en botella de vidrio a 40% alc/vol (80 proof).
-              </p>
-            </div>
-            <a href='#' className="Qbtn">Comprar</a>
-          </div>
-        </div>
-      </section>
+        {/* Productos */}
+            <section>
+              <div className="productos-header" style={{ marginTop: "100px" }}>
+                <h3>Nuestros Productos</h3>
+              </div>
+              <div className="productos-carousel">
+                <div className="producto-card">
+                  <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
+                  <div className="container-descrip">
+                    <h2 className="product-title">Drakon Destilado</h2>
+                    <p className="product-description">$27,00</p>
+                  </div>
+                  <div className="button-container">
+                    <a href="#" className="Qbtn">
+                      Comprar
+                    </a>
+                    <a href="#" className="Qbtn2">
+                      Conoce más
+                    </a>
+                  </div>
+                </div>
+                <div className="producto-card">
+                  <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
+                  <div className="container-descrip">
+                    <h2 className="product-title">Drakon Triple Destilado</h2>
+                    <p className="product-description">$39,00</p>
+                  </div>
+                  <div className="button-container">
+                    <a href="#" className="Qbtn">
+                      Comprar
+                    </a>
+                    <a href="#" className="Qbtn2">
+                      Conoce más
+                    </a>
+                  </div>
+                </div>
+                <div className="producto-card">
+                  <img src={assets.BOTELLAROJAcopy} alt="Malke Reposado" />
+                  <div className="container-descrip">
+                    <h2 className="product-title">Drakon Reposado</h2>
+                    <p className="product-description">$50,00</p>
+                  </div>
+                  <div className="button-container">
+                    <a href="#" className="Qbtn">
+                      Comprar
+                    </a>
+                    <a href="#" className="Qbtn2">
+                      Conoce más
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
       <Footer/>
     </div>
   );
