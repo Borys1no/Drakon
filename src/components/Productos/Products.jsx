@@ -20,17 +20,17 @@ const Products = () => {
                         </p>
                         <hr className="separator-line" />
 
-                        <h3 className="product-subtitle">Detalles de la botella</h3>
+                        <h3 className="product-subtitle">Detalles de la botella:</h3>
                         <p className="product-no-gap">32% alc/vol (64 proof).</p>
                         <p className="product-no-gap">750 ml</p>
 
                         
                         <div className="product-features-container">
                             <ul className="product-features">
-                                <li><strong>Vista</strong> Claro, limpio y transparente.</li>
-                                <li><strong>Sabor</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
-                                <li><strong>Cuerpo</strong> Ligeras notas frutales con delicados destellos florales.</li>
-                                <li><strong>Aroma</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
+                                <li><strong>VISTA</strong> Claro, limpio y transparente.</li>
+                                <li><strong>SABOR</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
+                                <li><strong>CUERPO</strong> Ligeras notas frutales con delicados destellos florales.</li>
+                                <li><strong>AROMA</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
                             </ul>
                         </div>
 
@@ -63,10 +63,10 @@ const Products = () => {
 
                     <div className="product-features-container">
                             <ul className="product-features">
-                                <li><strong>Vista</strong> Claro, limpio y transparente.</li>
-                                <li><strong>Sabor</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
-                                <li><strong>Cuerpo</strong> Ligeras notas frutales con delicados destellos florales.</li>
-                                <li><strong>Aroma</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
+                                <li><strong>VISTA</strong> Claro, limpio y transparente.</li>
+                                <li><strong>SABOR</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
+                                <li><strong>CUERPO</strong> Ligeras notas frutales con delicados destellos florales.</li>
+                                <li><strong>AROMA</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
                             </ul>
                     </div>
                     <p className="product-description-poppins">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>

@@ -50,10 +50,13 @@ body {
 .playfair-display-3TituloDrakonh1 {
     font-size: 3rem;
     color: #cc528f;
-    font-family: "Playfair Display", serif;
+    font-family: 'TTRamillas';
     font-optical-sizing: auto;
     font-weight: 400;
+
+    font-weight: bold;
     font-style: normal;
+
     text-align: left;
     margin-bottom: 30px;
     margin-left: 20px; /* Agrega margen izquierdo */
@@ -71,7 +74,7 @@ body {
 
 /* Sin espacios entre h3 y p */
 .product-subtitle {
-    font-family: "Playfair Display", serif;
+    font-family: 'TTRamillas';
     font-size: 1.6rem;
     color: #cd528f;
     margin-bottom: 0;
