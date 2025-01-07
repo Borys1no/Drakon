@@ -66,7 +66,7 @@ import Carrusel2 from "./img/pic/Carrusel2.jpg";
 import Carrusel3 from "./img/pic/Carrusel3.jpg";
 
 
-<<<<<<< HEAD
+
 import Carrusel2 from './img/pic/Carrusel2.jpg'
 import Carrusel3 from './img/pic/Carrusel3.jpg'
 import PFabricacion from './img/banners/procesoDeFabricacion.png'
@@ -131,66 +131,3 @@ export const assets ={
 
 
 }
-=======
-export const assets = {
-  LogoNegro,
-  LogoBlanco,
-  Cart,
-  User,
-  Burger,
-  Banner,
-  Introduction,
-  Trago,
-  Coctel,
-  Facebook,
-  Instagram,
-  Linkedin,
-  X,
-  Champage,
-  InstagramRosa,
-  FacebookRosa,
-  LinkedinRosa,
-  Xrosa,
-  PitahayaBack,
-  Bann1,
-  Bann2,
-  Bann3,
-  CoctelD,
-  DrakonCarac,
-  NuestraHistoriaEJEM,
-  N1,
-  N2,
-  N3,
-  N4,
-  N5,
-  N6,
-  ImgFtr,
-  FlechaDerecha,
-  FlechaIzquierda,
-  BotellaRoja,
-  BotellaRosa,
-  Duende,
-  Lechuza,
-  medalla,
-  BannerOficial,
-  FotoSeba,
-  GifBuho,
-  SLIDES2copy,
-  BOTELLAROSAcopy,
-  BOTELLAROJAcopy,
-  coctelRose,
-  coctelTonic,
-  coctelRasp,
-  bannerProceso,
-  Carrusel2,
-  Carrusel3,
-  bannerIdentidad,
-  bannerClaro,
-  bannerComunidad,
-  bannerGente,
-  bannerIdentidadRec,
-  bannerClaroRec,
-  bannerComunidadRec,
-  bannerGenteRec
-};
->>>>>>> refs/remotes/origin/master
