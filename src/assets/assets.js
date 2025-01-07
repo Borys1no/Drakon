@@ -43,6 +43,7 @@ import BannerOficial from './img/banners/mee.png'
 import FotoSeba from './img/pic/IMG1.jpg'
 import GifBuho from './img/gif/BUHO 1 copy.gif'
 
+<<<<<<< HEAD
 import SLIDES2copy from './img/banners/SLIDES2copy.jpg'
 import BOTELLAROSAcopy from './img/icons/BOTELLAROSAcopy.png'
 import BOTELLAROJAcopy from './img/icons/BOTELLAROJAcopy.png'
@@ -56,8 +57,76 @@ import bannerProceso from './img/banners/1.png'
 
 import Carrusel2 from './img/pic/Carrusel2.jpg'
 import Carrusel3 from './img/pic/Carrusel3.jpg'
+=======
+import PFabricacion from './img/banners/procesoDeFabricacion.png'
+import LogoDrakon from './img/icons/drakon_negro.png'
+>>>>>>> refs/remotes/origin/master
 
+export const assets = {
+  LogoNegro,
+  LogoBlanco,
+  Cart,
+  User,
+  Burger,
+  Banner,
+  Introduction,
+  Trago,
+  Coctel,
+  Facebook,
+  Instagram,
+  Linkedin,
+  X,
+  Champage,
+  InstagramRosa,
+  FacebookRosa,
+  LinkedinRosa,
+  Xrosa,
+  PitahayaBack,
+  Bann1,
+  Bann2,
+  Bann3,
+  CoctelD,
+  DrakonCarac,
+  NuestraHistoriaEJEM,
+  N1,
+  N2,
+  N3,
+  N4,
+  N5,
+  N6,
+  ImgFtr,
+  FlechaDerecha,
+  FlechaIzquierda,
+  BotellaRoja,
+  BotellaRosa,
+  Duende,
+  Lechuza,
+  medalla,
+  BannerOficial,
+  FotoSeba,
+  GifBuho,
+  SLIDES2copy,
+  BOTELLAROSAcopy,
+  BOTELLAROJAcopy,
+  coctelRose,
+  coctelTonic,
+  coctelRasp,
+  bannerProceso,
+  Carrusel2,
+  Carrusel3,
+  PFabricacion,
+  LogoDrakon,
+  bannerIdentidad,
+  bannerClaro,
+  bannerComunidad,
+  bannerGente,
+  bannerIdentidadRec,
+  bannerClaroRec,
+  bannerComunidadRec,
+  bannerGenteRec
+};
 
+<<<<<<< HEAD
 export const assets ={
     LogoNegro,
     LogoBlanco,
@@ -114,3 +183,5 @@ export const assets ={
 
 
 }
+=======
+>>>>>>> refs/remotes/origin/master
