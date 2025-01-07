@@ -2,212 +2,62 @@
 .historia-page-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   min-height: 100vh;
-  background-color: #2C2A29;
+  background-color: #ffffff;
   padding-bottom: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .historia-title-section {
-  text-align: left;
+  text-align: center;
   margin-bottom: 60px;
-  padding-left: 20px;
+}
+
+.historia-main-titleP {
+  margin-top: 10%;
+  font-size: 3.5rem;
+  color: #CD528F;
+  text-transform: uppercase;
+  font-family: 'TTRamillas', sans-serif;
 }
 
 .historia-main-title {
   font-size: 3.5rem;
   color: #CD528F;
   text-transform: uppercase;
+  font-family: 'TTRamillas', sans-serif;
 }
 
-.historia-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 60px;
-  padding: 20px;
-  background-color: #2C2A29;
-}
-
-.historia-text-left {
-  flex: 1;
-  padding: 20px;
-  text-align: left;
-  color: #CD528F;
-}
-
-.historia-text-left h2 {
+.historia-subtitle {
   font-size: 2rem;
-  margin-bottom: 20px;
+  color: #CD528F;
+  text-transform: uppercase;
+  font-family: 'TTRamillas', sans-serif;
+  margin-top: 20px;
 }
 
-.historia-text-left p {
+.historia-text {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #CD528F;
+  color: #2C2A29;
+  text-align: center;
+  margin: 1px 0;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
-.historia-image-right {
-  flex: 1;
-  padding: 20px;
+.ceibos-arbol-gif {
   text-align: center;
+  margin: 1px 0;
+}
+
+.ceibos-arbol-gif img {
+  width: 200px;
+  height: auto;
 }
 
 .historia-img {
-  width: 80%;
-  max-width: 500px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(205, 82, 143, 0.5);
-  margin: 0 auto;
-}
-
-/* Image Section */
-.image-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 60px;
-  padding: 0;
-}
-
-.image-left, .image-right {
-  flex: 1;
-  position: relative;
-}
-
-.left-image, .right-image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
-  max-height: 500px;
-}
-
-.blurred-image img {
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-}
-
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  background-color: rgba(240, 199, 227, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-}
-
-.overlay-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.overlay-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Creación de Drakon Section (Newspaper Style) */
-.creacion-drakon-section {
-  background-color: #F5F5DC;
-  padding: 40px;
-  margin-bottom: 60px;
-}
-
-.creacion-drakon-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #2C2A29;
-}
-
-.newspaper-article {
-  margin-bottom: 40px;
-}
-
-.article-title {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #CD528F;
-  text-transform: uppercase;
-}
-
-.article-image {
-  width: 30%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-}
-
-.article-content {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #2C2A29;
-  margin-top: 10px;
-}
-
-/* Leyendas Cortas Section */
-.leyendas-section {
-  background-color: #F5F5DC;
-  padding: 40px;
-  margin-bottom: 60px;
-}
-
-.leyendas-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #2C2A29;
-  margin-bottom: 30px;
-}
-
-.leyenda {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.leyenda-title {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #CD528F;
-}
-
-.leer-btn {
-  padding: 10px 20px;
-  background-color: #CD528F;
-  color: #F5F5DC;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-.leer-btn:hover {
-  background-color: #E573A0;
-}
-
-.leyenda-content {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.leyenda-content p {
-  flex: 1;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-right: 20px;
-  text-align: left;
-}
-
-.leyenda-image img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
 }
