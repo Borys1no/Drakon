@@ -1,4 +1,4 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -32,6 +32,7 @@ body {
 /* Introducción */
 .introduction {
   display: flex;
+  flex-wrap: wrap;
   border: 2px solid #e8d685;
   padding: 20px;
   align-items: center;
@@ -67,14 +68,14 @@ body {
   padding-right: 150px;
 }
 
-.intro-text  .des_txt {
+.intro-text  h3 {
   font-size: 40px;
   color: black;
   font-weight: 700;
 }
 
 
-.intro-text .txt_intro {
+.intro-text p {
   font-size: 19px;
   color: black;
 }
@@ -96,32 +97,6 @@ body {
   height: 200px;
 }
 
-/* Media Query para dispositivos pequeños */
-@media (max-width: 768px) {
-  .introduction {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .intro-img {
-    margin-right: 0;
-    margin-bottom: 20px;
-    flex: none;
-  }
-
-  .intro-text {
-    max-width: 100%;
-    /* Permite que el texto use todo el espacio en pantallas pequeñas */
-  }
-
-  .buho {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin-top: 20px;
-    width: 80px;
-  }
-}
 
 
 
@@ -461,201 +436,59 @@ body {
 
 
 
-
-@media (min-width: 300px) and (max-width:1024px) {
+@media (max-width: 768px) {
   .banner {
-    padding: 50px 10px;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .banner h2 {
-    font-size: 2rem;
-  }
-
-  .banner p {
-    font-size: 1rem;
+    margin-top: 0;
+    height: 400px; /* Reducimos la altura */
+    background-size: contain; /* Ajusta el fondo para no recortarlo */
   }
 
   .introduction {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Cambiamos a diseño en columna */
+    text-align: center; /* Centra todo el contenido */
   }
 
-  .introduction .intro-img {
-    position: relative;
-    z-index: 5;
-  }
-
-  .introduction h3,
-  .introduction p {
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
-  .introduction .btn {
-    padding: 10px 40px;
-    margin-bottom: 20px;
-    background-color: #2C2A29;
-    border: 1px solid #CD528F;
-  }
-
-  /* Productos */
-  .productos-header .btn {
-    padding: 10px 40px;
-  }
-
-  .productos-carousel {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    overflow-x: auto;
-    /* Habilitar scroll horizontal */
-    scroll-snap-type: x mandatory;
-  }
-
-  .producto-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    text-align: center;
-    flex: 1 1 calc(33.333% - 20px);
-    box-sizing: border-box;
-
-  }
-
-  .producto-card .product-description {
-    flex-grow: 1;
-  }
-
-  .producto-card .Qbtn {
-    padding: 5px 20px;
-    margin-top: auto;
-
-  }
-
-
-  .product-description {
-    display: none;
-    /* Ocultar descripciones para ahorrar espacio */
-  }
-
-  .producto-card img {
-    max-width: 90%;
-  }
-
-  /* Proceso de fabricación */
-  .fabricacion {
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .fabricacion h3 {
-    border-bottom: 1px solid #CD528F;
+  .intro-img {
+    flex: 0 0 auto;
+    margin-right: 0;
     margin-bottom: 20px;
   }
 
-  .fabricacion-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    max-width: 800px;
+  .intro-text {
+    padding-right: 0;
+    text-align: left;
+    display: block;
   }
-
-  .img-fabricacion {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .img-fabricacion img {
-    width: 100%;
-    height: auto;
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .fabricacion .fabricacion-content {
-    position: relative;
-    max-width: 100%;
-  }
-
-  .fabricacion .text-content {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .fabricacion p {
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .text-content .btn {
-    padding: 10px 40px;
+  .buho{
+    align-self: flex-end;
     margin-top: 20px;
   }
 
-  /* Cocteles */
-  .cocteles {
-    padding: 40px 20px;
-    text-align: center;
-    margin-top: 50px;
-    /* Ajusta este valor según tus necesidades */
+  .buho img {
+    width: 130px;
+    height: 130px
   }
+}
 
-
-  .cocteles-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-
+/* Para pantallas medianas como tablets */
+@media (max-width: 1024px) {
+  .banner {
+    margin-top: 10;
+    height: 500px; /* Ajustamos la altura para tablets */
   }
-
-  .coctel-card {
-    position: relative;
-    width: calc(33.333% - 20px);
-    height: 500px;
-    perspective: 1000px;
-    flex: 1 1 100%;
-    box-sizing: border-box;
-    justify-content: space-between;
-
+  .intro-text h3{
+    font-size: 1.8rem;
   }
-
-  .coctel-front {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .intro-text p{
+    font-size: 0.95rem;
   }
+}
 
-  .coctel-front img {
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
-  }
-
-  .btn-recetas {
-    padding: 10px 40px;
-  }
-
-  .coctel-card {
-    display: flex;
-    flex-direction: column;
+/* Para pantallas muy pequeñas como móviles antiguos */
+@media (max-width: 480px) {
+  .banner {
+    margin-top: 0;
+    height: 300px; /* Aún más pequeño */
+    margin-top: 50px; /* Ajustamos el margen superior */
   }
 }
