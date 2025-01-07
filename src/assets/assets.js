@@ -56,6 +56,8 @@ import bannerProceso from './img/banners/1.png'
 
 import Carrusel2 from './img/pic/Carrusel2.jpg'
 import Carrusel3 from './img/pic/Carrusel3.jpg'
+import PFabricacion from './img/banners/procesoDeFabricacion.png'
+import LogoDrakon from './img/icons/drakon_negro.png'
 
 
 export const assets ={
@@ -109,7 +111,9 @@ export const assets ={
     coctelRasp,
     bannerProceso,
     Carrusel2,
-    Carrusel3
+    Carrusel3,
+    PFabricacion,
+    LogoDrakon
 
 
 

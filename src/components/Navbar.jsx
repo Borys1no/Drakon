@@ -42,7 +42,7 @@ const Navbar = () => {
         <nav>
             <div className='navbar'>
                 <a href="/Home">
-                    <img src={assets.LogoNegro} alt="Logo Drakon" className='logo' />
+                    <img src={assets.LogoDrakon} alt="Logo Drakon" className='logo' />
                 </a>
 
                 <div className={`navbar-center ${isNavOpen && isMobile ? 'active' : ''}`}>
