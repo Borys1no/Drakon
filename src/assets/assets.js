@@ -51,7 +51,7 @@ import coctelRose from './img/pic/GAB06660-Editar 2.jpg'
 import coctelTonic from './img/pic/GAB06764-8 copy.jpg'
 import coctelRasp from './img/pic/GAB06825-Editar 2.jpg'
 
-import bannerProceso from "./img/banners/1.png";
+import bannerCoctel from "./img/banners/1.png";
 import bannerIdentidad from "./img/banners/4.png";
 import bannerClaro from "./img/banners/3.png";
 import bannerComunidad from "./img/banners/FIE09088-8.jpg";
@@ -67,6 +67,11 @@ import Carrusel3 from './img/pic/Carrusel3.jpg'
 
 import PFabricacion from './img/banners/procesoDeFabricacion.png'
 import LogoDrakon from './img/icons/drakon_negro.png'
+import CoctelDragonfly from './img/pic/IMG_8820 copy.jpg'
+import CoctelStraw from './img/pic/GAB06839-18 copy.jpg'
+import CoctelDrakorita from './img/pic/GAB06865-19 copy.jpg'
+import CoctelOld from './img/pic/IMG_8821 copy.jpg'
+import CoctelDrakontini from './img/pic/IMG_9437 copy.jpg'
 
 
 export const assets = {
@@ -118,7 +123,7 @@ export const assets = {
   coctelRose,
   coctelTonic,
   coctelRasp,
-  bannerProceso,
+  bannerCoctel,
   Carrusel2,
   Carrusel3,
   PFabricacion,
@@ -130,7 +135,12 @@ export const assets = {
   bannerIdentidadRec,
   bannerClaroRec,
   bannerComunidadRec,
-  bannerGenteRec
+  bannerGenteRec,
+  CoctelDragonfly,
+  CoctelStraw,
+  CoctelDrakorita,
+  CoctelOld,
+  CoctelDrakontini
 };
 
 
