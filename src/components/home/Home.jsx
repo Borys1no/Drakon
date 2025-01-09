@@ -26,7 +26,7 @@ const Home = () => {
           </p>
 
           <div className="buho">
-            <img src={assets.GifBuho} alt="Gif1" />
+            <img src={assets.Buho2} alt="Gif1" />
           </div>
         </div>
       </section>

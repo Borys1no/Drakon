@@ -3,6 +3,18 @@ import { useAuth } from '../../contexts/authContext';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase/firebase';
 import './SideBard.css';
+import {Package, Combine} from 'lucide-react';
+
+const menuItems = [
+  {
+    title: 'Pedidos',
+    icon: Package,
+  },
+  {
+    title: 'Estados pedidos',
+    icon: Combine,
+  },
+];
 
 const SideBar = () => {
   const { currentUser } = useAuth();
@@ -24,9 +36,8 @@ const SideBar = () => {
   return (
     <div className="sidebar-container">
       <div className="sidebar">
-        <a href="#">Ordenes</a>
-        <a href="#">Productos</a>
-        <a href="#">Configuracion</a>
+        <a href="#">Pedidos</a>
+        <a href="#">Estados pedidos</a>
       </div>
       <div className="perfil">
         {currentUser ? (

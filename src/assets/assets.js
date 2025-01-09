@@ -77,6 +77,7 @@ import CoctelOld from './img/pic/IMG_8821 copy.jpg'
 import CoctelDrakontini from './img/pic/IMG_9437 copy.jpg'
 
 import NuestraHistoriaImg from './img/pic/FIE09042-3.jpg'
+import Buho2 from './img/gif/BUHO 2 copy.gif'
 
 export const assets = {
   LogoNegro,
@@ -148,7 +149,8 @@ export const assets = {
   CoctelStraw,
   CoctelDrakorita,
   CoctelOld,
-  CoctelDrakontini
+  CoctelDrakontini,
+  Buho2
 };
 
 
