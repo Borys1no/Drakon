@@ -42,6 +42,9 @@ import medalla from './medalla.png'
 import BannerOficial from './img/banners/mee.png'
 import FotoSeba from './img/pic/IMG1.jpg'
 import GifBuho from './img/gif/BUHO 1 copy.gif'
+import GifAbstracto from './img/gif/ABSTRACTO copy.gif'
+import GifArbol from './img/gif/CEIBO PLANTAS copy.gif'
+import GifPitahaya from './img/pic/PITAHAYA copy.gif'
 
 import SLIDES2copy from './img/banners/SLIDES2copy.jpg'
 import BOTELLAROSAcopy from './img/icons/BOTELLAROSAcopy.png'
@@ -58,9 +61,9 @@ import bannerComunidad from "./img/banners/FIE09088-8.jpg";
 import bannerGente from "./img/banners/2.png";
 
 import bannerIdentidadRec from "./img/bannerRecortados/bannerRecortadosPrimero.png";
-import bannerClaroRec from "./img/bannerRecortados/bannerRecortadosPrimero.png";
-import bannerComunidadRec from "./img/bannerRecortados/bannerRecortadosPrimero.png";
-import bannerGenteRec from "./img/bannerRecortados/bannerRecortadosPrimero.png";
+import bannerClaroRec from "./img/bannerRecortados/bannerRecortadosSegundo.png";
+import bannerComunidadRec from "./img/bannerRecortados/bannerRecortadosTercero.jpg";
+import bannerGenteRec from "./img/bannerRecortados/bannerRecortadosCuarto.png";
 
 import Carrusel2 from './img/pic/Carrusel2.jpg'
 import Carrusel3 from './img/pic/Carrusel3.jpg'
@@ -68,6 +71,7 @@ import Carrusel3 from './img/pic/Carrusel3.jpg'
 import PFabricacion from './img/banners/procesoDeFabricacion.png'
 import LogoDrakon from './img/icons/drakon_negro.png'
 
+import NuestraHistoriaImg from './img/pic/FIE09042-3.jpg'
 
 export const assets = {
   LogoNegro,
@@ -130,7 +134,12 @@ export const assets = {
   bannerIdentidadRec,
   bannerClaroRec,
   bannerComunidadRec,
-  bannerGenteRec
+  bannerGenteRec,
+  GifAbstracto,
+  GifArbol,
+  GifPitahaya,
+  NuestraHistoriaImg
+
 };
 
 
