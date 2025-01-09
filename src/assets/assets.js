@@ -77,6 +77,7 @@ import CoctelOld from './img/pic/IMG_8821 copy.jpg'
 import CoctelDrakontini from './img/pic/IMG_9437 copy.jpg'
 
 import NuestraHistoriaImg from './img/pic/FIE09042-3.jpg'
+import Buho2 from './img/gif/BUHO 2 copy.gif'
 
 import Proceso1 from './img/pic/DSC08559-3.jpg'
 import Proceso2 from './img/pic/b2d9d9e0-423c-4309-a63e-d8559f76805b.jpg'
@@ -159,7 +160,8 @@ export const assets = {
   Proceso2,
   Proceso3,
   Proceso4,
-  Proceso5
+  Proceso5,
+  Buho2
 };
 
 
