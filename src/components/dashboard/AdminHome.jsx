@@ -1,7 +1,6 @@
 import React from 'react'
 import './Dashboard.css'
 import SideBar from './SideBar';
-import {DashborardStats} from './DashboardStats';
 
 const AdminHome = () => {
   return (
