@@ -2,44 +2,39 @@ import React, { useState } from 'react';
 import './Procesos.css'; 
 import Footer from '../Footer/Footer';
 import { assets } from '../../assets/assets'; 
+import {CircleArrowRight, CircleArrowLeft} from 'lucide-react';
 
 const steps = [
   {
     id: 1,
-    title: "Selección de la Fruta",
+    title: "SELECCIÓN DE LA FRUTA",
     description: "Solo se elige la mejor pitahaya roja de Manabí, garantizando una materia prima de calidad superior.",
-    image: assets.N1, 
+    image: assets.Proceso1, 
   },
   {
     id: 2,
-    title: "Preparación de la Pulpa",
+    title: "PREPARACIÓN DE LA PULPA",
     description: "La pitahaya es cuidadosamente pelada y su pulpa es extraída para conservar sus sabores frescos y únicos.",
-    image: assets.N2, 
+    image: assets.Proceso2, 
   },
   {
     id: 3,
-    title: "Fermentación",
+    title: "FERMENTACIÓN CONTROLADA",
     description: "La pulpa de pitahaya se fermenta, transformando sus azúcares naturales en alcohol, desarrollando el perfil aromático característico de Drakon.",
-    image: assets.N3, 
+    image: assets.Proceso3, 
   },
   {
     id: 4,
-    title: "Destilación",
+    title: "DESTILACIÓN PRECISA",
     description: "El destilado se somete a un proceso de purificación en alambiques, capturando los aromas y sabores únicos de la pitahaya.",
-    image: assets.N4, 
+    image: assets.Proceso4, 
   },
   {
     id: 5,
-    title: "Reposo o Envejecimiento",
-    description: "Algunas versiones de Drakon se maduran en barricas de roble, añadiendo complejidad y suavidad al destilado.",
-    image: assets.N5, 
-  },
-  {
-    id: 6,
-    title: "Filtrado y Embotellado",
-    description: "El destilado se filtra para obtener una pureza excepcional antes de ser embotellado, listo para representar el orgullo de Manabí y Ecuador.",
-    image: assets.N6, 
-  },
+    title: "FILTRADO Y EMBOTELLADO",
+    description: "El destilado se ltra para tener una pureza excepcional antes de ser etiquetado y embotellado cuidadosamente.",
+    image: assets.Proceso5, 
+  }
 ];
 
 const Procesos = () => {
@@ -57,12 +52,12 @@ const Procesos = () => {
     <div className="procesos-page-container">
 
       <section className="process-carousel">
-        <h2 className="process-title">Nuestro Proceso</h2>
+        <h2 className="process-title">NUESTRO PROCESO</h2>
         <div className="process-line"></div>
 
         <div className="process-step-container">
           <button className="carousel-btn left-arrow" onClick={prevStep}>
-            <img src={assets.FlechaIzquierda} alt="Flecha Izquierda" className="arrow-icon" />
+             <CircleArrowRight size={80} color="red"/>
           </button>
 
           <div className="process-step">

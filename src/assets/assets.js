@@ -78,6 +78,12 @@ import CoctelDrakontini from './img/pic/IMG_9437 copy.jpg'
 
 import NuestraHistoriaImg from './img/pic/FIE09042-3.jpg'
 
+import Proceso1 from './img/pic/DSC08559-3.jpg'
+import Proceso2 from './img/pic/b2d9d9e0-423c-4309-a63e-d8559f76805b.jpg'
+import Proceso3 from './img/pic/tankes 2.jpg'
+import Proceso4 from './img/pic/FIE09261-40.jpg'
+import Proceso5 from './img/pic/FIE09270-Editar-33.jpg'
+
 export const assets = {
   LogoNegro,
   LogoBlanco,
@@ -148,7 +154,12 @@ export const assets = {
   CoctelStraw,
   CoctelDrakorita,
   CoctelOld,
-  CoctelDrakontini
+  CoctelDrakontini,
+  Proceso1,
+  Proceso2,
+  Proceso3,
+  Proceso4,
+  Proceso5
 };
 
 

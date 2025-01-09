@@ -8,7 +8,6 @@
     padding-top: 100px; /* Add padding to prevent content from being hidden under the navbar */
     font-family: Arial, sans-serif;
   }
-  
 
 /* Process Section */
 .process-carousel {
@@ -18,15 +17,19 @@
   }
   
   .process-title {
-    font-size: 2.5rem;
+    font-family: 'TTRamillas', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+
+    font-size: 3.5rem;
     color: #2C2A29;
   }
   
   .process-line {
-    width: 150px;
-    height: 4px;
+    width: 450px;
+    height: 1px;
     background-color: #CD528F;
-    margin: 20px auto;
+    margin: 0 auto 30px auto; /* Margen superior 0, inferior 30px */
   }
   
   /* Process Step Container */
@@ -86,13 +89,27 @@
   }
   
   .process-step-details h3 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+
+
     font-size: 1.8rem;
-    color: #2C2A29;
+    color: #CD528F;
+    
   }
   
   .process-step-details p {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+
+
     font-size: 1.2rem;
     color: #2C2A29;
     line-height: 1.5;
     margin-top: 10px;
   }
+
+
+  

@@ -94,7 +94,7 @@ const NuestraHistoria = () => {
         {/* Legend 1 */}
         <div className="leyenda">
           <h3 className="leyenda-title"> <button onClick={() => setShowLegend1(!showLegend1)} className="leer-btn">
-            {showLegend1 ? 'Ocultar' : 'La lechuza que no podía volar '}
+            {showLegend1 ? 'Ocultar' : 'LA LECHUZA QUE NO PODIA VOLAR'}
           </button></h3>
 
           {showLegend1 && (
@@ -128,7 +128,6 @@ const NuestraHistoria = () => {
                 Un día, mientras vagaba por los valles de Manabí, Drakorito encontró una hacienda en las afueras de Rocafuerte. Allí, observó que los dueños cultivaban con esmero la fruta nacida de la Reina de la Noche, y sentían un profundo respeto por la tierra. Con cautela, se acercó y les ofreció el elixir. Para su sorpresa, en lugar de temerle, los humanos lo recibieron con alegría y lo invitaron a celebrar. Pero juntos coincidieron en que al elixir aún le faltaba el toque humano.
                 Durante tres meses, guardaron el brebaje en barricas de roble, trabajadas con las manos dedicadas de los hombres. Al sacarlo, descubrieron que el tiempo y el esfuerzo humano habían completado la magia de los duendes, creando un elixir perfecto. Decidieron llamarlo "Drakon Reposado", en honor a Drakorito, el duende que les había confiado el secreto.
                 Drakorito quedó tan encantado con el resultado que, a cambio de una pequeña compensación para él y sus amigos, aceptó convertirse en el guardián de los barriles. Desde entonces, cada vez que se llena un barril de Drakon, al sacarlo siempre falta un pequeño porcentaje: el pago a los duendes que vigilan el precioso elixir.
-
               </p>
               <div className="leyenda-image">
                 <img src={assets.Duende} alt="Leyenda 2" />
@@ -137,11 +136,6 @@ const NuestraHistoria = () => {
           )}
         </div>
       </section>
-
-
-
-
-
 
       <Footer />
     </div>
