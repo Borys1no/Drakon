@@ -49,7 +49,10 @@ const Procesos = () => {
   };
 
   return (
+    
     <div className="procesos-page-container">
+      {/* Fondo global */}
+      <img className="background-imageGris" src={assets.SLIDES2copy} alt="SLIDES2copy" />
 
       <section className="process-carousel">
         <h2 className="process-title">NUESTRO PROCESO</h2>
@@ -57,7 +60,7 @@ const Procesos = () => {
 
         <div className="process-step-container">
           <button className="carousel-btn left-arrow" onClick={prevStep}>
-             <CircleArrowRight size={80} color="red"/>
+             <CircleArrowLeft size={60} color="#CD528F"/>
           </button>
 
           <div className="process-step">
@@ -69,7 +72,7 @@ const Procesos = () => {
           </div>
 
           <button className="carousel-btn right-arrow" onClick={nextStep}>
-            <img src={assets.FlechaDerecha} alt="Flecha Derecha" className="arrow-icon" />
+            <CircleArrowRight size={60} color="#CD528F" margin-left={10} />
           </button>
         </div>
       </section>
