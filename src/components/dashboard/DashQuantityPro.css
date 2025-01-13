@@ -1,0 +1,17 @@
+.product-card {
+    background-color: var(--blue-100);
+    color: var(--blue-600);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.product-card h3 {
+    margin: 0;
+}
+
+.product-icon {
+    margin-right: 10px;
+}
