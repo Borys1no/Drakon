@@ -30,8 +30,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Productos */}
-      <section>
+      
+      <section className="productos-section">
         <div className="productos-headerH" style={{ marginTop: "100px" }}>
           <h3>Nuestros Productos</h3>
         </div>
@@ -44,10 +44,10 @@ const Home = () => {
             </div>
             <div className="button-container">
               <a href="/MalkeVirgen" className="Qbtn">
-                Comprar
+                COMPRAR
               </a>
               <a href="/Products" className="Qbtn2">
-                Conoce más
+                CONOCE MÁS
               </a>
             </div>
           </div>
@@ -59,10 +59,10 @@ const Home = () => {
             </div>
             <div className="button-container">
               <a href="#" className="Qbtn">
-                Comprar
+                COMPRAR
               </a>
               <a href="#" className="Qbtn2">
-                Conoce más
+                CONOCE MÁS
               </a>
             </div>
           </div>
@@ -74,10 +74,10 @@ const Home = () => {
             </div>
             <div className="button-container">
               <a href="#" className="Qbtn">
-                Comprar
+                COMPRAR
               </a>
               <a href="#" className="Qbtn2">
-                Conoce más
+                CONOCE MÁS
               </a>
             </div>
           </div>
