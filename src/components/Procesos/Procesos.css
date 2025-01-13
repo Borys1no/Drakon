@@ -122,5 +122,46 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    /* Coloca la imagen detrás de todo */
+}
+.nuestro-equipo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre tarjetas */
+  padding: 20px;
+}
+
+.process-title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.eq-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px; /* Ajusta el tamaño de las tarjetas */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.eq-card img {
+  width: 200px; /* Tamaño reducido de las imágenes */
+  height: auto;
+  border-radius: 25%;
+  margin-bottom: 10px;
+}
+
+.eq-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.eq-card p {
+  font-size: 0.9rem;
+  color: #555;
 }

@@ -84,6 +84,9 @@ import Proceso2 from './img/pic/b2d9d9e0-423c-4309-a63e-d8559f76805b.jpg'
 import Proceso3 from './img/pic/tankes 2.jpg'
 import Proceso4 from './img/pic/FIE09261-40.jpg'
 import Proceso5 from './img/pic/FIE09270-Editar-33.jpg'
+import Jannel from './img/pic/FIE08972-32 copy.jpg'
+import Carlos from './img/pic/FIE09285-48 copy.jpg'
+import Antonello from './img/pic/FIE08987-34 copy.jpg'
 
 export const assets = {
   LogoNegro,
@@ -161,7 +164,10 @@ export const assets = {
   Proceso3,
   Proceso4,
   Proceso5,
-  Buho2
+  Buho2,
+  Jannel,
+  Carlos,
+  Antonello
 };
 
 

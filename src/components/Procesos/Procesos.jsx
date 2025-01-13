@@ -76,6 +76,29 @@ const Procesos = () => {
           </button>
         </div>
       </section>
+      <section>
+        <div className="nuestro-equipo">
+          <h2 className="process-title">NUESTRO EQUIPO</h2>
+          <div className="eq-card">
+            <img src={assets.Jannel} alt="Jannel"/>
+            <h3>Jannell Moraga</h3>
+            <p>Ingeniero en agronegocios <br />
+            Destilador principal</p>
+          </div>
+          <div className="eq-card">
+            <img src={assets.Carlos} alt="Carlos"/>
+            <h3>Carlos Pastenes</h3>
+            <p>Licenciado en comercio exterior y aduanas <br />
+            Gerente de logística, operaciones y comercio exterior</p>
+          </div>
+          <div className="eq-card">
+            <img src={assets.Antonello} alt="" srcset="" />
+            <h3>Antonello Toala</h3>
+            <p>Ingeniero agrónomo <br />
+            Jefe de control de calidad de la la hacienda La Felipa</p>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
