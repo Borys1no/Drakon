@@ -32,7 +32,7 @@ const Home = () => {
       </section>
       {/* Productos */}
       <section>
-        <div className="productos-header" style={{ marginTop: "100px" }}>
+        <div className="productos-headerH" style={{ marginTop: "100px" }}>
           <h3>Nuestros Productos</h3>
         </div>
         <div className="productos-carousel">
