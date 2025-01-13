@@ -3,8 +3,6 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   padding-top: 80px;
-
-
 }
 
 
@@ -109,8 +107,6 @@ html, body {
   align-items: center;
   text-align: center;
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
   flex: 1 1 calc(33.333% - 20px);
@@ -120,7 +116,12 @@ html, body {
   margin-right: 30px;
 }
 
-.productos-header {
+.productos-headerH {
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+
+  margin-left: 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,8 +133,8 @@ html, body {
 
 
 
-.productos-header h3 {
-  font-size: 2rem;
+.productos-headerH h3 {
+  font-size: 5rem;
   color: #000 !important;
   margin-left: 10px;
   margin-bottom: 20px;
@@ -145,6 +146,10 @@ html, body {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .producto-card {
@@ -156,8 +161,6 @@ html, body {
   flex: 1 1 calc(33.333% - 20px); /* Ajuste para columnas */
   margin-bottom: 20px;
   box-sizing: border-box;
-  border: 1px solid #eee;
-  border-radius: 8px;
   height: 100%; /* Asegurar altura consistente */
 }
 
