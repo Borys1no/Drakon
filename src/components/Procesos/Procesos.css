@@ -123,6 +123,7 @@
     object-fit: cover;
     z-index: -1;
 }
+
 .nuestro-equipo {
   display: flex;
   justify-content: center;
@@ -130,6 +131,7 @@
   flex-wrap: wrap;
   gap: 20px; /* Espaciado entre tarjetas */
   padding: 20px;
+  align-items: stretch;
 }
 
 .process-title {
@@ -147,13 +149,15 @@
   width: 200px; /* Ajusta el tamaño de las tarjetas */
   padding: 10px;
   border-radius: 8px;
+  height: 100%; 
 }
 
 .eq-card img {
   width: 200px; /* Tamaño reducido de las imágenes */
   height: auto;
-  border-radius: 25%;
+  border-radius: 10%;
   margin-bottom: 10px;
+  align-self: center;
 }
 
 .eq-card h3 {

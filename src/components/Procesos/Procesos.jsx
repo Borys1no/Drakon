@@ -77,6 +77,9 @@ const Procesos = () => {
         </div>
       </section>
       <section>
+        <div className="container-Equipo">
+
+        
         <div className="nuestro-equipo">
           <h2 className="process-title">NUESTRO EQUIPO</h2>
           <div className="eq-card">
@@ -97,6 +100,7 @@ const Procesos = () => {
             <p>Ingeniero agrónomo <br />
             Jefe de control de calidad de la la hacienda La Felipa</p>
           </div>
+        </div>
         </div>
       </section>
 
