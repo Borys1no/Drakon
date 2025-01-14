@@ -67,14 +67,22 @@ html, body {
 }
 
 .intro-text  h3 {
-  font-size: 2rem;
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-align: left;
+
+  font-size: 2.2rem;
   color: black;
-  font-weight: 700;
 }
 
 
 .intro-text p {
-  font-size: 1rem;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+
   color: black;
 }
 
@@ -94,40 +102,12 @@ html, body {
 
 
 /* Productos */
-.productos-section {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.productos-headerH {
-  font-family: 'TTRamillas', sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  margin-left: 4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.productos-headerH h3 {
-  font-size: 5rem;
-  color: #000 !important;
-  margin-left: 10px;
-  margin-bottom: 20px;
-}
-
 .productos-carousel {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
-  justify-content: center;
   flex-wrap: wrap;
-  font-family: 'TTRamillas', sans-serif;
-  font-weight: bold;
-  font-style: italic;
 }
-
 .producto-card {
   display: flex;
   flex-direction: column;
@@ -140,7 +120,62 @@ html, body {
   flex: 1 1 calc(33.333% - 20px);
   max-width: 300px;
   min-height: 450px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.productos-headerH {
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+
+  margin-left: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-description {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-left: 0px;
+
+  display: block;
+}
+
+
+
+.productos-headerH h3 {
+  font-size: 5rem;
+  color: #000 !important;
+  margin-left: 10px;
   margin-bottom: 20px;
+}
+
+
+.productos-carousel {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.producto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  flex: 1 1 calc(33.333% - 20px); /* Ajuste para columnas */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  height: 100%; /* Asegurar altura consistente */
 }
 
 .producto-card h2 {
@@ -153,25 +188,16 @@ html, body {
   height: auto;
   margin: 0 auto;
   display: block;
-}
 
-.product-description {
-  font-family: "Poppins", serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.2rem;
-  margin-left: 0px;
-  display: block;
 }
-
 .button-container a {
-  display: inline-block;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 1.5rem;
+  display: inline-block; 
+  text-align: center; 
+  padding: 10px 20px; 
+  border-radius: 20px; 
+  font-size: 1.5rem; 
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
   white-space: nowrap; /* Prevents text from wrapping */
 }
 
@@ -180,6 +206,7 @@ html, body {
   font-weight: 500;
   font-style: normal;
   font-size: 1.5rem;
+
   margin-top: auto;
   display: flex;
   justify-content: center;
@@ -199,14 +226,12 @@ html, body {
   transition: all 0.3s ease-in-out; /* Suavidad en el hover */
   white-space: nowrap; /* Prevents text from wrapping */
 }
-
 .button-container .Qbtn:hover {
   background-color: #fff;
   color: #CD528F;
   border: 1px solid #CD528F;
 }
-
-.button-container .Qbtn2 {
+.button-container .Qbtn2{
   background-color: #fff;
   color: #CD528F;
   border: 1px solid #CD528F;
@@ -218,11 +243,12 @@ html, body {
   transition: all 0.3s ease-in-out; /* Suavidad en el hover */
   white-space: nowrap; /* Prevents text from wrapping */
 }
-
-.button-container .Qbtn2:hover {
+.button-container .Qbtn2:hover{
   background-color: #CD528F;
   color: #fff;
 }
+
+
 
 
 /* Proceso de fabricación */
@@ -255,6 +281,10 @@ html, body {
 }
 
 .fabricacion p {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+
   font-size: 1.5rem;
   margin: 10px 0;
   color: #000;
@@ -276,6 +306,10 @@ html, body {
 }
 
 .exitos h3 {
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+
   position: absolute;
   top: 10%;
   left: 50%;
@@ -535,6 +569,10 @@ html, body {
     height: 500px; /* Ajustamos la altura para tablets */
   }
   .intro-text h3{
+    font-family: 'TTRamillas', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+
     font-size: 1.8rem;
   }
   .intro-text p{

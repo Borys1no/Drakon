@@ -15,7 +15,7 @@ const Home = () => {
           <img src={assets.FotoSeba} alt="Imagen de introduccion" />
         </div>
         <div className="intro-text">
-          <h3>Un destilado a la perfección</h3>
+          <h3>UN DESTILADO A LA PERFECCIÓN</h3>
           <p>
             Drakon, como marca líder de destilados premium, reafirma su
             compromiso con la innovación, calidad, sostenibilidad,
@@ -30,7 +30,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="productos-section">
         <div className="productos-headerH" style={{ marginTop: "100px" }}>
           <h3>Nuestros Productos</h3>
