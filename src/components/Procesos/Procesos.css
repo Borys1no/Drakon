@@ -13,7 +13,6 @@
 
 /* Process Section */
 .process-carousel {
-    background-color: white;
     padding: 40px;
     text-align: center;
   }
@@ -23,7 +22,7 @@
     font-weight: bold;
     font-style: normal;
 
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: #2C2A29;
   }
   
@@ -137,8 +136,8 @@
 .process-title {
   width: 100%;
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 1px;
   font-family: 'TTRamillas', sans-serif;
 }
 
@@ -162,14 +161,14 @@
 }
 
 .eq-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 10px 0;
   font-family: 'TTRamillas', sans-serif;
 }
 
 .eq-card p {
   font-size: 0.9rem;
-  color: #555;
+  color: #000000;
   font-family: 'TTRamillas', sans-serif;
   font-style: italic;
 }

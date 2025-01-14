@@ -292,8 +292,14 @@
 }
 
 .productos-header h3 {
+    font-family: 'TTRamillas', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    
+    margin-left: 2%;
+    margin-bottom: 2%;
     color: #cc528f;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .productos-carousel {
@@ -306,7 +312,6 @@
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    color: #fff;
     position: relative;
     transition: transform 0.9s ease;
     cursor: pointer;

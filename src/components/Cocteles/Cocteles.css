@@ -31,8 +31,12 @@ html, body {
 }
 
 .cocteles h3 {
-  font-size: 2rem;
-  color: #cc528f;
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 4rem;
+
+  color: #000000;
   margin-top: -100px;
 }
 
@@ -100,17 +104,25 @@ html, body {
 }
 
 .coctel-back h4 {
-  color: #cc528f !important;
+  font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
   font-style: italic;
-
+  font-size: 2.4rem;
+  color: #cc528f !important;
 }
 
 .coctel-back h5 {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
   color: #cc528f;
 }
 
 .coctel-back p {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+
   color: #000;
   text-align: center;
   line-height: 1;
@@ -196,7 +208,7 @@ html, body {
   }
 
   .coctel-back h4 {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   .coctel-back h5 {
