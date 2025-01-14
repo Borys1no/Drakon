@@ -14,7 +14,6 @@ html, body {
   margin-top: 70px;
   width: 100%;
   height: 600px;
-  /* Ajusta según lo necesario */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,24 +29,19 @@ html, body {
   padding: 20px;
   align-items: flex-start;
   max-width: 1000px;
-  /* Limita el ancho máximo */
   margin: 0 auto;
-  /* Centra la sección */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   gap: 10px;
 }
 
 .intro-img {
   flex: 0 0 300px;
-  /* Define un tamaño fijo para la imagen */
   margin-right: 30px;
-  /* Espacio entre imagen y texto */
 }
 
 .intro-img img {
   display: block;
   width: 100%;
-  /* La imagen se ajusta al contenedor */
   height: auto;
   object-fit: cover;
 }
@@ -154,10 +148,10 @@ html, body {
   justify-content: space-between;
   padding: 10px;
   text-align: center;
-  flex: 1 1 calc(33.333% - 20px); /* Ajuste para columnas */
+  flex: 1 1 calc(33.333% - 20px);
   margin-bottom: 20px;
   box-sizing: border-box;
-  height: 100%; /* Asegurar altura consistente */
+  height: 100%;
 }
 
 .producto-card h2 {
@@ -180,7 +174,7 @@ html, body {
   font-size: 1.5rem;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  white-space: nowrap; /* Prevents text from wrapping */
+  white-space: nowrap;
 }
 
 .button-container {
@@ -204,7 +198,7 @@ html, body {
   font-size: 1rem;
   border-radius: 20px;
   text-decoration: none;
-  transition: all 0.3s ease-in-out; /* Suavidad en el hover */
+  transition: all 0.3s ease-in-out;
 }
 
 .button-container .Qbtn:hover {
@@ -222,7 +216,7 @@ html, body {
   font-size: 1rem;
   border-radius: 20px;
   text-decoration: none;
-  transition: all 0.3s ease-in-out; /* Suavidad en el hover */
+  transition: all 0.3s ease-in-out;
 }
 
 .button-container .Qbtn2:hover {
@@ -298,8 +292,6 @@ html, body {
   font-family: "Poppins", serif;
   font-weight: 300;
   font-style: normal;
-
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -454,11 +446,40 @@ html, body {
   font-size: 1.5rem;
 }
 
+/* Media Queries */
+@media (max-width: 1024px) {
+  .banner {
+    margin-top: 10;
+    height: 500px;
+  }
+
+  .intro-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .intro-text p {
+    font-size: 0.95rem;
+  }
+
+  .productos-headerH h3 {
+    font-size: 4rem;
+  }
+
+  .productos-carousel {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .exitos img {
+    height: 550px;
+  }
+}
+
 @media (max-width: 768px) {
   .banner {
     margin-top: 0;
-    height: 400px; /* Reducimos la altura */
-    background-size: contain; /* Ajusta el fondo para no recortarlo */
+    height: 400px;
+    background-size: contain;
   }
 
   .introduction {
@@ -481,6 +502,14 @@ html, body {
     display: block;
   }
 
+  .intro-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text p {
+    font-size: 0.9rem;
+  }
+
   .buho {
     align-self: flex-end;
     margin-top: 20px;
@@ -495,32 +524,44 @@ html, body {
     flex: 1 1 calc(50% - 20px);
   }
 
+  .producto-card h2 {
+    font-size: 2rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+  }
+
   .fabricacion p {
     font-size: 1.2rem;
     margin-bottom: 100px;
   }
 
+  .productos-headerH h3 {
+    font-size: 3rem;
+  }
+
   .exitos img {
-    height: 650px; /* Reduce la altura de la imagen */
+    height: 800px;
   }
 
   .coctel-card {
-    width: 350px; /* Reduce el ancho de las tarjetas */
-    height: 480px; /* Reduce la altura */
+    width: 350px;
+    height: 480px;
   }
 
   .coctel-front img,
   .coctel-back {
-    height: 80%; /* Ajusta la altura de las imágenes */
+    height: 80%;
   }
 
   .coctel-front h4,
   .coctel-back h4 {
-    font-size: 1rem; /* Reduce el tamaño de los títulos */
+    font-size: 1rem;
   }
 
   .cocteles .btn-coctel {
-    padding: 10px 40px; /* Botones más compactos */
+    padding: 10px 40px;
     font-size: 1rem;
   }
 
@@ -530,42 +571,11 @@ html, body {
   }
 }
 
-/* Para pantallas medianas como tablets */
-@media (max-width: 1024px) {
-  .banner {
-    margin-top: 10;
-    height: 500px; /* Ajustamos la altura para tablets */
-  }
-
-  .intro-text h3 {
-    font-family: 'TTRamillas', sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 1.8rem;
-  }
-
-  .intro-text p {
-    font-size: 0.95rem;
-  }
-
-  .productos-carousel {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .exitos img {
-    height: 550px;
-  }
-}
-
-/* Para pantallas muy pequeñas como móviles antiguos */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .banner {
     margin-top: 0;
-    height: 300px; /* Aún más pequeño */
-    margin-top: 50px; /* Ajustamos el margen superior */
+    height: 300px;
+    margin-top: 50px;
   }
 
   .intro-img {
@@ -582,6 +592,14 @@ html, body {
     display: block;
   }
 
+  .intro-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .intro-text p {
+    font-size: 0.8rem;
+  }
+
   .buho {
     align-self: flex-end;
     margin-top: 20px;
@@ -593,54 +611,176 @@ html, body {
   }
 
   .producto-card {
-    flex: 1 1 100%; /* Cada tarjeta ocupa el 100% del ancho */
-    max-width: 100%; /* Limita el tamaño para evitar desbordamiento */
+    flex: 1 1 100%;
+    max-width: 100%;
     margin-bottom: 20px;
   }
 
+  .producto-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .productos-headerH h3 {
+    font-size: 2.5rem;
+  }
+
   .exitos img {
-    height: 350px; /* Reduce aún más la altura */
+    height: 350px;
   }
 
   .exitos h3 {
-    font-size: 1.5rem; /* Reduce el tamaño del texto */
-    top: 5%; /* Ajusta la posición vertical */
+    font-size: 1.5rem;
+    top: 5%;
     transform: translate(-50%, -5%);
   }
 
   .exitos p {
-    font-size: 0.9rem; /* Reduce aún más el tamaño del texto */
-    width: 95%; /* Aumenta el ancho del texto para evitar desbordes */
-    top: 50%; /* Ajusta la posición vertical */
+    font-size: 0.9rem;
+    width: 95%;
+    top: 50%;
     transform: translate(-50%, -50%);
   }
 
   .coctel-card {
-    width: 300px; /* Reduce aún más el ancho de las tarjetas */
-    height: 550px; /* Reduce la altura */
+    width: 300px;
+    height: 550px;
   }
 
   .coctel-front img,
   .coctel-back {
-    height: 75%; /* Ajusta la altura de las imágenes */
+    height: 75%;
   }
 
   .coctel-front h4,
   .coctel-back h4 {
-    font-size: 0.9rem; /* Reduce más los títulos */
+    font-size: 0.9rem;
   }
 
   .cocteles h3 {
-    font-size: 1.5rem; /* Reduce el tamaño del título principal */
+    font-size: 1.5rem;
   }
 
   .cocteles .btn-coctel {
-    padding: 10px 30px; /* Botones más pequeños */
+    padding: 10px 30px;
     font-size: 0.9rem;
   }
 
   .coctel-back .btn-recetas {
     font-size: 0.8rem;
     top: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner {
+    margin-top: 0;
+    height: 280px;
+    margin-top: 40px;
+  }
+
+  .intro-img {
+    width: 45%;
+    height: 45%;
+  }
+
+  .intro-text h3 {
+    font-size: 1rem;
+  }
+
+  .intro-text p {
+    font-size: 0.75rem;
+  }
+
+  .buho img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .exitos img {
+    height: 320px;
+  }
+
+  .coctel-card {
+    width: 280px;
+    height: 520px;
+  }
+
+  .coctel-front img,
+  .coctel-back {
+    height: 70%;
+  }
+
+  .coctel-front h4,
+  .coctel-back h4 {
+    font-size: 0.85rem;
+  }
+
+  .cocteles .btn-coctel {
+    padding: 8px 25px;
+    font-size: 0.85rem;
+  }
+
+  .coctel-back .btn-recetas {
+    font-size: 0.75rem;
+    top: 25px;
+  }
+}
+
+@media (max-width: 325px) {
+  .banner {
+    margin-top: 0;
+    height: 280px;
+    margin-top: 40px;
+  }
+
+  .intro-img {
+    width: 45%;
+    height: 45%;
+  }
+
+  .intro-text h3 {
+    font-size: 1rem;
+  }
+
+  .intro-text p {
+    font-size: 0.75rem;
+  }
+
+  .buho img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .exitos img {
+    height: 320px;
+  }
+
+  .coctel-card {
+    width: 280px;
+    height: 520px;
+  }
+
+  .coctel-front img,
+  .coctel-back {
+    height: 70%;
+  }
+
+  .coctel-front h4,
+  .coctel-back h4 {
+    font-size: 0.85rem;
+  }
+
+  .cocteles .btn-coctel {
+    padding: 8px 25px;
+    font-size: 0.85rem;
+  }
+
+  .coctel-back .btn-recetas {
+    font-size: 0.75rem;
+    top: 25px;
   }
 }
