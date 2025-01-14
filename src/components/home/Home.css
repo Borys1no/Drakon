@@ -5,7 +5,6 @@ html, body {
   padding-top: 80px;
 }
 
-
 /* Banner */
 .banner {
   background-image: url('/src/assets/img/banners/mee.png');
@@ -22,10 +21,6 @@ html, body {
   border-color: 1px solid #c9a506;
   margin-bottom: 50px;
 }
-
-
-
-
 
 /* Introducción */
 .introduction {
@@ -66,23 +61,20 @@ html, body {
   max-width: calc(100% - 150px);
 }
 
-.intro-text  h3 {
+.intro-text h3 {
   font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
   font-style: normal;
   text-align: left;
-
   font-size: 2.2rem;
   color: black;
 }
-
 
 .intro-text p {
   font-family: "Poppins", serif;
   font-weight: 300;
   font-style: normal;
   font-size: 1.2rem;
-
   color: black;
 }
 
@@ -92,14 +84,10 @@ html, body {
   height: auto;
 }
 
-
 .buho img {
   width: 400px;
   height: 400px;
 }
-
-
-
 
 /* Productos */
 .productos-carousel {
@@ -108,6 +96,7 @@ html, body {
   gap: 20px;
   flex-wrap: wrap;
 }
+
 .producto-card {
   display: flex;
   flex-direction: column;
@@ -128,7 +117,6 @@ html, body {
   font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
   font-style: normal;
-
   margin-left: 4%;
   display: flex;
   justify-content: space-between;
@@ -141,11 +129,8 @@ html, body {
   font-style: normal;
   font-size: 1.2rem;
   margin-left: 0px;
-
   display: block;
 }
-
-
 
 .productos-headerH h3 {
   font-size: 5rem;
@@ -154,13 +139,11 @@ html, body {
   margin-bottom: 20px;
 }
 
-
 .productos-carousel {
   display: flex;
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-
   font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
   font-style: italic;
@@ -188,16 +171,16 @@ html, body {
   height: auto;
   margin: 0 auto;
   display: block;
-
 }
+
 .button-container a {
-  display: inline-block; 
-  text-align: center; 
-  padding: 10px 20px; 
-  border-radius: 20px; 
-  font-size: 1.5rem; 
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.5rem;
   text-decoration: none;
-  transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
   white-space: nowrap; /* Prevents text from wrapping */
 }
 
@@ -206,7 +189,6 @@ html, body {
   font-weight: 500;
   font-style: normal;
   font-size: 1.5rem;
-
   margin-top: auto;
   display: flex;
   justify-content: center;
@@ -220,36 +202,34 @@ html, body {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border-radius: 20px;
   text-decoration: none;
   transition: all 0.3s ease-in-out; /* Suavidad en el hover */
-  white-space: nowrap; /* Prevents text from wrapping */
 }
+
 .button-container .Qbtn:hover {
   background-color: #fff;
   color: #CD528F;
   border: 1px solid #CD528F;
 }
-.button-container .Qbtn2{
+
+.button-container .Qbtn2 {
   background-color: #fff;
   color: #CD528F;
   border: 1px solid #CD528F;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border-radius: 20px;
   text-decoration: none;
   transition: all 0.3s ease-in-out; /* Suavidad en el hover */
-  white-space: nowrap; /* Prevents text from wrapping */
 }
-.button-container .Qbtn2:hover{
+
+.button-container .Qbtn2:hover {
   background-color: #CD528F;
   color: #fff;
 }
-
-
-
 
 /* Proceso de fabricación */
 .fabricacion {
@@ -264,7 +244,6 @@ html, body {
   object-fit: cover;
 }
 
-
 .fabricacion-content {
   display: flex;
   justify-content: space-between;
@@ -277,19 +256,16 @@ html, body {
 .img-fabricacion img {
   max-width: 80%;
   height: auto;
-
 }
 
 .fabricacion p {
   font-family: "Poppins", serif;
   font-weight: 300;
   font-style: normal;
-
   font-size: 1.5rem;
   margin: 10px 0;
   color: #000;
   text-align: center;
-
 }
 
 /*Exitos*/
@@ -309,7 +285,6 @@ html, body {
   font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
   font-style: normal;
-
   position: absolute;
   top: 10%;
   left: 50%;
@@ -332,9 +307,6 @@ html, body {
   text-align: center;
   margin-top: 10px;
 }
-
-
-
 
 /* Cocteles */
 .cocteles {
@@ -363,7 +335,6 @@ html, body {
   width: 400px;
   height: 500px;
   perspective: 1000px;
-
 }
 
 .coctel-front,
@@ -382,7 +353,6 @@ html, body {
   align-items: center;
 }
 
-
 .coctel-front img {
   width: 80%;
   height: 85%;
@@ -396,7 +366,6 @@ html, body {
   font-size: 1.5rem;
   color: #000 !important;
   text-align: center;
-
 }
 
 .coctel-back {
@@ -417,7 +386,6 @@ html, body {
   color: #cc528f !important;
   font-weight: bold;
   font-style: italic;
-
 }
 
 .coctel-back h5 {
@@ -483,21 +451,19 @@ html, body {
   font-size: 1.5rem;
 }
 
-
-
 @media (max-width: 768px) {
-
   .banner {
     margin-top: 0;
     height: 400px; /* Reducimos la altura */
     background-size: contain; /* Ajusta el fondo para no recortarlo */
-
   }
-  .introduction{
+
+  .introduction {
     border: none;
     flex-direction: column;
     align-items: center;
   }
+
   .intro-img {
     flex: 0 0 auto;
     margin-right: 0;
@@ -511,7 +477,8 @@ html, body {
     text-align: left;
     display: block;
   }
-  .buho{
+
+  .buho {
     align-self: flex-end;
     margin-top: 20px;
   }
@@ -524,16 +491,16 @@ html, body {
   .producto-card {
     flex: 1 1 calc(50% - 20px);
   }
-  
-  .fabricacion p{
+
+  .fabricacion p {
     font-size: 1.2rem;
     margin-bottom: 100px;
-    
   }
+
   .exitos img {
     height: 650px; /* Reduce la altura de la imagen */
   }
-  
+
   .coctel-card {
     width: 350px; /* Reduce el ancho de las tarjetas */
     height: 480px; /* Reduce la altura */
@@ -558,8 +525,6 @@ html, body {
     padding: 10px 40px;
     font-size: 0.9rem;
   }
-
-
 }
 
 /* Para pantallas medianas como tablets */
@@ -568,14 +533,15 @@ html, body {
     margin-top: 10;
     height: 500px; /* Ajustamos la altura para tablets */
   }
-  .intro-text h3{
+
+  .intro-text h3 {
     font-family: 'TTRamillas', sans-serif;
     font-weight: bold;
     font-style: normal;
-
     font-size: 1.8rem;
   }
-  .intro-text p{
+
+  .intro-text p {
     font-size: 0.95rem;
   }
 
@@ -587,10 +553,8 @@ html, body {
   }
 
   .exitos img {
-    height: 550px; 
+    height: 550px;
   }
-
-
 }
 
 /* Para pantallas muy pequeñas como móviles antiguos */
@@ -600,6 +564,7 @@ html, body {
     height: 300px; /* Aún más pequeño */
     margin-top: 50px; /* Ajustamos el margen superior */
   }
+
   .intro-img {
     flex: 0 0 auto;
     margin-right: 0;
@@ -613,7 +578,8 @@ html, body {
     text-align: left;
     display: block;
   }
-  .buho{
+
+  .buho {
     align-self: flex-end;
     margin-top: 20px;
   }
@@ -622,12 +588,13 @@ html, body {
     width: 200px;
     height: 200px;
   }
-  
+
   .producto-card {
     flex: 1 1 100%; /* Cada tarjeta ocupa el 100% del ancho */
     max-width: 100%; /* Limita el tamaño para evitar desbordamiento */
     margin-bottom: 20px;
   }
+
   .exitos img {
     height: 350px; /* Reduce aún más la altura */
   }
@@ -644,6 +611,7 @@ html, body {
     top: 50%; /* Ajusta la posición vertical */
     transform: translate(-50%, -50%);
   }
+
   .coctel-card {
     width: 300px; /* Reduce aún más el ancho de las tarjetas */
     height: 550px; /* Reduce la altura */
@@ -666,7 +634,6 @@ html, body {
   .cocteles .btn-coctel {
     padding: 10px 30px; /* Botones más pequeños */
     font-size: 0.9rem;
-    
   }
 
   .coctel-back .btn-recetas {
