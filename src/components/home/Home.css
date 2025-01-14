@@ -504,6 +504,11 @@ html, body {
   .exitos img {
     height: 650px; /* Reduce la altura de la imagen */
   }
+  .exitos p { /* Reduce aún más el tamaño del texto */
+    width: 95%; /* Aumenta el ancho del texto para evitar desbordes */
+    top: 50%; /* Ajusta la posición vertical */
+    transform: translate(-50%, -50%);
+  }
   
   .coctel-card {
     width: 350px; /* Reduce el ancho de las tarjetas */
