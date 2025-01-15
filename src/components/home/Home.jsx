@@ -193,7 +193,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <a href="#" className="btn-coctel">
+        <a href="/Cocteles" className="btn-coctel">
           Ver más
         </a>
       </section>
