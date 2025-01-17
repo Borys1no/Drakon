@@ -20,19 +20,25 @@
     max-width: 100px;
 }
 
-.navbar-center{
+.navbar-center {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly; /* Cambiado a space-evenly para repartir uniformemente */
     align-items: center;
     flex-grow: 1;
 }
 
-.navbar-center .nav-links{
+.navbar-center .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 2rem;
+    width: 100%; /* Asegúrate de que ocupe todo el espacio del contenedor */
     margin: 0;
     padding: 0;
+    justify-content: space-evenly; /* Distribuye uniformemente los enlaces */
 }
 
 .navbar-right {
@@ -72,7 +78,6 @@
 .nav-links a{
     text-decoration: none;
     color: black;
-    font-weight: bold;
     padding: 0.5rem;
     transition: color 0.3s ease;
     cursor: pointer;

@@ -144,6 +144,7 @@
   font-weight: bold;
   font-style: normal;
   color: #cd528f;
+  white-space: nowrap;
 
   margin-bottom: 230px;
   /* Ajusta el margen superior */
