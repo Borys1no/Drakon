@@ -84,9 +84,9 @@ const Procesos = () => {
           <h2 className="process-title">NUESTRO EQUIPO</h2>
           <div className="eq-card">
             <img src={assets.Jannel} alt="Jannel"/>
-            <h3>Jannell Moraga</h3>
-            <p>Ingeniero en agronegocios <br />
-            Destilador principal</p>
+            <h3>JANNELL MORAGA</h3>
+            <p>Ingeniero en agroindustria de los alimentos  <br />
+              Gerente de producción y control de calidad</p>
           </div>
           <div className="eq-card">
             <img src={assets.Carlos} alt="Carlos"/>
@@ -98,7 +98,7 @@ const Procesos = () => {
             <img src={assets.Antonello} alt="" srcset="" />
             <h3>Antonello Toala</h3>
             <p>Ingeniero agrónomo <br />
-            Jefe de control de calidad de la la hacienda La Felipa</p>
+            Gerente técnico de la plantación de la Hacienda La Felipa</p>
           </div>
         </div>
         </div>

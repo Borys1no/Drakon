@@ -1,126 +1,119 @@
 .procesos-page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 100vh;
-    background-color: #ffffff;
-    padding-bottom: 0;
-    padding-top: 100px; /* Add padding to prevent content from being hidden under the navbar */
-    font-family: Arial, sans-serif;
-    position: relative;
-    z-index: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-bottom: 0;
+  padding-top: 100px; /* Add padding to prevent content from being hidden under the navbar */
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 0;
+}
 
 /* Process Section */
 .process-carousel {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .process-title {
-    font-family: 'TTRamillas', sans-serif;
-    font-weight: bold;
-    font-style: normal;
-
-    font-size: 4rem;
-    color: #2C2A29;
-  }
-  
-  .process-line {
-    width: 450px;
-    height: 1px;
-    background-color: #CD528F;
-    margin: 0 auto 30px auto; /* Margen superior 0, inferior 30px */
-  }
-  
-  /* Process Step Container */
-  .process-step-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Arrows */
-  .carousel-btn {
-    background-color: transparent;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 42%;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  
-  .left-arrow {
-    left: 27%; /* Brings the left arrow closer to the image */
-  }
-  
-  .right-arrow {
-    right: 27%; /* Brings the right arrow closer to the image */
-  }
-  
-  .arrow-icon {
-    width: 40px;  /* Adjust the size as needed */
-    height: auto;
-  }
-  
-  .carousel-btn:hover .arrow-icon {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-  
-  
-  /* Step Content */
-  .process-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 0;
-  }
-  
-  .process-img {
-    width: 300px; /* Ajusta el ancho según sea necesario */
-    height: 400px; /* Ajusta la altura según sea necesario */
-    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin distorsionarse */
-    border-radius: 8px;
-    margin-bottom: 20px;
+  padding: 40px;
+  text-align: center;
 }
-  .process-step-details h3 {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: normal;
 
+.process-title {
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 4rem;
+  color: #2C2A29;
+}
 
-    font-size: 1.8rem;
-    color: #CD528F;
-    
-  }
-  
-  .process-step-details p {
-    font-family: "Poppins", serif;
-    font-weight: 300;
-    font-style: normal;
+.process-line {
+  width: 450px;
+  height: 1px;
+  background-color: #CD528F;
+  margin: 0 auto 30px auto; /* Margen superior 0, inferior 30px */
+}
 
+/* Process Step Container */
+.process-step-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    font-size: 1.2rem;
-    color: #2C2A29;
-    line-height: 1.5;
-    margin-top: 10px;
-  }
+/* Arrows */
+.carousel-btn {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
 
+.left-arrow {
+  left: 27%; /* Brings the left arrow closer to the image */
+}
 
-  .background-imageGris {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.right-arrow {
+  right: 27%; /* Brings the right arrow closer to the image */
+}
+
+.arrow-icon {
+  width: 40px;  /* Adjust the size as needed */
+  height: auto;
+}
+
+.carousel-btn:hover .arrow-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Step Content */
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+.process-img {
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  height: 400px; /* Ajusta la altura según sea necesario */
+  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin distorsionarse */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.process-step-details h3 {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: #CD528F;
+}
+
+.process-step-details p {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #2C2A29;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.background-imageGris {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .nuestro-equipo {
@@ -149,7 +142,7 @@
   width: 200px; /* Ajusta el tamaño de las tarjetas */
   padding: 10px;
   border-radius: 8px;
-  height: 100%; 
+  height: 100%;
 }
 
 .eq-card img {
@@ -171,4 +164,126 @@
   color: #000000;
   font-family: 'TTRamillas', sans-serif;
   font-style: italic;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .process-title {
+      font-size: 3rem;
+  }
+
+  .process-img {
+      width: 250px;
+      height: 350px;
+  }
+
+  .process-step-details h3 {
+      font-size: 1.5rem;
+  }
+
+  .process-step-details p {
+      font-size: 1rem;
+  }
+
+  .eq-card {
+      width: 180px;
+  }
+
+  .eq-card h3 {
+      font-size: 1.2rem;
+  }
+
+  .eq-card p {
+      font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .process-title {
+      font-size: 2.5rem;
+  }
+
+  .process-img {
+      width: 200px;
+      height: 300px;
+  }
+
+  .process-step-details h3 {
+      font-size: 1.2rem;
+  }
+
+  .process-step-details p {
+      font-size: 0.9rem;
+  }
+
+  .eq-card {
+      width: 150px;
+  }
+
+  .eq-card h3 {
+      font-size: 1rem;
+  }
+
+  .eq-card p {
+      font-size: 0.7rem;
+  }
+
+  .left-arrow {
+      left: 10%;
+  }
+
+  .right-arrow {
+      right: 10%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .process-title {
+      font-size: 2rem;
+  }
+
+  .process-img {
+      width: 150px;
+      height: 250px;
+  }
+
+  .process-step-details h3 {
+      font-size: 1.2rem;
+  }
+
+  .process-step-details p {
+      font-size: 1.2rem;
+  }
+
+  .eq-card {
+      width: 200px;
+  }
+
+  .eq-card h3 {
+      font-size: 1.2rem;
+  }
+
+  .eq-card p {
+      font-size: 1rem;
+  }
+
+  .left-arrow {
+      left: -5%;
+  }
+
+  .right-arrow {
+      right: -5%;
+  }
+
+  .process-line {
+    width: 300px;
+    height: 1px;
+    background-color: #CD528F;
+    margin: 0 auto 30px auto; /* Margen superior 0, inferior 30px */
+  }
+
 }

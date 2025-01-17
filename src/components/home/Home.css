@@ -13,12 +13,11 @@ html, body {
   background-repeat: no-repeat;
   margin-top: 70px;
   width: 100%;
-  height: 600px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-color: 1px solid #c9a506;
-  margin-bottom: 50px;
 }
 
 /* Introducción */
@@ -28,7 +27,6 @@ html, body {
   border: 2px solid #e8d685;
   padding: 20px;
   align-items: flex-start;
-  max-width: 1000px;
   margin: 0 auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   gap: 10px;
@@ -86,8 +84,8 @@ html, body {
 /* Productos */
 .productos-carousel {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: space-between; /* Cambiado de space-between a center */
+  gap: 20px; /* Reducido el espacio */
   flex-wrap: wrap;
 }
 
@@ -100,7 +98,7 @@ html, body {
   padding: 20px;
   box-sizing: border-box;
   flex: 1 1 calc(33.333% - 20px);
-  max-width: 300px;
+  max-width: 350px;
   min-height: 450px;
   margin-left: 40px;
   margin-right: 40px;
@@ -110,25 +108,29 @@ html, body {
   font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
   font-style: normal;
-  margin-left: 4%;
+  margin-left: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.product-description {
+.product-descriptionH {
   font-family: "Poppins", serif;
-  font-weight: 500;
+  font-weight: 300;
   font-style: normal;
-  font-size: 1.2rem;
   margin-left: 0px;
   display: block;
+  font-size: 1.6rem;
+  color: #cd528f;
+  margin: 0;
+  text-align: left;
 }
 
 .productos-headerH h3 {
-  font-size: 5rem;
+  font-size: 3.5rem;
+  white-space: nowrap;
   color: #000 !important;
-  margin-left: 10px;
+  margin-left: 0px;
   margin-bottom: 20px;
 }
 
@@ -156,6 +158,7 @@ html, body {
 
 .producto-card h2 {
   color: #000;
+  white-space: nowrap;
   font-size: 35px;
 }
 
@@ -403,9 +406,12 @@ html, body {
 }
 
 .coctel-card h4 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: #fff;
   margin-top: 15px;
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .cocteles .btn-coctel {
@@ -418,6 +424,9 @@ html, body {
   color: white;
   font-size: 1.3rem;
   border-radius: 20px;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .cocteles .btn-coctel:hover {

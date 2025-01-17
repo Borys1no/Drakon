@@ -31,16 +31,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="productos-section">
-        <div className="productos-headerH" style={{ marginTop: "100px" }}>
-          <h3>Nuestros Productos</h3>
+      <section>
+        <div className="productos-headerH" style={{ marginTop: "10px" }}>
+          <h3>NUESTROS PRODUCTOS</h3>
         </div>
         <div className="productos-carousel">
           <div className="producto-card">
             <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
             <div className="container-descrip">
               <h2 className="product-title">Drakon Destilado</h2>
-              <p className="product-description">$27,00</p>
+              <p className="product-descriptionH">$27,00</p>
             </div>
             <div className="button-container">
               <a href="/MalkeVirgen" className="Qbtn">
@@ -55,7 +55,7 @@ const Home = () => {
             <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
             <div className="container-descrip">
               <h2 className="product-title">Drakon Triple Destilado</h2>
-              <p className="product-description">$39,00</p>
+              <p className="product-descriptionH">$39,00</p>
             </div>
             <div className="button-container">
               <a href="#" className="Qbtn">
@@ -70,7 +70,7 @@ const Home = () => {
             <img src={assets.BOTELLAROJAcopy} alt="Malke Reposado" />
             <div className="container-descrip">
               <h2 className="product-title">Drakon Reposado</h2>
-              <p className="product-description">$50,00</p>
+              <p className="product-descriptionH">$50,00</p>
             </div>
             <div className="button-container">
               <a href="#" className="Qbtn">
@@ -85,7 +85,7 @@ const Home = () => {
       </section>
 
       {/* Proceso de fabricación */}
-      <section className="fabricacion" style={{ marginTop: "100px" }}>
+      <section className="fabricacion" >
         <img src={assets.PFabricacion} alt="Banner proceso de fabricacion" />
         <div className="fabricacion-content">
           <div className="text-content">
@@ -193,8 +193,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <a href="/Cocteles" className="btn-coctel">
-          Ver más
+        <a href="/Cocteles" className="btn-coctel" style={{ marginTop: "30px" }}>
+          VER MÁS
         </a>
       </section>
       <Footer />
