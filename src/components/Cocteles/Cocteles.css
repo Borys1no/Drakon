@@ -18,7 +18,7 @@ html, body {
   align-items: center;
   justify-content: center;
   border-color: 1px solid #c9a506;
-  margin-bottom: 50px;
+  margin-bottom: 2px;
 }
 
 
@@ -53,7 +53,6 @@ html, body {
   width: 400px;
   height: 500px;
   perspective: 1000px;
-
 }
 
 .coctel-front,
@@ -82,7 +81,6 @@ html, body {
 }
 
 .coctel-front h4 {
-  margin-top: 10px;
   font-size: 1.5rem;
   color: #000 !important;
   text-align: center;
@@ -98,9 +96,9 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   border-radius: 50px;
   gap: 10px;
+  margin-left: 35px;
 }
 
 .coctel-back h4 {
@@ -134,13 +132,13 @@ html, body {
 }
 
 .coctel-card:hover .coctel-back {
-  transform: rotateY(360deg);
+  transform: rotateY(0);
 }
 
 .coctel-card h4 {
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   color: #fff;
-  margin-top: 15px;
+  margin-top: 1px;
 }
 
 .cocteles .btn-coctel {

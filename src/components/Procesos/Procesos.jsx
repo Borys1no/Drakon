@@ -90,13 +90,13 @@ const Procesos = () => {
           </div>
           <div className="eq-card">
             <img src={assets.Carlos} alt="Carlos"/>
-            <h3>Carlos Pastenes</h3>
+            <h3>CARLOS PASTENES</h3>
             <p>Licenciado en comercio exterior y aduanas <br />
             Gerente de logística, operaciones y comercio exterior</p>
           </div>
           <div className="eq-card">
             <img src={assets.Antonello} alt="" srcset="" />
-            <h3>Antonello Toala</h3>
+            <h3>ANTONELLO TOALA</h3>
             <p>Ingeniero agrónomo <br />
             Gerente técnico de la plantación de la Hacienda La Felipa</p>
           </div>

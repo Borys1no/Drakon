@@ -84,7 +84,7 @@ body {
 
 .product-no-gap {
     font-family: "Poppins", serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-size: 1.4rem;
     color: #000000;
@@ -147,11 +147,12 @@ body {
 .product-description-poppins {
     font-size: 1.6rem;
     font-family: "Poppins", serif;
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
     text-align: left;
     margin-left: 20px; /* Agrega margen izquierdo */
     line-height: 1; /* Elimina el interlineado */
+    margin-bottom: 30px;
 }
 
 /* Contenedor de características del producto */
@@ -178,7 +179,7 @@ body {
     color: black;
     display: flex;
     /* Flexbox para alinear elementos horizontalmente */
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 5px;
     /* Asegura que el texto del título esté alineado al inicio */
     align-items: center;
@@ -190,7 +191,7 @@ body {
     font-family: "Poppins", serif;
     font-weight: 700;
     font-style: normal;
-    min-width: 150px; /* Ajusta este valor según necesites */
+    min-width: 130px; /* Ajusta este valor según necesites */
     text-align: left;
     position: relative;
 }

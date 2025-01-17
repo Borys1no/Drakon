@@ -30,7 +30,7 @@ const NuestraHistoria = () => {
 
         <img
           className="historia-img"
-          src={assets.bannerIdentidadRec}
+          src={assets.bannerIdentidad}
           alt="Banner proceso de fabricacion"
         />
         <div className="container-objetivo">
@@ -54,7 +54,7 @@ const NuestraHistoria = () => {
 
         <img
           className="historia-img"
-          src={assets.bannerClaroRec}
+          src={assets.bannerClaro}
           alt="Banner proceso de fabricacion"
         />
 
@@ -80,7 +80,7 @@ const NuestraHistoria = () => {
 
         <img
           className="historia-img"
-          src={assets.bannerComunidadRec}
+          src={assets.bannerComunidad}
           alt="Banner proceso de fabricacion"
         />
         <div className="container-contribucion-gente">
@@ -104,7 +104,7 @@ const NuestraHistoria = () => {
 
         <img
           className="historia-img"
-          src={assets.bannerGenteRec}
+          src={assets.bannerGente}
           alt="Banner proceso de fabricacion"
         />
 
@@ -168,7 +168,7 @@ const NuestraHistoria = () => {
                 onClick={() => setShowLegend1(!showLegend1)}
                 className="leer-btn"
               >
-                {showLegend1 ? "Ocultar" : "LA LECHUZA QUE NO PODIA VOLAR"}
+                {showLegend1 ? "OCULTAR" : "LA LECHUZA QUE NO PODIA VOLAR"}
               </button>
             </h3>
 
@@ -219,7 +219,7 @@ const NuestraHistoria = () => {
                 onClick={() => setShowLegend2(!showLegend2)}
                 className="leer-btn"
               >
-                {showLegend2 ? "Ocultar" : "EL NACIMIENTO DE LA FLOR"}
+                {showLegend2 ? "OCULTAR" : "EL NACIMIENTO DE LA FLOR"}
               </button>
             </h3>
 

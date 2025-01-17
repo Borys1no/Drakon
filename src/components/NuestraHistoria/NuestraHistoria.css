@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 10vh;
   background-color: #ffffff;
   padding-bottom: 0;
   font-weight: 300;
@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 10vh;
   background-color: #ffffff;
   padding-bottom: 0;
 }
@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 10vh;
   background-color: #ffffff;
   padding-bottom: 0;
 }
@@ -109,7 +109,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
   background-color: #ffffff;
   padding-bottom: 0;
 }
@@ -266,7 +266,7 @@
   font-size: 1.2rem;
   line-height: 1.6;
   margin-right: 20px;
-  text-align: left;
+  text-align:justify;
 }
 
 .leyenda-image img {

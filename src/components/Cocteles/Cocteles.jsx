@@ -12,7 +12,7 @@ const Cocteles = () => {
       <div className="banner-coctel">
       </div>
 
-      <section className="cocteles" style={{ marginTop: "100px" }}>
+      <section className="cocteles" style={{ marginTop: "1px" }}>
               <div className="cocteles-grid">
                 <div className="coctel-card">
                   <div className="coctel-front">

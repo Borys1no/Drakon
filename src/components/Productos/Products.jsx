@@ -18,7 +18,7 @@ const Products = () => {
                         <p className="product-description-poppins">
                             Ofrece pureza excepcional y un perfil de sabor equilibrado, reflejando la escencia premium de la pitahaya manabita.
                         </p>
-                        <hr className="separator-line" />
+                        {/*<hr className="separator-line" />*/}
 
                         <h3 className="product-subtitle">Detalles de la botella:</h3>
                         <p className="product-no-gap">32% alc/vol (64 proof).</p>
