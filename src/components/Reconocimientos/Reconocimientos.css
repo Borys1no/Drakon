@@ -26,6 +26,8 @@ html, body {
 
 /* Medals Grid Layout */
 .reconocimientos-grid {
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
   gap: 20px; /* Reduce el espacio entre elementos */
@@ -87,7 +89,25 @@ html, body {
   transform: scale(0);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
+
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
 }
+
+.modal-content h2{
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 
 .modal-overlay.open .modal-content {
   transform: scale(1);
@@ -95,7 +115,7 @@ html, body {
 }
 
 .modal-medalla-img {
-  width: 100px;
+  width: 200px;
   height: auto;
   margin-bottom: 20px;
 }
