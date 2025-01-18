@@ -60,7 +60,7 @@ const Procesos = () => {
 
         <div className="process-step-container">
           <button className="carousel-btn left-arrow" onClick={prevStep}>
-             <CircleArrowLeft size={60} color="#CD528F"/>
+             <CircleArrowLeft strokeWidth={1} size={60} color="#CD528F"/>
           </button>
 
           <div className="process-step">
@@ -72,7 +72,7 @@ const Procesos = () => {
           </div>
 
           <button className="carousel-btn right-arrow" onClick={nextStep}>
-            <CircleArrowRight size={60} color="#CD528F" margin-left={10} />
+            <CircleArrowRight strokeWidth={1} size={60} color="#CD528F"/>
           </button>
         </div>
       </section>

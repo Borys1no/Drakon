@@ -88,6 +88,21 @@
   margin-bottom: 20px;
 }
 
+.process-step-details {
+  width: 1000px; /* Ajusta según sea necesario */
+  height: 180px; /* Fija la altura para que el texto no desplace otros elementos */
+  overflow: hidden; /* Oculta cualquier contenido que exceda el área designada */
+  text-overflow: ellipsis; /* Agrega "..." al texto que no cabe */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  padding: 10px; /* Opcional: espacio interno */
+  box-sizing: border-box; /* Incluye padding en las dimensiones del cuadro */
+  border-radius: 8px; /* Esquinas redondeadas */
+}
+
+
 .process-step-details h3 {
   font-family: "Poppins", serif;
   font-weight: 500;
