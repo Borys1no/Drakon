@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase/firebase';
 import './SideBard.css';
 import {Package, Combine} from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const menuItems = [
   {
     title: 'Pedidos',
@@ -36,7 +36,7 @@ const SideBar = () => {
   return (
     <div className="sidebar-container">
       <div className="sidebar">
-        <a href="#">Pedidos</a>
+        <Link to="#">Pedidos</Link>
         <a href="#">Estados pedidos</a>
       </div>
       <div className="perfil">

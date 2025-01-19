@@ -24,7 +24,8 @@ const Footer = () => {
               <h3>NUESTRAS REDES SOCIALES</h3>
               <div className="social-links">
                 <a href="#"><img src={assets.FacebookRosa} alt="Facebook"  /></a>
-                <a href="#"><img src={assets.InstagramRosa} alt="Instagram"  /></a>
+                <a href="https://www.instagram.com/drakon.ec?igsh=MTFndW45YXczcXZvZQ=="><img src={assets.InstagramRosa} alt="Instagram"  /></a>
+                <a href="https://www.tiktok.com/@drakon.ec?_t=ZM-8tBa58CVLqH&_r=1"><img src={assets.TikTok} alt="TikTok"/></a>
                 <a href="#"><img src={assets.Xrosa} alt="X" /></a>
                 <a href="#"><img src={assets.LinkedinRosa} alt="Linkedin"  /></a>
               </div>

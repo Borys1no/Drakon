@@ -15,6 +15,7 @@ import AdminHome from './components/dashboard/AdminHome';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Reconocimientos from './components/Reconocimientos/Reconocimientos';
 import PasarelaPago from './components/PasarelaPago/PasarelaPago';
+import Pedidos from './components/dashboard/Pedidos/Pedidos';
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
               <Route path='/Procesos' element={<Procesos/>}/>
               <Route path='/Reconocimientos' element={<Reconocimientos/>}/>
               <Route path='/cn' element={<PasarelaPago/>}/>
+              <Route path='/dashboard/Pedidos' element={<Pedidos/>} />
 
             </Route>
 

@@ -1,1 +1,18 @@
+.app-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
 
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
