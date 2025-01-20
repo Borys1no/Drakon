@@ -38,9 +38,14 @@ const App = () => {
               <Route path='/Procesos' element={<Procesos/>}/>
               <Route path='/Reconocimientos' element={<Reconocimientos/>}/>
               <Route path='/cn' element={<PasarelaPago/>}/>
-              <Route path='/dashboard/Pedidos' element={<Pedidos/>} />
 
             </Route>
+            {/* Rutas del administrador */}
+            <Route path="/dashboard/Pedidos" element={
+              <ProtectedRoute role="admin">
+                <Pedidos />
+              </ProtectedRoute>
+            } />
 
             {/* Rutas protegidas sin Navbar */}
             <Route path='/dashboard/AdminHome' element={

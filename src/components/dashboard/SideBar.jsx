@@ -36,7 +36,7 @@ const SideBar = () => {
   return (
     <div className="sidebar-container">
       <div className="sidebar">
-        <Link to="#">Pedidos</Link>
+        <Link to="/dashboard/Pedidos">Pedidos</Link>
         <a href="#">Estados pedidos</a>
       </div>
       <div className="perfil">
