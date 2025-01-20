@@ -69,6 +69,7 @@ import Proceso5 from './img/pic/FIE09270-Editar-33.jpg'
 import Jannel from './img/pic/FIE08972-32 copy.jpg'
 import Carlos from './img/pic/FIE09285-48 copy.jpg'
 import Antonello from './img/pic/FIE08987-34 copy.jpg'
+import Proximamente from './img/pic/Comingsoon1.png'
 
 export const assets = {
   Cart,
@@ -129,7 +130,8 @@ export const assets = {
   Jannel,
   Carlos,
   Antonello,
-  TikTok
+  TikTok,
+  Proximamente
 };
 
 

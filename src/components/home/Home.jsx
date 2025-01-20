@@ -67,18 +67,19 @@ const Home = () => {
             </div>
           </div>
           <div className="producto-card">
-            <img src={assets.BOTELLAROJAcopy} alt="Malke Reposado" />
+            <img src={assets.Proximamente} alt="Malke Reposado" />
             <div className="container-descrip">
               <h2 className="product-title">Drakon Reposado</h2>
-              <p className="product-descriptionH">$50,00</p>
+              {/**<p className="product-descriptionH">$50,00</p>*/}
             </div>
             <div className="button-container">
-              <a href="#" className="Qbtn">
+             {/** <a href="#" className="Qbtn">
                 COMPRAR
               </a>
               <a href="#" className="Qbtn2">
                 CONOCE MÁS
               </a>
+              */}
             </div>
           </div>
         </div>
