@@ -1,5 +1,5 @@
 import React from "react";
-{/*import {
+import {
   Table,
   TableBody,
   TableCell,
@@ -9,19 +9,11 @@ import React from "react";
   Paper,
   Button,
 } from "@mui/material";
+import SideBar from "../SideBar";
+import "./Pedidos.css";
 
-//Datos de ejemplo, cambiar por los datos reales
-
+// Datos de ejemplo, cambiar por los datos reales
 const pedidosMock = [
-  {
-    id: "001",
-    fecha: "2025-01-15",
-    cliente: "Juan Perez",
-    productos: "Drakon doble destilado",
-    cantidad: 3,
-    total: "$150.00",
-    estado: "Pendiente",
-  },
   {
     id: "001",
     fecha: "2025-01-15",
@@ -41,22 +33,16 @@ const pedidosMock = [
     estado: "Procesado",
   },
 ];
-*/}
-
-const Pedidos = () => {
-  return (
-    <div>Pedidos</div>
-  )
-}
-
-
-{/*
 
 const Pedidos = () => {
   const handleVerDetalle = (id) => {
     alert(`Ver detalle del pedido ${id}`);
   };
+
   return (
+    <div className="dashboard-container">
+  <SideBar />
+  <div className="content-container">
     <TableContainer component={Paper}>
       <Table>
         <TableHead>
@@ -83,7 +69,7 @@ const Pedidos = () => {
                 <Button
                   variant="contained"
                   color="primary"
-                  onClick={() => handleVerDetalles(pedido.id)}
+                  onClick={() => handleVerDetalle(pedido.id)}
                 >
                   Ver Detalles
                 </Button>
@@ -93,7 +79,11 @@ const Pedidos = () => {
         </TableBody>
       </Table>
     </TableContainer>
+  </div>
+</div>
+
+    
   );
 };
-*/}
+
 export default Pedidos;
