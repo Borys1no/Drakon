@@ -30,7 +30,7 @@ const Home = () => {
           </div>*/}
         </div>
       </section>
-
+      {/* Productos */}
       <section>
         <div className="productos-headerH" style={{ marginTop: "10px" }}>
           <h3>NUESTROS PRODUCTOS</h3>

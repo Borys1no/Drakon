@@ -470,8 +470,10 @@ html, body {
     font-size: 0.95rem;
   }
 
-  .productos-headerH h3 {
-    font-size: 4rem;
+  .exitos h3 {
+    font-size: 1.5rem;
+    top: 5%;
+    transform: translate(-50%, -5%);
   }
 
   .productos-carousel {
@@ -513,6 +515,7 @@ html, body {
 
   .intro-text h3 {
     font-size: 1.5rem;
+    
   }
 
   .intro-text p {
@@ -547,11 +550,17 @@ html, body {
   }
 
   .productos-headerH h3 {
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
   }
 
   .exitos img {
     height: 800px;
+  }
+  .exitos h3 {
+    font-size: 2.5rem;
+    top: 11%;
+    transform: translate(-50%, -5%);
   }
 
   .coctel-card {
@@ -614,9 +623,14 @@ html, body {
     margin-top: 20px;
   }
 
+
   .buho img {
     width: 200px;
     height: 200px;
+  }
+  .productos-headerH h3{
+    font-size: 1.5rem;
+
   }
 
   .producto-card {
@@ -633,16 +647,118 @@ html, body {
     font-size: 0.9rem;
   }
 
-  .productos-headerH h3 {
-    font-size: 2.5rem;
-  }
 
   .exitos img {
-    height: 350px;
+    height: 450px;
   }
 
   .exitos h3 {
     font-size: 1.5rem;
+    top: 5%;
+    transform: translate(-50%, -5%);
+  }
+
+  .exitos p {
+    font-size: 0.9rem;
+    width: 95%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .coctel-card {
+    width: 300px;
+    height: 550px;
+  }
+
+  .coctel-front img,
+  .coctel-back {
+    height: 75%;
+  }
+
+  .coctel-front h4,
+  .coctel-back h4 {
+    font-size: 0.9rem;
+  }
+
+  .cocteles h3 {
+    font-size: 1.5rem;
+  }
+
+  .cocteles .btn-coctel {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+
+  .coctel-back .btn-recetas {
+    font-size: 0.8rem;
+    top: 30px;
+  }
+}
+@media (max-width: 512px) {
+  .banner {
+    margin-top: 0;
+    height: 300px;
+    margin-top: 50px;
+  }
+
+  .intro-img {
+    flex: 0 0 auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 50%;
+  }
+
+  .intro-text {
+    padding-right: 0;
+    text-align: left;
+    display: block;
+  }
+
+  .intro-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .intro-text p {
+    font-size: 0.8rem;
+  }
+
+  .buho {
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+
+
+  .buho img {
+    width: 200px;
+    height: 200px;
+  }
+  .productos-headerH h3{
+    font-size: 1.5rem;
+
+  }
+
+  .producto-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .producto-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+
+  .exitos img {
+    height: 450px;
+  }
+
+  .exitos h3 {
+    font-size: 2rem;
     top: 5%;
     transform: translate(-50%, -5%);
   }
@@ -708,9 +824,18 @@ html, body {
     width: 180px;
     height: 180px;
   }
+  .productos-headerH h3{
+    font-size: 1.5rem;
+
+  }
 
   .exitos img {
     height: 320px;
+  }
+  .exitos h3 {
+    font-size: 1.5rem;
+    top: 5%;
+    transform: translate(-50%, -5%);
   }
 
   .coctel-card {
@@ -763,9 +888,18 @@ html, body {
     width: 180px;
     height: 180px;
   }
+  .productos-headerH h3{
+    font-size: 1.5rem;
+
+  }
 
   .exitos img {
-    height: 320px;
+    height: 480px;
+  }
+  .exitos h3 {
+    font-size: 1.5rem;
+    top: 5%;
+    transform: translate(-50%, -5%);
   }
 
   .coctel-card {
