@@ -71,9 +71,10 @@ html, body {
 }
 
 .buho {
-  align-self: flex-start;
-  width: 120px;
+  align-self: center;
+  width: 600px;
   height: auto;
+
 }
 
 .buho img {
@@ -160,14 +161,16 @@ html, body {
   color: #000;
   white-space: nowrap;
   font-size: 35px;
+  margin: 10px 0;
 }
 
 .producto-card img {
-  max-width: 60%;
-  height: auto;
+  max-width: 70%;
+  height: 300px;
   margin: 0 auto;
   display: block;
 }
+
 
 .button-container a {
   display: inline-block;
@@ -282,13 +285,13 @@ html, body {
   font-weight: bold;
   font-style: normal;
   position: absolute;
-  top: 10%;
+  top: 20%; 
   left: 50%;
-  transform: translateX(-50%);
-  color: #000;
+  transform: translate(-50%, -50%);
+  color: #000; 
   font-size: 2rem;
   text-align: center;
-  width: 90%;
+  width: 80%;
 }
 
 .exitos p {
@@ -296,15 +299,14 @@ html, body {
   font-weight: 300;
   font-style: normal;
   position: absolute;
-  top: 50%;
+  top: 60%; 
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  color: #000;
+  color: #000; 
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: center;
-  margin-top: 20px;
 }
 
 /* Cocteles */
@@ -471,7 +473,7 @@ html, body {
   }
 
   .exitos h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     top: 5%;
     transform: translate(-50%, -5%);
   }
@@ -479,6 +481,21 @@ html, body {
   .productos-carousel {
     justify-content: space-between;
     gap: 20px;
+  }
+  .producto-card {
+    flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
+    max-width: 100%; /* Asegura que no se desborden */
+    margin: 0 auto; /* Centra las tarjetas */
+  }
+
+  .producto-card h2 {
+    font-size: 2rem; /* Ajusta el tamaño del título */
+  }
+
+  .producto-card img {
+    max-width: 100%; /* Ajusta la imagen al contenedor */
+    height: 200px; /* Mantiene la altura fija */
+    object-fit: contain; /* Evita la distorsión de la imagen */
   }
 
   .exitos img {
@@ -534,10 +551,17 @@ html, body {
 
   .producto-card {
     flex: 1 1 calc(50% - 20px);
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .producto-card h2 {
     font-size: 2rem;
+  }
+  .producto-card img {
+    max-width: 100%; 
+    height: 200px; 
+    object-fit: contain; 
   }
 
   .product-description {
@@ -545,7 +569,7 @@ html, body {
   }
 
   .fabricacion p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 100px;
   }
 
@@ -555,12 +579,16 @@ html, body {
   }
 
   .exitos img {
-    height: 800px;
+    height: 600px;
   }
   .exitos h3 {
-    font-size: 2.5rem;
-    top: 11%;
-    transform: translate(-50%, -5%);
+    font-size: 1.7rem;
+    top: 5%;
+  }
+  .exitos p {
+    font-size: 1.5rem; /* Ajusta el tamaño del párrafo */
+    top: 50%; /* Reposiciona el párrafo */
+    width: 90%;
   }
 
   .coctel-card {
@@ -615,7 +643,7 @@ html, body {
   }
 
   .intro-text p {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
   }
 
   .buho {
@@ -659,10 +687,10 @@ html, body {
   }
 
   .exitos p {
-    font-size: 0.9rem;
     width: 95%;
     top: 50%;
     transform: translate(-50%, -50%);
+    font-size: 1.5rem;
   }
 
   .coctel-card {
@@ -754,20 +782,17 @@ html, body {
 
 
   .exitos img {
-    height: 450px;
+    height: 1200px;
   }
-
   .exitos h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     top: 5%;
     transform: translate(-50%, -5%);
   }
-
   .exitos p {
-    font-size: 0.9rem;
-    width: 95%;
+    font-size: 1.5rem;
     top: 50%;
-    transform: translate(-50%, -50%);
+    width: 90%;
   }
 
   .coctel-card {
@@ -817,7 +842,7 @@ html, body {
   }
 
   .intro-text p {
-    font-size: 0.75rem;
+    font-size: 1.5rem;
   }
 
   .buho img {
@@ -830,12 +855,17 @@ html, body {
   }
 
   .exitos img {
-    height: 320px;
+    height: 420px;
   }
   .exitos h3 {
     font-size: 1.5rem;
     top: 5%;
     transform: translate(-50%, -5%);
+  }
+  .exitos p {
+    font-size: 1.5rem;
+    top: 50%;
+    width: 90%;
   }
 
   .coctel-card {
