@@ -82,6 +82,8 @@ import medalla8 from './Oficial/medallas/USA Liqueur of the Year 2024.png'
 import medalla9 from './Oficial/medallas/cwsa-2024-stickers-double-gold-medal.png'
 import medalla10 from './Oficial/medallas/cwsa-2024-stickers-silver-medal.png'
 import medalla11 from './Oficial/medallas/etiqueta_oro.png'
+import Buho from './img/gif/Buho sin fondo.gif'
+import Buho2Sf from './img/gif/Buho 2 sin fondo.gif'
 
 export const assets = {
   Cart,
@@ -154,7 +156,9 @@ export const assets = {
   medalla8,
   medalla9,
   medalla10,
-  medalla11
+  medalla11,
+  Buho,
+  Buho2Sf
 };
 
 

@@ -25,9 +25,9 @@ const Home = () => {
             identidad ecuatoriana en los mercados internacionales.
           </p>
 
-          {/*<div className="buho">
-            <img src={assets.Buho2} alt="Gif1" />
-          </div>*/}
+          <div className="buho">
+            <img src={assets.Buho} alt="Gif1" />
+          </div>
         </div>
       </section>
       {/* Productos */}
