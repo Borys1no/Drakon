@@ -37,7 +37,7 @@ const Home = () => {
         </div>
         <div className="productos-carousel">
           <div className="producto-card">
-            <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
+            <img src={assets.Proximamente} alt="Malke Virgen" />
             <div className="container-descrip">
               <h2 className="product-title">Drakon Destilado</h2>
               <p className="product-descriptionH">$27,00</p>
