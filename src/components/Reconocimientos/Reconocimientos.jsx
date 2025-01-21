@@ -8,18 +8,17 @@ const Reconocimientos = () => {
   const [isAnimating, setIsAnimating] = useState(false); // Control the animation state
 
   const medallas = [
-    { id: 1, image: assets.medalla, title: 'Medalla 1', description: 'Medalla de Oro en el TAG Global Spirit Awards, Las Vegas, Estados Unidos, para el triple destilado.' },
-    { id: 2, image: assets.medalla, title: 'Medalla 2', description: 'Medalla de Plata en el Singapore World Spirits Competition, Singapur, para el triple destilado.' },
-    { id: 3, image: assets.medalla, title: 'Medalla 3', description: 'Medalla de Oro en los Premios Gourmet de Ecuador, para el triple destilado.' },
-    { id: 4, image: assets.medalla, title: 'Medalla 4', description: 'Medalla de Oro en los Premios Gourmet de Ecuador, para el doble destilado.' },
-    { id: 5, image: assets.medalla, title: 'Medalla 5', description: 'Medalla de Oro en el Melbourne International Spirits Competition, Australia, para el triple destilado.' },
-    { id: 6, image: assets.medalla, title: 'Medalla 6', description: 'Licor Americano del Año en el Melbourne International Spirits Competition, para el triple destilado.' },
-    { id: 7, image: assets.medalla, title: 'Medalla 7', description: 'Medalla de Bronce en el Melbourne International Spirits Competition, para el doble destilado.' },
-    { id: 8, image: assets.medalla, title: 'Medalla 8', description: 'Medalla de Doble oro en el China wine and spirits awards (CWSA), para el doble destilado' },
-    { id: 9, image: assets.medalla, title: 'Medalla 9', description: 'Medalla de plata en el China wine and spirits awards (CWSA), para el triple destilado' },
-    { id: 10, image: assets.medalla, title: 'Medalla 10', description: 'Medalla de doble oro en el Michelangelo international wine & spirits awards (Sudafrica) para el doble destilado' },
-    { id: 11, image: assets.medalla, title: 'Medalla 11', description: 'Medalla de oro en el Michelangelo international wine & spirits awards (Sudafrica) para el triple destilado' },
-    { id: 12, image: assets.medalla, title: 'Medalla 12', description: 'Emprendimiento innovador del año Lux awards' },
+    { id: 1, image: assets.medalla1, title: 'Singapore World Spirits Competition 2024', description: 'Medalla Plata: Drakon triple destilado' },
+    { id: 2, image: assets.medalla2, title: 'Michelangelo International Wine & Spirits Awards 2024', description: 'Medalla Doble oro: Drakon destilado' },
+    { id: 3, image: assets.medalla3, title: 'Michelangelo International Wine & Spirits Awards 2024', description: 'Medalla Oro: Drakon triple destilado' },
+    { id: 4, image: assets.medalla4, title: 'Melbourne International Spirits Competition 2024 ', description: 'Medalla Bronce: Drakon destilado' },
+    { id: 5, image: assets.medalla5, title: 'Melbourne International Spirits Competition 2024 ', description: 'Medalla Oro: Drakon triple destilado' },
+    { id: 6, image: assets.medalla6, title: 'England: The Specialty Spirits Masters 2024', description: 'Medalla Plata: Drakon triple destilado y Medalla Plata: Drakon reposado' },
+    { id: 7, image: assets.medalla7, title: 'Las Vegas: Tag Global Spirits Awards 2024', description: 'Medalla Oro: Drakon triple destilado' },
+    { id: 8, image: assets.medalla8, title: 'Melbourne International Spirits Competition 2024 ', description: 'Reconocimiento USA Licor del año' },
+    { id: 9, image: assets.medalla9, title: 'China: CWSA 2024', description: 'Medalla Doble oro: Drakon destilado' },
+    { id: 10, image: assets.medalla10, title: 'China: CWSA 2024', description: 'Medalla Plata: Drakon triple destilado' },
+    { id: 11, image: assets.medalla11, title: 'Ecuador: Premios Gourmet Ecuador 2024 ', description: 'Medalla Oro: Drakon triple destilado y Medalla Oro: Drakon destilado' },
   ];
 
   // Function to open modal with animation

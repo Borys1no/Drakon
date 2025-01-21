@@ -71,6 +71,18 @@ import Carlos from './img/pic/FIE09285-48 copy.jpg'
 import Antonello from './img/pic/FIE08987-34 copy.jpg'
 import Proximamente from './img/pic/Comingsoon1.png'
 
+import medalla1 from './Oficial/medallas/2024_SWSC_Silver_Med._Artwork-removebg-preview.png'
+import medalla2 from './Oficial/medallas/Michelangelo Double Gold 2024.png'
+import medalla3 from './Oficial/medallas/Michelangelo Gold 2024.png'
+import medalla4 from './Oficial/medallas/MISC_Bronze_2024.png'
+import medalla5 from './Oficial/medallas/MISC_Gold_2024.png'
+import medalla6 from './Oficial/medallas/PHOTO-2025-01-07-09-13-41.jpg'
+import medalla7 from './Oficial/medallas/TAG competition medallion_24- Gold.png'
+import medalla8 from './Oficial/medallas/USA Liqueur of the Year 2024.png'
+import medalla9 from './Oficial/medallas/cwsa-2024-stickers-double-gold-medal.png'
+import medalla10 from './Oficial/medallas/cwsa-2024-stickers-silver-medal.png'
+import medalla11 from './Oficial/medallas/etiqueta_oro.png'
+
 export const assets = {
   Cart,
   User,
@@ -131,7 +143,18 @@ export const assets = {
   Carlos,
   Antonello,
   TikTok,
-  Proximamente
+  Proximamente,
+  medalla1,
+  medalla2,
+  medalla3,
+  medalla4,
+  medalla5,
+  medalla6,
+  medalla7,
+  medalla8,
+  medalla9,
+  medalla10,
+  medalla11
 };
 
 

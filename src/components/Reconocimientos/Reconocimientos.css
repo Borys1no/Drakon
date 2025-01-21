@@ -26,15 +26,13 @@ html, body {
 
 /* Medals Grid Layout */
 .reconocimientos-grid {
-  margin-top: 30px;
-  margin-bottom: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
-  gap: 20px; /* Reduce el espacio entre elementos */
-  margin-left: 30px; /* Elimina márgenes adicionales */
-  margin-right: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta columnas automáticamente */
+  gap: 30px; /* Espacio entre elementos */
+  margin: 30px; /* Espaciado uniforme alrededor */
   padding: 0; /* Elimina padding adicional */
 }
+
 
 .medalla-item {
   margin: 0; /* Asegura que no haya espacio adicional */
@@ -48,13 +46,15 @@ html, body {
 }
 
 .medalla-img {
-  width: 100%;
-  height: auto;
+  width: auto; /* Asegura que ocupe el ancho del contenedor */
+  height: 250px; /* Define una altura fija para uniformar el tamaño */
+  object-fit: cover; /* Ajusta la imagen para que se recorte proporcionalmente */
   display: block; /* Evita espacio blanco debajo de imágenes */
   margin: 0 auto; /* Centra la imagen */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
 }
+
 
 /* Modal Styles */
 .modal-overlay {
@@ -100,7 +100,7 @@ html, body {
   font-family: "Poppins", serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 2rem;
 
   font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
@@ -115,7 +115,7 @@ html, body {
 }
 
 .modal-medalla-img {
-  width: 200px;
+  width: 300px;
   height: auto;
   margin-bottom: 20px;
 }

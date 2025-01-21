@@ -15,7 +15,6 @@ const NuestraHistoria = () => {
             <img src={assets.GifArbol} alt="Gif1" />
           </div>
           <h1 className="historia-main-titleP">
-           
             Un Tributo a la Identidad Ecuatoriana
           </h1>
           <p className="historia-text">
@@ -226,45 +225,16 @@ const NuestraHistoria = () => {
             {showLegend2 && (
               <div className="leyenda-content">
                 <p>
-                  En el corazón de Manabí, cuenta la leyenda que los duendes,
-                  cansados de ser vistos como seres malignos, decidieron crear
-                  algo que cambiaría su imagen para siempre: un elixir para
-                  regalar al mundo. Para lograrlo, escogieron una fruta
-                  especial, aquella que había nacido de la flor llamada la Reina
-                  de la Noche. Día y noche trabajaron sin descanso, hasta que
-                  finalmente dieron con un brebaje capaz de unir la realidad con
-                  la magia. Con gran entusiasmo, decidieron ofrecer su creación
-                  a las lechuzas, criaturas sabias y respetadas. Sin embargo,
-                  las lechuzas rechazaron el elixir, pues consideraron que le
-                  faltaba algo esencial. Sin rendirse, los duendes lo ofrecieron
-                  a las plantas, pero estas, al obtener su fuerza vital de los
-                  ríos, tampoco lo aceptaron. Frustrados y molestos, los duendes
-                  decidieron esconder su elixir para siempre, decepcionados de
-                  que nadie pareciera apreciar su arduo trabajo. Sin embargo,
-                  Drakorito, el duende más joven y curioso, creía firmemente que
-                  el brebaje tenía un propósito mayor. Decidió, a pesar del
-                  riesgo, compartirlo con los humanos, aunque ellos fueran
-                  quienes habían extendido la mala reputación de su raza. Un
-                  día, mientras vagaba por los valles de Manabí, Drakorito
-                  encontró una hacienda en las afueras de Rocafuerte. Allí,
-                  observó que los dueños cultivaban con esmero la fruta nacida
-                  de la Reina de la Noche, y sentían un profundo respeto por la
-                  tierra. Con cautela, se acercó y les ofreció el elixir. Para
-                  su sorpresa, en lugar de temerle, los humanos lo recibieron
-                  con alegría y lo invitaron a celebrar. Pero juntos
-                  coincidieron en que al elixir aún le faltaba el toque humano.
-                  Durante tres meses, guardaron el brebaje en barricas de roble,
-                  trabajadas con las manos dedicadas de los hombres. Al sacarlo,
-                  descubrieron que el tiempo y el esfuerzo humano habían
-                  completado la magia de los duendes, creando un elixir
-                  perfecto. Decidieron llamarlo "Drakon Reposado", en honor a
-                  Drakorito, el duende que les había confiado el secreto.
-                  Drakorito quedó tan encantado con el resultado que, a cambio
-                  de una pequeña compensación para él y sus amigos, aceptó
-                  convertirse en el guardián de los barriles. Desde entonces,
-                  cada vez que se llena un barril de Drakon, al sacarlo siempre
-                  falta un pequeño porcentaje: el pago a los duendes que vigilan
-                  el precioso elixir.
+                  La oscuridad del campo se iluminó con el reflejo de una flor
+                  que brillaba en la oscuridad, los aldeanos llenos de
+                  curiosidad fueron a contemplar su belleza, la cual bautizaron
+                  como la reina de la noche. Cada noche iban más personas por el
+                  rumor que era una flor mágica, que iluminaba la tierra y
+                  escuchaba tus deseos. Pero una noche desapareció, dejó de
+                  brillar y familias enteras comenzaron su búsqueda hasta que
+                  por fin la encontraron en forma de una fruta que en forma de
+                  corazón estaba unido a otro. Desde esa noche cuenta la leyenda
+                  que con quien compartas una pitahaya compartes tu corazón.
                 </p>
                 <div className="leyenda-image">
                   <img src={assets.Duende} alt="Leyenda 2" />
