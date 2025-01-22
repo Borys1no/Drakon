@@ -32,7 +32,7 @@ const steps = [
   {
     id: 5,
     title: "FILTRADO Y EMBOTELLADO",
-    description: "El destilado se ltra para tener una pureza excepcional antes de ser etiquetado y embotellado cuidadosamente.",
+    description: "El destilado se filtra para tener una pureza excepcional antes de ser etiquetado y embotellado cuidadosamente.",
     image: assets.Proceso5, 
   }
 ];

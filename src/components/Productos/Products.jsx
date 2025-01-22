@@ -55,7 +55,7 @@ const Products = () => {
                     <p className="product-description-poppins">
                     Combina elegancia y sofisticación, logrando una pureza inigualable y un sabor refinado.
                     </p>
-                    <hr className="separator-line" />
+                    
 
                     <h3 className="product-subtitle">Detalles de la botella</h3>
                     <p className="product-no-gap">32% alc/vol (64 proof).</p>

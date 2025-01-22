@@ -84,7 +84,7 @@ const NuestraHistoria = () => {
         />
         <div className="container-contribucion-gente">
           <div className="ceibos-arbol-gif">
-            <img src={assets.GifAbstracto} alt="Gif4" />
+            <img src={assets.GifAbstracto} style={{ transform: "rotate(90deg)" }} alt="Gif4" />
           </div>
           <h1 className="historia-main-title">Contribución a nuestra gente</h1>
           <h2 className="historia-subtitle">Pago Justo</h2>
