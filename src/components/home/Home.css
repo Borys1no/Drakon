@@ -78,8 +78,8 @@ html, body {
 }
 
 .buho img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
 
 /* Productos */
@@ -165,8 +165,8 @@ html, body {
 }
 
 .producto-card img {
-  max-width: 70%;
-  height: 300px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   display: block;
 }
