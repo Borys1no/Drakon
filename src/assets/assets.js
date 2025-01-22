@@ -86,6 +86,9 @@ import medalla11 from './Oficial/medallas/etiqueta_oro.png'
 import Buho from './img/gif/Buho sin fondo.gif'
 import Buho2Sf from './img/gif/Buho 2 sin fondo.gif'
 
+import Buho3 from './img/pic/buho2.png'
+import Flor2 from './img/pic/flor2.jpg'
+
 export const assets = {
   Cart,
   User,
@@ -160,7 +163,9 @@ export const assets = {
   medalla11,
   Buho,
   Buho2Sf,
-  FondoNegro
+  FondoNegro,
+  Buho3,
+  Flor2
 };
 
 
