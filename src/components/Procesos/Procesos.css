@@ -146,6 +146,11 @@
   padding: 20px;
   align-items: stretch;
 }
+.nuestro-equipo h2{
+  font-size: 3rem;
+  font-family: 'TTRamillas', sans-serif;
+
+}
 
 .process-title {
   width: 100%;
@@ -182,13 +187,12 @@
   font-size: 1.4rem;
   margin: 1px 0;
   font-family: 'TTRamillas', sans-serif;
+  font-weight: bold !important;
 }
 
 .eq-card p {
   font-size: 18px;
-  color: #191919;
   font-family: 'TTRamillas', sans-serif;
-  font-style: bold;
 }
 
 /* Media Queries */

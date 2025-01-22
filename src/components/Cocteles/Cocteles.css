@@ -97,7 +97,6 @@ html, body {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  gap: 10px;
   margin-left: 35px;
 }
 
@@ -114,6 +113,7 @@ html, body {
   font-weight: 300;
   font-style: normal;
   color: #cc528f;
+  
 }
 
 .coctel-back p {
