@@ -46,6 +46,7 @@ import bannerIdentidadRec from "./img/bannerRecortados/bannerRecortadosPrimero.p
 import bannerClaroRec from "./img/bannerRecortados/bannerRecortadosSegundo.png";
 import bannerComunidadRec from "./img/bannerRecortados/bannerRecortadosTercero.jpg";
 import bannerGenteRec from "./img/bannerRecortados/bannerRecortadosCuarto.png";
+import FondoNegro from './img/banners/SLIDES1 copy.jpg'
 
 import Carrusel2 from './img/pic/Carrusel2.jpg'
 import Carrusel3 from './img/pic/Carrusel3.jpg'
@@ -158,7 +159,8 @@ export const assets = {
   medalla10,
   medalla11,
   Buho,
-  Buho2Sf
+  Buho2Sf,
+  FondoNegro
 };
 
 
