@@ -204,7 +204,7 @@ const NuestraHistoria = () => {
                   fortalezas, si buscamos con el corazón abierto.
                 </p>
                 <div className="leyenda-image">
-                  <img src={assets.Lechuza} alt="Leyenda 1" />
+                  <img src={assets.Buho3} alt="Leyenda 1" />
                 </div>
               </div>
             )}
@@ -237,7 +237,7 @@ const NuestraHistoria = () => {
                   que con quien compartas una pitahaya compartes tu corazón.
                 </p>
                 <div className="leyenda-image">
-                  <img src={assets.Duende} alt="Leyenda 2" />
+                  <img src={assets.Flor2} alt="Leyenda 2" />
                 </div>
               </div>
             )}
