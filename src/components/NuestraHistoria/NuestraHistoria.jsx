@@ -109,7 +109,7 @@ const NuestraHistoria = () => {
 
         <div className="pilares-section">
           <div className="pilares-left">
-            <p className="pilares-vertical-text">Pilares de Drakon</p>
+            <p className="pilares-vertical-text">PILARES DE DRAKON</p>
           </div>
           <div className="pilares-center">
             <img src={assets.NuestraHistoriaImg} alt="Gif Pitahaya" />

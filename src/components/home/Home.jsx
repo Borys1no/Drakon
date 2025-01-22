@@ -46,7 +46,7 @@ const Home = () => {
               <a href="/MalkeVirgen" className="Qbtn">
                 COMPRAR
               </a>
-              <a href="/Products" className="Qbtn2">
+              <a href="/NuestraHistoria" className="Qbtn2">
                 CONOCE MÁS
               </a>
             </div>
@@ -61,7 +61,7 @@ const Home = () => {
               <a href="#" className="Qbtn">
                 COMPRAR
               </a>
-              <a href="#" className="Qbtn2">
+              <a href="/NuestraHistoria" className="Qbtn2">
                 CONOCE MÁS
               </a>
             </div>
