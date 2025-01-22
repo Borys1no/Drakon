@@ -10,7 +10,8 @@ const Home = () => {
       {/* Banner */}
       <div className="banner"></div>
       {/* Introducción */}
-      <section className="introduction">
+      <section >
+        <div className="introduction">
         <div className="intro-img">
           <img src={assets.FotoSeba} alt="Imagen de introduccion" />
         </div>
@@ -29,6 +30,9 @@ const Home = () => {
             <img src={assets.Buho} alt="Gif1" />
           </div>
         </div>
+
+        </div>
+        
       </section>
       {/* Productos */}
       <section>
@@ -43,7 +47,7 @@ const Home = () => {
               <p className="product-descriptionH">$27,00</p>
             </div>
             <div className="button-container">
-              <a href="/MalkeVirgen" className="Qbtn">
+              <a href="/products" className="Qbtn">
                 COMPRAR
               </a>
               <a href="/NuestraHistoria" className="Qbtn2">
@@ -58,7 +62,7 @@ const Home = () => {
               <p className="product-descriptionH">$39,00</p>
             </div>
             <div className="button-container">
-              <a href="#" className="Qbtn">
+              <a href="products" className="Qbtn">
                 COMPRAR
               </a>
               <a href="/NuestraHistoria" className="Qbtn2">
@@ -67,7 +71,8 @@ const Home = () => {
             </div>
           </div>
           <div className="producto-card">
-            <img src={assets.Proximamente} alt="Malke Reposado" />
+            <img className="proximamente" src={assets.BotellaRoja} alt="Malke Reposado" />
+            <div className="text-overlay">Próximamente</div>
             <div className="container-descrip">
               <h2 className="product-title">Drakon Reposado</h2>
               {/**<p className="product-descriptionH">$50,00</p>*/}
@@ -126,7 +131,7 @@ const Home = () => {
       {/* Cocteles */}
       <section>
         <div className="cocteles" style={{ marginTop: "100px" }}>
-          <h3>COCTELES</h3>
+          <h3>Cocteles</h3>
           <div className="cocteles-grid">
             <div className="coctel-card">
               <div className="coctel-front">

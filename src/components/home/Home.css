@@ -25,7 +25,6 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   border: 2px solid #e8d685;
-  padding: 20px;
   align-items: flex-start;
   margin: 0 auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -69,6 +68,7 @@ html, body {
   font-style: normal;
   font-size: 1.5rem;
   color: black;
+  margin-right: 40px;
 }
 
 .buho {
@@ -84,26 +84,16 @@ html, body {
 }
 
 /* Productos */
+.productos-headerH{
+  text-align: center;
+  margin-bottom: 20px;
+}
 .productos-carousel {
   display: flex;
-  justify-content: space-between; /* Cambiado de space-between a center */
-  gap: 20px; /* Reducido el espacio */
-  flex-wrap: wrap;
-}
-
-.producto-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  flex-wrap: wrap; /* Permitir que los productos se ajusten automáticamente */
+  gap: 20px; /* Espaciado entre tarjetas */
+  justify-content: center;
   padding: 20px;
-  box-sizing: border-box;
-  flex: 1 1 calc(33.333% - 20px);
-  max-width: 350px;
-  min-height: 450px;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 .productos-headerH {
@@ -140,22 +130,35 @@ html, body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
   font-style: italic;
+  align-items: stretch;
 }
 
 .producto-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
   text-align: center;
+  align-items: center;
+  padding: 20px;
   flex: 1 1 calc(33.333% - 20px);
   margin-bottom: 20px;
   box-sizing: border-box;
   height: 100%;
+  min-height: 450px;
+}
+.product-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  flex-grow: 1; /* Ocupa el espacio restante para alinear el contenido */
+  display: flex;
+  align-items: center; /* Centra verticalmente el texto */
+  justify-content: center; /* Centra horizontalmente el texto */
 }
 
 .producto-card h2 {
@@ -166,12 +169,28 @@ html, body {
 }
 
 .producto-card img {
-  width: 60% !important;
+  width: 50% !important;
   height: auto;
-  margin: 0 auto;
-  display: block;
-}
+  margin-bottom: 15px;
+  max-width: 250px;
+  object-fit: contain;
 
+}
+.producto-card .proximamente {
+  filter: brightness(0.1);
+}
+.producto-card .text-overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  z-index: 2;
+  pointer-events: none;
+
+}
 
 .button-container a {
   display: inline-block;
@@ -197,6 +216,8 @@ html, body {
 }
 
 .button-container .Qbtn {
+  display: flex;
+  gap: 10px;
   background-color: #CD528F;
   color: white;
   padding: 10px 20px;
@@ -462,50 +483,7 @@ html, body {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
-  .banner {
-    margin-top: 10;
-    height: 500px;
-  }
 
-  .intro-text h3 {
-    font-size: 1.8rem;
-  }
-
-  .intro-text p {
-    font-size: 0.95rem;
-  }
-
-  .exitos h3 {
-    font-size: 2rem;
-    top: 5%;
-    transform: translate(-50%, -5%);
-  }
-
-  .productos-carousel {
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .producto-card {
-    flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
-    max-width: 100%; /* Asegura que no se desborden */
-    margin: 0 auto; /* Centra las tarjetas */
-  }
-
-  .producto-card h2 {
-    font-size: 2rem; /* Ajusta el tamaño del título */
-  }
-
-  .producto-card img {
-    max-width: 100%; /* Ajusta la imagen al contenedor */
-    height: 200px; /* Mantiene la altura fija */
-    object-fit: contain; /* Evita la distorsión de la imagen */
-  }
-
-  .exitos img {
-    height: 550px;
-  }
-}
 
 @media (max-width: 768px) {
   .banner {
@@ -554,20 +532,9 @@ html, body {
     height: 200px;
   }
 
-  .producto-card {
-    flex: 1 1 calc(50% - 20px);
-    max-width: 100%;
-    margin: 0 auto;
-  }
+  
 
-  .producto-card h2 {
-    font-size: 2rem;
-  }
-  .producto-card img {
-    max-width: 100%; 
-    height: 200px; 
-    object-fit: contain; 
-  }
+ 
 
   .product-description {
     font-size: 1rem;
@@ -745,6 +712,10 @@ html, body {
     width: 50%;
     height: 50%;
   }
+  .intro-img img{
+    width: 100%;
+    height: 100%;
+  }
 
   .intro-text {
     padding-right: 0;
@@ -769,8 +740,8 @@ html, body {
 
 
   .buho img {
-    width: 100px;
-    height: 100px;
+    width: 20% !important;
+    height: auto !important;
   }
   .productos-headerH h3{
     font-size: 1.5rem;
@@ -872,6 +843,9 @@ html, body {
     font-size: 1.5rem;
 
   }
+  .producto-card {
+    flex: 1 1 100%; /* 1 tarjeta por fila */
+  }
 
   .exitos img {
     height: 420px;
@@ -941,6 +915,9 @@ html, body {
     font-size: 1.5rem;
 
   }
+  .producto-card {
+    flex: 1 1 100%; /* 1 tarjeta por fila */
+  }
 
   .exitos img {
     height: 480px;
@@ -975,4 +952,70 @@ html, body {
     font-size: 0.75rem;
     top: 25px;
   }
+}
+
+@media (max-width: 1024px){
+  .banner {
+    margin-top: 10;
+    height: 500px;
+  }
+  .introduction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .intro-img,
+  .intro-text {
+    flex: 1;
+    text-align: justify;
+  }
+
+  .intro-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .intro-text p {
+    font-size: 1.2rem;
+    margin-right: 30px;
+    
+  }
+  .exitos h3 {
+    font-size: 2rem;
+    top: 5%;
+    transform: translate(-50%, -5%);
+  }
+  .productos-headerH h3 {
+    font-size: 1.8rem;
+  }
+
+  /* Ajustar el tamaño de las tarjetas para pantallas pequeñas */
+  .productos-carousel {
+    flex-wrap: wrap; /* Permitir que los productos se ajusten automáticamente */
+    justify-content: center; /* Centrar los productos */
+  }
+
+  .producto-card {
+    flex: 1 1 calc(50% - 20px); /* Mostrar dos tarjetas por fila */
+    min-height: auto; /* Ajustar el tamaño mínimo de las tarjetas */
+    margin-bottom: 20px;
+  }
+
+  /* Ajustar el tamaño del título de producto */
+  .producto-card .product-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Ajustar el tamaño de las imágenes para pantallas más pequeñas */
+  .producto-card img {
+    width: 100%; /* Ajustar la imagen al ancho de la tarjeta */
+    max-width: 200px; /* Establecer un tamaño máximo para las imágenes */
+    margin-bottom: 10px;
+  }
+  
+  .exitos img {
+    height: 500px;
+  }
+
 }
