@@ -193,6 +193,9 @@
 .eq-card p {
   font-size: 18px;
   font-family: 'TTRamillas', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  color: #191919;
 }
 
 /* Media Queries */
