@@ -58,7 +58,7 @@ html, body {
   font-weight: bold;
   font-style: normal;
   text-align: left;
-  font-size: 2.2rem;
+  font-size: 3rem;
   color: black;
 }
 
@@ -66,7 +66,7 @@ html, body {
   font-family: "Poppins", serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: black;
 }
 
@@ -78,8 +78,8 @@ html, body {
 }
 
 .buho img {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
 }
 
 /* Productos */
@@ -128,7 +128,7 @@ html, body {
 }
 
 .productos-headerH h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   white-space: nowrap;
   color: #000 !important;
   margin-left: 0px;
@@ -283,13 +283,13 @@ html, body {
 .exitos h3 {
   font-family: 'TTRamillas', sans-serif;
   font-weight: bold;
-  font-style: normal;
+  font-style: italic;
   position: absolute;
   top: 20%; 
   left: 50%;
   transform: translate(-50%, -50%);
   color: #000; 
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   width: 80%;
 }
@@ -320,6 +320,8 @@ html, body {
 .cocteles h3 {
   color: #000000;
   margin-top: -100px;
+  font-size: 3rem !important;
+  font-style: normal !important;
 }
 
 .cocteles-grid {
@@ -536,17 +538,18 @@ html, body {
   }
 
   .intro-text p {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    text-align: justify;
   }
 
   .buho {
-    align-self: flex-end;
+    
     margin-top: 20px;
   }
 
   .buho img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
 
   .producto-card {
@@ -569,12 +572,15 @@ html, body {
   }
 
   .fabricacion p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
   }
 
   .productos-headerH h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -582,13 +588,14 @@ html, body {
     height: 600px;
   }
   .exitos h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     top: 5%;
   }
   .exitos p {
-    font-size: 1.5rem; /* Ajusta el tamaño del párrafo */
+    font-size: 1.2rem; /* Ajusta el tamaño del párrafo */
     top: 50%; /* Reposiciona el párrafo */
     width: 90%;
+    text-align: justify;
   }
 
   .coctel-card {
@@ -748,18 +755,20 @@ html, body {
   }
 
   .intro-text p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    text-align: justify;
   }
 
   .buho {
-    align-self: flex-end;
+    align-self: center;
     margin-top: 20px;
+    
   }
 
 
   .buho img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
   }
   .productos-headerH h3{
     font-size: 1.5rem;
@@ -779,10 +788,17 @@ html, body {
   .product-description {
     font-size: 0.9rem;
   }
+  .fabricacion p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
+    text-align: justify;
+
+  }
 
 
   .exitos img {
-    height: 1200px;
+    height: 600px;
   }
   .exitos h3 {
     font-size: 1.5rem;
@@ -790,9 +806,10 @@ html, body {
     transform: translate(-50%, -5%);
   }
   .exitos p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     top: 50%;
     width: 90%;
+    text-align: justify;
   }
 
   .coctel-card {
@@ -811,7 +828,7 @@ html, body {
   }
 
   .cocteles h3 {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
 
   .cocteles .btn-coctel {

@@ -73,7 +73,7 @@ const Home = () => {
               {/**<p className="product-descriptionH">$50,00</p>*/}
             </div>
             <div className="button-container">
-             {/** <a href="#" className="Qbtn">
+              {/** <a href="#" className="Qbtn">
                 COMPRAR
               </a>
               <a href="#" className="Qbtn2">
@@ -86,7 +86,7 @@ const Home = () => {
       </section>
 
       {/* Proceso de fabricación */}
-      <section className="fabricacion" >
+      <section className="fabricacion">
         <img src={assets.PFabricacion} alt="Banner proceso de fabricacion" />
         <div className="fabricacion-content">
           <div className="text-content">
@@ -124,79 +124,85 @@ const Home = () => {
         </div>
       </section>
       {/* Cocteles */}
-      <section className="cocteles" style={{ marginTop: "100px" }}>
-        <h3>Cocteles</h3>
-        <div className="cocteles-grid">
-          <div className="coctel-card">
-            <div className="coctel-front">
-              <img src={assets.coctelRose} alt="Drakon Tonic" />
-              <h4>Drakon Tonic</h4>
+      <section>
+        <div className="cocteles" style={{ marginTop: "100px" }}>
+          <h3>COCTELES</h3>
+          <div className="cocteles-grid">
+            <div className="coctel-card">
+              <div className="coctel-front">
+                <img src={assets.coctelRose} alt="Drakon Tonic" />
+                <h4>Drakon Tonic</h4>
+              </div>
+              <div className="coctel-back">
+                <h4>Drakon Tonic</h4>
+                <h5>INGREDIENTES</h5>
+                <p>
+                  2 oz de Drakon destilado <br />
+                  3/4 oz de zumo de limon <br />4 oz de agua tonica
+                </p>
+                <h5>METODO DE ELABORACION</h5>
+                <p>Directo</p>
+                <h5>CRISTALERIA</h5>
+                <p>Copa balon/vaso largo</p>
+                <h5>GARNISH</h5>
+                <p>1 rodaja de pitahaya</p>
+              </div>
             </div>
-            <div className="coctel-back">
-              <h4>Drakon Tonic</h4>
-              <h5>INGREDIENTES</h5>
-              <p>
-                2 oz de Drakon destilado <br />
-                3/4 oz de zumo de limon <br />4 oz de agua tonica
-              </p>
-              <h5>METODO DE ELABORACION</h5>
-              <p>Directo</p>
-              <h5>CRISTALERIA</h5>
-              <p>Copa balon/vaso largo</p>
-              <h5>GARNISH</h5>
-              <p>1 rodaja de pitahaya</p>
-            </div>
-          </div>
 
-          <div className="coctel-card">
-            <div className="coctel-front">
-              <img src={assets.coctelTonic} alt="Rasp sour" />
-              <h4>Rasp Sour</h4>
+            <div className="coctel-card">
+              <div className="coctel-front">
+                <img src={assets.coctelTonic} alt="Rasp sour" />
+                <h4>Rasp Sour</h4>
+              </div>
+              <div className="coctel-back">
+                <h4>Rasp Sour</h4>
+                <h5>INGREDIENTES</h5>
+                <p>
+                  2 oz de Drakon destilado <br />
+                  3/4 oz de sirope simple <br />
+                  3/4 oz de zumo de limon <br />1 clara de huevo
+                </p>
+                <h5>METODO DE ELABORACION</h5>
+                <p>Shake</p>
+                <h5>CRISTALERIA</h5>
+                <p>Copa coupe</p>
+                <h5>GARNISH</h5>
+                <p>1 cereza para decorar</p>
+              </div>
             </div>
-            <div className="coctel-back">
-              <h4>Rasp Sour</h4>
-              <h5>INGREDIENTES</h5>
-              <p>
-                2 oz de Drakon destilado <br />
-                3/4 oz de sirope simple <br />
-                3/4 oz de zumo de limon <br />1 clara de huevo
-              </p>
-              <h5>METODO DE ELABORACION</h5>
-              <p>Shake</p>
-              <h5>CRISTALERIA</h5>
-              <p>Copa coupe</p>
-              <h5>GARNISH</h5>
-              <p>1 cereza para decorar</p>
+            <div className="coctel-card">
+              <div className="coctel-front">
+                <img src={assets.coctelRasp} alt="Lechuza" />
+                <h4>Lechuza</h4>
+              </div>
+              <div className="coctel-back">
+                <h4>Lechuza</h4>
+                <h5>INGREDIENTES</h5>
+                <p>
+                  2 oz de Drakon destilado <br />
+                  1/2 oz de sirope simple <br />
+                  3/4 oz de zumo de limon <br />4 oz de agua mineral de toronja
+                </p>
+                <h5>METODO DE ELABORACION</h5>
+                <p>Directo</p>
+                <h5>CRISTALERIA</h5>
+                <p>Vaso corto</p>
+                <h5>GARNISH</h5>
+                <p>
+                  Vaso escarchado con sal de pitahaya <br />
+                  Twist de naranja
+                </p>
+              </div>
             </div>
           </div>
-          <div className="coctel-card">
-            <div className="coctel-front">
-              <img src={assets.coctelRasp} alt="Lechuza" />
-              <h4>Lechuza</h4>
-            </div>
-            <div className="coctel-back">
-              <h4>Lechuza</h4>
-              <h5>INGREDIENTES</h5>
-              <p>
-                2 oz de Drakon destilado <br />
-                1/2 oz de sirope simple <br />
-                3/4 oz de zumo de limon <br />4 oz de agua mineral de toronja
-              </p>
-              <h5>METODO DE ELABORACION</h5>
-              <p>Directo</p>
-              <h5>CRISTALERIA</h5>
-              <p>Vaso corto</p>
-              <h5>GARNISH</h5>
-              <p>
-                Vaso escarchado con sal de pitahaya <br />
-                Twist de naranja
-              </p>
-            </div>
-          </div>
+          <a
+            href="/Cocteles"
+            className="btn-coctel"
+            style={{ marginTop: "30px" }}
+          >
+            VER MÁS
+          </a>
         </div>
-        <a href="/Cocteles" className="btn-coctel" style={{ marginTop: "30px" }}>
-          VER MÁS
-        </a>
       </section>
       <Footer />
     </div>
