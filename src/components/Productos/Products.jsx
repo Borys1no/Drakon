@@ -39,7 +39,7 @@ const Products = () => {
                         {/* Botón de Comprar */}
                         <div className="button-container2">
                             <button className="buy-button">
-                                <a href="/MalkeVirgen"> AÑADIR AL CARRITO</a>
+                                <a href="/DrakonDestilado"> AÑADIR AL CARRITO</a>
                             </button>
                         </div>
                 </div>
@@ -74,7 +74,7 @@ const Products = () => {
                     {/* Botón de Comprar */}
                     <div className="button-container2">
                         <button className="buy-button">
-                            <a href="/MalkeVirgen"> AÑADIR AL CARRITO</a>
+                            <a href="/DrakonDestilado"> AÑADIR AL CARRITO</a>
                         </button>
                     </div>
                 </div>
