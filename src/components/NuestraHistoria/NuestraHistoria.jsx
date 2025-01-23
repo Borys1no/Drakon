@@ -186,11 +186,18 @@ const NuestraHistoria = () => {
                   elixir creado por los duendes, que yace en una fuente bajo un
                   ceibo sagrado, en el valle donde guardan una fruta milagrosa."
                   A pesar de su debilidad, la lechuza emprendió un largo y arduo
-                  viaje. Durante siete días, atravesó bosques densos y colinas
+                  viaje. 
+                  <br />
+                  <br />
+                  Durante siete días, atravesó bosques densos y colinas
                   escarpadas, hasta que, exhausta y casi sin fuerzas, finalmente
                   encontró el majestuoso ceibo que los duendes habitaban. Con su
                   último aliento, se lanzó hacia la fuente que yacía a sus pies,
-                  dispuesta a beber el elixir de la vida. En el momento en que
+                  dispuesta a beber el elixir de la vida. 
+                  <br />
+                  <br />
+
+                  En el momento en que
                   su pico tocó el agua mágica, un cambio extraordinario ocurrió.
                   La lechuza, que antes no podía volar, se elevó en el cielo con
                   un vuelo majestuoso, transformándose en un poderoso dragón. Ya

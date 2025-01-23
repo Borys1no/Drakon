@@ -48,7 +48,7 @@ import bannerComunidadRec from "./img/bannerRecortados/bannerRecortadosTercero.j
 import bannerGenteRec from "./img/bannerRecortados/bannerRecortadosCuarto.png";
 import FondoNegro from './img/banners/SLIDES1 copy.jpg'
 
-import Carrusel2 from './img/pic/Carrusel2.jpg'
+import Carrusel2 from './img/pic/Carrusel2.png'
 import Carrusel3 from './img/pic/Carrusel3.jpg'
 
 import PFabricacion from './img/banners/procesoDeFabricacion.png'
@@ -77,7 +77,7 @@ import medalla2 from './Oficial/medallas/Michelangelo Double Gold 2024.png'
 import medalla3 from './Oficial/medallas/Michelangelo Gold 2024.png'
 import medalla4 from './Oficial/medallas/MISC_Bronze_2024.png'
 import medalla5 from './Oficial/medallas/MISC_Gold_2024.png'
-import medalla6 from './Oficial/medallas/PHOTO-2025-01-07-09-13-41.jpg'
+import medalla6 from './Oficial/medallas/PHOTO-2025-01-07-09-13-41.png'
 import medalla7 from './Oficial/medallas/TAG competition medallion_24- Gold.png'
 import medalla8 from './Oficial/medallas/USA Liqueur of the Year 2024.png'
 import medalla9 from './Oficial/medallas/cwsa-2024-stickers-double-gold-medal.png'
