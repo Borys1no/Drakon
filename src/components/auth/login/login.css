@@ -15,6 +15,7 @@ main {
 
 /* Login-specific styles */
 .L-container {
+  margin-top: 80px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -29,8 +30,12 @@ main {
 }
 
 .L-title {
-  font-size: 1.8rem;
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2rem;
   color: #2c3e50;
+  margin-bottom: 10px;
 }
 
 .L-input {
@@ -40,6 +45,18 @@ main {
   border: 1px solid #dcdfe6;
   border-radius: 5px;
   transition: border-color 0.3s ease;
+  margin-bottom: 10px;
+
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.L-label{
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 10px;
 }
 
 .L-input:focus {
@@ -58,6 +75,13 @@ main {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+
+  margin-top: 10px;
+  margin-bottom: 10px
 }
 
 .L-button:hover {
@@ -79,6 +103,10 @@ main {
   align-items: center;
   text-align: center;
   margin: 1rem 0;
+
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .L-orDivider::before,
@@ -106,6 +134,10 @@ main {
   background-color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .L-googleBtn:hover {
@@ -119,10 +151,16 @@ main {
 
 .L-textCenter {
   text-align: center;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .L-textSm {
   font-size: 0.875rem;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .L-textBold {

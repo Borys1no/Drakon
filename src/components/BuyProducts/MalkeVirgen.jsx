@@ -125,10 +125,10 @@ const ProductPage = () => {
                   </div>
                   <div className="button-container">
                     <a href="#" className="Qbtn">
-                      Comprar
+                      COMPRAR
                     </a>
                     <a href="#" className="Qbtn2">
-                      Conoce más
+                      CONOCE MÁS
                     </a>
                   </div>
                 </div>
@@ -140,10 +140,10 @@ const ProductPage = () => {
                   </div>
                   <div className="button-container">
                     <a href="#" className="Qbtn">
-                      Comprar
+                      COMPRAR
                     </a>
                     <a href="#" className="Qbtn2">
-                      Conoce más
+                      CONOCE MÁS
                     </a>
                   </div>
                 </div>
@@ -155,10 +155,10 @@ const ProductPage = () => {
                   </div>
                   <div className="button-container">
                     <a href="#" className="Qbtn">
-                      Comprar
+                      COMPRAR
                     </a>
                     <a href="#" className="Qbtn2">
-                      Conoce más
+                      CONOCE MÁS
                     </a>
                   </div>
                 </div>

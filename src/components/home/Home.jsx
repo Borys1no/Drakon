@@ -47,7 +47,7 @@ const Home = () => {
               <p className="product-descriptionH">$27,00</p>
             </div>
             <div className="button-container">
-              <a href="/products" className="Qbtn">
+              <a href="/DrakonDestilado" className="Qbtn">
                 COMPRAR
               </a>
               <a href="/NuestraHistoria" className="Qbtn2">
