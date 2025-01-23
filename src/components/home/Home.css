@@ -490,47 +490,60 @@ html, body {
     margin-top: 0;
     height: 400px;
     background-size: contain;
+    margin-bottom: -111px;
   }
 
   .introduction {
+    display: flex;
+    flex-direction: column; /* Establecer la dirección de los elementos en columna */
+    align-items: center; /* Centrar los elementos en el eje transversal */
+    justify-content: center; /* Alinear los elementos en el eje principal */
     border: none;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
+    padding-top: 0;
   }
 
   .intro-img {
-    flex: 0 0 auto;
-    margin-right: 0;
-    margin-bottom: 20px;
-    width: 50%;
-    height: 50%;
+    flex: none; /* Evitar que la imagen crezca o se reduzca */
+    margin-right: 0; /* Eliminar el margen derecho */
+    width: 100%; /* Asegurarse de que la imagen ocupe todo el ancho disponible */
+  }
+
+  .intro-img img {
+    width: 100%; /* Hacer que la imagen se ajuste al ancho de su contenedor */
+    height: auto;
+    object-fit: cover;
   }
 
   .intro-text {
-    padding-right: 0;
-    text-align: left;
-    display: block;
+    width: 100%; 
+    text-align: center;
+    gap: 20px;
   }
 
   .intro-text h3 {
-    font-size: 1.5rem;
-    
+    font-size: 2rem; /* Reducir el tamaño del título en pantallas pequeñas */
+    text-align: center;
+
   }
 
   .intro-text p {
-    font-size: 1.2rem;
-    text-align: justify;
+    font-size: 1.2rem; /* Reducir el tamaño del párrafo en pantallas pequeñas */
+    margin-right: 0; /* Eliminar el margen derecho */
+    text-align: justify; /* Centrar el texto */
   }
 
   .buho {
-    
-    margin-top: 20px;
+    width: 80%; /* Ajustar el tamaño de la imagen del búho */
+    margin-top: 20px; /* Añadir margen superior */
   }
 
   .buho img {
-    width: 200px;
-    height: 200px;
+    width: 100%; /* Ajustar la imagen del búho al tamaño del contenedor */
+    height: auto;
   }
+  
+ 
 
   
 
