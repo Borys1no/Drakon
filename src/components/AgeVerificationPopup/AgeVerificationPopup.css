@@ -1,0 +1,101 @@
+/* Background overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+/* Pop-up container */
+.popup-container {
+    background-color: #f4d3db;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 80%; /* Reduced width */
+    height: auto;
+    max-width: 800px; /* Reduced max-width */
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-container h2 {
+    font-family: 'TTRamillas', sans-serif;
+    margin-top: 2px;
+    font-weight: bold;
+    font-style: normal;
+
+    font-size: 3rem;
+    margin-bottom: 1px;
+    color: #bd5a8c ;
+  }
+  
+  .popup-container p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #cc528f;
+
+    
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+  }
+  
+  /* Input field */
+/* Input field */
+.popup-container input {
+    background-color: #f4d3db;
+    width: 100%;
+    font-size: 5rem;
+    margin-bottom: 1px;
+    text-align: center;
+    border: none; /* Remove border */
+    outline: none; /* Remove black outline on focus */
+  
+    font-family: 'TTRamillas', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #655853;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Button styles */
+  .popup-container button {
+    width: 35%;
+    padding: 5px;
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: #d388a9 ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .popup-container button:hover {
+    background-color: #cc528f;
+  }
+
+  .imagenPopUp {
+    width: 10%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  

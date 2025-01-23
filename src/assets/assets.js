@@ -88,6 +88,7 @@ import Buho2Sf from './img/gif/Buho 2 sin fondo.gif'
 
 import Buho3 from './img/pic/buho2.png'
 import Flor2 from './img/pic/flor2.jpg'
+import DrakonIconoSolo from './img/icons/Drakon Iconos-05 copy.png'
 
 export const assets = {
   Cart,
@@ -165,7 +166,8 @@ export const assets = {
   Buho2Sf,
   FondoNegro,
   Buho3,
-  Flor2
+  Flor2,
+  DrakonIconoSolo
 };
 
 
