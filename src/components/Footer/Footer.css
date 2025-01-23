@@ -14,11 +14,12 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.container {
+.containerF {
     width: 100%;
-    max-width: 1200px;
+    
     margin: 0 auto;
 }
+
 .footer-row {
     display: flex;
     justify-content: space-around; /* Cambiado a space-around para centrar las secciones */
