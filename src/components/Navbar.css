@@ -81,11 +81,63 @@
     padding: 0.5rem;
     transition: color 0.3s ease;
     cursor: pointer;
+    
 }
 
 .nav-links a:hover {
     color: #f44336; 
 }
+
+.user-logged-in {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu ul li button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+}
+
+.dropdown-menu ul li button:hover {
+    text-decoration: underline;
+}
+.dropdown-menu ul li:hover{
+    background-color: #CD528F;
+    color: #fff;
+}
+
+
 
 /* Estilos para el menú en dispositivos móviles */
 .burger img{
