@@ -1,43 +1,45 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Procesos.css'; 
 import Footer from '../Footer/Footer';
 import { assets } from '../../assets/assets'; 
-import {CircleArrowRight, CircleArrowLeft} from 'lucide-react';
+import { CircleArrowRight, CircleArrowLeft } from 'lucide-react';
 
 const steps = [
   {
     id: 1,
-    title: "SELECCIÓN DE LA FRUTA",
-    description: "Solo se elige la mejor pitahaya roja de Manabí, garantizando una materia prima de calidad superior.",
+    titleKey: "fruitSelection",
+    descriptionKey: "fruitSelectionDescription",
     image: assets.Proceso1, 
   },
   {
     id: 2,
-    title: "PREPARACIÓN DE LA PULPA",
-    description: "La pitahaya es cuidadosamente pelada y su pulpa es extraída para conservar sus sabores frescos y únicos.",
+    titleKey: "pulpPreparation",
+    descriptionKey: "pulpPreparationDescription",
     image: assets.Proceso2, 
   },
   {
     id: 3,
-    title: "FERMENTACIÓN CONTROLADA",
-    description: "La pulpa de pitahaya se fermenta, transformando sus azúcares naturales en alcohol, desarrollando el perfil aromático característico de Drakon.",
+    titleKey: "controlledFermentation",
+    descriptionKey: "controlledFermentationDescription",
     image: assets.Proceso3, 
   },
   {
     id: 4,
-    title: "DESTILACIÓN PRECISA",
-    description: "El destilado se somete a un proceso de purificación en alambiques, capturando los aromas y sabores únicos de la pitahaya.",
+    titleKey: "preciseDistillation",
+    descriptionKey: "preciseDistillationDescription",
     image: assets.Proceso4, 
   },
   {
     id: 5,
-    title: "FILTRADO Y EMBOTELLADO",
-    description: "El destilado se filtra para tener una pureza excepcional antes de ser etiquetado y embotellado cuidadosamente.",
+    titleKey: "filteringBottling",
+    descriptionKey: "filteringBottlingDescription",
     image: assets.Proceso5, 
   }
 ];
 
 const Procesos = () => {
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
 
   const nextStep = () => {
@@ -49,58 +51,52 @@ const Procesos = () => {
   };
 
   return (
-    
     <div className="procesos-page-container">
-      {/* Fondo global */}
+      {/* Global background */}
       <img className="background-imageGris" src={assets.SLIDES2copy} alt="SLIDES2copy" />
 
       <section className="process-carousel">
-        <h2 className="process-title">NUESTRO PROCESO</h2>
+        <h2 className="process-title">{t('ourProcess')}</h2>
         <div className="process-line"></div>
 
         <div className="process-step-container">
           <button className="carousel-btn left-arrow" onClick={prevStep}>
-             <CircleArrowLeft strokeWidth={1} size={60} color="#CD528F"/>
+            <CircleArrowLeft strokeWidth={1} size={60} color="#CD528F" />
           </button>
 
           <div className="process-step">
-            <img src={steps[currentStep].image} alt={steps[currentStep].title} className="process-img" />
+            <img src={steps[currentStep].image} alt={t(steps[currentStep].titleKey)} className="process-img" />
             <div className="process-step-details">
-              <h3>{steps[currentStep].title}</h3>
-              <p>{steps[currentStep].description}</p>
+              <h3>{t(steps[currentStep].titleKey)}</h3>
+              <p>{t(steps[currentStep].descriptionKey)}</p>
             </div>
           </div>
 
           <button className="carousel-btn right-arrow" onClick={nextStep}>
-            <CircleArrowRight strokeWidth={1} size={60} color="#CD528F"/>
+            <CircleArrowRight strokeWidth={1} size={60} color="#CD528F" />
           </button>
         </div>
       </section>
       <section>
         <div className="container-Equipo">
-
-        
-        <div className="nuestro-equipo">
-          <h2 className="process-title">NUESTRO EQUIPO</h2>
-          <div className="eq-card">
-            <img src={assets.Jannel} alt="Jannel"/>
-            <h3>JANNELL MORAGA</h3>
-            <p>Ingeniero en agroindustria de los alimentos  <br />
-              Gerente de producción y control de calidad</p>
+          <div className="nuestro-equipo">
+            <h2 className="process-title">{t('ourTeam')}</h2>
+            <div className="eq-card">
+              <img src={assets.Jannel} alt="Jannel" />
+              <h3>{t('jannellMoraga')}</h3>
+              <p>{t('jannellMoragaDescription')}</p>
+            </div>
+            <div className="eq-card">
+              <img src={assets.Carlos} alt="Carlos" />
+              <h3>{t('carlosPastenes')}</h3>
+              <p>{t('carlosPastenesDescription')}</p>
+            </div>
+            <div className="eq-card">
+              <img src={assets.Antonello} alt="Antonello" />
+              <h3>{t('antonelloToala')}</h3>
+              <p>{t('antonelloToalaDescription')}</p>
+            </div>
           </div>
-          <div className="eq-card">
-            <img src={assets.Carlos} alt="Carlos"/>
-            <h3>CARLOS PASTENES</h3>
-            <p>Licenciado en comercio exterior y aduanas <br />
-            Gerente de logística, operaciones y comercio exterior</p>
-          </div>
-          <div className="eq-card">
-            <img src={assets.Antonello} alt="" srcset="" />
-            <h3>ANTONELLO TOALA</h3>
-            <p>Ingeniero agrónomo <br />
-            Gerente técnico de la plantación de la Hacienda La Felipa</p>
-          </div>
-        </div>
         </div>
       </section>
 

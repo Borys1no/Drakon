@@ -1,48 +1,41 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Reconocimientos.css'; 
 import { assets } from '../../assets/assets'; 
 import Footer from '../Footer/Footer';
 
 const Reconocimientos = () => {
-
-  <img className="background-imageGris" src={assets.FondoNegro} alt="FondoNegro" />
-
+  const { t } = useTranslation();
   const [selectedMedalla, setSelectedMedalla] = useState(null); // Track which medalla is clicked
   const [isAnimating, setIsAnimating] = useState(false); // Control the animation state
 
   const medallas = [
-    { id: 1, image: assets.medalla8, title: 'Melbourne International Spirits Competition 2024 ', description: 'Reconocimiento USA Licor del año' },
-    { id: 2, image: assets.medalla5, title: 'Melbourne International Spirits Competition 2024 ', description: 'Medalla Oro: Drakon triple destilado' },
-    { id: 3, image: assets.medalla4, title: 'Melbourne International Spirits Competition 2024 ', description: 'Medalla Bronce: Drakon destilado' },
-    { id: 4, image: assets.medalla9, title: 'China: CWSA 2024', description: 'Medalla Doble oro: Drakon destilado' },
-    { id: 5, image: assets.medalla10, title: 'China: CWSA 2024', description: 'Medalla Plata: Drakon triple destilado' },
-    { id: 6, image: assets.medalla11, title: 'Ecuador: Premios Gourmet Ecuador 2024 ', description: 'Medalla Oro: Drakon triple destilado y Medalla Oro: Drakon destilado' },
-    { id: 7, image: assets.medalla6, title: 'England: The Specialty Spirits Masters 2024', description: 'Medalla Plata: Drakon triple destilado y Medalla Plata: Drakon reposado' },
-    { id: 8, image: assets.medalla6, title: 'England: The Specialty Spirits Masters 2024', description: 'Medalla Plata: Drakon triple destilado y Medalla Plata: Drakon reposado' },
-    { id: 9, image: assets.medalla1, title: 'Singapore World Spirits Competition 2024', description: 'Medalla Plata: Drakon triple destilado' },
-    { id: 10, image: assets.medalla3, title: 'Michelangelo International Wine & Spirits Awards 2024', description: 'Medalla Oro: Drakon triple destilado' },
-    { id: 11, image: assets.medalla2, title: 'Michelangelo International Wine & Spirits Awards 2024', description: 'Medalla Doble oro: Drakon destilado' },
-    { id: 12, image: assets.medalla7, title: 'Las Vegas: Tag Global Spirits Awards 2024', description: 'Medalla Oro: Drakon triple destilado' },
-
-    
-    
+    { id: 1, image: assets.medalla8, titleKey: 'melbourneSpirits2024USA', descriptionKey: 'melbourneSpirits2024USADescription' },
+    { id: 2, image: assets.medalla5, titleKey: 'melbourneSpirits2024Gold', descriptionKey: 'melbourneSpirits2024GoldDescription' },
+    { id: 3, image: assets.medalla4, titleKey: 'melbourneSpirits2024Bronze', descriptionKey: 'melbourneSpirits2024BronzeDescription' },
+    { id: 4, image: assets.medalla9, titleKey: 'chinaCWSA2024DoubleGold', descriptionKey: 'chinaCWSA2024DoubleGoldDescription' },
+    { id: 5, image: assets.medalla10, titleKey: 'chinaCWSA2024Silver', descriptionKey: 'chinaCWSA2024SilverDescription' },
+    { id: 6, image: assets.medalla11, titleKey: 'ecuadorGourmet2024Gold', descriptionKey: 'ecuadorGourmet2024GoldDescription' },
+    { id: 7, image: assets.medalla6, titleKey: 'englandSpecialty2024Silver', descriptionKey: 'englandSpecialty2024SilverDescription' },
+    { id: 8, image: assets.medalla6, titleKey: 'englandSpecialty2024Silver', descriptionKey: 'englandSpecialty2024SilverDescription' },
+    { id: 9, image: assets.medalla1, titleKey: 'singapore2024Silver', descriptionKey: 'singapore2024SilverDescription' },
+    { id: 10, image: assets.medalla3, titleKey: 'michelangelo2024Gold', descriptionKey: 'michelangelo2024GoldDescription' },
+    { id: 11, image: assets.medalla2, titleKey: 'michelangelo2024DoubleGold', descriptionKey: 'michelangelo2024DoubleGoldDescription' },
+    { id: 12, image: assets.medalla7, titleKey: 'lasVegasTAG2024Gold', descriptionKey: 'lasVegasTAG2024GoldDescription' },
   ];
 
-  // Function to open modal with animation
   const openModal = (medalla) => {
     setSelectedMedalla(medalla);
     setIsAnimating(true);
   };
 
-  // Function to close modal
   const closeModal = () => {
     setIsAnimating(false);
     setTimeout(() => {
-      setSelectedMedalla(null); // After animation ends, reset modal
+      setSelectedMedalla(null);
     }, 300); // Match animation duration
   };
 
-  // Close modal on Escape key press
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
@@ -60,7 +53,7 @@ const Reconocimientos = () => {
       <div className="reconocimientos-grid">
         {medallas.map((medalla) => (
           <div key={medalla.id} className="medalla-item" onClick={() => openModal(medalla)}>
-            <img src={medalla.image} alt={medalla.title} className="medalla-img" />
+            <img src={medalla.image} alt={t(medalla.titleKey)} className="medalla-img" />
           </div>
         ))}
       </div>
@@ -70,9 +63,9 @@ const Reconocimientos = () => {
         <div className={`modal-overlay ${isAnimating ? 'open' : ''}`} onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <span className="close-btn" onClick={closeModal}>&times;</span>
-            <img src={selectedMedalla.image} alt={selectedMedalla.title} className="modal-medalla-img" />
-            <h2>{selectedMedalla.title}</h2>
-            <p>{selectedMedalla.description}</p>
+            <img src={selectedMedalla.image} alt={t(selectedMedalla.titleKey)} className="modal-medalla-img" />
+            <h2>{t(selectedMedalla.titleKey)}</h2>
+            <p>{t(selectedMedalla.descriptionKey)}</p>
           </div>
         </div>
       )}

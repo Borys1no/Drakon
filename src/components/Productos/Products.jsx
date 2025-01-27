@@ -2,46 +2,48 @@ import React from 'react';
 import './Products.css';
 import { assets } from '../../assets/assets';
 import Footer from '../Footer/Footer';
+import { useTranslation, Trans } from 'react-i18next'; // Import useTranslation and Trans
 
 const Products = () => {
+    const { t } = useTranslation(); // Destructure t function for translations
+
     return (
         <div className="products-container">
             {/* Fondo global */}
             <img className="background-image" src={assets.SLIDES2copy} alt="SLIDES2copy" />
+
             {/* Producto 1: Malke Virgen (Imagen a la derecha) */}
             <div className="product-section">
                 <div className="product-image">
                     <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
                 </div>
                 <div className="product-text">
-                    <h2 className="playfair-display-3TituloDrakonh1">DRAKON DESTILADO</h2>
-                        <p className="product-description-poppins">
-                            Ofrece pureza excepcional y un perfil de sabor equilibrado, reflejando la escencia premium de la pitahaya manabita.
-                        </p>
-                        {/*<hr className="separator-line" />*/}
+                    <h2 className="playfair-display-3TituloDrakonh1">{t('drakonDestilado')}</h2>
+                    <p className="product-description-poppins">
+                        {t('drakonDestiladoDescription')}
+                    </p>
 
-                        <h3 className="product-subtitle">Detalles de la botella:</h3>
-                        <p className="product-no-gap">32% alc/vol (64 proof).</p>
-                        <p className="product-no-gap">750 ml</p>
+                    <h3 className="product-subtitle">{t('bottleDetails')}</h3>
+                    <p className="product-no-gap">{t('alcoholContent')}</p>
+                    <p className="product-no-gap">{t('bottleSize')}</p>
 
-                        
-                        <div className="product-features-container">
-                            <ul className="product-features">
-                                <li><strong>VISTA</strong> Claro, limpio y transparente.</li>
-                                <li><strong>SABOR</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
-                                <li><strong>CUERPO</strong> Ligeras notas frutales con delicados destellos florales.</li>
-                                <li><strong>AROMA</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
-                            </ul>
-                        </div>
+                    <div className="product-features-container">
+                        <ul className="product-features">
+                            <li><strong>{t('view')}</strong> {t('drakonDestiladoView')}</li>
+                            <li><strong>{t('taste')}</strong> {t('drakonDestiladoTaste')}</li>
+                            <li><strong>{t('body')}</strong> {t('drakonDestiladoBody')}</li>
+                            <li><strong>{t('aroma')}</strong> {t('drakonDestiladoAroma')}</li>
+                        </ul>
+                    </div>
 
-                        <p className="product-description-poppins">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>
+                    <p className="product-description-poppins">{t('drakonDestiladoIdeal')}</p>
 
-                        {/* Botón de Comprar */}
-                        <div className="button-container2">
-                            <button className="buy-button">
-                                <a href="/DrakonDestilado"> AÑADIR AL CARRITO</a>
-                            </button>
-                        </div>
+                    {/* Botón de Comprar */}
+                    <div className="button-container2">
+                        <button className="buy-button">
+                            <a href="/DrakonDestilado">{t('addToCart')}</a>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -51,35 +53,35 @@ const Products = () => {
                     <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
                 </div>
                 <div className="product-text">
-                    <h2 className="playfair-display-3TituloDrakonh1">DRAKON TRIPLE DESTILADO</h2>
+                    <h2 className="playfair-display-3TituloDrakonh1">{t('drakonTripleDestilado')}</h2>
                     <p className="product-description-poppins">
-                    Combina elegancia y sofisticación, logrando una pureza inigualable y un sabor refinado.
+                        {t('drakonTripleDestiladoDescription')}
                     </p>
-                    
 
-                    <h3 className="product-subtitle">Detalles de la botella</h3>
-                    <p className="product-no-gap">32% alc/vol (64 proof).</p>
-                    <p className="product-no-gap">750 ml</p>
+                    <h3 className="product-subtitle">{t('bottleDetails')}</h3>
+                    <p className="product-no-gap">{t('alcoholContent')}</p>
+                    <p className="product-no-gap">{t('bottleSize')}</p>
 
                     <div className="product-features-container">
-                            <ul className="product-features">
-                                <li><strong>VISTA</strong> Claro, limpio y transparente.</li>
-                                <li><strong>SABOR</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
-                                <li><strong>CUERPO</strong> Ligeras notas frutales con delicados destellos florales.</li>
-                                <li><strong>AROMA</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
-                            </ul>
+                        <ul className="product-features">
+                            <li><strong>{t('view')}</strong> {t('drakonTripleDestiladoView')}</li>
+                            <li><strong>{t('taste')}</strong> {t('drakonTripleDestiladoTaste')}</li>
+                            <li><strong>{t('body')}</strong> {t('drakonTripleDestiladoBody')}</li>
+                            <li><strong>{t('aroma')}</strong> {t('drakonTripleDestiladoAroma')}</li>
+                        </ul>
                     </div>
-                    <p className="product-description-poppins">Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.</p>
+
+                    <p className="product-description-poppins">{t('drakonTripleDestiladoIdeal')}</p>
 
                     {/* Botón de Comprar */}
                     <div className="button-container2">
                         <button className="buy-button">
-                            <a href="/DrakonDestilado"> AÑADIR AL CARRITO</a>
+                            <a href="/DrakonDestilado">{t('addToCart')}</a>
                         </button>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

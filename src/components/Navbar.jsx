@@ -6,6 +6,7 @@ import { doSignOut } from '../firebase/auth'; // Importamos la función para cer
 import { assets } from '../assets/assets';
 import '../index.css';
 import './Navbar.css';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -15,6 +16,7 @@ const Navbar = () => {
     const { userLoggedIn, currentUser } = useAuth(); 
     const { cartItems } = useContext(CartContext); // Acceder a los elementos del carrito
     const navigate = useNavigate(); 
+    const { t, i18n } = useTranslation(); // Use the useTranslation hook
 
     // Manejar el redimensionamiento de la pantalla
     const handleResize = () => {
@@ -39,6 +41,11 @@ const Navbar = () => {
         }
     };
 
+    // Función para cambiar el idioma
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     return (
         <nav>
             <div className='navbar'>
@@ -48,11 +55,11 @@ const Navbar = () => {
 
                 <div className={`navbar-center ${isNavOpen && isMobile ? 'active' : ''}`}>
                     <ul className="nav-links">
-                        <li><a href="/products">PRODUCTOS</a></li>
-                        <li><a href="/Cocteles">COCTELES</a></li>
-                        <li><a href="/NuestraHistoria">NUESTRA HISTORIA</a></li>
-                        <li><a href="/Procesos">PROCESO</a></li>
-                        <li><a href="/Reconocimientos">RECONOCIMIENTOS</a></li>
+                        <li><a href="/products">{t('products')}</a></li>
+                        <li><a href="/Cocteles">{t('cocktails')}</a></li>
+                        <li><a href="/NuestraHistoria">{t('ourHistory')}</a></li>
+                        <li><a href="/Procesos">{t('process')}</a></li>
+                        <li><a href="/Reconocimientos">{t('recognitions')}</a></li>
                     </ul>
                 </div>
 
@@ -74,10 +81,10 @@ const Navbar = () => {
                             {isDropdownOpen && (
                                 <div className="dropdown-menu">
                                     <ul>
-                                        <li><a href="/pedidos">Pedidos</a></li>
-                                        <li><a href="/checkout">Carrito de compras</a></li>
-                                        <li><a href="/configuracion">Configuración</a></li>
-                                        <li><button onClick={handleLogout}>Cerrar sesión</button></li>
+                                        <li><a href="/pedidos">{t('orders')}</a></li>
+                                        <li><a href="/checkout">{t('shoppingCart')}</a></li>
+                                        <li><a href="/configuracion">{t('settings')}</a></li>
+                                        <li><button onClick={handleLogout}>{t('logout')}</button></li>
                                     </ul>
                                 </div>
                             )}
@@ -87,6 +94,12 @@ const Navbar = () => {
                             <img src={assets.User} alt="Usuario" />
                         </a>
                     )}
+
+                    {/* Language Switcher Button */}
+                    <div className="language-switcher">
+                        <button onClick={() => changeLanguage('es')}>ES</button>
+                        <button onClick={() => changeLanguage('en')}>EN</button>
+                    </div>
                 </div>
 
                 {isMobile && (

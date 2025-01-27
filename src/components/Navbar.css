@@ -201,3 +201,22 @@
         background-color: #e53e3e;
     }
 }
+
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.language-switcher button {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #f0f0f0;
+}

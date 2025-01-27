@@ -18,7 +18,8 @@ import Reconocimientos from "./components/Reconocimientos/Reconocimientos";
 import PasarelaPago from "./components/PasarelaPago/PasarelaPago";
 import Pedidos from "./components/dashboard/Pedidos/Pedidos";
 import AgeVerificationPopup from "./components/AgeVerificationPopup/AgeVerificationPopup"; // Importar el pop-up
-import CookieBanner from './components/Cookie/CookieBanner.jsx'
+import CookieBanner from './components/Cookie/CookieBanner.jsx';
+import './i18n'; // Import the i18n configuration file
 
 const App = () => {
   const [isVerified, setIsVerified] = useState(false); // Estado para la verificación de edad
