@@ -10,6 +10,7 @@ import './Navbar.css';
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Estado para controlar el menú desplegable
 
     const { userLoggedIn, currentUser } = useAuth(); 
     const { cartItems } = useContext(CartContext); // Acceder a los elementos del carrito
@@ -47,7 +48,6 @@ const Navbar = () => {
 
                 <div className={`navbar-center ${isNavOpen && isMobile ? 'active' : ''}`}>
                     <ul className="nav-links">
-                        
                         <li><a href="/products">PRODUCTOS</a></li>
                         <li><a href="/Cocteles">COCTELES</a></li>
                         <li><a href="/NuestraHistoria">NUESTRA HISTORIA</a></li>
@@ -65,9 +65,22 @@ const Navbar = () => {
                     </a>
 
                     {userLoggedIn ? (
-                        <div className="user-logged-in">
+                        <div 
+                            className="user-logged-in" 
+                            onMouseEnter={() => setIsDropdownOpen(true)} 
+                            onMouseLeave={() => setIsDropdownOpen(false)}
+                        >
                             <span>{currentUser?.email}</span> 
-                            <button onClick={handleLogout} className="logout-button">Logout</button>
+                            {isDropdownOpen && (
+                                <div className="dropdown-menu">
+                                    <ul>
+                                        <li><a href="/pedidos">Pedidos</a></li>
+                                        <li><a href="/checkout">Carrito de compras</a></li>
+                                        <li><a href="/configuracion">Configuración</a></li>
+                                        <li><button onClick={handleLogout}>Cerrar sesión</button></li>
+                                    </ul>
+                                </div>
+                            )}
                         </div>
                     ) : (
                         <a href="/login" className="user-icon">
