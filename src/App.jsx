@@ -18,6 +18,7 @@ import Reconocimientos from "./components/Reconocimientos/Reconocimientos";
 import PasarelaPago from "./components/PasarelaPago/PasarelaPago";
 import Pedidos from "./components/dashboard/Pedidos/Pedidos";
 import AgeVerificationPopup from "./components/AgeVerificationPopup/AgeVerificationPopup"; // Importar el pop-up
+import CookieBanner from './components/Cookie/CookieBanner.jsx'
 
 const App = () => {
   const [isVerified, setIsVerified] = useState(false); // Estado para la verificación de edad
@@ -66,6 +67,7 @@ const App = () => {
               }
             />
           </Routes>
+          <CookieBanner/>
         </Router>
       </CartProvider>
     </AuthProvider>
