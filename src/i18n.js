@@ -7,7 +7,7 @@ const resources = {
     translation: {
       "welcome": "Bienvenido",
       "products": "PRODUCTOS",
-      "cocktails": "COCTELES",
+      "cocktails": "Cocteles",
       "ourHistory": "NUESTRA HISTORIA",
       "process": "PROCESO",
       "recognitions": "RECONOCIMIENTOS",
@@ -154,7 +154,7 @@ const resources = {
     translation: {
       "welcome": "Welcome",
       "products": "PRODUCTS",
-      "cocktails": "COCKTAILS",
+      "cocktails": "Cocktails",
       "ourHistory": "OUR HISTORY",
       "process": "PROCESS",
       "recognitions": "RECOGNITIONS",
