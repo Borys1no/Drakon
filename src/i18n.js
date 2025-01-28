@@ -148,6 +148,17 @@ const resources = {
       "lasVegasTAG2024Gold": "Las Vegas: Tag Global Spirits Awards 2024",
       "lasVegasTAG2024GoldDescription": "Medalla Oro: Drakon triple destilado",
 
+      // Footer (ES)
+      "footerContactoTitle": "CONTACTO",
+      "footerEmail": "Email",
+      "footerPhone": "Teléfono",
+      "footerDireccionTitle": "DIRECCIÓN",
+      "footerOficina": "Oficina",
+      "footerOficinaAddress": "Av los Arcos 335, edificio Arcos plaza 2 piso 4 oficina 423, Samborondon, 092301 Ecuador",
+      "footerDestileria": "Destilería",
+      "footerDestileriaAddress": "Km 8,5 vía Tosagua, sector cerro verde Rocafuerte, Manabí. Ecuador",
+      "footerRedesSocialesTitle": "NUESTRAS REDES SOCIALES",
+      "footerCopyright": "© 2023 copyright La Felipa. Todos los derechos reservados."
     }
   },
   en: {
@@ -293,7 +304,20 @@ const resources = {
       "michelangelo2024DoubleGold": "Michelangelo International Wine & Spirits Awards 2024",
       "michelangelo2024DoubleGoldDescription": "Double Gold Medal: Drakon Distilled",
       "lasVegasTAG2024Gold": "Las Vegas: Tag Global Spirits Awards 2024",
-      "lasVegasTAG2024GoldDescription": "Gold Medal: Drakon Triple Distilled"
+      "lasVegasTAG2024GoldDescription": "Gold Medal: Drakon Triple Distilled",
+
+      // Footer (EN)
+      "footerContactoTitle": "CONTACT",
+      "footerEmail": "Email",
+      "footerPhone": "Phone",
+      "footerDireccionTitle": "ADDRESS",
+      "footerOficina": "Office",
+      "footerOficinaAddress": "Av los Arcos 335, Arcos Plaza Building, 2nd floor, office 423, Samborondon, 092301 Ecuador",
+      "footerDestileria": "Distillery",
+      "footerDestileriaAddress": "Km 8.5 Tosagua Road, Cerro Verde sector, Rocafuerte, Manabí. Ecuador",
+      "footerRedesSocialesTitle": "OUR SOCIAL MEDIA",
+      "footerCopyright": "© 2023 copyright La Felipa. All rights reserved."
+
     }
   }
 };

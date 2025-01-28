@@ -1,40 +1,41 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 import '../../index.css';
 import { assets } from '../../assets/assets';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="containerF">
         <div className="footer-row">
           {/* Contact Section */}
           <div className="footer-col">
-            <h3>CONTACTO</h3>
+            <h3>{t('footerContactoTitle')}</h3>
             <p>
-              Email: <a href="mailto:svelez@lafelipa.com.ec">svelez@lafelipa.com.ec</a>
+              {t('footerEmail')}: <a href="mailto:svelez@lafelipa.com.ec">svelez@lafelipa.com.ec</a>
             </p>
             <p>
-              Phone: <a href="tel:+593986850872">+593 986850872</a>
+              {t('footerPhone')}: <a href="tel:+593986850872">+593 986850872</a>
             </p>
           </div>
 
           {/* Address Section */}
           <div className="footer-col">
-            <h3>DIRECCIÓN</h3>
+            <h3>{t('footerDireccionTitle')}</h3>
             <p>
-              <strong>Oficina:</strong> Av los Arcos 335,
-              edificio Arcos plaza 2 piso 4 oficina 423, Samborondon, 092301 Ecuador
+              <strong>{t('footerOficina')}:</strong> {t('footerOficinaAddress')}
             </p>
             <p>
-              <strong>Destileria:</strong> Km 8,5 via Tosagua
-              sector cerro verde Rocafuerte, Manabi. Ecuador
+              <strong>{t('footerDestileria')}:</strong> {t('footerDestileriaAddress')}
             </p>
           </div>
 
           {/* Social Media Section */}
           <div className="footer-col">
-            <h3>NUESTRAS REDES SOCIALES</h3>
+            <h3>{t('footerRedesSocialesTitle')}</h3>
             <div className="social-links">
               <a href="#">
                 <img src={assets.FacebookRosa} alt="Facebook" />
@@ -57,7 +58,7 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="footer-bottom">
-          <p>&copy; 2023 copyright La Felipa. All rights reserved.</p>
+          <p>{t('footerCopyright')}</p>
         </div>
       </div>
     </footer>
