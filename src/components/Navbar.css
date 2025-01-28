@@ -205,18 +205,29 @@
 .language-switcher {
     display: flex;
     gap: 0.5rem;
+
 }
 
 .language-switcher button {
     background: none;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     padding: 0.25rem 0.5rem;
     cursor: pointer;
     font-size: 0.875rem;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .language-switcher button:hover {
-    background-color: #f0f0f0;
+    color: #f44336; 
 }
