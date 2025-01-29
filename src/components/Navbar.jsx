@@ -20,7 +20,7 @@ const Navbar = () => {
 
     // Manejar el redimensionamiento de la pantalla
     const handleResize = () => {
-        window.innerWidth > 768 ? setIsMobile(false) && setIsNavOpen(false) : setIsMobile(true);
+        window.innerWidth > 1024 ? setIsMobile(false) && setIsNavOpen(false) : setIsMobile(true);
     };
 
     useEffect(() => {
