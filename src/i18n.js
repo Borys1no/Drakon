@@ -45,7 +45,7 @@ const resources = {
       "cherryGarnish": "1 cereza para decorar",
       "lechuzaIngredients": "2 oz de Drakon destilado <br /> 1/2 oz de sirope simple <br /> 3/4 oz de zumo de limón <br /> 4 oz de agua mineral de toronja",
       "shortGlass": "Vaso corto",
-      "lechuzaGarnish": "Vaso escarchado con sal de pitahaya <br /> Twist de naranja",
+      "lechuzaGarnish": "Vaso escarchado con sal de pitahaya. Twist de naranja",
       "seeMore": "VER MÁS",
       //Productos
       "drakonDestilado": "DRAKON DESTILADO",

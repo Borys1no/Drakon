@@ -308,7 +308,9 @@
   }
 
   .eq-card {
-      width: 200px;
+    max-width: 90%; /* Asegura que ocupe un ancho mayor */
+    width: 600px; /* Define un ancho fijo más amplio */
+    margin: 0 auto; 
   }
 
   .eq-card h3 {
@@ -317,6 +319,7 @@
 
   .eq-card p {
       font-size: 1rem;
+      text-align: justify;
   }
 
   .left-arrow {
