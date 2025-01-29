@@ -65,7 +65,7 @@ const Procesos = () => {
           </button>
 
           <div className="process-step">
-            <img src={steps[currentStep].image} alt={t(steps[currentStep].titleKey)} className="process-img" />
+            <img src={steps[currentStep].image} alt={t(steps[currentStep].titleKey)} className="process-img" loading="lazy"/>
             <div className="process-step-details">
               <h3>{t(steps[currentStep].titleKey)}</h3>
               <p>{t(steps[currentStep].descriptionKey)}</p>
@@ -82,17 +82,17 @@ const Procesos = () => {
           <div className="nuestro-equipo">
             <h2 className="process-title">{t('ourTeam')}</h2>
             <div className="eq-card">
-              <img src={assets.Jannel} alt="Jannel" />
+              <img src={assets.Jannel} alt="Jannel" loading="lazy"/>
               <h3>{t('jannellMoraga')}</h3>
               <p>{t('jannellMoragaDescription')}</p>
             </div>
             <div className="eq-card">
-              <img src={assets.Carlos} alt="Carlos" />
+              <img src={assets.Carlos} alt="Carlos" loading="lazy"/>
               <h3>{t('carlosPastenes')}</h3>
               <p>{t('carlosPastenesDescription')}</p>
             </div>
             <div className="eq-card">
-              <img src={assets.Antonello} alt="Antonello" />
+              <img src={assets.Antonello} alt="Antonello" loading="lazy"/>
               <h3>{t('antonelloToala')}</h3>
               <p>{t('antonelloToalaDescription')}</p>
             </div>

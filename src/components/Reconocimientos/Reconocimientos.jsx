@@ -53,7 +53,7 @@ const Reconocimientos = () => {
       <div className="reconocimientos-grid">
         {medallas.map((medalla) => (
           <div key={medalla.id} className="medalla-item" onClick={() => openModal(medalla)}>
-            <img src={medalla.image} alt={t(medalla.titleKey)} className="medalla-img" />
+            <img src={medalla.image} alt={t(medalla.titleKey)} className="medalla-img" loading="lazy"/>
           </div>
         ))}
       </div>
@@ -63,7 +63,7 @@ const Reconocimientos = () => {
         <div className={`modal-overlay ${isAnimating ? 'open' : ''}`} onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <span className="close-btn" onClick={closeModal}>&times;</span>
-            <img src={selectedMedalla.image} alt={t(selectedMedalla.titleKey)} className="modal-medalla-img" />
+            <img src={selectedMedalla.image} alt={t(selectedMedalla.titleKey)} className="modal-medalla-img" loading="lazy"/>
             <h2>{t(selectedMedalla.titleKey)}</h2>
             <p>{t(selectedMedalla.descriptionKey)}</p>
           </div>
