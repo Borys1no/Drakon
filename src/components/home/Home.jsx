@@ -16,7 +16,7 @@ const Home = () => {
       <section>
         <div className="introduction">
           <div className="intro-img">
-            <img src={assets.FotoSeba} alt="Imagen de introduccion" />
+            <img src={assets.FotoSeba} alt="Imagen de introduccion" loading="lazy"/>
           </div>
           <div className="intro-text">
             <h3>{t("introductionTitle")}</h3>
@@ -35,7 +35,7 @@ const Home = () => {
         </div>
         <div className="productos-carousel">
           <div className="producto-card">
-            <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
+            <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" loading="lazy"/>
             <div className="container-descrip">
               <h2 className="product-title">{t("drakonDestilado")}</h2>
               <p className="product-descriptionH">$27,00</p>
@@ -50,7 +50,7 @@ const Home = () => {
             </div>
           </div>
           <div className="producto-card">
-            <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
+            <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" loading="lazy" />
             <div className="container-descrip">
               <h2 className="product-title">{t("drakonTripleDestilado")}</h2>
               <p className="product-descriptionH">$39,00</p>
@@ -69,6 +69,7 @@ const Home = () => {
               className="proximamente"
               src={assets.BotellaRoja}
               alt="Malke Reposado"
+              loading="lazy"
             />
             <div className="text-overlay">{t("comingSoon")}</div>
             <div className="container-descrip">
@@ -80,7 +81,7 @@ const Home = () => {
 
       {/* Proceso de fabricación */}
       <section className="fabricacion">
-        <img src={assets.PFabricacion} alt="Banner proceso de fabricacion" />
+        <img src={assets.PFabricacion} alt="Banner proceso de fabricacion" loading="lazy"/>
         <div className="fabricacion-content">
           <div className="text-content">
             <p>{t("fabricationProcess")}</p>
@@ -91,7 +92,7 @@ const Home = () => {
       {/* Un año de éxitos internacionales */}
       <section>
         <div className="exitos">
-          <img src={assets.SLIDES2copy} alt="Background exitos" />
+          <img src={assets.SLIDES2copy} alt="Background exitos" loading="lazy"/>
           <h3>{t("internationalSuccessTitle")}</h3>
           <p>{t("internationalSuccessDescription")}</p>
         </div>
@@ -104,7 +105,7 @@ const Home = () => {
           <div className="cocteles-grid">
             <div className="coctel-card">
               <div className="coctel-front">
-                <img src={assets.coctelRose} alt="Drakon Tonic" />
+                <img src={assets.coctelRose} alt="Drakon Tonic" loading="lazy"/>
                 <h4>{t("drakonTonic")}</h4>
               </div>
               <div className="coctel-back">
@@ -126,7 +127,7 @@ const Home = () => {
 
             <div className="coctel-card">
               <div className="coctel-front">
-                <img src={assets.coctelTonic} alt="Rasp sour" />
+                <img src={assets.coctelTonic} alt="Rasp sour" loading="lazy"/>
                 <h4>{t("raspSour")}</h4>
               </div>
               <div className="coctel-back">
@@ -146,7 +147,7 @@ const Home = () => {
 
             <div className="coctel-card">
               <div className="coctel-front">
-                <img src={assets.coctelRasp} alt="Lechuza" />
+                <img src={assets.coctelRasp} alt="Lechuza" loading="lazy"/>
                 <h4>{t("lechuza")}</h4>
               </div>
               <div className="coctel-back">

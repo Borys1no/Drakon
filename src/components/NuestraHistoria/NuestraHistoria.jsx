@@ -15,7 +15,7 @@ const NuestraHistoria = () => {
         {/* Tributo Section */}
         <div className="container-tributo">
           <div className="ceibos-arbol-gifP">
-            <img src={assets.GifArbol} alt="Gif1" />
+            <img src={assets.GifArbol} alt="Gif1" loading="lazy"/>
           </div>
           <h1 className="historia-main-titleP">
             {t('tributoTitle')}
@@ -29,12 +29,13 @@ const NuestraHistoria = () => {
           className="historia-img"
           src={assets.bannerIdentidad}
           alt="Banner proceso de fabricacion"
+          loading="lazy"
         />
 
         {/* Objetivo Section */}
         <div className="container-objetivo">
           <div className="ceibos-arbol-gif">
-            <img src={assets.GifPitahaya} alt="Gif2" />
+            <img src={assets.GifPitahaya} alt="Gif2" loading="lazy"/>
           </div>
           <h1 className="historia-main-title">{t('objetivoTitle')}</h1>
           <p className="historia-text">
@@ -46,12 +47,13 @@ const NuestraHistoria = () => {
           className="historia-img"
           src={assets.bannerClaro}
           alt="Banner proceso de fabricacion"
+          loading="lazy"
         />
 
         {/* Contribución a la Comunidad Section */}
         <div className="container-contribucion">
           <div className="ceibos-arbol-gif">
-            <img src={assets.GifBuho} alt="Gif3" />
+            <img src={assets.GifBuho} alt="Gif3" loading="lazy"/>
           </div>
           <h1 className="historia-main-title">{t('contribucionComunidadTitle')}</h1>
           <h2 className="historia-subtitle">{t('apoyoEducacionTitle')}</h2>
@@ -68,12 +70,13 @@ const NuestraHistoria = () => {
           className="historia-img"
           src={assets.bannerComunidad}
           alt="Banner proceso de fabricacion"
+          loading="lazy"
         />
 
         {/* Contribución a Nuestra Gente Section */}
         <div className="container-contribucion-gente">
           <div className="ceibos-arbol-gif">
-            <img src={assets.GifAbstracto} style={{ transform: "rotate(90deg)" }} alt="Gif4" />
+            <img src={assets.GifAbstracto} style={{ transform: "rotate(90deg)" }} alt="Gif4" loading="lazy"/>
           </div>
           <h1 className="historia-main-title">{t('contribucionGenteTitle')}</h1>
           <h2 className="historia-subtitle">{t('pagoJustoTitle')}</h2>
@@ -90,6 +93,7 @@ const NuestraHistoria = () => {
           className="historia-img"
           src={assets.bannerGente}
           alt="Banner proceso de fabricacion"
+          loading="lazy"
         />
 
         {/* Pilares Section */}
@@ -98,7 +102,7 @@ const NuestraHistoria = () => {
             <p className="pilares-vertical-text">{t('pilaresTitle')}</p>
           </div>
           <div className="pilares-center">
-            <img src={assets.NuestraHistoriaImg} alt="Gif Pitahaya" />
+            <img src={assets.NuestraHistoriaImg} alt="Gif Pitahaya" loading="lazy"/>
           </div>
           <div className="pilares-right">
             <p className="pilares-text">
@@ -185,7 +189,7 @@ const NuestraHistoria = () => {
                   </Trans>
                 </p>
                 <div className="leyenda-image">
-                  <img src={assets.Buho3} alt="Leyenda 1" />
+                  <img src={assets.Buho3} alt="Leyenda 1" loading="lazy"/>
                 </div>
               </div>
             )}
@@ -219,7 +223,7 @@ const NuestraHistoria = () => {
                   </Trans>
                 </p>
                 <div className="leyenda-image">
-                  <img src={assets.Flor2} alt="Leyenda 2" />
+                  <img src={assets.Flor2} alt="Leyenda 2" loading="lazy"/>
                 </div>
               </div>
             )}
