@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -34,7 +35,7 @@ html, body {
 .intro-img {
   flex: 0 0 300px;
   margin-right: 180px;
-  
+
 }
 
 .intro-img img {
@@ -58,7 +59,7 @@ html, body {
   font-weight: bold;
   font-style: normal;
   text-align: left;
-  font-size: 3rem;
+  font-size: clamp(1rem, 20vw, 3rem);
   color: black;
 }
 
@@ -66,7 +67,7 @@ html, body {
   font-family: "Poppins", serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 20vw, 1.5rem);
   color: black;
   margin-right: 40px;
 }
@@ -84,14 +85,17 @@ html, body {
 }
 
 /* Productos */
-.productos-headerH{
+.productos-headerH {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .productos-carousel {
   display: flex;
-  flex-wrap: wrap; /* Permitir que los productos se ajusten automáticamente */
-  gap: 20px; /* Espaciado entre tarjetas */
+  flex-wrap: wrap;
+  /* Permitir que los productos se ajusten automáticamente */
+  gap: 20px;
+  /* Espaciado entre tarjetas */
   justify-content: center;
   padding: 20px;
 }
@@ -112,14 +116,14 @@ html, body {
   font-style: normal;
   margin-left: 0px;
   display: block;
-  font-size: 1.6rem;
+  font-size: clamp(1rem, 20vw, 1.6rem);
   color: #cd528f;
   margin: 0;
   text-align: left;
 }
 
 .productos-headerH h3 {
-  font-size: 3rem;
+  font-size: clamp(1rem, 20vw, 3rem);
   white-space: nowrap;
   color: #000 !important;
   margin-left: 0px;
@@ -152,19 +156,23 @@ html, body {
   height: 100%;
   min-height: 450px;
 }
+
 .product-title {
-  font-size: 1.5em;
+  font-size: clamp(1rem, 20vw, 1.5rem);
   margin-bottom: 10px;
-  flex-grow: 1; /* Ocupa el espacio restante para alinear el contenido */
+  flex-grow: 1;
+  /* Ocupa el espacio restante para alinear el contenido */
   display: flex;
-  align-items: center; /* Centra verticalmente el texto */
-  justify-content: center; /* Centra horizontalmente el texto */
+  align-items: center;
+  /* Centra verticalmente el texto */
+  justify-content: center;
+  /* Centra horizontalmente el texto */
 }
 
 .producto-card h2 {
   color: #000;
   white-space: nowrap;
-  font-size: 35px;
+  font-size: 30px;
   margin: 10px 0;
 }
 
@@ -176,10 +184,12 @@ html, body {
   object-fit: contain;
 
 }
+
 .producto-card .proximamente {
   filter: brightness(0.1);
 }
-.producto-card .text-overlay{
+
+.producto-card .text-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -309,10 +319,10 @@ html, body {
   font-weight: bold;
   font-style: italic;
   position: absolute;
-  top: 20%; 
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #000; 
+  color: #000;
   font-size: 3rem;
   text-align: center;
   width: 80%;
@@ -323,11 +333,11 @@ html, body {
   font-weight: 300;
   font-style: normal;
   position: absolute;
-  top: 60%; 
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  color: #000; 
+  color: #000;
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: justify;
@@ -415,7 +425,8 @@ html, body {
 
 .coctel-back h5 {
   color: #cc528f;
-  text-align: left; /* Agregado para alinear el texto a la izquierda */
+  text-align: left;
+  /* Agregado para alinear el texto a la izquierda */
 }
 
 .coctel-back p {
@@ -486,194 +497,224 @@ html, body {
 
 /* Media Queries */
 
+@media screen and (min-width: 320px) and (max-width:430px) {
 
-@media (max-width: 768px) {
+  /*Banner*/
   .banner {
-    margin-top: 0;
+    margin-top: -30px;
     height: 400px;
     background-size: contain;
-    margin-bottom: -111px;
   }
 
+  /*Introduccion*/
   .introduction {
     display: flex;
-    flex-direction: column; /* Establecer la dirección de los elementos en columna */
-    align-items: center; /* Centrar los elementos en el eje transversal */
-    justify-content: center; /* Alinear los elementos en el eje principal */
     border: none;
-    margin: 0;
-    padding-top: 0;
+    align-items: center;
+    justify-content: center;
+
   }
 
   .intro-img {
-    flex: none; /* Evitar que la imagen crezca o se reduzca */
-    margin-right: 0; /* Eliminar el margen derecho */
-    width: 100%; /* Asegurarse de que la imagen ocupe todo el ancho disponible */
-  }
-
-  .intro-img img {
-    width: 100%; /* Hacer que la imagen se ajuste al ancho de su contenedor */
+    width: 80%;
     height: auto;
-    object-fit: cover;
+    margin-top: -130px;
+
   }
 
   .intro-text {
-    width: 100%; 
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     text-align: center;
-    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .intro-text h3 {
-    font-size: 2rem; /* Reducir el tamaño del título en pantallas pequeñas */
+    font-size: 1.2rem;
     text-align: center;
-
   }
 
   .intro-text p {
-    font-size: 1.2rem; /* Reducir el tamaño del párrafo en pantallas pequeñas */
-    margin-right: 0; /* Eliminar el margen derecho */
-    text-align: justify; /* Centrar el texto */
+    font-size: 1rem;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 500px;
   }
 
   .buho {
-    width: 80%; /* Ajustar el tamaño de la imagen del búho */
-    margin-top: 20px; /* Añadir margen superior */
-  }
-
-  .buho img {
-    width: 100%; /* Ajustar la imagen del búho al tamaño del contenedor */
-    height: auto;
-  }
-  
- 
-
-  
-
- 
-
-  .product-description {
-    font-size: 1rem;
-  }
-
-  .fabricacion p {
-    font-size: 1.2rem;
-    margin-bottom: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: justify;
-  }
-
-  .productos-headerH h3 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .exitos img {
-    height: 600px;
-  }
-  .exitos h3 {
-    font-size: 1.5rem;
-    top: 5%;
-  }
-  .exitos p {
-    font-size: 1.2rem; /* Ajusta el tamaño del párrafo */
-    top: 50%; /* Reposiciona el párrafo */
-    width: 90%;
-    text-align: justify;
-  }
-
-  .coctel-card {
-    width: 350px;
-    height: 480px;
-  }
-
-  .coctel-front img,
-  .coctel-back {
-    height: 80%;
-  }
-
-  .coctel-front h4,
-  .coctel-back h4 {
-    font-size: 1rem;
-  }
-
-  .cocteles .btn-coctel {
-    padding: 10px 40px;
-    font-size: 1rem;
-  }
-
-  .coctel-back .btn-recetas {
-    padding: 10px 40px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 425px) {
-  .banner {
-    margin-top: 0;
-    height: 300px;
-    margin-top: 50px;
-  }
-
-  .intro-img {
-    flex: 0 0 auto;
-    margin-right: 0;
-    margin-bottom: 20px;
-    width: 50%;
-    height: 50%;
-  }
-
-  .intro-text {
-    padding-right: 0;
-    text-align: left;
     display: block;
+    text-align: center;
   }
-
-  .intro-text h3 {
-    font-size: 1.2rem;
-  }
-
-  .intro-text p {
-    font-size: 1.5rem;
-  }
-
-  .buho {
-    align-self: flex-end;
-    margin-top: 20px;
-  }
-
 
   .buho img {
-    width: 200px;
-    height: 200px;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
   }
-  .productos-headerH h3{
-    font-size: 1.5rem;
 
+  /*Productos*/
+
+  .productos-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20-x;
   }
 
   .producto-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
+    width: 90% !important;
+    max-width: 320px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .producto-card img {
+    width: 70% !important;
+    /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin: 0 auto;
+    /* Centra la imagen */
+    display: block;
+  }
+
+
+  .productos-headerH h3 {
+    font-size: 1.5rem;
+    max-width: 200px;
   }
 
   .producto-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    margin-top: 50px;
+  }
+
+  /*Exitos*/
+  .exitos img {
+    width: 100%;
+    /* Limita la altura máxima */
+    height: 900px;
+    object-fit: cover;
+    /* Ajusta la imagen para que mantenga una proporción adecuada */
+    display: block;
+    /* Evita espacios blancos no deseados */
+    margin: 0 auto;
+  }
+
+  .exitos h3 {
+    font-size: 1.9rem;
+    top: 1%;
+    transform: translate(-50%, -5%);
+  }
+
+  .exitos p {
     font-size: 1.5rem;
+    width: 95%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+/* Para pantallas entre 768px y 1024px */
+@media screen and (width: 768px) {
+  .banner {
+    width: 100%;
+    margin-top: 50px;
+    height: 400px;
+    background-size: contain;
+  }
+  /*Introduccion*/
+  .introduction {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 30px;
+    border: none;
+  }
+  .intro-img {
+    flex: 0 0 50%;
+    margin-right: 0;
+  }
+  .intro-img img {
+    width: 400px;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: -22px;
+  }
+  .intro-text {
+    flex: 0 0 40%;
+    text-align: justify;
+    max-width: none;
+  }
+  .intro-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text p {
+    margin-right: 0;
+    font-size: 1.2rem;
+  }
+  .buho {
+    align-self: flex-start;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .buho img {
+    width: 150px;
+    height: auto;
+  }
+
+  /*Productos*/
+  .productos-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se muevan a una nueva línea */
+    justify-content: space-between;
+    /* Espacio entre las imágenes */
+    gap: 10px;
+  }
+  .producto-card {
+    width: 90% !important;
+    max-width: 320px;
+    /* Tamaño máximo de la tarjeta */
+    text-align: center;
+    padding: 20px;
+  }
+  .producto-card img {
+    width: 70% !important;
+    /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin: 0 auto;
+    /* Centra la imagen */
+    display: block;
+  }
+  .productos-headerH h3 {
+    max-width: 200px;
+  }
+
+  .producto-card h2 {
+    font-size: 1.2rem;
   }
 
   .product-description {
     font-size: 0.9rem;
   }
-
-
+  /*Exitos*/
   .exitos img {
-    height: 450px;
+    height: 700px;
   }
 
   .exitos h3 {
-    font-size: 1.5rem;
-    top: 5%;
+    top: 1%;
     transform: translate(-50%, -5%);
   }
 
@@ -681,92 +722,99 @@ html, body {
     width: 95%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
-  }
-
-  .coctel-card {
-    width: 300px;
-    height: 550px;
-  }
-
-  .coctel-front img,
-  .coctel-back {
-    height: 75%;
-  }
-
-  .coctel-front h4,
-  .coctel-back h4 {
-    font-size: 0.9rem;
-  }
-
-  .cocteles h3 {
-    font-size: 1.5rem;
-  }
-
-  .cocteles .btn-coctel {
-    padding: 10px 30px;
-    font-size: 0.9rem;
-  }
-
-  .coctel-back .btn-recetas {
-    font-size: 0.8rem;
-    top: 30px;
   }
 }
-@media (max-width: 512px) {
+
+@media screen and (width: 1024px) {
   .banner {
-    margin-top: 0;
-    height: 300px;
-    margin-top: 50px;
-  }
-
-  .intro-img {
-    flex: 0 0 auto;
-    margin-right: 0;
-    margin-bottom: 20px;
-    width: 50%;
-    height: 50%;
-  }
-  .intro-img img{
     width: 100%;
-    height: 100%;
+    margin-top: 50px;
+    height: 500px; /* Ajusta el tamaño aquí */
+    background-size: cover; /* Cambia el tamaño de fondo si es necesario */
   }
-
+  /*Introduccion*/
+  .introduction {
+    flex-wrap: nowrap;
+    /* Evitar que los elementos se envuelvan */
+    align-items: center;
+    gap: 30px;
+    /* Ajustar espacio entre elementos */
+    border: none;
+  }
+  .intro-img {
+    flex: 0 0 50%;
+    /* Imagen ocupa el 40% del espacio disponible */
+    margin-right: 0;
+    /* Eliminar margen lateral extra */
+  }
+  .intro-img img {
+    width: 400px;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: -85px;
+  }
   .intro-text {
-    padding-right: 0;
-    text-align: left;
-    display: block;
+    flex: 0 0 40%;
+    /* Texto ocupa el 60% del espacio disponible */
+    text-align: justify;
+    /* Alinear texto a la izquierda */
+    max-width: none;
+    /* Permitir mayor ancho */
   }
-
   .intro-text h3 {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
   .intro-text p {
-    font-size: 1rem;
-    text-align: justify;
+    margin-right: 0;
+    font-size: 1.5rem;
   }
-
   .buho {
-    align-self: center;
+    align-self: flex-start;
+    /* Alinear búho debajo del texto */
     margin-top: 20px;
-    
+    /* Espaciado entre texto y búho */
+    width: 100%;
+    /* Asegurar que ocupe todo el ancho disponible */
+    text-align: center;
+    /* Centrar la imagen del búho */
   }
-
 
   .buho img {
-    width: 20% !important;
-    height: auto !important;
-  }
-  .productos-headerH h3{
-    font-size: 1.5rem;
-
+    width: 300px;
+    /* Ajustar tamaño de la imagen del búho */
+    height: auto;
   }
 
+  /*Productos*/
+  .productos-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se muevan a una nueva línea */
+    justify-content: space-between;
+    /* Espacio entre las imágenes */
+    gap: 10px;
+
+  }
   .producto-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
+    width: 90% !important;
+    /* Asegura que ocupe el ancho del contenedor */
+    max-width: 320px;
+    /* Tamaño máximo de la tarjeta */
+    text-align: center;
+    padding: 20px;
+  }
+  .producto-card img {
+    width: 70% !important;
+    /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin: 0 auto;
+    /* Centra la imagen */
+    display: block;
+  }
+  .productos-headerH h3 {
+    font-size: 2rem;
+    max-width: 200px;
   }
 
   .producto-card h2 {
@@ -776,261 +824,10 @@ html, body {
   .product-description {
     font-size: 0.9rem;
   }
-  .fabricacion p{
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 1rem;
-    text-align: justify;
-
-  }
-
-
-  .exitos img {
-    height: 600px;
-  }
+  /*Exitos*/
   .exitos h3 {
-    font-size: 1.5rem;
-    top: 5%;
-    transform: translate(-50%, -5%);
-  }
-  .exitos p {
-    font-size: 1rem;
-    top: 50%;
-    width: 90%;
-    text-align: justify;
+    top: 10%;
   }
 
-  .coctel-card {
-    width: 300px;
-    height: 550px;
-  }
-
-  .coctel-front img,
-  .coctel-back {
-    height: 75%;
-  }
-
-  .coctel-front h4,
-  .coctel-back h4 {
-    font-size: 0.9rem;
-  }
-
-  .cocteles h3 {
-    font-size: 1.5rem !important;
-  }
-
-  .cocteles .btn-coctel {
-    padding: 10px 30px;
-    font-size: 0.9rem;
-  }
-
-  .coctel-back .btn-recetas {
-    font-size: 0.8rem;
-    top: 30px;
-  }
-}
-
-@media (max-width: 375px) {
-  .banner {
-    margin-top: 0;
-    height: 280px;
-    margin-top: 40px;
-  }
-
-  .intro-img {
-    width: 45%;
-    height: 45%;
-  }
-
-  .intro-text h3 {
-    font-size: 1rem;
-  }
-
-  .intro-text p {
-    font-size: 1.5rem;
-  }
-
-  .buho img {
-    width: 180px;
-    height: 180px;
-  }
-  .productos-headerH h3{
-    font-size: 1.5rem;
-
-  }
-  .producto-card {
-    flex: 1 1 100%; /* 1 tarjeta por fila */
-  }
-
-  .exitos img {
-    height: 420px;
-  }
-  .exitos h3 {
-    font-size: 1.5rem;
-    top: 5%;
-    transform: translate(-50%, -5%);
-  }
-  .exitos p {
-    font-size: 1.5rem;
-    top: 50%;
-    width: 90%;
-  }
-
-  .coctel-card {
-    width: 280px;
-    height: 520px;
-  }
-
-  .coctel-front img,
-  .coctel-back {
-    height: 70%;
-  }
-
-  .coctel-front h4,
-  .coctel-back h4 {
-    font-size: 0.85rem;
-  }
-
-  .cocteles .btn-coctel {
-    padding: 8px 25px;
-    font-size: 0.85rem;
-  }
-
-  .coctel-back .btn-recetas {
-    font-size: 0.75rem;
-    top: 25px;
-  }
-}
-
-@media (max-width: 325px) {
-  .banner {
-    margin-top: 0;
-    height: 280px;
-    margin-top: 40px;
-  }
-
-  .intro-img {
-    width: 45%;
-    height: 45%;
-  }
-
-  .intro-text h3 {
-    font-size: 1rem;
-  }
-
-  .intro-text p {
-    font-size: 0.75rem;
-  }
-
-  .buho img {
-    width: 180px;
-    height: 180px;
-  }
-  .productos-headerH h3{
-    font-size: 1.5rem;
-
-  }
-  .producto-card {
-    flex: 1 1 100%; /* 1 tarjeta por fila */
-  }
-
-  .exitos img {
-    height: 480px;
-  }
-  .exitos h3 {
-    font-size: 1.5rem;
-    top: 5%;
-    transform: translate(-50%, -5%);
-  }
-
-  .coctel-card {
-    width: 280px;
-    height: 520px;
-  }
-
-  .coctel-front img,
-  .coctel-back {
-    height: 70%;
-  }
-
-  .coctel-front h4,
-  .coctel-back h4 {
-    font-size: 0.85rem;
-  }
-
-  .cocteles .btn-coctel {
-    padding: 8px 25px;
-    font-size: 0.85rem;
-  }
-
-  .coctel-back .btn-recetas {
-    font-size: 0.75rem;
-    top: 25px;
-  }
-}
-
-@media (max-width: 1024px){
-  .banner {
-    margin-top: 10;
-    height: 500px;
-  }
-  .introduction {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .intro-img,
-  .intro-text {
-    flex: 1;
-    text-align: justify;
-  }
-
-  .intro-text h3 {
-    font-size: 1.8rem;
-  }
-
-  .intro-text p {
-    font-size: 1.2rem;
-    margin-right: 30px;
-    
-  }
-  .exitos h3 {
-    font-size: 2rem;
-    top: 5%;
-    transform: translate(-50%, -5%);
-  }
-  .productos-headerH h3 {
-    font-size: 1.8rem;
-  }
-
-  /* Ajustar el tamaño de las tarjetas para pantallas pequeñas */
-  .productos-carousel {
-    flex-wrap: wrap; /* Permitir que los productos se ajusten automáticamente */
-    justify-content: center; /* Centrar los productos */
-  }
-
-  .producto-card {
-    flex: 1 1 calc(50% - 20px); /* Mostrar dos tarjetas por fila */
-    min-height: auto; /* Ajustar el tamaño mínimo de las tarjetas */
-    margin-bottom: 20px;
-  }
-
-  /* Ajustar el tamaño del título de producto */
-  .producto-card .product-title {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  /* Ajustar el tamaño de las imágenes para pantallas más pequeñas */
-  .producto-card img {
-    width: 100%; /* Ajustar la imagen al ancho de la tarjeta */
-    max-width: 200px; /* Establecer un tamaño máximo para las imágenes */
-    margin-bottom: 10px;
-  }
-  
-  .exitos img {
-    height: 500px;
-  }
 
 }
