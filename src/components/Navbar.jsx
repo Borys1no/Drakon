@@ -97,8 +97,12 @@ const Navbar = () => {
 
                     {/* Language Switcher Button */}
                     <div className="language-switcher">
-                        <button onClick={() => changeLanguage('es')}>ES</button>
-                        <button onClick={() => changeLanguage('en')}>EN</button>
+                        <button onClick={() => changeLanguage('es')}>
+                            <img src={assets.Ecuador} alt="Ecuador Flag" />
+                        </button>
+                        <button onClick={() => changeLanguage('en')}>
+                            <img src={assets.UnitedE} alt="United States Flag" />
+                        </button>
                     </div>
                 </div>
 
