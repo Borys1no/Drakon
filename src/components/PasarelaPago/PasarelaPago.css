@@ -18,24 +18,32 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #1a73e8; /* Color azul suave para encabezado */
+    color: #000000; /* Color azul suave para encabezado */
+
+    font-family: 'TTRamillas', sans-serif;
+    font-weight: bold;
+    font-style: normal;
   }
   
+
   #pay {
     display: inline-block;
     background-color: #FAFAFA;
     background: url('https://sandbox-paybox.pagoplux.com/img/pagar.png?v1') no-repeat center center;
-    height: 96px;
-    width: 215px;
-    border: none;
+    height: 8rem;
+    width: 17rem;
+    border: 1px solid #ccc; /* Borde sutil de 1px */
+    border-radius: 12px; /* Bordes redondeados */
     cursor: pointer;
     background-size: contain;
     outline: 0;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(1, 54, 134, 0.2); /* Sombra inicial */
   }
   
   #pay:hover {
     transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al pasar el cursor */
+    background-color: #d53de911; /* Color más oscuro al pasar el mouse */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
   }
   
