@@ -7,6 +7,7 @@ import { assets } from '../assets/assets';
 import '../index.css';
 import './Navbar.css';
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
+import { User } from 'lucide-react'; // Importar el ícono de Lucide
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -76,8 +77,9 @@ const Navbar = () => {
                             className="user-logged-in" 
                             onMouseEnter={() => setIsDropdownOpen(true)} 
                             onMouseLeave={() => setIsDropdownOpen(false)}
+                            onClick={() => setIsDropdownOpen(!isDropdownOpen)} // Alternar menú al hacer clic
                         >
-                            <span>{currentUser?.email}</span> 
+                            <User size={24} /> {/* Ícono de Lucide en todas las pantallas */}
                             {isDropdownOpen && (
                                 <div className="dropdown-menu">
                                     <ul>
