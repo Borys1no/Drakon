@@ -20,7 +20,7 @@ import Pedidos from "./components/dashboard/Pedidos/Pedidos";
 import AgeVerificationPopup from "./components/AgeVerificationPopup/AgeVerificationPopup"; // Importar el pop-up
 import CookieBanner from './components/Cookie/CookieBanner.jsx';
 import './i18n'; // Import the i18n configuration file
-
+import UserProfile from "./components/setting/userProfile.jsx";
 const App = () => {
   const [isVerified, setIsVerified] = useState(false); // Estado para la verificación de edad
 
@@ -48,6 +48,7 @@ const App = () => {
               <Route path="/Procesos" element={<Procesos />} />
               <Route path="/Reconocimientos" element={<Reconocimientos />} />
               <Route path="/cn" element={<PasarelaPago />} />
+              <Route path="/userProfile" element={<UserProfile />} />
             </Route>
             {/* Rutas del administrador */}
             <Route

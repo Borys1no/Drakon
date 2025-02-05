@@ -85,7 +85,7 @@ const Navbar = () => {
                                     <ul>
                                         <li><a href="/pedidos">{t('orders')}</a></li>
                                         <li><a href="/checkout">{t('shoppingCart')}</a></li>
-                                        <li><a href="/configuracion">{t('settings')}</a></li>
+                                        <li><a href="/userProfile">{t('settings')}</a></li>
                                         <li><button onClick={handleLogout}>{t('logout')}</button></li>
                                     </ul>
                                 </div>
