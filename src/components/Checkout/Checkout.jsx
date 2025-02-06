@@ -16,7 +16,7 @@ const Checkout = () => {
 
   // Función para manejar el clic en "Pagar"
   const handlePay = () => {
-    navigate('/cn', { state: { total } }); // Redirige a la página de PasarelaPago y pasa el total
+    navigate('/checkoutInfo', { state: { total } }); // Redirige a la página de PasarelaPago y pasa el total
   };
 
   return (
