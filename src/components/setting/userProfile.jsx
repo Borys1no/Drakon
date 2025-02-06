@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { auth, db } from "../../firebase/firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { updatePassword, reauthenticateWithCredential, EmailAuthProvider } from "firebase/auth";
+import "./userProfile.css";
 
 const UserProfile = () => {
     const [userData, setUserData] = useState({
@@ -85,7 +86,7 @@ const UserProfile = () => {
 
   return (
     <div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br />
       <h2>Perfil de Usuario</h2>
   
       <label>Nombre:</label>
@@ -132,7 +133,7 @@ const UserProfile = () => {
         disabled={!editing} 
       />
   
-      <button onClick={() => setEditing(!editing)}>
+      <button className="btnEditar" onClick={() => setEditing(!editing)}>
         {editing ? "Guardar" : "Editar"}
       </button>
       {editing && <button onClick={updateProfile}>Actualizar</button>}
@@ -158,7 +159,7 @@ const UserProfile = () => {
         disabled={!passwords.current} 
       />
       
-      <button onClick={changePassword}>Actualizar Contraseña</button>
+      <button className="btnActualizar" onClick={changePassword}>Actualizar Contraseña</button>
     </div>
   );
   

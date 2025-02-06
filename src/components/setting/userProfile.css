@@ -1,0 +1,137 @@
+/* userProfile.css */
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 400px; /* Reducimos el ancho del formulario */
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+    text-align: center;
+    
+    
+  }
+  
+  input {
+    width: 50%; /* Ajusta el ancho */
+    padding: 10px;
+    margin: 5px auto 15px auto; /* Centra horizontalmente */
+    display: block; /* Permite que el margin auto funcione */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+  
+  input:disabled {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre botones */
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+  
+  button {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 10px auto; /* Centra el botón horizontalmente */
+    
+  }
+  
+  button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+  
+  .btnEditar{
+    background: #007bff;
+    color: white;
+  }
+  
+  .btnActualizar{
+    background: #dc3545;
+    color: white;
+  }
+  
+  p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: -10px;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .container {
+      width: 85%;
+      padding: 15px;
+    }
+  
+    input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 95%;
+      margin: 30px auto;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  
+    h2, h3 {
+      font-size: 18px;
+    }
+  
+    input {
+      font-size: 14px;
+      padding: 7px;
+    }
+  
+    .button-group {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    button {
+      width: 80%;
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
