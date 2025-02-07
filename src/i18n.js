@@ -165,7 +165,7 @@ const resources = {
     translation: {
       "welcome": "Welcome",
       "products": "PRODUCTS",
-      "cocktails": "Cocktails",
+      "cocktails": "COCKTAILS",
       "ourHistory": "OUR HISTORY",
       "process": "PROCESS",
       "recognitions": "RECOGNITIONS",
