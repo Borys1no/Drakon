@@ -7,15 +7,13 @@ import "./Checkout.css";
 const Checkout = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
   const navigate = useNavigate();
-  const shippingCost = 5.0; // Costo de envío fijo
 
   // Calcular el subtotal
   const subtotal = cartItems.reduce((acc, item) => acc + (item.price || 0) * item.quantity, 0);
-  const total = subtotal + shippingCost;
 
   // Función para manejar el clic en "Pagar"
   const handlePay = () => {
-    navigate("/checkoutInfo", { state: { cartItems, subtotal, total, shippingCost } });
+    navigate("/checkoutInfo", { state: { cartItems, subtotal } });
   };
 
   return (
@@ -34,7 +32,7 @@ const Checkout = () => {
                 </li>
               ))}
             </ul>
-            <h2 className="C-total">Total: ${total.toFixed(2)}</h2>
+            <h2 className="C-total">Subtotal: ${subtotal.toFixed(2)}</h2>
             <button className="C-payButton" onClick={handlePay}>Pagar</button>
           </>
         )}
