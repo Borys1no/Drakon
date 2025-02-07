@@ -94,7 +94,7 @@ const ProductPage = () => {
           {/* Selector de cantidad */}
           <div className="Qquantity-container">
             <label htmlFor="quantity">Cantidad:</label>
-            <input 
+            <input className='input2'
               type="number" 
               id="quantity" 
               min="1" 
