@@ -1,22 +1,21 @@
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { CartContext } from '../../contexts/CartContext';
-import Footer from '../Footer/Footer'; // Importar el footer
-import './Checkout.css';
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
+import Footer from "../Footer/Footer";
+import "./Checkout.css";
 
 const Checkout = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
   const navigate = useNavigate();
+  const shippingCost = 5.0; // Costo de envío fijo
 
-  // Calcula el total solo para los ítems que tengan un precio válido
-  const total = cartItems.reduce((acc, item) => {
-    const price = item.price ? item.price : 0; // Verificar si el campo `price` está definido
-    return acc + price * item.quantity;
-  }, 0);
+  // Calcular el subtotal
+  const subtotal = cartItems.reduce((acc, item) => acc + (item.price || 0) * item.quantity, 0);
+  const total = subtotal + shippingCost;
 
   // Función para manejar el clic en "Pagar"
   const handlePay = () => {
-    navigate('/checkoutInfo', { state: { total } }); // Redirige a la página de PasarelaPago y pasa el total
+    navigate("/checkoutInfo", { state: { cartItems, subtotal, total, shippingCost } });
   };
 
   return (
@@ -30,7 +29,7 @@ const Checkout = () => {
             <ul className="C-checkoutItemsList">
               {cartItems.map((item, index) => (
                 <li key={index} className="C-checkoutItem">
-                  <span>{item.name}</span> - <span>{item.quantity} x ${item.price ? item.price.toFixed(2) : 'N/A'}</span>
+                  <span>{item.name}</span> - <span>{item.quantity} x ${item.price?.toFixed(2) || "N/A"}</span>
                   <button className="C-removeButton" onClick={() => removeFromCart(item.id)}>Eliminar</button>
                 </li>
               ))}
@@ -40,7 +39,7 @@ const Checkout = () => {
           </>
         )}
       </div>
-      <Footer /> {/* Incluye el footer */}
+      <Footer />
     </div>
   );
 };
