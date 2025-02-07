@@ -80,6 +80,7 @@ body {
     margin-bottom: 0;
     margin-left: 20px; /* Agrega margen izquierdo */
     line-height: 1; /* Elimina el interlineado */
+    text-align: left;
 }
 
 .product-no-gap {
@@ -92,6 +93,7 @@ body {
     margin-bottom: 0;
     margin-left: 20px; /* Agrega margen izquierdo */
     line-height: 1; /* Elimina el interlineado */
+    text-align: left;
 }
 
 .products-header h1 {
