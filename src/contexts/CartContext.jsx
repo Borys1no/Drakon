@@ -33,45 +33,66 @@ export const CartProvider = ({ children }) => {
 
   // Guardar carrito en Firestore cuando cambia el carrito y el usuario está logueado
   useEffect(() => {
+    console.log("Guardando en Firestore:", cartItems);
     const saveCartToFirestore = async () => {
       if (currentUser && cartItems.length > 0) {
         const docRef = doc(db, "carts", currentUser.uid);
-        await setDoc(docRef, { items: cartItems });
+        const validCartItems = cartItems.filter(item => item && item.id); // Filtra elementos inválidos
+        await setDoc(docRef, { items: validCartItems });
       }
     };
-
+  
     saveCartToFirestore();
   }, [cartItems, currentUser]);
 
   const addToCart = (product, quantity) => {
-    setCartItems((prevItems) => {
-      const updatedCart = [...prevItems];
-      const existingItemIndex = updatedCart.findIndex(item => item.id === product.id);
+    if (!product || !product.id) {
+      console.error("Producto inválido");
+      return;
+    }
 
-      if (existingItemIndex > -1) {
-        updatedCart[existingItemIndex].quantity += quantity;
-      } else {
-        updatedCart.push({ ...product, quantity });
-      }
+     // Limpia el objeto `product` antes de agregarlo al carrito
+  const cleanedProduct = {
+    id: product.id,
+    name: product.name || "Nombre no disponible",
+    price: product.price || 0,
+    image: product.image || null, // Reemplaza `undefined` con `null`
+    quantity: quantity,
+  };
+  
+  setCartItems((prevItems) => {
+    const updatedCart = [...prevItems];
+    const existingItemIndex = updatedCart.findIndex(item => item.id === cleanedProduct.id);
 
-      // Guardar en localStorage también
-      localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+    if (existingItemIndex > -1) {
+      updatedCart[existingItemIndex].quantity += quantity;
+    } else {
+      updatedCart.push(cleanedProduct);
+    }
 
-      return updatedCart;
-    });
+    // Guardar en localStorage también
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+
+    return updatedCart;
+  });
   };
 
   // Modificación para eliminar también de Firestore
   const removeFromCart = async (productId) => {
+    if (!productId) {
+      console.error("ID de producto inválido");
+      return;
+    }
+  
     setCartItems((prevItems) => {
       const updatedCart = prevItems.filter(item => item.id !== productId);
-
+  
       // Guardar el carrito actualizado en localStorage
       localStorage.setItem('cartItems', JSON.stringify(updatedCart));
-
+  
       return updatedCart;
     });
-
+  
     // Si el usuario está logueado, elimina el producto de Firestore
     if (currentUser) {
       try {
@@ -80,7 +101,7 @@ export const CartProvider = ({ children }) => {
         if (docSnap.exists()) {
           const existingItems = docSnap.data().items || [];
           const updatedItems = existingItems.filter(item => item.id !== productId);
-
+  
           // Actualiza los elementos en Firestore
           await updateDoc(cartRef, { items: updatedItems });
         }

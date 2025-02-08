@@ -1,90 +1,99 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-import './PasarelaPago.css'; // Importar el CSS personalizado
+import React, { useState, useEffect, useRef, useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { auth } from '../../firebase/firebase';
+import { CartContext } from '../../contexts/CartContext'; // Importar el contexto del carrito
+import './PasarelaPago.css';
 
 const PasarelaPago = () => {
+  const [userEmail, setUserEmail] = useState('');
   const location = useLocation();
-  const { total } = location.state || { total: 0 }; // Obtener el valor total del carrito
+  const navigate = useNavigate();
+  const { total = 0 } = location.state || {};
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+  const [onAuthorizeDefined, setOnAuthorizeDefined] = useState(false);
+  const [isReady, setIsReady] = useState(false);
+  const payButtonRef = useRef(null);
+  const { clearCart } = useContext(CartContext); // Obtener la función para vaciar el carrito
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserEmail(user.email);
+      } else {
+        setUserEmail("");
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const [data, setData] = useState({
-    PayboxRemail: 'agenda.reumasur@gmail.com', // Correo del vendedor
-    PayboxSendmail: 'correo_cliente@example.com', // Correo del cliente (puedes cambiarlo dinámicamente)
-    PayboxRename: 'Nombre del Vendedor', // Nombre del vendedor
-    PayboxSendname: 'Nombre del Cliente', // Nombre del cliente (puedes cambiarlo dinámicamente)
-    PayboxBase0: total.toFixed(2), // Valor total del carrito
-    PayboxBase12: '0.00', // Impuestos (si aplica)
-    PayboxDescription: 'Compra en E-commerce', // Descripción del pago
-    PayboxProduction: false, // Modo sandbox (cambiar a true en producción)
-    PayboxEnvironment: 'sandbox', // Entorno sandbox (cambiar a 'production' en producción)
-    PayboxLanguage: 'es', // Idioma del modal de pago
-    PayboxPagoPlux: true, // Usar un botón personalizado
-    PayboxDirection: 'Dirección del cliente', // Dirección del cliente (puedes cambiarlo dinámicamente)
-    PayBoxClientPhone: '1234567890', // Teléfono del cliente (puedes cambiarlo dinámicamente)
+    PayboxRemail: 'agenda.reumasur@gmail.com',
+    PayboxSendmail: userEmail || 'correo_cliente@example.com',
+    PayboxRename: 'Nombre del Vendedor',
+    PayboxSendname: 'Nombre del Cliente',
+    PayboxBase0: (Number(total) || 0).toFixed(2),
+    PayboxBase12: '0.00',
+    PayboxDescription: 'Compra en E-commerce',
+    PayboxProduction: false,
+    PayboxEnvironment: 'sandbox',
+    PayboxLanguage: 'es',
+    PayboxPagoPlux: true,
+    PayboxDirection: 'Dirección del cliente',
+    PayBoxClientPhone: '1234567890',
   });
 
-  const [scriptLoaded, setScriptLoaded] = useState(false); // Estado para controlar si el script ya se cargó
-  const [onAuthorizeDefined, setOnAuthorizeDefined] = useState(false); // Estado para controlar si onAuthorize ya se definió
-  const [isReady, setIsReady] = useState(false); // Estado para controlar si todo está listo
-  const payButtonRef = useRef(null); // Referencia al botón de pago
+  useEffect(() => {
+    setData((prevData) => ({
+      ...prevData,
+      PayboxSendmail: userEmail || 'correo_cliente@example.com',
+    }));
+  }, [userEmail]);
 
-  // Cargar el script de PagoPlux dinámicamente
   useEffect(() => {
     if (!scriptLoaded) {
       const script = document.createElement('script');
       script.src = 'https://sandbox-paybox.pagoplux.com/paybox/index.js';
       script.async = true;
-      script.onload = () => {
-        setScriptLoaded(true); // Marcar que el script se cargó
-      };
-      script.onerror = () => {
-        console.error("Error al cargar el script de PagoPlux.");
-      };
+      script.onload = () => setScriptLoaded(true);
+      script.onerror = () => console.error("Error al cargar el script de PagoPlux.");
       document.body.appendChild(script);
-
-      // Limpiar el script cuando el componente se desmonte
-      return () => {
-        document.body.removeChild(script);
-      };
+      return () => document.body.removeChild(script);
     }
   }, [scriptLoaded]);
 
-  // Definir la función onAuthorize solo una vez
   useEffect(() => {
     if (scriptLoaded && !onAuthorizeDefined) {
       window.onAuthorize = async function (response) {
         if (response.status === 'succeeded') {
-          // Pago exitoso
           alert("Pago exitoso. Gracias por su compra.");
-          // Aquí puedes redirigir a una página de confirmación o hacer otras acciones
+          clearCart();
         } else {
-          // Pago fallido
           alert("Pago fallido. Por favor, inténtelo de nuevo.");
         }
       };
-
-      setOnAuthorizeDefined(true); // Marcar que onAuthorize ya se definió
+      setOnAuthorizeDefined(true);
     }
-  }, [scriptLoaded, onAuthorizeDefined]);
+  }, [scriptLoaded, onAuthorizeDefined, clearCart, navigate]);
 
-  // Verificar si todo está listo
   useEffect(() => {
     if (scriptLoaded && onAuthorizeDefined) {
       setIsReady(true);
     }
   }, [scriptLoaded, onAuthorizeDefined]);
 
-  // Simular un clic automático cuando todo esté listo
   useEffect(() => {
     if (isReady && payButtonRef.current) {
-      payButtonRef.current.click(); // Simular un clic en el botón de pago
+      payButtonRef.current.click();
     }
   }, [isReady]);
 
   const handlePayment = () => {
     if (window.Data) {
-      window.Data.init(data); // Iniciar el proceso de pago
+      console.log("Iniciando pago con los datos:", data);
+      window.Data.init(data);
     } else {
-      console.error("Data no está definido.");
+      console.error("Data no está definido. Verifica que el script de PagoPlux esté cargado.");
     }
   };
 
