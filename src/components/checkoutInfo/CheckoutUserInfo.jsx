@@ -63,7 +63,8 @@ const CheckoutUserInfo = () => {
 
   // Manejar la finalización del pago
   const handleFinalizePayment = () => {
-    navigate("/cn"); // Redirigir a la página de confirmación de pago
+    navigate("/cn", { state: { total: subtotal + shippingCost } });
+
   };
 
   return (

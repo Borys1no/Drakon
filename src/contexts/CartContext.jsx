@@ -111,12 +111,27 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const clearCart = async () => {
+    setCartItems([]); 
+    localStorage.removeItem("cartItems"); 
+  
+    if (currentUser) {
+      try {
+        const cartRef = doc(db, "carts", currentUser.uid);
+        await setDoc(cartRef, { items: [] }); // Vacía el carrito en Firestore
+      } catch (error) {
+        console.error("Error al vaciar el carrito en Firebase:", error);
+      }
+    }
+  };
+  
+
   const getCartCount = () => {
     return cartItems.reduce((acc, item) => acc + item.quantity, 0);
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, getCartCount }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, getCartCount, clearCart }}>
       {children}
     </CartContext.Provider>
   );
