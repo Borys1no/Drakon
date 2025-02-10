@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { auth } from '../../firebase/firebase';
+import { auth, db } from '../../firebase/firebase';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
 import { CartContext } from '../../contexts/CartContext';
 import './PasarelaPago.css'; // Importar el CSS personalizado
 
@@ -71,10 +72,24 @@ const PasarelaPago = () => {
     if (scriptLoaded && !onAuthorizeDefined) {
       window.onAuthorize = async function (response) {
         if (response.status === 'succeeded') {
-          // Pago exitoso
+          try{
+            await addDoc(collection(db, 'orders'), {
+              userEmail: userEmail,
+              total: total,
+              status: 'Procesando',
+              createdAt: Timestamp.now(),
+            });
+             // Pago exitoso
           alert("Pago exitoso. Gracias por su compra.");
-          // Aquí puedes redirigir a una página de confirmación o hacer otras acciones
           clearCart(); // Limpiar el carrito
+          navigate('/Home'); // Redirigir al inicio
+
+          }catch(error){
+            console.error("Error al guardar la orden:", error);
+            alert("Error al guardar la orden. Por favor, inténtelo de nuevo.");
+          }
+         
+          
         } else {
           // Pago fallido
           alert("Pago fallido. Por favor, inténtelo de nuevo.");
@@ -83,7 +98,7 @@ const PasarelaPago = () => {
 
       setOnAuthorizeDefined(true); // Marcar que onAuthorize ya se definió
     }
-  }, [scriptLoaded, onAuthorizeDefined, clearCart, navigate]);
+  }, [scriptLoaded, onAuthorizeDefined, clearCart, navigate, userEmail, total]);
 
   // Verificar si todo está listo
   useEffect(() => {
