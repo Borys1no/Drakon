@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { auth } from '../../firebase/firebase';
+import { auth, db } from '../../firebase/firebase';
 import { CartContext } from '../../contexts/CartContext';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
 import './PasarelaPago.css'; // Importar el CSS personalizado
 
 const PasarelaPago = () => {
@@ -31,7 +32,7 @@ const PasarelaPago = () => {
   }, []);
 
   const [data, setData] = useState({
-    PayboxRemail: 'agenda.reumasur@gmail.com', // Correo del vendedor
+    PayboxRemail: 'drakonadm@protonmail.com', // Correo del vendedor
     PayboxSendmail: userEmail || 'correo_cliente@example.com', // Correo del cliente (puedes cambiarlo dinámicamente)
     PayboxRename: 'Nombre del Vendedor', // Nombre del vendedor
     PayboxSendname: 'Nombre del Cliente', // Nombre del cliente (puedes cambiarlo dinámicamente)
@@ -74,6 +75,29 @@ const PasarelaPago = () => {
           // Pago exitoso
           alert("Pago exitoso. Gracias por su compra.");
           // Aquí puedes redirigir a una página de confirmación o hacer otras acciones
+            //guarda la compra en Firebase
+          try{
+            await addDoc(collection(db, "orders"),{
+              IdUsuario: userId, 
+              NombreUsuario: userName, 
+              Cedula: userCedula,
+              CorreoUsuario: userEmail,
+              Telefono: userPhone,
+              Cantidad: cart.reduce((acc, item) => acc + item.quantity, 0),
+              Producto:cart.map((item) => ({
+                nombre:item.name,
+                cantidad:item.quantity,
+                precio:item.price,
+              })),
+              TotalPagado:total.toFixed(2),
+              EstadoPedido: "Pendiente",
+              FechaHora: Timestamp.now(),
+            });
+            console.log("Compra guardada en Firebase");
+
+          } catch (error){
+            console.error("Error al guardar la compra en Firebase", error);
+          }
           clearCart(); // Limpiar el carrito
         } else {
           // Pago fallido
@@ -83,7 +107,7 @@ const PasarelaPago = () => {
 
       setOnAuthorizeDefined(true); // Marcar que onAuthorize ya se definió
     }
-  }, [scriptLoaded, onAuthorizeDefined, clearCart, navigate]);
+  }, [scriptLoaded, onAuthorizeDefined, clearCart, navigate, userEmail, total]);
 
   // Verificar si todo está listo
   useEffect(() => {
