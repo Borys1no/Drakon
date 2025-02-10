@@ -1,45 +1,167 @@
-.container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+/* Estilos para el título principal */
+.main-title {
+  font-family: 'TTRamillas', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 100px; /* Ajusta según la altura de tu navbar */
+  margin-bottom: 20px;
+  color: #333; /* Color del texto */
+}
+
+/* Estilos generales del contenedor */
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+h2 {
+  font-family: 'TTRamillas', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Sección de datos del usuario */
+.user-info-section {
+  width: 50%;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.user-info-section label {
+  color: black;
+  display: block;
+  margin-top: 10px;
+
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+/* Estilos para los inputs cuando están deshabilitados (no en modo edición) */
+.user-info-section input:disabled {
+  background: transparent; /* Fondo transparente */
+  border: none; /* Sin bordes */
+  padding: 0; /* Sin padding */
+  color: #333; /* Color del texto */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: default; /* Cursor por defecto */
+  font-weight: 500;
+}
+
+/* Estilos para los inputs cuando están habilitados (modo edición) */
+.user-info-section input:not(:disabled) {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff; /* Fondo blanco */
+  font-weight: 500;
+}
+
+.user-info-section button {
+  background-color: #cd528f;
+  color: white;
+  font-family: 'TTRamillas', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.user-info-section button:hover {
+  background-color: #b34a7f;
+}
+
+/* Sección de resumen de la compra */
+.order-summary-section {
+  width: 40%;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.order-summary-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+
+  font-family: 'TTRamillas', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.order-items {
+  margin-bottom: 20px;
+
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.order-item {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.order-summary {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.order-summary p {
+  margin: 5px 0;
+}
+
+.order-summary h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Botón de finalizar pago */
+.final-pay-btn {
+  background-color: #cd528f;
+  color: white;
+  font-family: 'TTRamillas', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px; /* Espacio arriba del botón */
+}
+
+.final-pay-btn:hover {
+  background-color: #b34a7f;
+}
+
+/* Estilos para la disposición en fila */
+@media (min-width: 768px) {
+  .checkout-container {
+      flex-direction: row;
+      align-items: flex-start;
   }
 
-  h2{
-    font-family: 'TTRamillas', sans-serif;
-    font-size: 2rem;
+  .user-info-section {
+      width: 50%;
   }
 
-  label{
-    font-family: 'TTRamillas', sans-serif;
-    font-size: 1rem;
-    color: black;
+  .order-summary-section {
+      width: 40%;
   }
-
-  input{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-  }
-  .btnEditar{
-    background-color: #cd528f;
-    color: white;
-    font-family: 'TTRamillas', sans-serif;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-top: 20px;
-  }
-
-  .continuarP{
-    background-color: #cd528f;
-    color: white;
-    font-family: 'TTRamillas', sans-serif;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-top: 20px;
-  }
+}
