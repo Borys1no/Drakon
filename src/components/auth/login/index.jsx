@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../firebase/auth';
 import { useAuth } from '../../../contexts/authContext';
 import { db } from '../../../firebase/firebase';
 import { doc, getDoc } from 'firebase/firestore';
-import './login.css'; // Importa los estilos
+import './login.css';
 
 const Login = () => {
+    const { t } = useTranslation();
     const auth = useAuth();
     const userLoggedIn = auth?.userLoggedIn;
     const navigate = useNavigate();
@@ -29,7 +31,7 @@ const Login = () => {
                     setLoading(false);
                 } catch (error) {
                     console.error("Error al obtener el rol del usuario ", error);
-                    setErrorMessage("Error al obtener el rol del usuario");
+                    setErrorMessage(t('loginErrorFetchingRole'));
                     setLoading(false);
                 }
             };
@@ -37,54 +39,47 @@ const Login = () => {
         } else {
             setLoading(false);
         }
-    }, [auth]);
+    }, [auth, t]);
 
     const onSubmit = async (e) => {
         e.preventDefault();
         setErrorMessage('');
-    
+
         if (!isSigningIn) {
             setIsSigningIn(true);
             try {
-    
-                // Intentar iniciar sesión con email y password
                 const userCredential = await doSignInWithEmailAndPassword(email, password);
-    
-                // Verificar si el usuario está autenticado
                 const user = userCredential.user;
-    
+
                 if (!user) {
-                    throw new Error("Error: No se pudo autenticar al usuario");
+                    throw new Error(t('loginAuthError'));
                 }
-    
-                // Obtener el documento de Firestore con el UID del usuario
+
                 const userDoc = await getDoc(doc(db, 'users', user.uid));
-                
-    
+
                 if (userDoc.exists()) {
                     const role = userDoc.data().role;
-                    
+
                     if (role === 'admin') {
                         navigate('/dashboard/AdminHome');
                     } else {
                         navigate('/home');
                     }
                 } else {
-                    setErrorMessage("No se encontró el rol del usuario.");
+                    setErrorMessage(t('loginRoleNotFound'));
                 }
             } catch (error) {
                 console.error("Error en el inicio de sesión:", error);
-                setErrorMessage("Error en el inicio de sesión: " + error.message);
+                if (error.code === "auth/invalid-credential") {
+                    setErrorMessage(t('loginInvalidCredentials'));
+                } else {
+                    setErrorMessage(t('loginError', { error: error.message }));
+                }
             } finally {
                 setIsSigningIn(false);
             }
         }
     };
-    
-    
-    
-    
-
 
     const onGoogleSignIn = async (e) => {
         e.preventDefault();
@@ -100,10 +95,10 @@ const Login = () => {
             }
         }
     };
-    if (loading) {
-        return <div>Cargando...</div>
-    }
 
+    if (loading) {
+        return <div>{t('loginLoading')}</div>;
+    }
 
     return (
         <div>
@@ -112,11 +107,11 @@ const Login = () => {
             <main className="L-main">
                 <div className="L-container">
                     <div className="L-textCenter">
-                        <h3 className="L-title">Welcome Back</h3>
+                        <h3 className="L-title">{t('loginWelcomeBack')}</h3>
                     </div>
                     <form onSubmit={onSubmit} className="space-y-5">
                         <div>
-                            <label className="L-label">Email</label>
+                            <label className="L-label">{t('loginEmail')}</label>
                             <input
                                 type="email"
                                 autoComplete="email"
@@ -128,7 +123,7 @@ const Login = () => {
                         </div>
 
                         <div>
-                            <label className="L-label">Password</label>
+                            <label className="L-label">{t('loginPassword')}</label>
                             <input
                                 type="password"
                                 autoComplete="current-password"
@@ -146,16 +141,16 @@ const Login = () => {
                             disabled={isSigningIn}
                             className={`L-button ${isSigningIn ? 'L-buttonDisabled' : ''}`}
                         >
-                            {isSigningIn ? 'Signing In...' : 'Sign In'}
+                            {isSigningIn ? t('loginSigningIn') : t('loginSignIn')}
                         </button>
                     </form>
 
                     <div className="L-textCenter L-textSm">
-                        Don't have an account? <Link to="/register" className="L-link">Sign up</Link>
+                        {t('loginNoAccount')} <Link to="/register" className="L-link">{t('loginSignUp')}</Link>
                     </div>
 
                     <div className="L-orDivider">
-                        <span>OR</span>
+                        <span>{t('loginOr')}</span>
                     </div>
 
                     <button
@@ -163,13 +158,12 @@ const Login = () => {
                         onClick={onGoogleSignIn}
                         className={`L-googleBtn ${isSigningIn ? 'L-googleBtnDisabled' : ''}`}
                     >
-                        Continue with Google
+                        {t('loginGoogle')}
                     </button>
                 </div>
             </main>
         </div>
     );
-
 };
 
 export default Login;

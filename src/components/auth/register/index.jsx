@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Navigate, Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useAuth } from "../../../contexts/authContext";
 import { doCreateUserWithEmailAndPassword } from "../../../firebase/auth";
-import "./register.css"; // Importa los estilos
+import "./register.css";
 
 const Register = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,16 +20,16 @@ const Register = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setErrorMessage("Las contraseñas no coinciden");
+      setErrorMessage(t("registerPasswordsDontMatch"));
       return;
     }
 
     setIsRegistering(true);
     try {
       await doCreateUserWithEmailAndPassword(email, password, fullName, cedula);
-      navigate("/home"); // Redirigir tras el registro
+      navigate("/home");
     } catch (error) {
-      setErrorMessage(error.message);
+      setErrorMessage(t("registerError", { error: error.message }));
     }
     setIsRegistering(false);
   };
@@ -39,11 +41,11 @@ const Register = () => {
       <main className="R-main">
         <div className="R-container">
           <div className="R-header">
-            <h3 className="R-title">Create a New Account</h3>
+            <h3 className="R-title">{t("registerTitle")}</h3>
           </div>
           <form onSubmit={onSubmit} className="R-form">
             <div>
-              <label className="R-label">Full Name</label>
+              <label className="R-label">{t("registerFullName")}</label>
               <input
                 type="text"
                 required
@@ -53,7 +55,7 @@ const Register = () => {
               />
             </div>
             <div>
-              <label className="R-label">Cédula</label>
+              <label className="R-label">{t("registerCedula")}</label>
               <input
                 type="text"
                 required
@@ -64,7 +66,7 @@ const Register = () => {
             </div>
 
             <div>
-              <label className="R-label">Email</label>
+              <label className="R-label">{t("registerEmail")}</label>
               <input
                 type="email"
                 autoComplete="email"
@@ -76,7 +78,7 @@ const Register = () => {
             </div>
 
             <div>
-              <label className="R-label">Password</label>
+              <label className="R-label">{t("registerPassword")}</label>
               <input
                 type="password"
                 required
@@ -87,7 +89,7 @@ const Register = () => {
             </div>
 
             <div>
-              <label className="R-label">Confirm Password</label>
+              <label className="R-label">{t("registerConfirmPassword")}</label>
               <input
                 type="password"
                 required
@@ -97,18 +99,16 @@ const Register = () => {
               />
             </div>
 
-            {errorMessage && (
-              <span className="R-errorMessage">{errorMessage}</span>
-            )}
+            {errorMessage && <span className="R-errorMessage">{errorMessage}</span>}
 
             <button type="submit" disabled={isRegistering} className="R-button">
-              {isRegistering ? "Signing Up..." : "Sign Up"}
+              {isRegistering ? t("registerSigningUp") : t("registerSignUp")}
             </button>
 
             <div className="R-textCenter">
-              Already have an account?{" "}
+              {t("registerAlreadyHaveAccount")}{" "}
               <Link to="/login" className="R-link">
-                Continue
+                {t("registerContinue")}
               </Link>
             </div>
           </form>

@@ -158,7 +158,61 @@ const resources = {
       "footerDestileria": "Destilería",
       "footerDestileriaAddress": "Km 8,5 vía Tosagua, sector cerro verde Rocafuerte, Manabí. Ecuador",
       "footerRedesSocialesTitle": "NUESTRAS REDES SOCIALES",
-      "footerCopyright": "© 2023 copyright La Felipa. Todos los derechos reservados."
+      "footerCopyright": "© 2023 copyright La Felipa. Todos los derechos reservados.",
+
+      // Login (ES)
+      "loginLoading": "Cargando...",
+      "loginWelcomeBack": "Bienvenido de nuevo",
+      "loginEmail": "Correo electrónico",
+      "loginPassword": "Contraseña",
+      "loginSigningIn": "Iniciando sesión...",
+      "loginSignIn": "Iniciar sesión",
+      "loginNoAccount": "¿No tienes una cuenta?",
+      "loginSignUp": "Regístrate",
+      "loginOr": "O",
+      "loginGoogle": "Continuar con Google",
+      "loginErrorFetchingRole": "Error al obtener el rol del usuario",
+      "loginAuthError": "Error: No se pudo autenticar al usuario",
+      "loginRoleNotFound": "No se encontró el rol del usuario.",
+      "loginInvalidCredentials": "Usuario o contraseña incorrectos.",
+      "loginError": "Error en el inicio de sesión: {{error}}",
+
+      // Register (ES)
+      "registerTitle": "Crear una nueva cuenta",
+      "registerFullName": "Nombre completo",
+      "registerCedula": "Cédula",
+      "registerEmail": "Correo electrónico",
+      "registerPassword": "Contraseña",
+      "registerConfirmPassword": "Confirmar contraseña",
+      "registerSigningUp": "Registrando...",
+      "registerSignUp": "Registrarse",
+      "registerAlreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "registerContinue": "Continuar",
+      "registerPasswordsDontMatch": "Las contraseñas no coinciden",
+      "registerError": "Error en el registro: {{error}}",
+
+      // Checkout (ES)
+      "checkoutTitle": "Confirmar Información de Envío",
+      "checkoutName": "Nombre",
+      "checkoutCedula": "Cédula",
+      "checkoutEmail": "Correo Electrónico",
+      "checkoutPhone": "Teléfono",
+      "checkoutAddress": "Dirección de Envío",
+      "checkoutEdit": "Editar",
+      "checkoutCancel": "Cancelar",
+      "checkoutSave": "Guardar",
+      "checkoutSummary": "Resumen de Compra",
+      "checkoutProducts": "Productos",
+      "checkoutNoProducts": "No hay productos en el carrito.",
+      "checkoutSubtotal": "Subtotal",
+      "checkoutShippingCost": "Costo de Envío",
+      "checkoutTotal": "Total",
+      "checkoutFinalizePayment": "Finalizar Pago",
+      "checkoutUpdateSuccess": "Datos actualizados correctamente",
+      "checkoutUpdateError": "Hubo un error al actualizar los datos",
+      "checkoutIncompleteInfo": "Es necesario completar todos los datos del usuario. Para ello, puedes utilizar el botón 'Editar', donde podrás agregar la información faltante o modificar aquellos datos que desees cambiar."
+
+
     }
   },
   en: {
@@ -316,7 +370,60 @@ const resources = {
       "footerDestileria": "Distillery",
       "footerDestileriaAddress": "Km 8.5 Tosagua Road, Cerro Verde sector, Rocafuerte, Manabí. Ecuador",
       "footerRedesSocialesTitle": "OUR SOCIAL MEDIA",
-      "footerCopyright": "© 2023 copyright La Felipa. All rights reserved."
+      "footerCopyright": "© 2023 copyright La Felipa. All rights reserved.",
+
+      // Login (EN)
+      "loginLoading": "Loading...",
+      "loginWelcomeBack": "Welcome Back",
+      "loginEmail": "Email",
+      "loginPassword": "Password",
+      "loginSigningIn": "Signing In...",
+      "loginSignIn": "Sign In",
+      "loginNoAccount": "Don't have an account?",
+      "loginSignUp": "Sign up",
+      "loginOr": "OR",
+      "loginGoogle": "Continue with Google",
+      "loginErrorFetchingRole": "Error fetching user role",
+      "loginAuthError": "Error: Could not authenticate user",
+      "loginRoleNotFound": "User role not found.",
+      "loginInvalidCredentials": "Incorrect username or password.",
+      "loginError": "Login error: {{error}}",
+
+      // Register (EN)
+      "registerTitle": "Create a New Account",
+      "registerFullName": "Full Name",
+      "registerCedula": "ID (Cédula)",
+      "registerEmail": "Email",
+      "registerPassword": "Password",
+      "registerConfirmPassword": "Confirm Password",
+      "registerSigningUp": "Signing Up...",
+      "registerSignUp": "Sign Up",
+      "registerAlreadyHaveAccount": "Already have an account?",
+      "registerContinue": "Continue",
+      "registerPasswordsDontMatch": "Passwords do not match",
+      "registerError": "Registration error: {{error}}",
+
+      // Checkout (EN)
+      "checkoutTitle": "Confirm Shipping Information",
+      "checkoutName": "Name",
+      "checkoutCedula": "ID (Cedula)",
+      "checkoutEmail": "Email",
+      "checkoutPhone": "Phone",
+      "checkoutAddress": "Shipping Address",
+      "checkoutEdit": "Edit",
+      "checkoutCancel": "Cancel",
+      "checkoutSave": "Save",
+      "checkoutSummary": "Order Summary",
+      "checkoutProducts": "Products",
+      "checkoutNoProducts": "No products in the cart.",
+      "checkoutSubtotal": "Subtotal",
+      "checkoutShippingCost": "Shipping Cost",
+      "checkoutTotal": "Total",
+      "checkoutFinalizePayment": "Finalize Payment",
+      "checkoutUpdateSuccess": "Data updated successfully",
+      "checkoutUpdateError": "There was an error updating the data",
+      "checkoutIncompleteInfo": "All user information must be completed. To do so, you can use the 'Edit' button, where you can add any missing details or modify any information you wish to change."
+
 
     }
   }
