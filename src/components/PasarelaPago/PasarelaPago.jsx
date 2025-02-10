@@ -32,7 +32,7 @@ const PasarelaPago = () => {
   }, []);
 
   const [data, setData] = useState({
-    PayboxRemail: 'drakonadm@protonmail.com', // Correo del vendedor
+    PayboxRemail: 'drakon-adm@outlook.com', // Correo del vendedor
     PayboxSendmail: userEmail || 'correo_cliente@example.com', // Correo del cliente (puedes cambiarlo dinámicamente)
     PayboxRename: 'Nombre del Vendedor', // Nombre del vendedor
     PayboxSendname: 'Nombre del Cliente', // Nombre del cliente (puedes cambiarlo dinámicamente)
