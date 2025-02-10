@@ -8,7 +8,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";
-import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { doc, setDoc, serverTimestamp, getDoc } from "firebase/firestore";
 
 export const doCreateUserWithEmailAndPassword = async (email, password, fullName, cedula) => {
   try {
@@ -82,4 +82,24 @@ export const doSendEmailVerification = () => {
   return sendEmailVerification(auth.currentUser, {
     url: `${window.location.origin}/home`,
   });
+};
+
+export const getUserData = async () => {
+  const user = auth.currentUser;
+  if (!user) return null; // Si no hay usuario autenticado, salir
+
+  try {
+    const userDocRef = doc(db, "users", user.uid);
+    const userSnapshot = await getDoc(userDocRef);
+
+    if (userSnapshot.exists()) {
+      return userSnapshot.data(); // Retorna los datos almacenados en Firestore
+    } else {
+      console.log("No se encontraron datos del usuario en Firestore.");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error al obtener datos del usuario:", error);
+    return null;
+  }
 };
