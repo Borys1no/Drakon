@@ -20,7 +20,7 @@ const ProductPage = () => {
   const product = {
     id: 1,
     name: 'DRAKON DESTILADO',
-    price: 30,
+    price: 27,
     image: assets.Trago,
   };
 
