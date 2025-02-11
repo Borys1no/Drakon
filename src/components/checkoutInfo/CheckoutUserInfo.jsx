@@ -71,7 +71,7 @@ const CheckoutUserInfo = () => {
       return;
     }
 
-    navigate("/cn", { state: { total: subtotal + shippingCost } });
+    navigate("/cn", { state: { total: subtotal + shippingCost, cartItems } });
   };
 
   return (
