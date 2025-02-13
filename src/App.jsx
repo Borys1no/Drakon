@@ -22,6 +22,7 @@ import './i18n'; // Import the i18n configuration file
 import UserProfile from "./components/setting/userProfile.jsx";
 import CheckoutUserInfo from "./components/checkoutInfo/CheckoutUserInfo.jsx";
 import Pedidos from "./components/Pedidos/Pedidos";
+import PedidosAdmin from "./components/dashboard/Pedidos/PedidosAdmin.jsx";
 
 
 
@@ -60,10 +61,10 @@ const App = () => {
             </Route>
             {/* Rutas del administrador */}
             <Route
-              path="/dashboard/Pedidos"
+              path="/dashboard/PedidosAdmin"
               element={
                 <ProtectedRoute role="admin">
-                  <Pedidos />
+                  <PedidosAdmin />
                 </ProtectedRoute>
               }
             />

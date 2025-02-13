@@ -14,7 +14,7 @@ import {
 import SideBar from "../SideBar";
 import "./Pedidos.css";
 
-const Pedidos = () => {
+const PedidosAdmin = () => {
   const [pedidos, setPedidos] = useState([]);
 
   useEffect(() => {
@@ -23,21 +23,25 @@ const Pedidos = () => {
         const querySnapshot = await getDocs(collection(db, "orders"));
         const pedidosData = querySnapshot.docs.map((doc) => {
           const data = doc.data();
-          
+          console.log("Datos de la orden:", data); // Verifica los datos en la consola
+
           return {
             id: doc.id,
-            fecha: data.FechaHora?.toDate 
-              ? data.FechaHora.toDate().toLocaleString()
+            fecha: data.timestamp?.toDate
+              ? data.timestamp.toDate().toLocaleString()
               : "Fecha no disponible",
-            cliente: data.NombreUsuario || "Desconocido",
-            productos: Array.isArray(data.Producto)
-              ? data.Producto.map(p => p.nombre).join(", ")
-              : typeof data.Producto === "string"
-                ? data.Producto
-                : "No especificado",
-            cantidad: data.Cantidad || 0,
-            total: data.TotalPagado ? `$${data.TotalPagado}` : "$0.00",
-            estado: data.EstadoPedido || "Pendiente",
+            cliente: data.userName || "Desconocido",
+            productos: Array.isArray(data.products)
+              ? data.products.map((p) => `${p.name} (x${p.quantity})`).join(", ")
+              : "No especificado",
+            cantidad: data.products
+              ? data.products.reduce((acc, p) => acc + p.quantity, 0)
+              : 0,
+            total: data.totalAmount ? `$${data.totalAmount.toFixed(2)}` : "$0.00",
+            estado: data.orderStatus || "Pendiente", // Si agregaste un estado
+            telefono: data.userPhone || "No especificado",
+            cedula: data.userIdentification || "No especificado",
+            direccion: data.userAddress || "No especificado",
           };
         });
 
@@ -68,6 +72,9 @@ const Pedidos = () => {
                 <TableCell>Productos</TableCell>
                 <TableCell>Total</TableCell>
                 <TableCell>Estado</TableCell>
+                <TableCell>Teléfono</TableCell>
+                <TableCell>Cédula</TableCell>
+                <TableCell>Dirección</TableCell>
                 <TableCell>Acciones</TableCell>
               </TableRow>
             </TableHead>
@@ -81,6 +88,9 @@ const Pedidos = () => {
                     <TableCell>{pedido.productos}</TableCell>
                     <TableCell>{pedido.total}</TableCell>
                     <TableCell>{pedido.estado}</TableCell>
+                    <TableCell>{pedido.telefono}</TableCell>
+                    <TableCell>{pedido.cedula}</TableCell>
+                    <TableCell>{pedido.direccion}</TableCell>
                     <TableCell>
                       <Button
                         variant="contained"
@@ -94,7 +104,7 @@ const Pedidos = () => {
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={7} align="center">
+                  <TableCell colSpan={10} align="center">
                     No hay pedidos disponibles.
                   </TableCell>
                 </TableRow>
@@ -107,4 +117,4 @@ const Pedidos = () => {
   );
 };
 
-export default Pedidos;
+export default PedidosAdmin;
