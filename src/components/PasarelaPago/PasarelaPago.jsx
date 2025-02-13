@@ -46,20 +46,26 @@ const PasarelaPago = () => {
 
   const fetchUserData = async (userId) => {
     try {
-      const userDoc = await getDoc(doc(db, "useres", userId));
+      const userDoc = await getDoc(doc(db, "users", userId));
       if (userDoc.exists()) {
+        const data = userDoc.data();
+      console.log("Datos obtenidos del usuario:", data);
         setUserData({
-          PayboxSendname: userDoc.data().name || "Nombre del Cliente",
-          PayboxDirection: userDoc.data().address || "Dirección del cliente",
-          PayBoxClientPhone: userDoc.data().phone || "1234567890",
+          PayboxSendname: userDoc.data().nombre || "Nombre del Cliente",
+          PayboxDirection: userDoc.data().direccion || "Dirección del cliente",
+          PayBoxClientPhone: userDoc.data().telefono || "1234567890",
           PayBoxClientIdentification:
-            userDoc.data().id || "Cedula tarjetahabiente",
+            userDoc.data().cedula || "Cedula tarjetahabiente",
         });
       }
     } catch (error) {
       console.error("Error obteniendo los datos del usuario:", error);
     }
   };
+  useEffect(() => {
+    console.log("Estado actualizado de userData:", userData);
+  }, [userData]);
+  
 
   const [data, setData] = useState({
     PayboxRemail: "drakon-adm@outlook.com", // Correo del vendedor
@@ -86,27 +92,44 @@ const PasarelaPago = () => {
 
   // Cargar el script de PagoPlux dinámicamente
   useEffect(() => {
-    if (!scriptLoaded) {
+    if (!scriptLoaded && !document.querySelector('script[src="https://sandbox-paybox.pagoplux.com/paybox/index.js"]')) {
       const script = document.createElement("script");
       script.src = "https://sandbox-paybox.pagoplux.com/paybox/index.js";
       script.async = true;
       script.onload = () => setScriptLoaded(true);
-      script.onerror = () =>
-        console.error("Error al cargar el script de PagoPlux.");
+      script.onerror = () => console.error("Error al cargar el script de PagoPlux.");
       document.body.appendChild(script);
-      return () => document.body.removeChild(script);
     }
   }, [scriptLoaded]);
 
   // Definir la función onAuthorize solo una vez
   useEffect(() => {
-    if (scriptLoaded && !onAuthorizeDefined) {
+    if (scriptLoaded && !onAuthorizeDefined && userData.PayboxSendname) {
+      console.log("Definiendo la función onAuthorize...", userData);
+
       window.onAuthorize = async function (response) {
+        console.log("Respuesta del pago:", response);
+
         if (response.status === "succeeded") {
           try {
+            console.log(" Datos enviados a Firestore:", {
+              userId: user.uid,
+              userEmail: user.email,
+              userName: userData.PayboxSendname,
+              userAddress: userData.PayboxDirection,
+              userPhone: userData.PayBoxClientPhone,
+              userIdentification: userData.PayBoxClientIdentification,
+              products: cartItems,
+              totalAmount: total,
+            });
+
             await addDoc(collection(db, "orders"), {
               userId: user.uid, // Usar el usuario almacenado en el estado
               userEmail: user.email,
+              userName: userData.PayboxSendname,
+              userAddress: userData.PayboxDirection,
+              userPhone: userData.PayBoxClientPhone,
+              userIdentification: userData.PayBoxClientIdentification,
               products: cartItems.map((item) => ({
                 id: item.id,
                 name: item.name,
@@ -132,7 +155,7 @@ const PasarelaPago = () => {
 
       setOnAuthorizeDefined(true); // Marcar que onAuthorize ya se definió
     }
-  }, [scriptLoaded, onAuthorizeDefined, clearCart, navigate, user, total]);
+  }, [scriptLoaded, onAuthorizeDefined, userData, clearCart, navigate, user, total, cartItems]);
 
   // Verificar si todo está listo
   useEffect(() => {
