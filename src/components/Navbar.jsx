@@ -83,7 +83,7 @@ const Navbar = () => {
                             {isDropdownOpen && (
                                 <div className="dropdown-menu">
                                     <ul>
-                                        <li><a href="/pedidos">{t('orders')}</a></li>
+                                        <li><a href="/Pedidos">{t('orders')}</a></li>
                                         <li><a href="/checkout">{t('shoppingCart')}</a></li>
                                         <li><a href="/userProfile">{t('settings')}</a></li>
                                         <li><button onClick={handleLogout}>{t('logout')}</button></li>

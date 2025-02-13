@@ -16,12 +16,12 @@ import AdminHome from "./components/dashboard/AdminHome";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Reconocimientos from "./components/Reconocimientos/Reconocimientos";
 import PasarelaPago from "./components/PasarelaPago/PasarelaPago";
-import Pedidos from "./components/dashboard/Pedidos/Pedidos";
 import AgeVerificationPopup from "./components/AgeVerificationPopup/AgeVerificationPopup"; // Importar el pop-up
 import CookieBanner from './components/Cookie/CookieBanner.jsx';
 import './i18n'; // Import the i18n configuration file
 import UserProfile from "./components/setting/userProfile.jsx";
 import CheckoutUserInfo from "./components/checkoutInfo/CheckoutUserInfo.jsx";
+import Pedidos from "./components/Pedidos/Pedidos";
 
 
 
@@ -56,6 +56,7 @@ const App = () => {
               <Route path="/cn" element={<PasarelaPago />} />
               <Route path="/userProfile" element={<UserProfile />} />
               <Route path="/checkoutInfo" element={<CheckoutUserInfo />} />
+              <Route path="/Pedidos" element={<Pedidos />} />
             </Route>
             {/* Rutas del administrador */}
             <Route

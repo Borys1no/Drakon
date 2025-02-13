@@ -193,7 +193,7 @@ const resources = {
 
       // Checkout (ES)
       "checkoutTitle": "Confirmar Información de Envío",
-      "checkoutName": "Nombre",
+      "checkoutName": "Nombre y Apellidos",
       "checkoutCedula": "Cédula",
       "checkoutEmail": "Correo Electrónico",
       "checkoutPhone": "Teléfono",
@@ -405,7 +405,7 @@ const resources = {
 
       // Checkout (EN)
       "checkoutTitle": "Confirm Shipping Information",
-      "checkoutName": "Name",
+      "checkoutName": "Name and Last names",
       "checkoutCedula": "ID (Cedula)",
       "checkoutEmail": "Email",
       "checkoutPhone": "Phone",
