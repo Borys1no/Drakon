@@ -39,6 +39,16 @@ const Pedidos = () => {
             <h2>Pedido #{order.id}</h2>
             <p>Fecha: {new Date(order.timestamp?.toDate()).toLocaleString()}</p>
             <p>Total: ${order.totalAmount.toFixed(2)}</p>
+            <p> <strong>Estado Pedido:</strong> {order.status || "Pendiente"} </p>
+            {order.status === "Enviado" &&  order.trackingUrl && (
+              <p>
+                <strong>Rastrea tu paquete: </strong>{""}
+                <a href={order.trackingUrl} target="_blank" rel="noopener noreferrer">
+                  Clic para rastrear tu pedido
+                </a>
+              </p>
+                
+            )}
             <h3>Productos:</h3>
             <ul>
               {order.products.map((product, index) => (

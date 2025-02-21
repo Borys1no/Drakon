@@ -32,3 +32,7 @@
     padding: 10px;
     border-radius: 4px;
   }
+  .order-card a{
+    color: #cd528f;
+    font-weight: bold;
+  }

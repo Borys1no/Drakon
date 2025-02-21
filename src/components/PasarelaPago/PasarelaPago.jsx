@@ -138,6 +138,7 @@ const PasarelaPago = () => {
               })),
               totalAmount: total,
               timestamp: Timestamp.now(),
+              status: "Pendiente", // Estado inicial
             });
             // Pago exitoso
             alert("Pago exitoso. Gracias por su compra.");
