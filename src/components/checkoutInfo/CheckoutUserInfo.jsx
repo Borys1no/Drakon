@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { auth, db } from "../../firebase/firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { useLocation, useNavigate } from "react-router-dom";
+import PaymentButton from "../PasarelaPago/PasarelaPago";
 import "./CheckoutUserInfo.css";
 
 const CheckoutUserInfo = () => {
@@ -154,10 +155,10 @@ const CheckoutUserInfo = () => {
               {t("checkoutTotal")}: <strong>${(subtotal + shippingCost).toFixed(2)}</strong>
             </h3>
           </div>
-
-          <button className="final-pay-btn" onClick={handleFinalizePayment}>
-            {t("checkoutFinalizePayment")}
-          </button>
+          <div className="botonPago">
+          <PaymentButton total={subtotal+ shippingCost} cartItems={cartItems}/>
+          </div>
+          
         </div>
       </div>
     </div>

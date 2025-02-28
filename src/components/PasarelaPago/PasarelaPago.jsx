@@ -5,33 +5,30 @@ import { collection, addDoc, Timestamp, doc, getDoc } from "firebase/firestore";
 import { CartContext } from "../../contexts/CartContext";
 import "./PasarelaPago.css"; // Importar el CSS personalizado
 
-const PasarelaPago = () => {
-  const location = useLocation();
-  const { total = 0, cartItems = [] } = location.state || {}; // Obtener el valor total del carrito
-
-  const [scriptLoaded, setScriptLoaded] = useState(false); // Estado para controlar si el script ya se cargó
-  const [onAuthorizeDefined, setOnAuthorizeDefined] = useState(false); // Estado para controlar si onAuthorize ya se definió
-  const [isReady, setIsReady] = useState(false); // Estado para controlar si todo está listo
-  const payButtonRef = useRef(null); // Referencia al botón de pago
-  const [userEmail, setUserEmail] = useState(""); // Estado para almacenar el correo del usuario
-  const [user, setUser] = useState(null); // Estado para almacenar el usuario autenticado
+const PaymentButton = ({ total, cartItems }) => {
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+  const [onAuthorizeDefined, setOnAuthorizeDefined] = useState(false);
+  const [isReady, setIsReady] = useState(false);
+  const payButtonRef = useRef(null);
+  const [userEmail, setUserEmail] = useState("");
+  const [user, setUser] = useState(null);
   const [userData, setUserData] = useState({
     PayboxSendname: "",
     PayboxDirection: "",
     PayBoxClientPhone: "",
     PayBoxClientIdentification: "",
   });
-  const navigate = useNavigate(); // Hook de navegación
-  const { clearCart } = useContext(CartContext); // Función para limpiar el carrito
+  const navigate = useNavigate();
+  const { clearCart } = useContext(CartContext);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
-        setUser(user); // Almacenar el usuario en el estado
+        setUser(user);
         setUserEmail(user.email);
         await fetchUserData(user.uid);
       } else {
-        setUser(null); // Limpiar el estado del usuario
+        setUser(null);
         setUserEmail("");
         setUserData({
           PayboxSendname: "",
@@ -49,7 +46,7 @@ const PasarelaPago = () => {
       const userDoc = await getDoc(doc(db, "users", userId));
       if (userDoc.exists()) {
         const data = userDoc.data();
-      console.log("Datos obtenidos del usuario:", data);
+        console.log("Datos obtenidos del usuario:", data);
         setUserData({
           PayboxSendname: userDoc.data().nombre || "Nombre del Cliente",
           PayboxDirection: userDoc.data().direccion || "Dirección del cliente",
@@ -62,23 +59,23 @@ const PasarelaPago = () => {
       console.error("Error obteniendo los datos del usuario:", error);
     }
   };
+
   useEffect(() => {
     console.log("Estado actualizado de userData:", userData);
   }, [userData]);
-  
 
   const [data, setData] = useState({
-    PayboxRemail: "drakon-adm@outlook.com", // Correo del vendedor
-    PayboxSendmail: userEmail || "correo_cliente@example.com", // Correo del cliente (puedes cambiarlo dinámicamente)
-    PayboxRename: "Nombre del Vendedor", // Nombre del vendedor
-    PayboxSendname: "Nombre del Cliente", // Nombre del cliente (puedes cambiarlo dinámicamente)
-    PayboxBase0: total.toFixed(2), // Valor total del carrito
-    PayboxBase12: "0.00", // Impuestos (si aplica)
-    PayboxDescription: "Compra en E-commerce", // Descripción del pago
-    PayboxProduction: false, // Modo sandbox (cambiar a true en producción)
-    PayboxEnvironment: "sandbox", // Entorno sandbox (cambiar a 'production' en producción)
-    PayboxLanguage: "es", // Idioma del modal de pago
-    PayboxPagoPlux: true, // Usar un botón personalizado
+    PayboxRemail: "drakon-adm@outlook.com",
+    PayboxSendmail: userEmail || "correo_cliente@example.com",
+    PayboxRename: "Nombre del Vendedor",
+    PayboxSendname: "Nombre del Cliente",
+    PayboxBase0: total.toFixed(2),
+    PayboxBase12: "0.00",
+    PayboxDescription: "Compra en E-commerce",
+    PayboxProduction: false,
+    PayboxEnvironment: "sandbox",
+    PayboxLanguage: "es",
+    PayboxPagoPlux: true,
     ...userData,
   });
 
@@ -90,7 +87,6 @@ const PasarelaPago = () => {
     }));
   }, [userEmail, userData]);
 
-  // Cargar el script de PagoPlux dinámicamente
   useEffect(() => {
     if (!scriptLoaded && !document.querySelector('script[src="https://sandbox-paybox.pagoplux.com/paybox/index.js"]')) {
       const script = document.createElement("script");
@@ -102,7 +98,6 @@ const PasarelaPago = () => {
     }
   }, [scriptLoaded]);
 
-  // Definir la función onAuthorize solo una vez
   useEffect(() => {
     if (scriptLoaded && !onAuthorizeDefined && userData.PayboxSendname) {
       console.log("Definiendo la función onAuthorize...", userData);
@@ -124,7 +119,7 @@ const PasarelaPago = () => {
             });
 
             await addDoc(collection(db, "orders"), {
-              userId: user.uid, // Usar el usuario almacenado en el estado
+              userId: user.uid,
               userEmail: user.email,
               userName: userData.PayboxSendname,
               userAddress: userData.PayboxDirection,
@@ -134,48 +129,44 @@ const PasarelaPago = () => {
                 id: item.id,
                 name: item.name,
                 price: item.price,
-                quantity: item.quantity, // Aquí incluimos la cantidad
+                quantity: item.quantity,
               })),
               totalAmount: total,
               timestamp: Timestamp.now(),
-              status: "Pendiente", // Estado inicial
+              status: "Pendiente",
             });
-            // Pago exitoso
             alert("Pago exitoso. Gracias por su compra.");
-            clearCart(); // Limpiar el carrito
-            navigate("/Home"); // Redirigir al inicio
+            clearCart();
+            navigate("/Home");
           } catch (error) {
             console.error("Error al guardar la orden:", error);
             alert("Error al guardar la orden. Por favor, inténtelo de nuevo.");
           }
         } else {
-          // Pago fallido
           alert("Pago fallido. Por favor, inténtelo de nuevo.");
         }
       };
 
-      setOnAuthorizeDefined(true); // Marcar que onAuthorize ya se definió
+      setOnAuthorizeDefined(true);
     }
   }, [scriptLoaded, onAuthorizeDefined, userData, clearCart, navigate, user, total, cartItems]);
 
-  // Verificar si todo está listo
   useEffect(() => {
     if (scriptLoaded && onAuthorizeDefined) {
       setIsReady(true);
     }
   }, [scriptLoaded, onAuthorizeDefined]);
 
-  // Simular un clic automático cuando todo esté listo
   useEffect(() => {
     if (isReady && payButtonRef.current) {
-      payButtonRef.current.click(); // Simular un clic en el botón de pago
+      payButtonRef.current.click();
     }
   }, [isReady]);
 
   const handlePayment = () => {
     if (window.Data) {
       console.log("Iniciando proceso de pago con los siguientes datos:", data);
-      window.Data.init(data); // Iniciar el proceso de pago
+      window.Data.init(data);
     } else {
       console.error(
         "Data no está definido. Asegúrate de que el script de PagoPlux esté cargado."
@@ -185,7 +176,6 @@ const PasarelaPago = () => {
 
   return (
     <div className="pasarela-pago-container">
-      <h1>Pago con Tarjeta</h1>
       <div id="modalPaybox"></div>
       <button
         id="pay"
@@ -198,4 +188,4 @@ const PasarelaPago = () => {
   );
 };
 
-export default PasarelaPago;
+export default PaymentButton;

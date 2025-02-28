@@ -89,9 +89,6 @@ h2 {
 /* Sección de resumen de la compra */
 .order-summary-section {
   width: 40%;
-  padding: 20px;
-  background: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
@@ -133,21 +130,9 @@ h2 {
 }
 
 /* Botón de finalizar pago */
-.final-pay-btn {
-  background-color: #cd528f;
-  color: white;
-  font-family: 'TTRamillas', sans-serif;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 20px; /* Espacio arriba del botón */
-}
 
-.final-pay-btn:hover {
-  background-color: #b34a7f;
+.botonPago{
+  padding-bottom: 100px;
 }
 
 /* Estilos para la disposición en fila */

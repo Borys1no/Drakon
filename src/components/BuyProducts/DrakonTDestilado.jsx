@@ -1,71 +1,44 @@
 import React, { useState, useContext, useEffect } from 'react';
-import './buyproduct.css';  // Archivo CSS importado
+import './DrakonTDestilado.css';  // Archivo CSS importado
 import { CartContext } from '../../contexts/CartContext';  // Importar el contexto del carrito
 import { assets } from '../../assets/assets';
 import Footer from '../Footer/Footer';
-import { db } from '../../firebase/firebase';
-import {collection, getDocs} from 'firebase/firestore';
 
-const ProductPage = () => {
+const TripleDestilado = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);  // Manejar la cantidad
   const { addToCart } = useContext(CartContext);  // Traer la función del contexto del carrito
-  const [products, setProducts] = useState([]); 
 
   // Lista de imágenes del producto
   const productImages = [
-    assets.BOTELLAROSAcopy,
-    assets.Carrusel2,
-    assets.Carrusel3,
+    assets.BOTELLAROJAcopy,
+    assets.CTDestilado2,
+    assets.CTDestilado1,
   ];
 
   // Datos del producto actual
- 
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const productsCollection = collection(db, "products");
-      const productsSnapshot = await getDocs(productsCollection);
-      const productsList = productsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-  
-      // Filtrar por el ID manualmente asignado
-      const drakonDestilado = productsList.find(p => p.id === "001");
-  
-      setProducts(productsList);
-    };
-  
-    fetchProducts();
-  }, []);
-
   const product = {
     id: 1,
-    name: 'DRAKON DESTILADO',
-    price: 27,
+    name: 'DRAKON TRIPLE DESTILADO',
+    price: 39,
     image: assets.Trago,
   };
 
   useEffect(() => {
-      const interval = setInterval(() => {
-          setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length);
-      }, 3000);
-      return () => clearInterval(interval);
-    }, [productImages.length]);
-
-
+    const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [productImages.length]);
 
   // Función para cambiar la imagen principal al hacer clic en una imagen pequeña
   const handleImageClick = (index) => {
-    setCurrentImageIndex(index);image
+    setCurrentImageIndex(index);
   };
 
   // Función para agregar producto al carrito
   const handleAddToCart = () => {
-    if(quantity >product.availableQuantity)  {
-      alert('Stock insuficiente. Solo quedan disponibles' + product.availableQuantity + 'unidades');
-      return;
-    }
-    addToCart(product, quantity);  
-    console.log("producto agregado al carritooo", product);
+    addToCart(product, quantity);  // Llama a la función y pasa el producto y cantidad
   };
 
   return (
@@ -76,7 +49,6 @@ const ProductPage = () => {
         {/* Sección de la imagen principal y el carrusel a la izquierda */}
         <div className="Qproduct-image-section">
           <div className="Qproduct-image-container">
-
             <div
               className="Qcarousel-slides"
               style={{
@@ -113,16 +85,15 @@ const ProductPage = () => {
         <div className="Qproduct-details">
           <h2 className="playfair-display-3TituloDrakonh1">{product.name}</h2>
           <p className="product-description-poppins">
-          Ofrece pureza excepcional y un perfil de sabor equilibrado, reflejando la esencia premium de la
-          pitahaya manabita.
+          Combina elegancia y sofisticación, logrando una pureza inigualable y un sabor refinado.
           </p>
 
           <div className="product-featuresP-container">
             <ul className="product-featuresP">
-                <li><strong>VISTA</strong> Claro, limpio y transparente.</li>
-                <li><strong>SABOR</strong> Entrada suave y persistente, con un final redondeado y placentero.</li>
-                <li><strong>CUERPO</strong> Ligeras notas frutales con delicados destellos florales.</li>
-                <li><strong>AROMA</strong> Exótico y atractivo, con una mezcla de frutas y flores silvestres.</li>
+                <li><strong>VISTA</strong> Brillante, impecable y transparente.</li>
+                <li><strong>SABOR</strong> Elegante expresión frutal con notas distintivas de pera y kiwi.</li>
+                <li><strong>CUERPO</strong> Refinado, con mayor profundidad, acompañado de destellos florales.</li>
+                <li><strong>AROMA</strong> Complejo y exótico, combinando frutas maduras y flores silvestres</li>
             </ul>
           </div>
 
@@ -204,4 +175,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default TripleDestilado;

@@ -76,7 +76,7 @@ const Products = () => {
                     {/* Botón de Comprar */}
                     <div className="button-container2">
                         <button className="buy-button">
-                            <a href="/DrakonDestilado">{t('addToCart')}</a>
+                            <a href="/TripleDestilado">{t('addToCart')}</a>
                         </button>
                     </div>
                 </div>

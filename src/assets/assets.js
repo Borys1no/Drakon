@@ -92,6 +92,8 @@ import DrakonIconoSolo from './img/icons/Drakon Iconos-05 copy.png'
 
 import Ecuador from './img/icons/ecuador-svgrepo-com.svg'
 import UnitedE from './img/icons/united-states-svgrepo-com.svg'
+import CTDestilado1 from './img/pic/FIE08652-16 copy.jpg'
+import CTDestilado2 from './img/pic/GAB06767-9 copyX.jpg'
 
 export const assets = {
   Cart,
@@ -172,7 +174,9 @@ export const assets = {
   Flor2,
   DrakonIconoSolo,
   Ecuador,
-  UnitedE
+  UnitedE,
+  CTDestilado1,
+  CTDestilado2
 };
 
 

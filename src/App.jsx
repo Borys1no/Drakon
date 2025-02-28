@@ -8,6 +8,7 @@ import Home from "./components/home/Home";
 import Register from "./components/auth/register";
 import Products from "./components/Productos/Products";
 import DrakonDestilado from "./components/BuyProducts/MalkeVirgen";
+import TripleDesrilado from "./components/BuyProducts/DrakonTDestilado";
 import Checkout from "./components/Checkout/Checkout";
 import NuestraHistoria from "./components/NuestraHistoria/NuestraHistoria";
 import Cocteles from "./components/Cocteles/Cocteles";
@@ -49,12 +50,13 @@ const App = () => {
               <Route path="/register" element={<Register />} />
               <Route path="/products" element={<Products />} />
               <Route path="/DrakonDestilado" element={<DrakonDestilado />} />
+              <Route path="/TripleDestilado" element={<TripleDesrilado />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
               <Route path="/Cocteles" element={<Cocteles />} />
               <Route path="/Procesos" element={<Procesos />} />
               <Route path="/Reconocimientos" element={<Reconocimientos />} />
-              <Route path="/cn" element={<PasarelaPago />} />
+              <Route path="/PaymentButton" element={<PasarelaPago />} />
               <Route path="/userProfile" element={<UserProfile />} />
               <Route path="/checkoutInfo" element={<CheckoutUserInfo />} />
               <Route path="/Pedidos" element={<Pedidos />} />
