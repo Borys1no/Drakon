@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { auth, db } from "../../firebase/firebase";
 import { collection, addDoc, Timestamp, doc, getDoc } from "firebase/firestore";
 import { CartContext } from "../../contexts/CartContext";
+import Swal from "sweetalert2";
 import "./PasarelaPago.css"; // Importar el CSS personalizado
 
 const PaymentButton = ({ total, cartItems }) => {
@@ -135,12 +136,22 @@ const PaymentButton = ({ total, cartItems }) => {
               timestamp: Timestamp.now(),
               status: "Pendiente",
             });
-            alert("Pago exitoso. Gracias por su compra.");
+            Swal.fire({
+              title: "¡Pago exitoso!",
+              text: "Gracias por su compra.",
+              icon: "success",
+              confirmButtonText: "Aceptar",
+            });
             clearCart();
             navigate("/Home");
           } catch (error) {
             console.error("Error al guardar la orden:", error);
-            alert("Error al guardar la orden. Por favor, inténtelo de nuevo.");
+            Swal.fire({
+              title: "Error",
+              text: "Error al guardar la orden. Por favor, inténtelo de nuevo.",
+              icon: "error",
+              confirmButtonText: "Aceptar",
+            });
           }
         } else {
           alert("Pago fallido. Por favor, inténtelo de nuevo.");
