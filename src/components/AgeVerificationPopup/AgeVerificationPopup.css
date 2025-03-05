@@ -98,4 +98,31 @@
     margin-top: 20px;
   }
 
-  
+  /* Responsive Design */
+@media (max-width: 600px) {
+  .popup-container {
+      width: 95%;
+      padding: 15px;
+  }
+
+  .popup-container h2 {
+      font-size: 2rem;
+  }
+
+  .popup-container p {
+      font-size: 0.9rem;
+  }
+
+  .popup-container input {
+      font-size: 2rem;
+  }
+
+  .popup-container button {
+      width: 70%;
+      font-size: 1.2rem;
+  }
+
+  .imagenPopUp {
+      width: 30%;
+  }
+}
