@@ -497,29 +497,25 @@ body {
 
 /* Media Queries */
 
-@media screen and (min-width: 320px) and (max-width:430px) {
 
-  /*Banner*/
+@media screen and (min-width: 320px) and (max-width: 430px) {
   .banner {
     margin-top: -30px;
     height: 400px;
     background-size: contain;
   }
 
-  /*Introduccion*/
   .introduction {
     display: flex;
     border: none;
     align-items: center;
     justify-content: center;
-
   }
 
   .intro-img {
     width: 80%;
     height: auto;
     margin-top: -130px;
-
   }
 
   .intro-text {
@@ -555,13 +551,11 @@ body {
     height: auto;
   }
 
-  /*Productos*/
-
   .productos-carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20-x;
+    gap: 20px;
   }
 
   .producto-card {
@@ -574,13 +568,10 @@ body {
 
   .producto-card img {
     width: 70% !important;
-    /* Ajusta el tamaño de la imagen */
     height: auto;
     margin: 0 auto;
-    /* Centra la imagen */
     display: block;
   }
-
 
   .productos-headerH h3 {
     font-size: 1.5rem;
@@ -596,15 +587,11 @@ body {
     margin-top: 50px;
   }
 
-  /*Exitos*/
   .exitos img {
     width: 100%;
-    /* Limita la altura máxima */
     height: 900px;
     object-fit: cover;
-    /* Ajusta la imagen para que mantenga una proporción adecuada */
     display: block;
-    /* Evita espacios blancos no deseados */
     margin: 0 auto;
   }
 
@@ -620,19 +607,14 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-
 }
 
-@media screen and (width:320px){
-
+@media screen and (width: 320px) {
   .exitos img {
     width: 100%;
-    /* Limita la altura máxima */
     height: 1300px;
     object-fit: cover;
-    /* Ajusta la imagen para que mantenga una proporción adecuada */
     display: block;
-    /* Evita espacios blancos no deseados */
     margin: 0 auto;
   }
 
@@ -648,21 +630,128 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  
 }
 
 @media screen and (min-width: 375px) and (max-width: 430px) {
   .exitos img {
     width: 100%;
-    height: 1050px; /* Asegura que la imagen tenga una altura suficiente */
+    height: 1050px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 431px) and (max-width: 767px) {
+  .banner {
+    margin-top: -30px;
+    height: 400px;
+    background-size: contain;
+  }
 
+  .introduction {
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+  }
 
-/* Para pantallas entre 768px y 1024px */
+  .intro-img {
+    width: 80%;
+    height: auto;
+    margin-top: -130px;
+  }
+
+  .intro-text {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .intro-text h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  .buho {
+    display: block;
+    text-align: center;
+  }
+
+  .buho img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+  }
+
+  .productos-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .producto-card {
+    width: 90% !important;
+    max-width: 320px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .producto-card img {
+    width: 70% !important;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .productos-headerH h3 {
+    font-size: 1.5rem;
+    max-width: 200px;
+  }
+
+  .producto-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    margin-top: 50px;
+  }
+
+  .exitos img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .exitos h3 {
+    font-size: 1.9rem;
+    top: 1%;
+    transform: translate(-50%, -5%);
+  }
+
+  .exitos p {
+    font-size: 1.5rem;
+    width: 95%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 @media screen and (width: 768px) {
   .banner {
     width: 100%;
@@ -670,28 +759,32 @@ body {
     height: 500px;
     background-size: contain;
   }
-  /*Introduccion*/
+
   .introduction {
     flex-wrap: nowrap;
     align-items: center;
     gap: 30px;
     border: none;
   }
+
   .intro-img {
     flex: 0 0 50%;
     margin-right: 0;
   }
+
   .intro-img img {
     width: 400px;
     align-items: center;
     margin-bottom: 100px;
     margin-top: -22px;
   }
+
   .intro-text {
     flex: 0 0 40%;
     text-align: justify;
     max-width: none;
   }
+
   .intro-text h3 {
     font-size: 1.5rem;
   }
@@ -700,6 +793,7 @@ body {
     margin-right: 0;
     font-size: 1.2rem;
   }
+
   .buho {
     align-self: flex-start;
     margin-top: 20px;
@@ -712,30 +806,27 @@ body {
     height: auto;
   }
 
-  /*Productos*/
   .productos-carousel {
     display: flex;
     flex-wrap: wrap;
-    /* Permite que los elementos se muevan a una nueva línea */
     justify-content: space-between;
-    /* Espacio entre las imágenes */
     gap: 10px;
   }
+
   .producto-card {
     width: 90% !important;
     max-width: 320px;
-    /* Tamaño máximo de la tarjeta */
     text-align: center;
     padding: 20px;
   }
+
   .producto-card img {
     width: 70% !important;
-    /* Ajusta el tamaño de la imagen */
     height: auto;
     margin: 0 auto;
-    /* Centra la imagen */
     display: block;
   }
+
   .productos-headerH h3 {
     max-width: 200px;
   }
@@ -747,7 +838,7 @@ body {
   .product-description {
     font-size: 0.9rem;
   }
-  /*Exitos*/
+
   .exitos img {
     height: 700px;
   }
@@ -768,38 +859,35 @@ body {
   .banner {
     width: 100%;
     margin-top: 50px;
-    height: 500px; /* Ajusta el tamaño aquí */
-    background-size: cover; /* Cambia el tamaño de fondo si es necesario */
+    height: 500px;
+    background-size: cover;
   }
-  /*Introduccion*/
+
   .introduction {
     flex-wrap: nowrap;
-    /* Evitar que los elementos se envuelvan */
     align-items: center;
     gap: 30px;
-    /* Ajustar espacio entre elementos */
     border: none;
   }
+
   .intro-img {
     flex: 0 0 50%;
-    /* Imagen ocupa el 40% del espacio disponible */
     margin-right: 0;
-    /* Eliminar margen lateral extra */
   }
+
   .intro-img img {
     width: 400px;
     align-items: center;
     margin-bottom: 100px;
     margin-top: -85px;
   }
+
   .intro-text {
     flex: 0 0 40%;
-    /* Texto ocupa el 60% del espacio disponible */
     text-align: justify;
-    /* Alinear texto a la izquierda */
     max-width: none;
-    /* Permitir mayor ancho */
   }
+
   .intro-text h3 {
     font-size: 2rem;
   }
@@ -808,49 +896,40 @@ body {
     margin-right: 0;
     font-size: 1.5rem;
   }
+
   .buho {
     align-self: flex-start;
-    /* Alinear búho debajo del texto */
     margin-top: 20px;
-    /* Espaciado entre texto y búho */
     width: 100%;
-    /* Asegurar que ocupe todo el ancho disponible */
     text-align: center;
-    /* Centrar la imagen del búho */
   }
 
   .buho img {
     width: 300px;
-    /* Ajustar tamaño de la imagen del búho */
     height: auto;
   }
 
-  /*Productos*/
   .productos-carousel {
     display: flex;
     flex-wrap: wrap;
-    /* Permite que los elementos se muevan a una nueva línea */
     justify-content: space-between;
-    /* Espacio entre las imágenes */
     gap: 10px;
-
   }
+
   .producto-card {
     width: 90% !important;
-    /* Asegura que ocupe el ancho del contenedor */
     max-width: 320px;
-    /* Tamaño máximo de la tarjeta */
     text-align: center;
     padding: 20px;
   }
+
   .producto-card img {
     width: 70% !important;
-    /* Ajusta el tamaño de la imagen */
     height: auto;
     margin: 0 auto;
-    /* Centra la imagen */
     display: block;
   }
+
   .productos-headerH h3 {
     font-size: 2rem;
     max-width: 200px;
@@ -863,10 +942,8 @@ body {
   .product-description {
     font-size: 0.9rem;
   }
-  /*Exitos*/
+
   .exitos h3 {
     top: 10%;
   }
-
-
 }
