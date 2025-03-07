@@ -5,7 +5,9 @@ import { db } from "../../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
 
 const ProtectedRoute = ({ role, children }) => {
-  const { currentUser, userRole, loading } = useAuth();
+  const { currentUser } = useAuth();
+  const [userRole, setUserRole] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUserRole = async () => {

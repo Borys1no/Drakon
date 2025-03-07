@@ -15,6 +15,7 @@ import Cocteles from "./components/Cocteles/Cocteles";
 import Procesos from "./components/Procesos/Procesos";
 import AdminHome from "./components/dashboard/AdminHome";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import PublicRoute from "./components/ProtectedRoute/PublicRoute.jsx";
 import Reconocimientos from "./components/Reconocimientos/Reconocimientos";
 import PasarelaPago from "./components/PasarelaPago/PasarelaPago";
 import AgeVerificationPopup from "./components/AgeVerificationPopup/AgeVerificationPopup"; // Importar el pop-up
@@ -45,7 +46,7 @@ const App = () => {
             {/* Rutas públicas con Navbar */}
             <Route element={<WithNavbar />}>
               <Route path="/" element={<Navigate to="/home" />} />
-              <Route path="/home" element={<Home />} />
+              <Route path="/home" element={ <PublicRoute> <Home /> </PublicRoute> } />
               <Route path="/login" element={<LoginMenu />} />
               <Route path="/register" element={<Register />} />
               <Route path="/products" element={<Products />} />
