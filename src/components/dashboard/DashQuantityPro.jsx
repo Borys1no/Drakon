@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
 import { Milk } from 'lucide-react';
-import './DashQuantityPro.css'; 
+import { Card, CardContent, Typography, Box, CircularProgress } from '@mui/material';
+import { blue } from '@mui/material/colors';
 
 const DashQuantityPro = () => {
     const [products, setProducts] = useState([]);
@@ -10,20 +11,13 @@ const DashQuantityPro = () => {
 
     useEffect(() => {
         const unsubscribe = onSnapshot(
-            collection(db, "carts"),
+            collection(db, "products"),
             (snapshot) => {
-                const productData = snapshot.docs.flatMap((doc) => {
-                    const data = doc.data();
-                    // Asegúrate de que items existe y tiene contenido
-                    if (data.items && Array.isArray(data.items)) {
-                        return data.items.map((item) => ({
-                            id: doc.id,
-                            name: item.name || "Producto Desconocido",
-                            quantity: item.quantity || 0,
-                        }));
-                    }
-                    return [];
-                });
+                const productData = snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    name: doc.data().name || "Producto Desconocido",
+                    quantity: doc.data().availableQuantity || 0,
+                }));
                 setProducts(productData);
                 setLoading(false);
             },
@@ -37,19 +31,33 @@ const DashQuantityPro = () => {
     }, []);
 
     if (loading) {
-        return <p>Cargando productos...</p>;
+        return <CircularProgress sx={{ display: 'block', margin: '20px auto' }} />;
     }
 
     return (
-        <div>
-            {products.map((product) => (
-                <div key={product.id} className="product-card">
-                    <Milk className="product-icon" />
-                    <h3>{product.name}</h3>
-                    <p>Cantidad Total: {product.quantity}</p>
-                </div>
-            ))}
-        </div>
+        <Box display="flex" flexWrap="wrap" gap={2}>
+            {products.length > 0 ? (
+                products.map((product) => (
+                    <Card key={product.id} sx={{ minWidth: 275, boxShadow: 3 }}>
+                        <CardContent sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                            <Milk size={32} color={blue[600]} />
+                            <Box>
+                                <Typography variant="h6" color="text.primary">
+                                    {product.name}
+                                </Typography>
+                                <Typography variant="h5" color="text.secondary">
+                                    Cantidad Total: {product.quantity}
+                                </Typography>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                ))
+            ) : (
+                <Typography variant="h6" sx={{ textAlign: "center", width: "100%" }}>
+                    No hay productos disponibles.
+                </Typography>
+            )}
+        </Box>
     );
 };
 

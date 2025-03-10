@@ -25,6 +25,7 @@ import UserProfile from "./components/setting/userProfile.jsx";
 import CheckoutUserInfo from "./components/checkoutInfo/CheckoutUserInfo.jsx";
 import Pedidos from "./components/Pedidos/Pedidos";
 import PedidosAdmin from "./components/dashboard/Pedidos/PedidosAdmin.jsx";
+import StatusOrder from "./components/dashboard/StatusOrder/StatusOrder.jsx";
 
 
 
@@ -70,6 +71,14 @@ const App = () => {
                   <PedidosAdmin />
                 </ProtectedRoute>
               }
+            />
+            <Route
+            path="/dashboard/StatusOrder"
+            element={
+              <ProtectedRoute role="admin">
+                <StatusOrder />
+              </ProtectedRoute>
+            }
             />
             {/* Rutas protegidas sin Navbar */}
             <Route

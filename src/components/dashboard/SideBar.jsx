@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Box, Typography, Button, IconButton } from '@mui/material';
-import { Package, Combine, LogOut, Menu } from 'lucide-react';
+import { Package, Combine, LogOut, Menu, House } from 'lucide-react';
 import { useAuth } from '../../contexts/authContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { auth } from '../../firebase/firebase';
 
 const menuItems = [
+
+  { title: 'Inicio', icon: <House />, path: '/dashboard/AdminHome' },
   { title: 'Pedidos', icon: <Package />, path: '/dashboard/PedidosAdmin' },
-  { title: 'Estados pedidos', icon: <Combine />, path: '#' }
+  { title: 'Estados pedidos', icon: <Combine />, path: '/dashboard/StatusOrder' }
+  
+
 ];
 
 const SideBar = () => {
