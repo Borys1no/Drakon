@@ -3,7 +3,7 @@ import "./Dashboard.css";
 import SideBar from "./SideBar";
 import DashboardStats from "./DashboardStats";
 import DashQuantityPro from "./DashQuantityPro";
-import ProductManagement from "./ProductsManagement";
+import { DashboardCard, AdminDashboard } from "./Sales/DashboardCard";
 
 const AdminHome = () => {
   return (
@@ -19,8 +19,7 @@ const AdminHome = () => {
         <DashQuantityPro />
 
         </div>
-        
-        <ProductManagement />
+        <AdminDashboard/>
 
         </div>
       </div>
