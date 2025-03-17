@@ -3,18 +3,45 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 import Footer from "../Footer/Footer";
 import "./Checkout.css";
+import Swal from 'sweetalert2';
+import {auth} from "../../firebase/firebase";
+
+
 
 const Checkout = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
   const navigate = useNavigate();
 
+  const isUserLoggedIn = () =>{
+    const user = auth.currentUser;
+    return user !== null;
+
+  }
+
+  const handlePay = () => {
+    if (!isUserLoggedIn()) {
+      Swal.fire({
+        title: 'Debes iniciar sesión',
+        text: 'Para continuar con el pago, por favor inicia sesión.',
+        icon: 'warning',
+        confirmButtonText: 'Iniciar sesión',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/login"); // Redirige a la página de inicio de sesión
+        }
+      });
+    } else {
+      navigate("/checkoutInfo", { state: { cartItems, subtotal } });
+    }
+  };
+
   // Calcular el subtotal
   const subtotal = cartItems.reduce((acc, item) => acc + (item.price || 0) * item.quantity, 0);
 
   // Función para manejar el clic en "Pagar"
-  const handlePay = () => {
-    navigate("/checkoutInfo", { state: { cartItems, subtotal } });
-  };
+
 
   return (
     <div className="C-checkoutPage-container">

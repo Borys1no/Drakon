@@ -1,13 +1,15 @@
-import React, { useState, useContext, useEffect } from 'react';
-import './DrakonTDestilado.css';  // Archivo CSS importado
-import { CartContext } from '../../contexts/CartContext';  // Importar el contexto del carrito
-import { assets } from '../../assets/assets';
-import Footer from '../Footer/Footer';
+import React, { useState, useContext, useEffect } from "react";
+import "./DrakonTDestilado.css"; // Archivo CSS importado
+import { CartContext } from "../../contexts/CartContext"; // Importar el contexto del carrito
+import { assets } from "../../assets/assets";
+import Footer from "../Footer/Footer";
+import { useTranslation } from "react-i18next";
 
 const TripleDestilado = () => {
+  const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);  // Manejar la cantidad
-  const { addToCart } = useContext(CartContext);  // Traer la función del contexto del carrito
+  const [quantity, setQuantity] = useState(1); // Manejar la cantidad
+  const { addToCart } = useContext(CartContext); // Traer la función del contexto del carrito
 
   // Lista de imágenes del producto
   const productImages = [
@@ -19,14 +21,16 @@ const TripleDestilado = () => {
   // Datos del producto actual
   const product = {
     id: 1,
-    name: 'DRAKON TRIPLE DESTILADO',
+    name: t("drakonTripleDestilado"),
     price: 39,
     image: assets.Trago,
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length);
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % productImages.length
+      );
     }, 3000);
     return () => clearInterval(interval);
   }, [productImages.length]);
@@ -38,13 +42,17 @@ const TripleDestilado = () => {
 
   // Función para agregar producto al carrito
   const handleAddToCart = () => {
-    addToCart(product, quantity);  // Llama a la función y pasa el producto y cantidad
+    addToCart(product, quantity); // Llama a la función y pasa el producto y cantidad
   };
 
   return (
     <div className="Qproduct-page-container">
       {/* Fondo global */}
-      <img className="background-image2" src={assets.SLIDES2copy} alt="SLIDES2copy" />
+      <img
+        className="background-image2"
+        src={assets.SLIDES2copy}
+        alt="SLIDES2copy"
+      />
       <div className="Qproduct-content">
         {/* Sección de la imagen principal y el carrusel a la izquierda */}
         <div className="Qproduct-image-section">
@@ -53,7 +61,7 @@ const TripleDestilado = () => {
               className="Qcarousel-slides"
               style={{
                 transform: `translateX(-${currentImageIndex * 100}%)`,
-                transition: 'transform 0.5s ease-in-out'
+                transition: "transform 0.5s ease-in-out",
               }}
             >
               {productImages.map((image, index) => (
@@ -74,7 +82,9 @@ const TripleDestilado = () => {
                 key={index}
                 src={image}
                 alt={`Producto ${product.name} ${index + 1}`}
-                className={`Qcarousel-image ${currentImageIndex === index ? 'Qactive' : ''}`}
+                className={`Qcarousel-image ${
+                  currentImageIndex === index ? "Qactive" : ""
+                }`}
                 onClick={() => handleImageClick(index)}
               />
             ))}
@@ -85,26 +95,35 @@ const TripleDestilado = () => {
         <div className="Qproduct-details">
           <h2 className="playfair-display-3TituloDrakonh1">{product.name}</h2>
           <p className="product-description-poppins">
-          Combina elegancia y sofisticación, logrando una pureza inigualable y un sabor refinado.
+            {t("drakonTripleDestiladoDescription")}
           </p>
 
           <div className="product-featuresP-container">
             <ul className="product-featuresP">
-                <li><strong>VISTA</strong> Brillante, impecable y transparente.</li>
-                <li><strong>SABOR</strong> Elegante expresión frutal con notas distintivas de pera y kiwi.</li>
-                <li><strong>CUERPO</strong> Refinado, con mayor profundidad, acompañado de destellos florales.</li>
-                <li><strong>AROMA</strong> Complejo y exótico, combinando frutas maduras y flores silvestres</li>
+              <li>
+                <strong>{t("view")}</strong> {t("drakonTripleDestiladoView")}
+              </li>
+              <li>
+                <strong>{t("taste")}</strong> {t("drakonTripleDestiladoTaste")}
+              </li>
+              <li>
+                <strong>{t("body")}</strong> {t("drakonTripleDestiladoBody")}
+              </li>
+              <li>
+                <strong>{t("aroma")}</strong> {t("drakonTripleDestiladoAroma")}
+              </li>
             </ul>
           </div>
 
           {/* Selector de cantidad */}
           <div className="Qquantity-container">
-            <label htmlFor="quantity">Cantidad:</label>
-            <input className='input2'
-              type="number" 
-              id="quantity" 
-              min="1" 
-              value={quantity} 
+            <label htmlFor="quantity">{t("quantity")}:</label>
+            <input
+              className="input2"
+              type="number"
+              id="quantity"
+              min="1"
+              value={quantity}
               onChange={(e) => setQuantity(Number(e.target.value))}
             />
           </div>
@@ -112,65 +131,62 @@ const TripleDestilado = () => {
           {/* Precio y botón */}
           <div className="Qproduct-price"></div>
           <button className="Qadd-to-cart-button" onClick={handleAddToCart}>
-          AÑADIR AL CARRITO
+            {t("addToCart")}
           </button>
         </div>
       </div>
 
-        {/* Productos */}
-            <section>
-              <div className="productos-header" style={{ marginTop: "100px" }}>
-                <h3>Nuestros Productos</h3>
-              </div>
-              <div className="productos-carousel">
-                <div className="producto-card">
-                  <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
-                  <div className="container-descrip">
-                    <h2 className="product-title">Drakon Destilado</h2>
-                    <p className="product-description">$27,00</p>
-                  </div>
-                  <div className="button-container">
-                    <a href="#" className="Qbtn">
-                      COMPRAR
-                    </a>
-                    <a href="#" className="Qbtn2">
-                      CONOCE MÁS
-                    </a>
-                  </div>
-                </div>
-                <div className="producto-card">
-                  <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
-                  <div className="container-descrip">
-                    <h2 className="product-title">Drakon Triple Destilado</h2>
-                    <p className="product-description">$39,00</p>
-                  </div>
-                  <div className="button-container">
-                    <a href="#" className="Qbtn">
-                      COMPRAR
-                    </a>
-                    <a href="#" className="Qbtn2">
-                      CONOCE MÁS
-                    </a>
-                  </div>
-                </div>
-                <div className="producto-card">
-                  <img src={assets.BOTELLAROJAcopy} alt="Malke Reposado" />
-                  <div className="container-descrip">
-                    <h2 className="product-title">Drakon Reposado</h2>
-                    <p className="product-description">$50,00</p>
-                  </div>
-                  <div className="button-container">
-                    <a href="#" className="Qbtn">
-                      COMPRAR
-                    </a>
-                    <a href="#" className="Qbtn2">
-                      CONOCE MÁS
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-      <Footer/>
+      {/* Productos */}
+      <section>
+        <div className="productos-header" style={{ marginTop: "100px" }}>
+          <h3>{t("ourProducts")}</h3>
+        </div>
+        <div className="productos-carousel">
+          <div className="producto-card">
+            <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
+            <div className="container-descrip">
+              <h2 className="product-title">{t("drakonDestilado")}</h2>
+              <p className="product-description">$27,00</p>
+            </div>
+            <div className="button-container">
+              <a href="/DrakonDestilado" className="Qbtn">
+                {t("buy")}
+              </a>
+              <a href="/NuestraHistoria" className="Qbtn2">
+                {t("learnMore")}
+              </a>
+            </div>
+          </div>
+          <div className="producto-card">
+            <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
+            <div className="container-descrip">
+              <h2 className="product-title">{t("drakonTripleDestilado")}</h2>
+              <p className="product-description">$39,00</p>
+            </div>
+            <div className="button-container">
+              <a href="/TripleDestilado" className="Qbtn">
+                {t("buy")}
+              </a>
+              <a href="/NuestraHistoria" className="Qbtn2">
+                {t("learnMore")}
+              </a>
+            </div>
+          </div>
+          <div className="producto-card">
+            <img
+              className="proximamente"
+              src={assets.BotellaRoja}
+              alt="Malke Reposado"
+              loading="lazy"
+            />
+            <div className="text-overlay">{t("comingSoon")}</div>
+            <div className="container-descrip">
+              <h2 className="product-title">{t("drakonReposado")}</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 };

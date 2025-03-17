@@ -4,6 +4,9 @@
     margin: 0 auto;
     margin-top: 8%;
   }
+  .pedidos-container h1{
+    color: #cd528f;
+  }
   
   .order-card {
     background-color: #f9f9f9;
@@ -11,6 +14,7 @@
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   }
   
   .order-card h2 {
@@ -24,6 +28,10 @@
   .order-card ul {
     list-style-type: none;
     padding: 0;
+  }
+  .order-card li{
+    color: #cd528f;
+    font-style: italic;
   }
   
   .order-card ul li {

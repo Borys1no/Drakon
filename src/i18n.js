@@ -5,6 +5,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   es: {
     translation: {
+      //Navbar
       "welcome": "Bienvenido",
       "products": "PRODUCTOS",
       "cocktails": "COCTELES",
@@ -48,6 +49,7 @@ const resources = {
       "lechuzaGarnish": "Vaso escarchado con sal de pitahaya. Twist de naranja",
       "seeMore": "VER MÁS",
       //Productos
+      //DESTILADO
       "drakonDestilado": "DRAKON DESTILADO",
       "drakonDestiladoDescription": "Ofrece pureza excepcional y un perfil de sabor equilibrado, reflejando la esencia premium de la pitahaya manabita.",
       "bottleDetails": "Detalles de la botella",
@@ -62,15 +64,16 @@ const resources = {
       "aroma": "AROMA",
       "drakonDestiladoAroma": "Exótico y atractivo, con una mezcla de frutas y flores silvestres.",
       "drakonDestiladoIdeal": "Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.",
+      "quantity": "Cantidad",
       "addToCart": "AÑADIR AL CARRITO",
+      //TRIPLE DESTILADO
       "drakonTripleDestilado": "DRAKON TRIPLE DESTILADO",
       "drakonTripleDestiladoDescription": "Combina elegancia y sofisticación, logrando una pureza inigualable y un sabor refinado.",
-      "drakonTripleDestiladoView": "Claro, limpio y transparente.",
-      "drakonTripleDestiladoTaste": "Entrada suave y persistente, con un final redondeado y placentero.",
-      "drakonTripleDestiladoBody": "Ligeras notas frutales con delicados destellos florales.",
-      "drakonTripleDestiladoAroma": "Exótico y atractivo, con una mezcla de frutas y flores silvestres.",
-      "drakonTripleDestiladoIdeal": "Ideal para coctelería gracias a su versatilidad, balance perfecto entre notas frutales y aromas florales.",
-    
+      "drakonTripleDestiladoView": "Brillante, impecable y transparente.",
+      "drakonTripleDestiladoTaste": "Elegante expresión frutal con notas distintivas de pera y kiwi.",
+      "drakonTripleDestiladoBody": "Refinado, con mayor profundidad, acompañado de destellos florales.",
+      "drakonTripleDestiladoAroma": "Complejo y exótico, combinando frutas maduras y flores silvestres",
+      "drakonTripleDestiladoIdeal": "Perfecto tanto para coctelería como para disfrutarse como shot o bajativo, con reconocimiento internacional por su sosticación y versatilidad.",    
       //Nuestra Historia
       "tributoTitle": "Un Tributo a la Identidad Ecuatoriana",
       "tributoDescription": "Drakon nació en 2023 como una visión innovadora que buscaba trascender las fronteras tradicionales de la industria de los destilados. Desde el corazón de Manabí, Ecuador, nos propusimos crear un producto que no solo destacara por su calidad excepcional, sino que también fuera un fiel representante de la riqueza cultural, natural e histórica de nuestro país.",
@@ -274,6 +277,7 @@ const resources = {
       "aroma": "AROMA",
       "drakonDestiladoAroma": "Exotic and attractive, with a mix of wild fruits and flowers.",
       "drakonDestiladoIdeal": "Ideal for cocktails thanks to its versatility, perfect balance between fruity notes and floral aromas.",
+      "quantity": "Quantity",
       "addToCart": "ADD TO CART",
       "drakonTripleDestilado": "DRAKON TRIPLE DISTILLED",
       "drakonTripleDestiladoDescription": "Combines elegance and sophistication, achieving unmatched purity and refined flavor.",

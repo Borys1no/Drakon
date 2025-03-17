@@ -37,8 +37,8 @@ const PedidosAdmin = () => {
           return {
             id: doc.id,
             fecha: data.timestamp?.toDate
-              ? data.timestamp.toDate().toLocaleString()
-              : "Fecha no disponible",
+              ? data.timestamp.toDate()
+              : new Date(0),
             cliente: data.userName || "Desconocido",
             productos: Array.isArray(data.products)
               ? data.products
@@ -58,7 +58,16 @@ const PedidosAdmin = () => {
           };
         });
 
-        setPedidos(pedidosData);
+        pedidosData.sort((a, b) => b.fecha - a.fecha);
+
+      // Convertir las fechas a un formato legible después de ordenar
+      const pedidosFormateados = pedidosData.map((pedido) => ({
+        ...pedido,
+        fecha: pedido.fecha.toLocaleString(),
+      }));
+
+
+        setPedidos(pedidosFormateados);
       } catch (error) {
         console.error("Error al obtener los pedidos:", error);
       }
