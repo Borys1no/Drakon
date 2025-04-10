@@ -26,6 +26,7 @@ import CheckoutUserInfo from "./components/checkoutInfo/CheckoutUserInfo.jsx";
 import Pedidos from "./components/Pedidos/Pedidos";
 import PedidosAdmin from "./components/dashboard/Pedidos/PedidosAdmin.jsx";
 import StatusOrder from "./components/dashboard/StatusOrder/StatusOrder.jsx";
+import NotFound from "./components/home/index.jsx"
 
 
 
@@ -44,13 +45,16 @@ const App = () => {
       <CartProvider>
         <Router>
           <Routes>
+          <Route path="/NotFound" element={<NotFound />} />
             {/* Rutas públicas con Navbar */}
             <Route element={<WithNavbar />}>
-              <Route path="/" element={<Navigate to="/home" />} />
-              <Route path="/home" element={ <PublicRoute> <Home /> </PublicRoute> } />
-              <Route path="/login" element={<LoginMenu />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/products" element={<Products />} />
+              <Route path="/" element={<Navigate to="/NotFound" />} />
+              {/*<Route path="/" element={<Navigate to="/home" />} />*/}
+              
+              <Route path="/home" element={ <PublicRoute> {/*<Home />*/} <Navigate to="/NotFound" /> </PublicRoute> } />
+              <Route path="/login" element={<Navigate to="/NotFound" />} />
+              <Route path="/register" element={<Navigate to="/NotFound" />} />
+              <Route path="/products" element={<Navigate to="/NotFound" />} />
               <Route path="/DrakonDestilado" element={<DrakonDestilado />} />
               <Route path="/TripleDestilado" element={<TripleDesrilado />} />
               <Route path="/checkout" element={<Checkout />} />

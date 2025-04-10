@@ -60,11 +60,12 @@ const PaymentButton = ({ total, cartItems }) => {
       console.error("Error obteniendo los datos del usuario:", error);
     }
   };
-
+// Actualizar el estado de userData cada vez que cambie
   useEffect(() => {
     console.log("Estado actualizado de userData:", userData);
   }, [userData]);
 
+  // Datos de la pasarela de pago
   const [data, setData] = useState({
     PayboxRemail: "drakon-adm@outlook.com",
     PayboxSendmail: userEmail || "correo_cliente@example.com",
@@ -79,7 +80,7 @@ const PaymentButton = ({ total, cartItems }) => {
     PayboxPagoPlux: true,
     ...userData,
   });
-
+  // Actualizar los datos del usuario cada vez que cambie el correo electrónico o los datos del usuario
   useEffect(() => {
     setData((prevData) => ({
       ...prevData,
@@ -87,7 +88,7 @@ const PaymentButton = ({ total, cartItems }) => {
       ...userData,
     }));
   }, [userEmail, userData]);
-
+    // Actualizar el estado de data cada vez que cambie
   useEffect(() => {
     if (!scriptLoaded && !document.querySelector('script[src="https://sandbox-paybox.pagoplux.com/paybox/index.js"]')) {
       const script = document.createElement("script");
@@ -98,14 +99,14 @@ const PaymentButton = ({ total, cartItems }) => {
       document.body.appendChild(script);
     }
   }, [scriptLoaded]);
-
+  // Definir la función onAuthorize
   useEffect(() => {
     if (scriptLoaded && !onAuthorizeDefined && userData.PayboxSendname) {
       console.log("Definiendo la función onAuthorize...", userData);
 
       window.onAuthorize = async function (response) {
         console.log("Respuesta del pago:", response);
-
+        // Guardar la orden en Firestore
         if (response.status === "succeeded") {
           try {
             console.log(" Datos enviados a Firestore:", {
