@@ -9,24 +9,16 @@ import Register from "./components/auth/register";
 import Products from "./components/Productos/Products";
 import DrakonDestilado from "./components/BuyProducts/MalkeVirgen";
 import TripleDesrilado from "./components/BuyProducts/DrakonTDestilado";
-import Checkout from "./components/Checkout/Checkout";
 import NuestraHistoria from "./components/NuestraHistoria/NuestraHistoria";
 import Cocteles from "./components/Cocteles/Cocteles";
 import Procesos from "./components/Procesos/Procesos";
-import AdminHome from "./components/dashboard/AdminHome";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import PublicRoute from "./components/ProtectedRoute/PublicRoute.jsx";
 import Reconocimientos from "./components/Reconocimientos/Reconocimientos";
-import PasarelaPago from "./components/PasarelaPago/PasarelaPago";
 import AgeVerificationPopup from "./components/AgeVerificationPopup/AgeVerificationPopup"; // Importar el pop-up
 import CookieBanner from './components/Cookie/CookieBanner.jsx';
 import './i18n'; // Import the i18n configuration file
 import UserProfile from "./components/setting/userProfile.jsx";
-import CheckoutUserInfo from "./components/checkoutInfo/CheckoutUserInfo.jsx";
-import Pedidos from "./components/Pedidos/Pedidos";
-import PedidosAdmin from "./components/dashboard/Pedidos/PedidosAdmin.jsx";
-import StatusOrder from "./components/dashboard/StatusOrder/StatusOrder.jsx";
-{/*import NotFound from "./components/home/index.jsx"*/}
+
 
 
 
@@ -57,42 +49,12 @@ const App = () => {
               <Route path="/products" element={<Products />} />
               <Route path="/DrakonDestilado" element={<DrakonDestilado />} />
               <Route path="/TripleDestilado" element={<TripleDesrilado />} />
-              <Route path="/checkout" element={<Checkout />} />
               <Route path="/NuestraHistoria" element={<NuestraHistoria />} />
               <Route path="/Cocteles" element={<Cocteles />} />
               <Route path="/Procesos" element={<Procesos />} />
               <Route path="/Reconocimientos" element={<Reconocimientos />} />
-              <Route path="/PaymentButton" element={<PasarelaPago />} />
               <Route path="/userProfile" element={<UserProfile />} />
-              <Route path="/checkoutInfo" element={<CheckoutUserInfo />} />
-              <Route path="/Pedidos" element={<Pedidos />} />
             </Route>
-            {/* Rutas del administrador */}
-            <Route
-              path="/dashboard/PedidosAdmin"
-              element={
-                <ProtectedRoute role="admin">
-                  <PedidosAdmin />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-            path="/dashboard/StatusOrder"
-            element={
-              <ProtectedRoute role="admin">
-                <StatusOrder />
-              </ProtectedRoute>
-            }
-            />
-            {/* Rutas protegidas sin Navbar */}
-            <Route
-              path="/dashboard/AdminHome"
-              element={
-                <ProtectedRoute role="admin">
-                  <AdminHome />
-                </ProtectedRoute>
-              }
-            />
           </Routes>
           <CookieBanner/>
         </Router>

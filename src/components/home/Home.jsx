@@ -46,12 +46,9 @@ const Home = () => {
             />
             <div className="container-descrip">
               <h2 className="product-title">{t("drakonDestilado")}</h2>
-              <p className="product-descriptionH">$27,00</p>
+              
             </div>
             <div className="button-container">
-              <a href="/products" className="Qbtn">
-                {t("buy")}
-              </a>
               <a href="/NuestraHistoria" className="Qbtn2">
                 {t("learnMore")}
               </a>
@@ -65,12 +62,9 @@ const Home = () => {
             />
             <div className="container-descrip">
               <h2 className="product-title">{t("drakonTripleDestilado")}</h2>
-              <p className="product-descriptionH">$39,00</p>
+              
             </div>
             <div className="button-container">
-              <a href="products" className="Qbtn">
-                {t("buy")}
-              </a>
               <a href="/NuestraHistoria" className="Qbtn2">
                 {t("learnMore")}
               </a>

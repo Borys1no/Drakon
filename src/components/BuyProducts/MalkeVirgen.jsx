@@ -146,25 +146,6 @@ const ProductPage = () => {
               </li>
             </ul>
           </div>
-
-          {/* Selector de cantidad */}
-          <div className="Qquantity-container">
-            <label htmlFor="quantity">{t("quantity")}:</label>
-            <input
-              className="input2"
-              type="number"
-              id="quantity"
-              min="1"
-              value={quantity}
-              onChange={(e) => setQuantity(Number(e.target.value))}
-            />
-          </div>
-
-          {/* Precio y botón */}
-          <div className="Qproduct-price"></div>
-          <button className="Qadd-to-cart-button" onClick={handleAddToCart}>
-            {t("addToCart")}
-          </button>
         </div>
       </div>
 
@@ -178,12 +159,8 @@ const ProductPage = () => {
             <img src={assets.BOTELLAROSAcopy} alt="Malke Virgen" />
             <div className="container-descrip">
               <h2 className="product-title">{t("drakonDestilado")}</h2>
-              <p className="product-description">$27,00</p>
             </div>
             <div className="button-container">
-              <a href="/DrakonDestilado" className="Qbtn">
-                {t("buy")}
-              </a>
               <a href="/NuestraHistoria" className="Qbtn2">
                 {t("learnMore")}
               </a>
@@ -193,12 +170,8 @@ const ProductPage = () => {
             <img src={assets.BOTELLAROJAcopy} alt="Malke Triple Destilado" />
             <div className="container-descrip">
               <h2 className="product-title">{t("drakonTripleDestilado")}</h2>
-              <p className="product-description">$39,00</p>
             </div>
             <div className="button-container">
-              <a href="/TripleDestilado" className="Qbtn">
-                {t("buy")}
-              </a>
               <a href="/NuestraHistoria" className="Qbtn2">
                 {t("learnMore")}
               </a>

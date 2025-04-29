@@ -65,12 +65,6 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-right">
-                    <a onClick={() => navigate('/checkout')} className="cart-icon" style={{ position: 'relative' }}>
-                        <img src={assets.Cart} alt="Carrito" />
-                        {cartItems.length > 0 && (
-                            <span className="cart-count">{cartItems.length}</span>
-                        )}
-                    </a>
 
                     {userLoggedIn ? (
                         <div 
@@ -83,8 +77,6 @@ const Navbar = () => {
                             {isDropdownOpen && (
                                 <div className="dropdown-menu">
                                     <ul>
-                                        <li><a href="/Pedidos">{t('orders')}</a></li>
-                                        <li><a href="/checkout">{t('shoppingCart')}</a></li>
                                         <li><a href="/userProfile">{t('settings')}</a></li>
                                         <li><button onClick={handleLogout}>{t('logout')}</button></li>
                                     </ul>

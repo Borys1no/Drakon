@@ -41,7 +41,7 @@ const Products = () => {
                     {/* Botón de Comprar */}
                     <div className="button-container2">
                         <button className="buy-button">
-                            <a href="/DrakonDestilado">{t('addToCart')}</a>
+                            <a href="/DrakonDestilado">{t('learnMore')}</a>
                         </button>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ const Products = () => {
                     {/* Botón de Comprar */}
                     <div className="button-container2">
                         <button className="buy-button">
-                            <a href="/TripleDestilado">{t('addToCart')}</a>
+                            <a href="/TripleDestilado">{t('learnMore')}</a>
                         </button>
                     </div>
                 </div>
