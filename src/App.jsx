@@ -18,6 +18,7 @@ import AgeVerificationPopup from "./components/AgeVerificationPopup/AgeVerificat
 import CookieBanner from './components/Cookie/CookieBanner.jsx';
 import './i18n'; // Import the i18n configuration file
 import UserProfile from "./components/setting/userProfile.jsx";
+import NotFound from "./components//home/index.jsx";
 
 
 
@@ -37,13 +38,15 @@ const App = () => {
       <CartProvider>
         <Router>
           <Routes>
-          {/*<Route path="/NotFound" element={<NotFound />} />*/}
+          <Route path="/NotFound" element={<NotFound />} />
             {/* Rutas públicas con Navbar */}
             <Route element={<WithNavbar />}>
-              {/*<Route path="/" element={<Navigate to="/NotFound" />} />*/}
-              <Route path="/" element={<Navigate to="/home" />} />
-              
+              <Route path="/" element={<Navigate to="/NotFound" />} />
+              <Route path="/home" element={<Navigate to="/NotFound" /> } />
+              {/*<Route path="/" element={<Navigate to="/home" />} />*/}
+              {/*}
               <Route path="/home" element={ <PublicRoute><Home /> </PublicRoute> } />
+              
               <Route path="/login" element={<LoginMenu />} />
               <Route path="/register" element={<Register />} />
               <Route path="/products" element={<Products />} />
@@ -54,6 +57,7 @@ const App = () => {
               <Route path="/Procesos" element={<Procesos />} />
               <Route path="/Reconocimientos" element={<Reconocimientos />} />
               <Route path="/userProfile" element={<UserProfile />} />
+              */}
             </Route>
           </Routes>
           <CookieBanner/>
