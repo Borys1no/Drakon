@@ -38,13 +38,17 @@ const App = () => {
       <CartProvider>
         <Router>
           <Routes>
+            {/**
           <Route path="/NotFound" element={<NotFound />} />
+           */}
             {/* Rutas públicas con Navbar */}
             <Route element={<WithNavbar />}>
+            {/** 
               <Route path="/" element={<Navigate to="/NotFound" />} />
               <Route path="/home" element={<Navigate to="/NotFound" /> } />
+              */}
               <Route path="/" element={<Navigate to="/home" />} />
-              {/**
+              
                
               <Route path="/home" element={ <PublicRoute><Home /> </PublicRoute> } />
               
@@ -58,7 +62,7 @@ const App = () => {
               <Route path="/Procesos" element={<Procesos />} />
               <Route path="/Reconocimientos" element={<Reconocimientos />} />
               <Route path="/userProfile" element={<UserProfile />} />
-              */}
+              
             </Route>
           </Routes>
           <CookieBanner/>
